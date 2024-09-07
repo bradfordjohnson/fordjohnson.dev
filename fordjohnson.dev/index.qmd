@@ -33,6 +33,10 @@ cta div
 
 body content
 
+<a href="mailto:bradfordljohnson21+portfolio@gmail.com">
+    <button type="button" class="btn btn-primary">Say hello</button>
+</a>
+
 :::
 
 <!-- next section -->
