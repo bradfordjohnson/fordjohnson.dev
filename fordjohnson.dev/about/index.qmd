@@ -1,0 +1,31 @@
+---
+pagetitle: About
+about:
+  id: hero-heading
+  template: trestles
+  image: ../images/profile.jpg
+  links:
+    - icon: github
+      href: https://github.com/bradfordjohnson
+      text: GitHub
+    - icon: linkedin
+      href: https://linkedin.com/in/bradford-ford-johnson
+      text: LinkedIn
+---
+
+::: {.column-page}
+
+:::{#hero-heading}
+
+<!-- make the "hey im ..." part larger text like a heading-->
+<!-- get another picture to use -->
+
+Hey there, I'm Ford, a data analyst and storyteller with experience navigating the intersection of web analytics and big data. I'm skilled at untangling complex datasets to find useful insights and telling engaging stories with the data.
+
+Beyond the digital realm, you'll often find me exploring the great outdoors, capturing moments through the lens of my camera, or embarking on hiking adventures.
+
+Feel free to explore my work on this site, where I share insights, projects, and a glimpse into my data journey.
+
+:::
+
+:::

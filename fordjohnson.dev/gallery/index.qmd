@@ -1,0 +1,9 @@
+---
+pagetitle: Gallery
+---
+
+::: {.column-page}
+
+<h1 class="title">Gallery</h1>
+
+:::

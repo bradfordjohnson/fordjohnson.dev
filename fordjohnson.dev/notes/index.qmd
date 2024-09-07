@@ -1,0 +1,9 @@
+---
+pagetitle: Notes
+---
+
+::: {.column-page}
+
+<h1 class="title">Notes</h1>
+
+:::

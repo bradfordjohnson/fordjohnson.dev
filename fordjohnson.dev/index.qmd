@@ -1,11 +1,5 @@
 ---
-title: "fordjohnson.dev"
-    # - icon: linkedin
-    #   text: LinkedIn
-    #   href: https://linkedin.com/in/bradford-ford-johnson
-    # - icon: github
-    #   text: Github
-    #   href: https://github.com/bradfordjohnson
+pagetitle: Ford Johnson
 ---
 
 ::: {.column-page}

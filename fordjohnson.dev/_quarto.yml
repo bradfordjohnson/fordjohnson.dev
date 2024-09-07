@@ -8,15 +8,25 @@ website:
   bread-crumbs: true
   navbar:
     right:
-      - href: index.qmd
-        text: Home
+      - href: portfolio/index.qmd
+        text: Portfolio
+      - href: gallery/index.qmd
+        text: Gallery
+      - href: notes/index.qmd
+        text: Notes
+      - href: about/index.qmd
+        text: About
+      - href: https://github.com/bradfordjohnson
+        icon: github
+      - href: https://linkedin.com/in/bradford-ford-johnson
+        icon: linkedin
   page-footer:
     left: Copyright &copy; 2024 Ford Johnson
     center:
-      - icon: linkedin
-        href: https://linkedin.com/in/bradford-ford-johnson
       - icon: github
         href: https://github.com/bradfordjohnson
+      - icon: linkedin
+        href: https://linkedin.com/in/bradford-ford-johnson
 
 format:
   html:
