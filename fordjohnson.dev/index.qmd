@@ -1,0 +1,65 @@
+---
+title: "fordjohnson.dev"
+    # - icon: linkedin
+    #   text: LinkedIn
+    #   href: https://linkedin.com/in/bradford-ford-johnson
+    # - icon: github
+    #   text: Github
+    #   href: https://github.com/bradfordjohnson
+---
+
+::: {.column-page}
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-8}
+
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-8}
+
+cta div
+
+:::
+
+:::
+
+'p for other content'
+
+:::
+
+::: {.g-col-12 .g-col-md-4}
+
+<img src="images/profile.jpg" alt="Headshot of Bradford (Ford) Johnson, a data analyst smiling in professional attire." id="profile-image"/>
+
+:::
+
+:::
+
+body content
+
+:::
+
+<!-- next section -->
+
+::: {.column-screen}
+::: {.highlight-banner}
+
+::: {.column-page}
+
+## Highlights
+
+::: {.grid}
+
+<div class="g-col-6 g-col-md-4">.g-col-6 .g-col-md-4</div>
+<div class="g-col-6 g-col-md-4">.g-col-6 .g-col-md-4</div>
+<div class="g-col-6 g-col-md-4">.g-col-6 .g-col-md-4</div>
+
+:::
+
+:::
+
+:::
+
+:::
