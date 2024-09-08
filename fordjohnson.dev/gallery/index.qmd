@@ -11,16 +11,16 @@ pagetitle: Gallery
 ::: {.column-screen-inset}
 <div class="gallery-row">
 <div class="gallery-column">
-<img src="https://placehold.co/600x300" alt="">
-<img src="https://placehold.co/600x400" alt="">
-<img src="https://placehold.co/600x500" alt="">
-<img src="https://placehold.co/600x400" alt="">
+<img src="visuals/seinfeld-sentiment.png" alt="Raincloud plots showing the sentiment of Seinfeld episodes across different lexicons">
+<img src="visuals/goals-foot.png" alt="Density heatmap showing where goals were scored in the EPL from 2014-2020">
+<img src="visuals/soccer.png" alt="Lollipop plot showing the average number of yellow cards given to the home and away teams by EPL soccer referees">
+<img src="visuals/ufo.png" alt="Network visual showing the most common bigrams used in witness accounts for UFO sightings">
 </div>
 <div class="gallery-column">
-<img src="https://placehold.co/600x400" alt="">
-<img src="https://placehold.co/600x600" alt="">
-<img src="https://placehold.co/600x700" alt="">
-<img src="https://placehold.co/600x400" alt="">
+<img src="visuals/topgolf.png" alt="Density plot of 200 random balls hit at TopGolf">
+<img src="visuals/owid-energy.png" alt="Faceted line charts showing Demand vs Generation for electricity in Europe">
+<img src="visuals/fair-use.png" alt="Fair Use analysis, showing court findings in cases across different case categories">
+<img src="visuals/african-languages.png" alt="Sankey chart showing sentiment of different African languages">
 </div>
 </div>
 
