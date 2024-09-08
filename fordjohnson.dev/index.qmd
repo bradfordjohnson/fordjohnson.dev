@@ -13,13 +13,13 @@ pagetitle: Ford Johnson
 
 ::: {.g-col-12 .g-col-md-8 .hero-heading}
 
-Empower your <span class="hero-highlight">insights</span> with data visualization.
+# Let visuals <span class="hero-highlight">simplify</span> your data story.
 
 :::
 
 :::
 
-'p for other content'
+Creating compelling data visuals that transform complex information into clear, actionable insights. From dynamic dashboards to custom ad-hoc visuals and reporting templates, I deliver solutions that make it easy for audiences to understand their data, empowering informed decisions and driving impactful results.
 
 :::
 

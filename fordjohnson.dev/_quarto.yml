@@ -29,9 +29,12 @@ website:
         href: https://linkedin.com/in/bradford-ford-johnson
 format:
   html:
-    theme: cosmo
+    include-in-header:
+      text: <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    # theme: cosmo
+    # mainfont: Rubik
     anchor-sections: false
-    css: styles.css
+    theme: styles.scss
     toc: false
 
 
