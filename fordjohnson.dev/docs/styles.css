@@ -16,6 +16,14 @@ p {
     margin-bottom: 0;
 }
 
+.hero-heading {
+    color: #0400db;
+}
+
+.hero-highlight {
+    color: #6a4c4c;
+}
+
 .highlight-banner {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -35,6 +43,44 @@ p {
     color: #eceff4;
 }
 
+.gallery-title {
+    text-align: center;
+}
+
+.gallery-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .gallery-column {
+    flex: 50%;
+    max-width: 50%;
+    padding: 16px;
+  }
+  
+  .gallery-column img {
+    margin-bottom: 32px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .gallery-column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .gallery-column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
 /* .highlight-banner h2{
     text-align: center;
 } */

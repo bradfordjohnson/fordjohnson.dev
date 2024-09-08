@@ -1,10 +1,31 @@
 [
   {
+    "objectID": "portfolio/index.html#captivating-visuals",
+    "href": "portfolio/index.html#captivating-visuals",
+    "title": "\nPortfolio\n",
+    "section": "Captivating visuals",
+    "text": "Captivating visuals\nEngaging graphics with compelling narratives, crafted directly from the data"
+  },
+  {
+    "objectID": "portfolio/index.html#custom-visual-libraries-reporting-templates",
+    "href": "portfolio/index.html#custom-visual-libraries-reporting-templates",
+    "title": "\nPortfolio\n",
+    "section": "Custom visual libraries & reporting templates",
+    "text": "Custom visual libraries & reporting templates\nWhy repeat yourself? Just refresh the data with custom visual libraries and templates."
+  },
+  {
+    "objectID": "portfolio/index.html#data-driven-solutions",
+    "href": "portfolio/index.html#data-driven-solutions",
+    "title": "\nPortfolio\n",
+    "section": "Data-driven solutions",
+    "text": "Data-driven solutions\nNot just visuals—custom APIs and full-stack solutions for all your data needs. Tailored to fit both front-end and back-end requirements."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Ford Johnson",
     "section": "",
-    "text": "cta div\n\n\n‘p for other content’\n\n\n\n\n\nbody content\n Say hello"
+    "text": "Empower your insights with data visualization.\n\n\n‘p for other content’\n\n\n\n\n\nbody content\n Get in touch"
   },
   {
     "objectID": "index.html#highlights",
@@ -14,32 +35,11 @@
     "text": "Highlights\n\n\n.g-col-6 .g-col-md-4\n\n\n.g-col-6 .g-col-md-4\n\n\n.g-col-6 .g-col-md-4"
   },
   {
-    "objectID": "portfolio/index.html",
-    "href": "portfolio/index.html",
-    "title": "\nPortfolio\n",
+    "objectID": "about/index.html",
+    "href": "about/index.html",
+    "title": "Ford Johnson",
     "section": "",
-    "text": "Portfolio"
-  },
-  {
-    "objectID": "portfolio/index.html#stand-out-visualizations",
-    "href": "portfolio/index.html#stand-out-visualizations",
-    "title": "\nPortfolio\n",
-    "section": "“Stand-out visualizations”",
-    "text": "“Stand-out visualizations”"
-  },
-  {
-    "objectID": "portfolio/index.html#data-visualization-solutions",
-    "href": "portfolio/index.html#data-visualization-solutions",
-    "title": "\nPortfolio\n",
-    "section": "“Data visualization solutions”",
-    "text": "“Data visualization solutions”"
-  },
-  {
-    "objectID": "portfolio/index.html#data-driven-solutions",
-    "href": "portfolio/index.html#data-driven-solutions",
-    "title": "\nPortfolio\n",
-    "section": "Data-Driven Solutions",
-    "text": "Data-Driven Solutions\nNot just visuals—custom APIs and full-stack solutions for all your data needs. Tailored to fit both front-end and back-end requirements."
+    "text": "GitHub\n  \n  \n    \n     LinkedIn\n  \n\n  \n  \n\n\nHey there, I’m Ford, a data analyst and storyteller with experience navigating the intersection of web analytics and big data. I’m skilled at untangling complex datasets to find useful insights and telling engaging stories with the data.\nBeyond the digital realm, you’ll often find me exploring the great outdoors, capturing moments through the lens of my camera, or embarking on hiking adventures.\nFeel free to explore my work on this site, where I share insights, projects, and a glimpse into my data journey."
   },
   {
     "objectID": "gallery/index.html",
@@ -54,33 +54,5 @@
     "title": "\nNotes\n",
     "section": "",
     "text": "Notes"
-  },
-  {
-    "objectID": "portfolio/index.html#captivating-visuals",
-    "href": "portfolio/index.html#captivating-visuals",
-    "title": "\nPortfolio\n",
-    "section": "Captivating visuals",
-    "text": "Captivating visuals\nEngaging graphics with compelling narratives, crafted directly from the data"
-  },
-  {
-    "objectID": "portfolio/index.html#custom-libraries-and-templates",
-    "href": "portfolio/index.html#custom-libraries-and-templates",
-    "title": "\nPortfolio\n",
-    "section": "Custom libraries and templates",
-    "text": "Custom libraries and templates\nWhy repeat yourself? Just refresh the data with custom visual libraries and templates."
-  },
-  {
-    "objectID": "portfolio/index.html#custom-visual-libraries-reporting-templates",
-    "href": "portfolio/index.html#custom-visual-libraries-reporting-templates",
-    "title": "\nPortfolio\n",
-    "section": "Custom visual libraries & reporting templates",
-    "text": "Custom visual libraries & reporting templates\nWhy repeat yourself? Just refresh the data with custom visual libraries and templates."
-  },
-  {
-    "objectID": "about/index.html",
-    "href": "about/index.html",
-    "title": "Ford Johnson",
-    "section": "",
-    "text": "GitHub\n  \n  \n    \n     LinkedIn\n  \n\n  \n  \n\n\nHey there, I’m Ford, a data analyst and storyteller with experience navigating the intersection of web analytics and big data. I’m skilled at untangling complex datasets to find useful insights and telling engaging stories with the data.\nBeyond the digital realm, you’ll often find me exploring the great outdoors, capturing moments through the lens of my camera, or embarking on hiking adventures.\nFeel free to explore my work on this site, where I share insights, projects, and a glimpse into my data journey."
   }
 ]

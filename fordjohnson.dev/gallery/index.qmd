@@ -2,8 +2,26 @@
 pagetitle: Gallery
 ---
 
-::: {.column-page}
+::: {.gallery-title}
 
 <h1 class="title">Gallery</h1>
+
+:::
+
+::: {.column-screen-inset}
+<div class="gallery-row">
+<div class="gallery-column">
+<img src="https://placehold.co/600x300" alt="">
+<img src="https://placehold.co/600x400" alt="">
+<img src="https://placehold.co/600x500" alt="">
+<img src="https://placehold.co/600x400" alt="">
+</div>
+<div class="gallery-column">
+<img src="https://placehold.co/600x400" alt="">
+<img src="https://placehold.co/600x600" alt="">
+<img src="https://placehold.co/600x700" alt="">
+<img src="https://placehold.co/600x400" alt="">
+</div>
+</div>
 
 :::

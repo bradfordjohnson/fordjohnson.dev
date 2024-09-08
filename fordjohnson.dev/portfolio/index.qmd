@@ -26,7 +26,7 @@ Engaging graphics with compelling narratives, crafted directly from the data
 
 Why repeat yourself? Just refresh the data with custom visual libraries and templates.
 
-## Data-Driven Solutions
+## Data-driven solutions
 
 Not just visuals—custom APIs and full-stack solutions for all your data needs. Tailored to fit both front-end and back-end requirements.
 

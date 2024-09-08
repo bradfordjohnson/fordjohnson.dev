@@ -11,9 +11,9 @@ pagetitle: Ford Johnson
 
 ::: {.grid}
 
-::: {.g-col-12 .g-col-md-8}
+::: {.g-col-12 .g-col-md-8 .hero-heading}
 
-cta div
+Empower your <span class="hero-highlight">insights</span> with data visualization.
 
 :::
 
@@ -34,7 +34,7 @@ cta div
 body content
 
 <a href="mailto:bradfordljohnson21+portfolio@gmail.com">
-    <button type="button" class="btn btn-primary">Say hello</button>
+    <button type="button" class="btn btn-primary">Get in touch</button>
 </a>
 
 :::
