@@ -46,8 +46,6 @@ body content
 
 ::: {.column-page}
 
-## Highlights
-
 ::: {.grid}
 
 <div class="g-col-6 g-col-md-4">.g-col-6 .g-col-md-4</div>

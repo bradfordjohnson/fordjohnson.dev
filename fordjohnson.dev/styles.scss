@@ -5,7 +5,7 @@ $white:    #fff;
 $gray-100: #f8f9fa;
 $gray-200: #e9ecef;
 $gray-300: #dee2e6;
-$gray-400: #ced4da;
+$gray-400: #47536b;
 $gray-500: #adb5bd;
 $gray-600: #868e96;
 $gray-700: #495057;
@@ -34,11 +34,11 @@ $light:         $gray-100;
 $dark:          $gray-800;
 
 // Body
-$body-color: $gray-800;
+$body-color: $gray-400;
 
 // Fonts
 $header-font: "https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap";
-$body-font: "https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap";
+$body-font: "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap";
 
 // Import fonts
 @if $header-font {
@@ -50,10 +50,11 @@ $body-font: "https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&d
 }
 
 // Typography
-body {
-  font-family: 'Montserrat', sans-serif;
+p {
+  font-family: "Montserrat", system-ui;
   color: $body-color;
   -webkit-font-smoothing: antialiased;
+  margin-bottom: 0;
 }
 
 h1, .hero-heading, h2 {
