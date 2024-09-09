@@ -21,6 +21,12 @@ pagetitle: Ford Johnson
 
 Creating compelling data visuals that transform complex information into clear, actionable insights. From dynamic dashboards to custom ad-hoc visuals and reporting templates, I deliver solutions that make it easy for audiences to understand their data, empowering informed decisions and driving impactful results.
 
+::: {.cta-button}
+<a href="mailto:bradfordljohnson21+portfolio@gmail.com">
+<button type="button" class="btn btn-primary">Get in touch</button>
+</a>
+
+:::
 :::
 
 ::: {.g-col-12 .g-col-md-4}
@@ -31,11 +37,7 @@ Creating compelling data visuals that transform complex information into clear, 
 
 :::
 
-body content
 
-<a href="mailto:bradfordljohnson21+portfolio@gmail.com">
-    <button type="button" class="btn btn-primary">Get in touch</button>
-</a>
 
 :::
 
@@ -48,9 +50,9 @@ body content
 
 ::: {.grid}
 
-<div class="g-col-6 g-col-md-4">.g-col-6 .g-col-md-4</div>
-<div class="g-col-6 g-col-md-4">.g-col-6 .g-col-md-4</div>
-<div class="g-col-6 g-col-md-4">.g-col-6 .g-col-md-4</div>
+<div class="g-col-6 g-col-md-4"><p>.g-col-6 .g-col-md-4</p></div>
+<div class="g-col-6 g-col-md-4"><p>.g-col-6 .g-col-md-4</p></div>
+<div class="g-col-6 g-col-md-4"><p>.g-col-6 .g-col-md-4</p></div>
 
 :::
 

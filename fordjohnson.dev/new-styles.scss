@@ -1,7 +1,8 @@
 /*-- scss:defaults --*/
 $white: #fff !default;
 
-$blue: #0579ec !default;
+$blue: #027af2 !default;
+$hero-blue: #027af2;
 $header-color: #0b0e14 !default;
 $p-color: #4c566a !default;
 $banner-color: #eceff4 !default;
@@ -62,7 +63,7 @@ p {
 }
 
 .hero-highlight {
-    color: #027af2;
+    color: $hero-blue;
 }
 
 .highlight-banner {
@@ -135,11 +136,19 @@ p {
 #profile-image {
     max-width: 95%;
     height: auto;
+    border-radius: 4.25px;
 }
 
 // buttons
+// .cta-button {
+//     float: right;
+// }
 .btn {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-right: 16px;
     color: $white;
+    background-color: $hero-blue;
 }
 .btn:hover {
     color: $white;
