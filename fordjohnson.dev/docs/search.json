@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "Let visuals simplify your data story.",
     "section": "",
-    "text": "Let visuals simplify your data story.\n\n\nCreating compelling data visuals that transform complex information into clear, actionable insights. From dynamic dashboards to custom ad-hoc visuals and reporting templates, I deliver solutions that make it easy for audiences to understand their data, empowering informed decisions and driving impactful results.\n\n Get in touch \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.g-col-6 .g-col-md-4\n\n\n\n\n.g-col-6 .g-col-md-4\n\n\n\n\n.g-col-6 .g-col-md-4"
+    "text": "Let visuals simplify your data story.\n\n\nCreating compelling data visuals that transform complex information into clear, actionable insights. From dynamic dashboards to custom ad-hoc visuals and reporting templates, I deliver solutions that make it easy for audiences to understand their data, empowering informed decisions and driving impactful results.\n\n Get in touch \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVisualization\n\n\nUnlock the power of your data with engaging visuals and interactive dashboards that make insights clear and actionable.\n\n\n\n\nBusiness Intelligence\n\n\nDrive smarter decisions with tailored BI solutions that reveal key trends and strategic opportunities.\n\n\n\n\nEngineering & Pipelines\n\n\nStreamline your data processes with efficient pipelines and engineering solutions that ensure accuracy and reliability."
   },
   {
     "objectID": "about/index.html",
@@ -21,17 +21,31 @@
     "text": "GitHub\n  \n  \n    \n     LinkedIn\n  \n\n  \n  \n\n\nHey there, I’m Ford, a data analyst and storyteller with experience navigating the intersection of web analytics and big data. I’m skilled at untangling complex datasets to find useful insights and telling engaging stories with the data.\nBeyond the digital realm, you’ll often find me exploring the great outdoors, capturing moments through the lens of my camera, or embarking on hiking adventures.\nFeel free to explore my work on this site, where I share insights, projects, and a glimpse into my data journey."
   },
   {
-    "objectID": "gallery/index.html",
-    "href": "gallery/index.html",
-    "title": "\nGallery\n",
+    "objectID": "404/index.html",
+    "href": "404/index.html",
+    "title": "Page Not Found",
     "section": "",
-    "text": "Gallery"
+    "text": "The page you requested cannot be found (perhaps it was moved or renamed).\nYou may want to try searching to find the page’s new location."
   },
   {
     "objectID": "notes/index.html",
     "href": "notes/index.html",
     "title": "\nNotes\n",
     "section": "",
-    "text": "Notes\n\n\n\n\n\nA collection of data notes from my learning journey and mini analysis projects. These entries cover various techniques, insights, and findings to aid in understanding and experimentation.\n\n\n\n\n\n\nGeneral notes\n\nJust a placeholder category to build out my notes.\n\n\n\n\n  \n    \n      \n        Distance squared sum\n         \n        \n          \n        \n        \n        Represents the Euclidean distance between two sets of values, calculated as the square root of the sum of squared differences.\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        Matchmaking in Rocket League\n         \n        \n          \n        \n        \n        An exploration of matchmaking in competitive Rocket League, covering Root Mean Square (RMS) skill calculations, party matchmaking, and rating updates.\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\nCode\n\nJust a placeholder category to build out my notes.\n\n\n\n\n  \n    \n      \n        SQL QUALIFY\n         \n        \n          \n        \n        \n        Using the QUALIFY statement in your queries.\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\n\nNo matching items"
+    "text": "Notes\n\n\n\n\n\nA collection of data notes from my learning journey and mini analysis projects. These entries cover various techniques, insights, and findings to aid in understanding and experimentation.\n\n\n\n\n\n\nGeneral notes\n\nJust a placeholder category to build out my notes.\n\n\n\n\n  \n    \n      \n        Distance squared sum\n         \n        \n          \n        \n        \n        Represents the Euclidean distance between two sets of values, calculated as the square root of the sum of squared differences.\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        WoW Δ's + binomial test\n         \n        \n          \n        \n        \n        Finding statistical signifigance for WoW trends.\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        Matchmaking in Rocket League\n         \n        \n          \n        \n        \n        An exploration of matchmaking in competitive Rocket League, covering Root Mean Square (RMS) skill calculations, party matchmaking, and rating updates.\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\nCode\n\nJust a placeholder category to build out my notes.\n\n\n\n\n  \n    \n      \n        SQL QUALIFY\n         \n        \n          \n        \n        \n        Using the QUALIFY statement in your queries.\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "docs/404/404.html",
+    "href": "docs/404/404.html",
+    "title": "Ford Johnson",
+    "section": "",
+    "text": "Redirect"
+  },
+  {
+    "objectID": "404/404.html",
+    "href": "404/404.html",
+    "title": "Page Not Found",
+    "section": "",
+    "text": "The page you requested cannot be found (perhaps it was moved or renamed).\nYou may want to try searching to find the page’s new location."
   }
 ]

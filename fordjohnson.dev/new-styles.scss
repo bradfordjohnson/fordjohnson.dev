@@ -74,11 +74,18 @@ p {
     margin-top: 20px;
     background-color: $banner-color;
     color: $banner-text-color;
-    text-align: center;
+    text-align: left;
 }
 
 .highlight-banner p {
     padding-bottom: 0px;
+}
+
+.highlight-banner h5 {
+    color: $header-color;
+    font-size: 1.25rem;
+    font-weight: 300;
+    font-family: "Rubik", sans-serif;
 }
 
 .portfolio-banner {

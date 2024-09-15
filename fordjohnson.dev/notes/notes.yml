@@ -8,6 +8,12 @@
       code: https://github.com/bradfordjohnson/ggraincloud
       thumbnail: projects/ggraincloud.png
 
+    - title: WoW Δ's + binomial test 
+      subtitle: Finding statistical signifigance for WoW trends.
+      href: https://github.com/bradfordjohnson/ggraincloud/blob/master/README.md
+      code: https://github.com/bradfordjohnson/ggraincloud
+      thumbnail: projects/ggraincloud.png
+
     - title: Matchmaking in Rocket League
       subtitle: An exploration of matchmaking in competitive Rocket League, covering Root Mean Square (RMS) skill calculations, party matchmaking, and rating updates.
       href: https://github.com/bradfordjohnson/ggraincloud/blob/master/README.md
