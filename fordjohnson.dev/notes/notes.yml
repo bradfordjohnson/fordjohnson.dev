@@ -1,0 +1,15 @@
+- category: General notes
+  description: |
+    Just a placeholder category to build out my notes.
+  tiles:
+    - title: Distance squared sum
+      subtitle: Represents the Euclidean distance between two sets of values, calculated as the square root of the sum of squared differences.
+      href: /about/index.qmd
+      code: https://github.com/bradfordjohnson/ggraincloud
+      thumbnail: projects/ggraincloud.png
+
+    - title: Matchmaking in Rocket League
+      subtitle: An exploration of matchmaking in competitive Rocket League, covering Root Mean Square (RMS) skill calculations, party matchmaking, and rating updates.
+      href: https://github.com/bradfordjohnson/ggraincloud/blob/master/README.md
+      code: https://github.com/bradfordjohnson/ggraincloud
+      thumbnail: projects/ggraincloud.png

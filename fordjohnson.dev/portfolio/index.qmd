@@ -5,7 +5,7 @@ listing:
     template: projects.ejs
     contents: projects.yml
 description: |
-  A gallery of example documents, websites, books, and presentations created with Quarto.
+  Listing of projects.
 ---
 
 ::: {.column-page}

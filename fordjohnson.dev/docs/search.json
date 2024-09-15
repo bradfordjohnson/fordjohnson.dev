@@ -1,24 +1,10 @@
 [
   {
-    "objectID": "portfolio/index.html#captivating-visuals",
-    "href": "portfolio/index.html#captivating-visuals",
+    "objectID": "portfolio/index.html",
+    "href": "portfolio/index.html",
     "title": "\nPortfolio\n",
-    "section": "Captivating visuals",
-    "text": "Captivating visuals\nEngaging graphics with compelling narratives, crafted directly from the data.\n\n\nPackages\n\nCode packages and libraries.\n\n\n\n\n  \n    \n      \n        ggraincloud\n         \n        \n          \n        \n        \n        Raincloud plot templates for ggplot2.\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "portfolio/index.html#custom-visual-libraries-reporting-templates",
-    "href": "portfolio/index.html#custom-visual-libraries-reporting-templates",
-    "title": "\nPortfolio\n",
-    "section": "Custom visual libraries & reporting templates",
-    "text": "Custom visual libraries & reporting templates\nWhy repeat yourself? Just refresh the data with custom visual libraries and templates."
-  },
-  {
-    "objectID": "portfolio/index.html#data-driven-solutions",
-    "href": "portfolio/index.html#data-driven-solutions",
-    "title": "\nPortfolio\n",
-    "section": "Data-driven solutions",
-    "text": "Data-driven solutions\nNot just visuals—custom APIs and full-stack solutions for all your data needs. Tailored to fit both front-end and back-end requirements."
+    "section": "",
+    "text": "Portfolio\n\n\n\n\n\nElevate your data with visuals that captivate and communicate. Whether you need striking graphics, custom reporting tools, or seamless back-end solutions, discover a range of services designed to turn your data into compelling stories and functional insights.\n\n\n\n\n\n\nCaptivating visuals\n\nEngaging graphics with compelling narratives, crafted directly from the data.\n\n\n\n\n  \n    \n      \n        ggraincloud\n         \n        \n          \n        \n        \n        Raincloud plot templates for ggplot2.\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\nCustom visual & reporting templates\n\nWhy repeat yourself? Just refresh the data.\n\n\n\n\n  \n    \n      \n        ggraincloud\n         \n        \n          \n        \n        \n        Raincloud plot templates for ggplot2.\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\nData-driven solutions\n\nFront-end solutions such as dashboards, visuals, and web apps, along with back-end solutions including packages, APIs, and pipelines. All tailored to meet your data needs and fit your project requirements.\n\n\n\n\n  \n    \n      \n        ggraincloud\n         \n        \n          \n        \n        \n        Raincloud plot templates for ggplot2.\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -46,20 +32,6 @@
     "href": "notes/index.html",
     "title": "\nNotes\n",
     "section": "",
-    "text": "Notes"
-  },
-  {
-    "objectID": "portfolio/index.html#custom-visual-reporting-templates",
-    "href": "portfolio/index.html#custom-visual-reporting-templates",
-    "title": "\nPortfolio\n",
-    "section": "Custom visual & reporting templates",
-    "text": "Custom visual & reporting templates\nWhy repeat yourself? Just refresh the data."
-  },
-  {
-    "objectID": "portfolio/index.html",
-    "href": "portfolio/index.html",
-    "title": "\nPortfolio\n",
-    "section": "",
-    "text": "Portfolio\n\n\n\n\n\nElevate your data with visuals that captivate and communicate. Whether you need striking graphics, custom reporting tools, or seamless back-end solutions, discover a range of services designed to turn your data into compelling stories and functional insights.\n\n\n\n\n\n\nCaptivating visuals\n\nEngaging graphics with compelling narratives, crafted directly from the data.\n\n\n\n\n  \n    \n      \n        ggraincloud\n         \n        \n          \n        \n        \n        Raincloud plot templates for ggplot2.\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\nCustom visual & reporting templates\n\nWhy repeat yourself? Just refresh the data.\n\n\n\n\n  \n    \n      \n        ggraincloud\n         \n        \n          \n        \n        \n        Raincloud plot templates for ggplot2.\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\nData-driven solutions\n\nFront-end solutions such as dashboards, visuals, and web apps, along with back-end solutions including packages, APIs, and pipelines. All tailored to meet your data needs and fit your project requirements.\n\n\n\n\n  \n    \n      \n        ggraincloud\n         \n        \n          \n        \n        \n        Raincloud plot templates for ggplot2.\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\n\nNo matching items"
+    "text": "Notes\n\n\n\n\n\nA collection of data notes from my learning journey and mini analysis projects. These entries cover various techniques, insights, and findings to aid in understanding and experimentation.\n\n\n\n\n\n\nGeneral notes\n\nJust a placeholder category to build out my notes.\n\n\n\n\n  \n    \n      \n        Distance squared sum\n         \n        \n          \n        \n        \n        Represents the Euclidean distance between two sets of values, calculated as the square root of the sum of squared differences.\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        Matchmaking in Rocket League\n         \n        \n          \n        \n        \n        An exploration of matchmaking in competitive Rocket League, covering Root Mean Square (RMS) skill calculations, party matchmaking, and rating updates.\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\n\nNo matching items"
   }
 ]

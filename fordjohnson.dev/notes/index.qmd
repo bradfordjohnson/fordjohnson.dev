@@ -1,9 +1,30 @@
 ---
 pagetitle: Notes
+listing:
+  - id: notes
+    template: notes.ejs
+    contents: notes.yml
+description: |
+  Listing of notes.
 ---
 
 ::: {.column-page}
 
 <h1 class="title">Notes</h1>
+
+:::
+
+::: {.column-screen}
+::: {.portfolio-banner}
+::: {.column-page}
+A collection of data notes from my learning journey and mini analysis projects. These entries cover various techniques, insights, and findings to aid in understanding and experimentation.
+:::
+:::
+:::
+
+::: {.column-page}
+:::{#notes}
+
+:::
 
 :::

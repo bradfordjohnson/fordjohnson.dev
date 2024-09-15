@@ -2,11 +2,11 @@
 pagetitle: Gallery
 ---
 
-::: {.gallery-title}
+<!-- ::: {.gallery-title}
 
 <h1 class="title">Gallery</h1>
 
-:::
+::: -->
 
 ::: {.column-screen-inset}
 <div class="gallery-row">

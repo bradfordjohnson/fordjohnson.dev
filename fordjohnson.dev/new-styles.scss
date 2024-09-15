@@ -54,6 +54,7 @@ p {
     font-style: normal;
     margin-bottom: 0;
     color: $p-color;
+    padding-bottom: 10px;
 }
 
 // divs
@@ -76,6 +77,10 @@ p {
     text-align: center;
 }
 
+.highlight-banner p {
+    padding-bottom: 0px;
+}
+
 .portfolio-banner {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -86,11 +91,12 @@ p {
 
 .portfolio-banner p {
     color: $banner-text-color;
+    padding-bottom: 0px;
 }
 
-.gallery-title {
-    text-align: center;
-}
+// .gallery-title {
+//     text-align: center;
+// }
 
 .gallery-row {
     display: flex;
