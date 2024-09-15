@@ -1,0 +1,29 @@
+- category: Captivating visuals
+  description: |
+    Engaging graphics with compelling narratives, crafted directly from the data.
+  tiles:
+    - title: ggraincloud
+      subtitle: Raincloud plot templates for ggplot2.
+      href: https://github.com/bradfordjohnson/ggraincloud/blob/master/README.md
+      code: https://github.com/bradfordjohnson/ggraincloud
+      thumbnail: projects/ggraincloud.png
+
+- category: Custom visual & reporting templates
+  description: |
+    Why repeat yourself? Just refresh the data.
+  tiles:
+    - title: ggraincloud
+      subtitle: Raincloud plot templates for ggplot2.
+      href: https://github.com/bradfordjohnson/ggraincloud/blob/master/README.md
+      code: https://github.com/bradfordjohnson/ggraincloud
+      thumbnail: projects/ggraincloud.png
+
+- category: Data-driven solutions
+  description: |
+    Front-end solutions such as dashboards, visuals, and web apps, along with back-end solutions including packages, APIs, and pipelines. All tailored to meet your data needs and fit your project requirements.
+  tiles:
+    - title: ggraincloud
+      subtitle: Raincloud plot templates for ggplot2.
+      href: https://github.com/bradfordjohnson/ggraincloud/blob/master/README.md
+      code: https://github.com/bradfordjohnson/ggraincloud
+      thumbnail: projects/ggraincloud.png

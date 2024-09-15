@@ -8,6 +8,7 @@ website:
   search: false
   bread-crumbs: true
   navbar:
+    pinned: true
     right:
       - href: portfolio/index.qmd
         text: Portfolio

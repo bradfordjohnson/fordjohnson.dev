@@ -1,5 +1,11 @@
 ---
 pagetitle: Portfolio
+listing:
+  - id: projects
+    template: projects.ejs
+    contents: projects.yml
+description: |
+  A gallery of example documents, websites, books, and presentations created with Quarto.
 ---
 
 ::: {.column-page}
@@ -18,16 +24,9 @@ Elevate your data with visuals that captivate and communicate. Whether you need 
 
 ::: {.column-page}
 
-## Captivating visuals
+:::{#projects}
 
-Engaging graphics with compelling narratives, crafted directly from the data
+:::
 
-## Custom visual libraries & reporting templates
-
-Why repeat yourself? Just refresh the data with custom visual libraries and templates.
-
-## Data-driven solutions
-
-Not just visuals—custom APIs and full-stack solutions for all your data needs. Tailored to fit both front-end and back-end requirements.
 
 :::
