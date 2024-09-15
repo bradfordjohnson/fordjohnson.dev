@@ -13,3 +13,13 @@
       href: https://github.com/bradfordjohnson/ggraincloud/blob/master/README.md
       code: https://github.com/bradfordjohnson/ggraincloud
       thumbnail: projects/ggraincloud.png
+
+- category: Code
+  description: |
+    Just a placeholder category to build out my notes.
+  tiles:
+    - title: SQL QUALIFY
+      subtitle: Using the QUALIFY statement in your queries.
+      href: /about/index.qmd
+      code: https://github.com/bradfordjohnson/ggraincloud
+      thumbnail: projects/ggraincloud.png
