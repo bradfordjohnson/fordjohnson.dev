@@ -5,7 +5,8 @@ listing:
     template: notes.ejs
     contents: notes.yml
 description: |
-  Listing of notes.
+    Explore my notes on various data concepts and practical applications, offering insights and tips to enhance your understanding and execution of data-driven solutions.
+hide-description: true
 ---
 
 ::: {.column-page}

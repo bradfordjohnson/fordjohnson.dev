@@ -1,5 +1,8 @@
 ---
 pagetitle: Gallery
+description: |
+    Browse my gallery of data visuals to explore a curated collection of charts, graphs, and dashboards that bring data to life.
+hide-description: true
 ---
 
 <!-- ::: {.gallery-title}

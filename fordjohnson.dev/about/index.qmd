@@ -1,5 +1,8 @@
 ---
 pagetitle: About
+description: |
+    Learn more about Ford Johnson, his journey in data analytics, and his approach to transforming complex data into actionable insights.
+hide-description: true
 about:
   id: hero-heading
   template: trestles

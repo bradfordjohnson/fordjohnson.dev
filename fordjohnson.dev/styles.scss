@@ -1,159 +1,226 @@
 /*-- scss:defaults --*/
+$white: #fff !default;
 
-// Color system
-$white:    #fff;
-$gray-100: #f8f9fa;
-$gray-200: #e9ecef;
-$gray-300: #dee2e6;
-$gray-400: #47536b;
-$gray-500: #adb5bd;
-$gray-600: #868e96;
-$gray-700: #495057;
-$gray-800: #0b0e14;
-$gray-900: #212529;
-$black:    #000;
+$blue: #027af2 !default;
+$hero-blue: #027af2;
+$header-color: #0b0e14 !default;
+$p-color: #4c566a !default;
+$banner-color: #eceff4 !default;
+$banner-text-color: #3b4252 !default;
+$nav-footer-color: #eceff4 !default;
+$nav-footer-text-color: #2e3440 !default;
+$primary:  $blue;
+/*-- scss:rules --*/
 
-$blue:    #027af2;
-$indigo:  #6610f2;
-$purple:  #613d7c;
-$pink:    #e83e8c;
-$red:     #ff0039;
-$orange:  #f0ad4e;
-$yellow:  #ff7518;
-$green:   #3fb618;
-$teal:    #20c997;
-$cyan:    #9954bb;
-
-$primary:       $blue;
-$secondary:     $gray-800;
-$success:       $green;
-$info:          $cyan;
-$warning:       $yellow;
-$danger:        $red;
-$light:         $gray-100;
-$dark:          $gray-800;
-
-// Body
-$body-color: $gray-400;
-
-// Fonts
+// fonts
 $header-font: "https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap";
-$body-font: "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap";
+$body-font: "https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap'";
 
-// Import fonts
 @if $header-font {
-  @import url($header-font);
+    @import url($header-font);
 }
 
 @if $body-font {
-  @import url($body-font);
+    @import url($body-font);
 }
 
-// Typography
-p {
-  font-family: "Montserrat", system-ui;
-  color: $body-color;
-  -webkit-font-smoothing: antialiased;
-  margin-bottom: 0;
-}
-
-h1, .hero-heading, h2 {
-  font-family: 'Rubik', sans-serif;
-}
-
-// Global Styles
+// elements
 * {
-  font-weight: 300;
-  letter-spacing: 0.01071em;
+    font-weight: 300;
+    letter-spacing: 0.01071em;
 }
 
-// Headings
 h1 {
-  color: $dark;
-  font-size: 2.5rem;
-  font-weight: 300;
+    color: $header-color;
+    font-size: 2.5rem;
+    font-weight: 300;
+    font-family: "Rubik", sans-serif;
 }
 
 h2 {
-  border-bottom: none;
-  padding-bottom: 0;
-  margin: 10px 0;
-  color: $dark;
-  font-size: 1.5rem;
-  font-weight: 300;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: $header-color;
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: "Rubik", sans-serif;
 }
 
-// Paragraphs
 p {
-  margin-bottom: 0;
-  color: $gray-600;
+    font-family: "Hind Madurai", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    margin-bottom: 0;
+    color: $p-color;
+    padding-bottom: 10px;
 }
 
-// Hero Section
+// divs
 .hero-heading {
-  font-size: 2.5rem;
-  color: $dark;
+    font-size: 2.5rem;
+    color: #0b0e14;
 }
 
 .hero-highlight {
-  color: $primary;
+    color: $hero-blue;
 }
 
-// Banners
-.highlight-banner, .portfolio-banner {
-  padding: 20px 0;
-  margin: 20px 0;
-  background-color: $dark;
-  color: $gray-500;
-  text-align: center;
+.highlight-banner {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: $banner-color;
+    color: $banner-text-color;
+    text-align: left;
 }
 
-// Gallery
-.gallery-title {
-  text-align: center;
+.highlight-banner p {
+    padding-bottom: 0px;
+}
+
+.highlight-banner h5 {
+    color: $header-color;
+    font-size: 1.25rem;
+    font-weight: 300;
+    font-family: "Rubik", sans-serif;
+}
+
+.portfolio-banner {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: $banner-color;
+}
+
+.portfolio-banner p {
+    color: $banner-text-color;
+    padding-bottom: 0px;
+}
+
+// .card {
+//     background-color: $banner-color;
+// }
+
+.card {
+    font-family: "Hind Madurai", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    margin-bottom: 0;
+    color: $p-color;
+}
+
+// .gallery-title {
+//     text-align: center;
+// }
+
+.gallery-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
 }
 
 .gallery-row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
 }
 
 .gallery-column {
-  flex: 50%;
-  max-width: 50%;
-  padding: 16px;
+    flex: 50%;
+    max-width: 50%;
+    padding: 16px;
+}
 
-  img {
+.gallery-column img {
     margin-bottom: 32px;
     vertical-align: middle;
     width: auto;
     max-width: 100%;
     height: auto;
-  }
 }
 
 @media screen and (max-width: 800px) {
-  .gallery-column {
-    flex: 100%;
-    max-width: 100%;
-  }
+    .gallery-column {
+        flex: 100%;
+        max-width: 100%;
+    }
 }
 
 @media screen and (max-width: 600px) {
-  .gallery-column {
-    flex: 100%;
-    max-width: 100%;
-  }
+    .gallery-column {
+        flex: 100%;
+        max-width: 100%;
+    }
 }
 
-// Badge
-.badge.bg-light {
-  color: $dark;
-}
-
-// Profile Image
+// images
 #profile-image {
-  max-width: 95%;
-  height: auto;
+    max-width: 95%;
+    height: auto;
+    border-radius: 4.25px;
+}
+
+// buttons
+
+// .cta-button {
+//     float: right;
+// }
+
+.about-link-text {
+    font-family: "Rubik", sans-serif;
+    text-decoration: none;
+}
+
+.btn {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-right: 16px;
+    color: $white;
+    background-color: $hero-blue;
+}
+.btn:hover {
+    color: $white;
+}
+
+// nav
+.navbar {
+    background-color: $white;
+    
+}
+
+.nav-link, .navbar-title {
+    font-weight: 400;
+    font-family: "Rubik", sans-serif;
+    color: $header-color;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 5px;
+  
+    &:hover {
+      color: $blue;
+    }
+  
+    &.active {
+      color: $blue;
+  
+      .menu-text {
+        color: $blue;
+      }
+    }
+  }
+
+// nav-footer
+.nav-footer {
+    background-color: $nav-footer-color;
+    color: $nav-footer-text-color;
+}
+
+.nav-footer p {
+    background-color: $nav-footer-color;
+    color: $nav-footer-text-color;
 }
