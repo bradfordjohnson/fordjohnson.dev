@@ -1,31 +1,27 @@
-- category: General notes
+- category: Analytical insights & techniques
   description: |
     Just a placeholder category to build out my notes.
   tiles:
     - title: Distance squared sum
-      subtitle: Represents the Euclidean distance between two sets of values, calculated as the square root of the sum of squared differences.
+      subtitle: Finding similarity across dimensions.
       href: /about/index.qmd
-      code: https://github.com/bradfordjohnson/ggraincloud
-      thumbnail: projects/ggraincloud.png
+      thumbnail: https://placehold.co/994x557
 
     - title: WoW Δ's + binomial test 
       subtitle: Finding statistical signifigance for WoW trends.
       href: https://github.com/bradfordjohnson/ggraincloud/blob/master/README.md
-      code: https://github.com/bradfordjohnson/ggraincloud
-      thumbnail: projects/ggraincloud.png
+      thumbnail: https://placehold.co/994x557
 
     - title: Matchmaking in Rocket League
-      subtitle: An exploration of matchmaking in competitive Rocket League, covering Root Mean Square (RMS) skill calculations, party matchmaking, and rating updates.
+      subtitle: Diving into how MMR and matchmaking work.
       href: https://github.com/bradfordjohnson/ggraincloud/blob/master/README.md
-      code: https://github.com/bradfordjohnson/ggraincloud
-      thumbnail: projects/ggraincloud.png
+      thumbnail: https://placehold.co/994x557
 
 - category: Code
   description: |
-    Just a placeholder category to build out my notes.
+    A collection of neat and useful code snippets and use cases.
   tiles:
     - title: SQL QUALIFY
       subtitle: Using the QUALIFY statement in your queries.
       href: /about/index.qmd
-      code: https://github.com/bradfordjohnson/ggraincloud
-      thumbnail: projects/ggraincloud.png
+      thumbnail: https://placehold.co/994x557

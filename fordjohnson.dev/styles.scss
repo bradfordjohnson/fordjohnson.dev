@@ -10,6 +10,7 @@ $banner-text-color: #3b4252 !default;
 $nav-footer-color: #eceff4 !default;
 $nav-footer-text-color: #2e3440 !default;
 $primary:  $blue;
+$bg-light: #eceff4 !default;
 /*-- scss:rules --*/
 
 // fonts
@@ -100,10 +101,6 @@ p {
     color: $banner-text-color;
     padding-bottom: 0px;
 }
-
-// .card {
-//     background-color: $banner-color;
-// }
 
 .card {
     font-family: "Hind Madurai", sans-serif;
