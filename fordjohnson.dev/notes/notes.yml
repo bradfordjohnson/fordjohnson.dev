@@ -9,7 +9,7 @@
 
     - title: WoW Δ's + binomial test 
       subtitle: Finding statistical signifigance for WoW trends.
-      href: https://github.com/bradfordjohnson/ggraincloud/blob/master/README.md
+      href: binomial-test.html
       thumbnail: https://placehold.co/994x557
 
     - title: Matchmaking in Rocket League
