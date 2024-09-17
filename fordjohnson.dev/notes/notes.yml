@@ -15,6 +15,7 @@
     - title: Matchmaking in Rocket League
       subtitle: Diving into how MMR and matchmaking work.
       href: https://github.com/bradfordjohnson/ggraincloud/blob/master/README.md
+      code: bi-stars
       thumbnail: https://placehold.co/994x557
 
 - category: Code
