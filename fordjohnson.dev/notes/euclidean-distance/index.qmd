@@ -23,6 +23,8 @@ Measuring similarity and difference between data points is essential for analysi
 #| code-overflow: wrap
 
 owid_energy <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-06-06/owid-energy.csv')
+# get reference vector, and make tibble of vectors to compare
+# =SQRT(SUMXMY2($E$1:$H$1,E5:H5))
 ```
 
 :::

@@ -11,7 +11,7 @@
     "href": "notes/euclidean-distance/index.html",
     "title": "Euclidean Distance Between Vectors",
     "section": "",
-    "text": "Euclidean Distance Between Vectors\n\n\n\n\nMeasuring similarity and difference between data points is essential for analysis. One effective approach is Euclidean distance, which quantifies how far apart two sets of values are. By calculating the sum of the squares of differences between corresponding elements, we can easily determine which points are most similar or different, helping to reveal patterns and inform decision-making.\n\n\n\n\n\nowid_energy &lt;- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-06-06/owid-energy.csv')"
+    "text": "Euclidean Distance Between Vectors\n\n\n\n\nMeasuring similarity and difference between data points is essential for analysis. One effective approach is Euclidean distance, which quantifies how far apart two sets of values are. By calculating the sum of the squares of differences between corresponding elements, we can easily determine which points are most similar or different, helping to reveal patterns and inform decision-making.\n\n\n\n\n\nowid_energy &lt;- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-06-06/owid-energy.csv')\n# get reference vector, and make tibble of vectors to compare\n# =SQRT(SUMXMY2($E$1:$H$1,E5:H5))"
   },
   {
     "objectID": "index.html",
