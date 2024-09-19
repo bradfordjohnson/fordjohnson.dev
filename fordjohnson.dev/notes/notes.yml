@@ -7,9 +7,9 @@
       href: /about/index.qmd
       thumbnail: https://placehold.co/994x557
 
-    - title: WoW Δ's + binomial test 
-      subtitle: Finding statistical signifigance for WoW trends.
-      href: binomial-test.html
+    - title: Binomial Trend Detection
+      subtitle: Finding statistical signifigance and identifying WoW trends.
+      href: binomial-test/index.html
       thumbnail: https://placehold.co/994x557
 
     - title: Matchmaking in Rocket League

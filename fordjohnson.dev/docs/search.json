@@ -7,11 +7,18 @@
     "text": "Portfolio\n\n\n\n\n\nElevate your data with visuals that captivate and communicate. Whether you need striking graphics, custom reporting tools, or seamless back-end solutions, discover a range of services designed to turn your data into compelling stories and functional insights.\n\n\n\n\n\n\nCaptivating visuals\n\nEngaging graphics with compelling narratives, crafted directly from the data.\n\n\n\n\n  \n    \n      \n        ggraincloud\n         \n        \n          \n        \n        \n        Raincloud plot templates for ggplot2.\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\nCustom visual & reporting templates\n\nWhy repeat yourself? Just refresh the data.\n\n\n\n\n  \n    \n      \n        ggraincloud\n         \n        \n          \n        \n        \n        Raincloud plot templates for ggplot2.\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\nData-driven solutions\n\nFront-end solutions such as dashboards, visuals, and web apps, along with back-end solutions including packages, APIs, and pipelines. All tailored to meet your data needs and fit your project requirements.\n\n\n\n\n  \n    \n      \n        ggraincloud\n         \n        \n          \n        \n        \n        Raincloud plot templates for ggplot2.\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Let visuals simplify your data story.",
+    "objectID": "notes/binomial-test/index.html",
+    "href": "notes/binomial-test/index.html",
+    "title": "Trend Detection",
     "section": "",
-    "text": "Let visuals simplify your data story.\n\n\nCreating compelling data visuals that transform complex information into clear, actionable insights. From dynamic dashboards to custom ad-hoc visuals and reporting templates, I deliver solutions that make it easy for audiences to understand their data, empowering informed decisions and driving impactful results.\n\n Get in touch \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVisualization\n\n\nUnlock the power of your data with engaging visuals and interactive dashboards that make insights clear and actionable.\n\n\n\n\nBusiness Intelligence\n\n\nDrive smarter decisions with tailored BI solutions that reveal key trends and strategic opportunities.\n\n\n\n\nEngineering & Pipelines\n\n\nStreamline your data processes with efficient pipelines and engineering solutions that ensure accuracy and reliability."
+    "text": "Code\nbinom.test(12, 14, 1/2, alternative = \"greater\")\n\n\n\n    Exact binomial test\n\ndata:  12 and 14\nnumber of successes = 12, number of trials = 14, p-value = 0.00647\nalternative hypothesis: true probability of success is greater than 0.5\n95 percent confidence interval:\n 0.6146103 1.0000000\nsample estimates:\nprobability of success \n             0.8571429"
+  },
+  {
+    "objectID": "notes/binomial-test/index.html#a-binomial-approach",
+    "href": "notes/binomial-test/index.html#a-binomial-approach",
+    "title": "Trend Detection",
+    "section": "A Binomial Approach",
+    "text": "A Binomial Approach\nAn alternative method to detect trends more robustly is a binomial trend detection approach, which uses a week-over-week (WoW) comparison. This method works as follows:\n\nCalculate WoW Deltas\nCompute the week-over-week changes (deltas) for the metric of interest. This involves determining whether the metric has increased or decreased each day.\n\n\nRolling 2-Week Window\nFor each day, consider the previous 14-day period (2 weeks) as a rolling timeframe for analysis. This helps smooth out short-term variations while being responsive to recent changes.\n\n\nCounting Positive and Negative Days\nWithin the 14-day window, count the number of days where the WoW delta is positive and the number of days where it is negative. This provides insight into the recent performance pattern.\n\n\nBinomial Distribution\nAssume that each day has an equal 50% chance of having either a positive or negative WoW delta. Under this assumption, the 14-day window is treated as 14 independent trials, each with a 50% probability of being positive or negative.\n\n\nTrend Threshold\nSet a threshold to identify significant trends: for example, if 12 or more out of the 14 days show a consistent direction (either positive or negative), it is deemed statistically significant according to the binomial distribution."
   },
   {
     "objectID": "about/index.html",
@@ -21,38 +28,17 @@
     "text": "GitHub\n  \n  \n    \n     LinkedIn\n  \n\n  \n  \n\n\nHey there, I’m Ford, a data analyst and storyteller with experience navigating the intersection of web analytics and big data. I’m skilled at untangling complex datasets to find useful insights and telling engaging stories with the data.\nBeyond the digital realm, you’ll often find me exploring the great outdoors, capturing moments through the lens of my camera, or embarking on hiking adventures.\nFeel free to explore my work on this site, where I share insights, projects, and a glimpse into my data journey."
   },
   {
-    "objectID": "404/index.html",
-    "href": "404/index.html",
-    "title": "Page Not Found",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Let visuals simplify your data story.",
     "section": "",
-    "text": "The page you requested cannot be found (perhaps it was moved or renamed).\nYou may want to try searching to find the page’s new location."
+    "text": "Let visuals simplify your data story.\n\n\nCreating compelling data visuals that transform complex information into clear, actionable insights. From dynamic dashboards to custom ad-hoc visuals and reporting templates, I deliver solutions that make it easy for audiences to understand their data, empowering informed decisions and driving impactful results.\n\n Get in touch \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVisualization\n\n\nUnlock the power of your data with engaging visuals and interactive dashboards that make insights clear and actionable.\n\n\n\n\nBusiness Intelligence\n\n\nDrive smarter decisions with tailored BI solutions that reveal key trends and strategic opportunities.\n\n\n\n\nEngineering & Pipelines\n\n\nStreamline your data processes with efficient pipelines and engineering solutions that ensure accuracy and reliability."
   },
   {
     "objectID": "notes/index.html",
     "href": "notes/index.html",
     "title": "\nNotes\n",
     "section": "",
-    "text": "Notes\n\n\n\n\n\nA collection of data notes from my learning journey and mini analysis projects. These entries cover various techniques, insights, and findings to aid in understanding and experimentation.\n\n\n\n\n\n\nAnalytical insights & techniques\n\nJust a placeholder category to build out my notes.\n\n\n\n\n  \n    \n      \n        Distance squared sum\n        \n        Finding similarity across dimensions.\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        WoW Δ's + binomial test\n        \n        Finding statistical signifigance for WoW trends.\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        Matchmaking in Rocket League\n         \n        \n          \n        \n        \n        Diving into how MMR and matchmaking work.\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\nCode\n\nA collection of neat and useful code snippets and use cases.\n\n\n\n\n  \n    \n      \n        SQL QUALIFY\n        \n        Using the QUALIFY statement in your queries.\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "docs/404/404.html",
-    "href": "docs/404/404.html",
-    "title": "Ford Johnson",
-    "section": "",
-    "text": "Redirect"
-  },
-  {
-    "objectID": "404/404.html",
-    "href": "404/404.html",
-    "title": "Page Not Found",
-    "section": "",
-    "text": "The page you requested cannot be found (perhaps it was moved or renamed).\nYou may want to try searching to find the page’s new location."
-  },
-  {
-    "objectID": "notes/binomial-test.html",
-    "href": "notes/binomial-test.html",
-    "title": "Ford Johnson",
-    "section": "",
-    "text": "binom.test(13, 14, 1/2, alternative = \"greater\")\n\n\n    Exact binomial test\n\ndata:  13 and 14\nnumber of successes = 13, number of trials = 14, p-value = 0.0009155\nalternative hypothesis: true probability of success is greater than 0.5\n95 percent confidence interval:\n 0.7032658 1.0000000\nsample estimates:\nprobability of success \n             0.9285714 \n\n\n\nlibrary(ggplot2)\nlibrary(showtext)\n\nLoading required package: sysfonts\n\n\nLoading required package: showtextdb\n\nlibrary(ggtext)\n\nWarning: package 'ggtext' was built under R version 4.4.1\n\nshowtext_auto()\nshowtext_opts(dpi = 300)\n\nfont_add_google(name = \"Roboto\", family = \"Roboto\")\nfont_1 &lt;- \"Roboto\"\n\nn &lt;- 14 \np &lt;- 1/2  \nx_obs &lt;- 12  \n\nbinom_test &lt;- binom.test(x_obs, n, p, alternative = \"greater\")\n\np_value &lt;- binom_test$p.value\nconf_int &lt;- binom_test$conf.int\n\np_ge_x_obs &lt;- sum(dbinom(x_obs:n, size = n, prob = p))\n\ndata &lt;- data.frame(\n  x = 0:n,\n  probability = dbinom(0:n, size = n, prob = p),\n  color = ifelse(0:n &gt;= x_obs, \"#C0392B\", \"#30394F\")  \n)\n\nggplot(data, aes(x = x, y = probability, fill = color)) +\n  geom_bar(stat = \"identity\", alpha = 0.7) +\n  scale_fill_identity() +  \n  scale_x_continuous(breaks = 0:n) +  \n  labs(\n    title = \"Binomial Distribution (n = 14, p = 0.5)\",\n    x = \"Number of Successes\",\n    y = \"Probability\"\n  ) +\n  theme_minimal() +\n  theme(\n    panel.grid.major.x = element_blank(),\n    panel.grid.minor.x = element_blank(),\n    plot.margin = margin(10, 10, 10, 10),\n    axis.text = element_text(family = font_1, size = 9),\n    axis.title = element_text(family = font_1, size = 9),\n    axis.title.x = element_text(margin = margin(5, 0, 0, 0, 'mm')),\n    axis.title.y = element_text(margin = margin(0, 5, 0, 0, 'mm')),\n    plot.title = element_text(family = font_1, size = 12),\n  ) +\n  annotate(\n    geom = 'richtext',\n    x = n,\n    y = max(data$probability) * 0.9,\n    label = paste0(\n      \"&lt;span style='color:#C0392B; font-size:9pt;font-family:Roboto;'&gt;\",\n      \"Successes = \", x_obs, \"&lt;br&gt;\",\n      \"P(X ≥ \", x_obs, \") = \", round(p_ge_x_obs, 4), \"&lt;br&gt;\",\n      \"95% CI = [\", round(conf_int[1], 4), \", \", round(conf_int[2], 4), \"]&lt;/span&gt;\"\n    ),\n    hjust = 1, fill = NA, label.color = NA\n)"
+    "text": "Notes\n\n\n\n\n\nA collection of data notes from my learning journey and mini analysis projects. These entries cover various techniques, insights, and findings to aid in understanding and experimentation.\n\n\n\n\n\n\nAnalytical insights & techniques\n\nJust a placeholder category to build out my notes.\n\n\n\n\n  \n    \n      \n        Distance squared sum\n        \n        Finding similarity across dimensions.\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        Binomial Trend Detection\n        \n        Finding statistical signifigance and identifying WoW trends.\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        Matchmaking in Rocket League\n         \n        \n          \n        \n        \n        Diving into how MMR and matchmaking work.\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\nCode\n\nA collection of neat and useful code snippets and use cases.\n\n\n\n\n  \n    \n      \n        SQL QUALIFY\n        \n        Using the QUALIFY statement in your queries.\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\n\nNo matching items"
   }
 ]
