@@ -1,0 +1,28 @@
+---
+pagetitle: Euclidean Distance Between Vectors
+# execute: 
+#   freeze: auto
+---
+
+::: column-page
+# Euclidean Distance Between Vectors
+:::
+
+::::: column-screen
+:::: portfolio-banner
+::: column-page
+Measuring similarity and difference between data points is essential for analysis. One effective approach is **Euclidean distance**, which quantifies how far apart two sets of values are. By calculating the sum of the squares of differences between corresponding elements, we can easily determine which points are most similar or different, helping to reveal patterns and inform decision-making.
+:::
+::::
+:::::
+
+::: {.column-page .binom}
+
+```{r}
+#| eval: false
+#| code-overflow: wrap
+
+owid_energy <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-06-06/owid-energy.csv')
+```
+
+:::

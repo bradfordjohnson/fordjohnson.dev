@@ -2,9 +2,9 @@
   description: |
     Just a placeholder category to build out my notes.
   tiles:
-    - title: Distance squared sum
-      subtitle: Finding similarity across dimensions.
-      href: /about/index.qmd
+    - title: Euclidean distance
+      subtitle: Identifying similarity between a fixed reference and list of vectors.
+      href: euclidean-distance/index.html
       thumbnail: https://placehold.co/994x557
 
     - title: Binomial trend detection

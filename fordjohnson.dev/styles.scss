@@ -7,6 +7,7 @@ $header-color: #0b0e14 !default;
 $p-color: #4c566a !default;
 $banner-color: #eceff4 !default;
 $banner-text-color: #3b4252 !default;
+$navbar-bg: #0b0e14;
 $nav-footer-color: #eceff4 !default;
 $nav-footer-text-color: #2e3440 !default;
 $primary:  $blue;
@@ -219,6 +220,10 @@ p {
     background-color: $white;
     
 }
+
+// .navbar-toggler-icon {
+//     color: $header-color;
+// }
 
 .nav-link, .navbar-title {
     font-weight: 400;
