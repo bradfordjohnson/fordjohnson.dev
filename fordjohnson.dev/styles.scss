@@ -122,13 +122,23 @@ p {
     color: $p-color;
 }
 
-.binom p,li {
+.binom p,li,td,th {
     font-family: "Hind Madurai", sans-serif;
     font-weight: 300;
     font-style: normal;
     margin-bottom: 0;
     color: $header-color;
     padding-bottom: 10px;
+}
+.binom th {
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    font-style: normal;
+    margin-bottom: 0;
+    color: $header-color;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 // .gallery-title {

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Binomial Test – Ford Johnson</title>
+<title>Binomial Trend Detection – Ford Johnson</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -85,8 +85,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<meta property="og:title" content="Binomial Test">
-<meta property="og:description" content="">
+<meta property="og:title" content="Binomial Trend Detection">
 <meta property="og:site_name" content="Ford Johnson">
 </head>
 
@@ -150,8 +149,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="trend-detection" class="level1 column-page">
-<h1>Trend Detection</h1>
+<section id="binomial-trend-detection" class="level1 column-page">
+<h1>Binomial Trend Detection</h1>
 </section>
 <div class="column-screen page-columns page-full">
 <div class="portfolio-banner page-columns page-full">
@@ -162,30 +161,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<section id="a-binomial-approach" class="level2 column-page binom">
-<h2 data-anchor-id="a-binomial-approach">A Binomial Approach</h2>
-<p>An alternative method to detect trends more robustly is a <strong>binomial trend detection approach</strong>, which uses a week-over-week (WoW) comparison. This method works as follows:</p>
-<section id="calculate-wow-deltas" class="level3">
-<h3 data-anchor-id="calculate-wow-deltas">Calculate WoW Deltas</h3>
-<p>Compute the week-over-week changes (deltas) for the metric of interest. This involves determining whether the metric has increased or decreased each day.</p>
-</section>
-<section id="rolling-2-week-window" class="level3">
-<h3 data-anchor-id="rolling-2-week-window">Rolling 2-Week Window</h3>
-<p>For each day, consider the previous 14-day period (2 weeks) as a rolling timeframe for analysis. This helps smooth out short-term variations while being responsive to recent changes.</p>
-</section>
-<section id="counting-positive-and-negative-days" class="level3">
-<h3 data-anchor-id="counting-positive-and-negative-days">Counting Positive and Negative Days</h3>
-<p>Within the 14-day window, count the number of days where the WoW delta is positive and the number of days where it is negative. This provides insight into the recent performance pattern.</p>
-</section>
-<section id="binomial-distribution" class="level3">
-<h3 data-anchor-id="binomial-distribution">Binomial Distribution</h3>
-<p>Assume that each day has an equal 50% chance of having either a positive or negative WoW delta. Under this assumption, the 14-day window is treated as 14 independent trials, each with a 50% probability of being positive or negative.</p>
-</section>
-<section id="trend-threshold" class="level3">
-<h3 data-anchor-id="trend-threshold">Trend Threshold</h3>
-<p>Set a threshold to identify significant trends: for example, if 12 or more out of the 14 days show a consistent direction (either positive or negative), it is deemed statistically significant according to the binomial distribution.</p>
-</section>
-</section>
+<div class="column-page binom">
+<p>An alternative method to detect trends more robustly is a <strong>binomial trend detection approach</strong>, which uses a week-over-week (WoW) comparison. This is how the method can be implemented:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Step</strong></th>
+<th><strong>Details</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Calculate WoW Deltas</strong></td>
+<td>Compute the week-over-week changes (deltas) for the metric of interest. This involves determining whether the metric has increased or decreased each day.</td>
+</tr>
+<tr class="even">
+<td><strong>Rolling 2-Week Window</strong></td>
+<td>For each day, consider the previous 14-day period (2 weeks) as a rolling timeframe for analysis. This helps smooth out short-term variations while being responsive to recent changes.</td>
+</tr>
+<tr class="odd">
+<td><strong>Counting Positive and Negative Days</strong></td>
+<td>Within the 14-day window, count the number of days where the WoW delta is positive and the number of days where it is negative. This provides insight into the recent performance pattern.</td>
+</tr>
+<tr class="even">
+<td><strong>Binomial Distribution</strong></td>
+<td>Assume that each day has an equal 50% chance of having either a positive or negative WoW delta. Under this assumption, the 14-day window is treated as 14 independent trials, each with a 50% probability of being positive or negative.</td>
+</tr>
+<tr class="odd">
+<td><strong>Trend Threshold</strong></td>
+<td>Set a threshold to identify significant trends: for example, if 12 or more out of the 14 days show a consistent direction (either positive or negative), it is deemed statistically significant according to the binomial distribution.</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="cell column-page">
 <details class="code-fold">
 <summary>Code</summary>

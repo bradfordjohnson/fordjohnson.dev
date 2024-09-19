@@ -1,50 +1,35 @@
 ---
-pagetitle: Binomial Test
+pagetitle: Binomial Trend Detection
 # execute: 
 #   freeze: auto
 ---
 
-::: {.column-page}
-# Trend Detection
+::: column-page
+# Binomial Trend Detection
 :::
 
-::: {.column-screen}
-:::{.portfolio-banner}
-::: {.column-page}
+::::: column-screen
+:::: portfolio-banner
+::: column-page
 One common approach to highlighting trends and detecting anomalies is **rolling average benchmarking**. This method involves comparing each new data point to the average of a specified number of preceding values. By smoothing out short-term fluctuations, it becomes easier to identify deviations that may indicate a potential trend shift or anomaly.
 
 <br>
 
 However, this method has some limitations. It is sensitive to the chosen window size, can introduce lag, and may struggle to account for seasonality or sudden changes in the data.
 :::
-:::
-:::
+::::
+:::::
 
 ::: {.column-page .binom}
-## A Binomial Approach
+An alternative method to detect trends more robustly is a **binomial trend detection approach**, which uses a week-over-week (WoW) comparison. This is how the method can be implemented:
 
-An alternative method to detect trends more robustly is a **binomial trend detection approach**, which uses a week-over-week (WoW) comparison. This method works as follows:
-
-### Calculate WoW Deltas
-
-Compute the week-over-week changes (deltas) for the metric of interest. This involves determining whether the metric has increased or decreased each day.
-
-### Rolling 2-Week Window
-
-For each day, consider the previous 14-day period (2 weeks) as a rolling timeframe for analysis. This helps smooth out short-term variations while being responsive to recent changes.
-
-### Counting Positive and Negative Days
-
-Within the 14-day window, count the number of days where the WoW delta is positive and the number of days where it is negative. This provides insight into the recent performance pattern.
-
-### Binomial Distribution
-
-Assume that each day has an equal 50% chance of having either a positive or negative WoW delta. Under this assumption, the 14-day window is treated as 14 independent trials, each with a 50% probability of being positive or negative.
-
-### Trend Threshold
-
-Set a threshold to identify significant trends: for example, if 12 or more out of the 14 days show a consistent direction (either positive or negative), it is deemed statistically significant according to the binomial distribution.
-
+| **Step** | **Details** |
+|----|----|
+| **Calculate WoW Deltas** | Compute the week-over-week changes (deltas) for the metric of interest. This involves determining whether the metric has increased or decreased each day. |
+| **Rolling 2-Week Window** | For each day, consider the previous 14-day period (2 weeks) as a rolling timeframe for analysis. This helps smooth out short-term variations while being responsive to recent changes. |
+| **Counting Positive and Negative Days** | Within the 14-day window, count the number of days where the WoW delta is positive and the number of days where it is negative. This provides insight into the recent performance pattern. |
+| **Binomial Distribution** | Assume that each day has an equal 50% chance of having either a positive or negative WoW delta. Under this assumption, the 14-day window is treated as 14 independent trials, each with a 50% probability of being positive or negative. |
+| **Trend Threshold** | Set a threshold to identify significant trends: for example, if 12 or more out of the 14 days show a consistent direction (either positive or negative), it is deemed statistically significant according to the binomial distribution. |
 :::
 
 ```{r, binom-test}
@@ -55,11 +40,9 @@ binom.test(12, 14, 1/2, alternative = "greater")
 
 ::: {.column-page .binom}
 This threshold helps ensure that the observed trend is not due to random fluctuations, but rather indicates a consistent pattern.
-
 :::
 
 <br>
-
 
 ```{r, binom-visual}
 #| warning: false
@@ -124,7 +107,6 @@ ggplot(data, aes(x = x, y = probability, fill = color)) +
     hjust = 1, fill = NA, label.color = NA
   )
 ```
-
 
 ::: {.column-page .binom}
 This binomial approach balances longer rolling windows, reduces sensitivity to day-of-week variations, and adjusts to recent trends more effectively than simple rolling averages.

@@ -9,7 +9,7 @@
 
     - title: Binomial Trend Detection
       subtitle: Finding statistical signifigance and identifying WoW trends.
-      href: binomial-test/index.html
+      href: binomial-trend-detection/index.html
       thumbnail: https://placehold.co/994x557
 
     - title: Matchmaking in Rocket League
