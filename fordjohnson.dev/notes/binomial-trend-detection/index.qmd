@@ -42,12 +42,12 @@ binom.test(12, 14, 1/2, alternative = "greater")
 This threshold helps ensure that the observed trend is not due to random fluctuations, but rather indicates a consistent pattern.
 :::
 
-<br>
 
 ```{r, binom-visual}
-#| warning: false
 #| column: page
 #| echo: false
+#| warning: false
+
 library(ggplot2)
 library(showtext)
 library(ggtext)

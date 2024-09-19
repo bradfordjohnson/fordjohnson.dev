@@ -7,10 +7,10 @@
       href: /about/index.qmd
       thumbnail: https://placehold.co/994x557
 
-    - title: Binomial Trend Detection
+    - title: Binomial trend detection
       subtitle: Finding statistical signifigance and identifying WoW trends.
       href: binomial-trend-detection/index.html
-      thumbnail: https://placehold.co/994x557
+      thumbnail: binomial-trend-detection/index_files/figure-html/binom-visual-1.png
 
     - title: Matchmaking in Rocket League
       subtitle: Diving into how MMR and matchmaking work.
