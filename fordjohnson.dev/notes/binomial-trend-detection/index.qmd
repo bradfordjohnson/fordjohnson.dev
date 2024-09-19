@@ -1,7 +1,7 @@
 ---
 pagetitle: Binomial Trend Detection
-# execute: 
-#   freeze: auto
+execute: 
+  freeze: auto
 ---
 
 ::: column-page
