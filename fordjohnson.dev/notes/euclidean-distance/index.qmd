@@ -1,5 +1,7 @@
 ---
 pagetitle: Euclidean Distance Between Vectors
+description: |
+  Discover the concept of Euclidean distance, a fundamental metric used in various fields to measure the straight-line distance between points in space. This page covers its mathematical formulation, applications in data analysis, and examples to illustrate its use in clustering and dimensionality reduction.
 # execute: 
 #   freeze: auto
 ---

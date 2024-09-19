@@ -1,5 +1,7 @@
 ---
 pagetitle: Binomial Trend Detection
+description: |
+  Explore a robust method for trend detection using binomial analysis, focusing on week-over-week comparisons to identify significant patterns in data.
 execute: 
   freeze: auto
 ---
@@ -33,7 +35,7 @@ An alternative method to detect trends more robustly is a **binomial trend detec
 :::
 
 ```{r, binom-test}
-#| code-fold: true
+#| code-fold: show
 #| column: page
 binom.test(12, 14, 1/2, alternative = "greater")
 ```
