@@ -20,13 +20,49 @@ Measuring similarity and difference between data points is essential for analysi
 
 ::: {.column-page .binom}
 
+```{r, sum-squared-differences-across-all-years}
+#| eval: false
+#| code-overflow: wrap
+
+library(tidyverse)
+
+owid_energy <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-06-06/owid-energy.csv')
+
+countries <- c(
+  "CAN", "MEX", "BLZ", "CRI", "SLV", "GTM", "HND",
+  "NIC", "PAN", "BHS", "BRB", "CUB", "DOM", "HTI",
+  "JAM", "TTO","ALB", "AND", "ARM", "AUT", "AZE",
+  "BLR", "BEL", "BIH", "BGR", "HRV", "CYP", "CZE",
+  "DNK", "EST", "FIN", "FRA", "GEO", "USA", "GRC",
+  "HUN", "ISL", "IRL", "ITA", "KAZ", "LVA", "LIE",
+  "LTU", "LUX", "MLT", "MDA", "MCO", "MNE", "NLD",
+  "MKD", "NOR", "POL", "PRT", "ROU", "RUS", "SMR",
+  "SRB", "SVK", "SVN", "ESP", "SWE", "CHE", "UKR",
+  "GBR", "VAT"
+)
+
+electricity_generation <- owid_energy %>%
+  select(country, iso_code, year, electricity_generation) %>%
+  filter(year > 2000 & iso_code %in% countries)
+
+target_country <- "DEU" # Germany's 3 letter ISO country code
+
+target_country_generation <- owid_energy %>%
+  filter(year > 2000 & iso_code == target_country) %>%
+  select(year, electricity_generation) %>%
+  rename(target_generation = electricity_generation)
+
+countries_with_similarity_score <- electricity_generation %>%
+  left_join(target_country_generation, by = "year") %>%
+  group_by(country, iso_code) %>%
+  summarize(similarity_score = sqrt(sum((electricity_generation - target_generation)^2, na.rm = TRUE))) %>%
+  arrange(similarity_score)
+```
+
 ```{r}
 #| eval: false
 #| code-overflow: wrap
 
-owid_energy <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-06-06/owid-energy.csv')
-# get reference vector, and make tibble of vectors to compare
-# =SQRT(SUMXMY2($E$1:$H$1,E5:H5))
 ```
 
 :::

@@ -163,9 +163,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="column-page binom">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-overflow-wrap code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>owid_energy <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-06-06/owid-energy.csv'</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># get reference vector, and make tibble of vectors to compare</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># =SQRT(SUMXMY2($E$1:$H$1,E5:H5))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-overflow-wrap code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>owid_energy <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-06-06/owid-energy.csv'</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>countries <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"CAN"</span>, <span class="st">"MEX"</span>, <span class="st">"BLZ"</span>, <span class="st">"CRI"</span>, <span class="st">"SLV"</span>, <span class="st">"GTM"</span>, <span class="st">"HND"</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"NIC"</span>, <span class="st">"PAN"</span>, <span class="st">"BHS"</span>, <span class="st">"BRB"</span>, <span class="st">"CUB"</span>, <span class="st">"DOM"</span>, <span class="st">"HTI"</span>,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"JAM"</span>, <span class="st">"TTO"</span>,<span class="st">"ALB"</span>, <span class="st">"AND"</span>, <span class="st">"ARM"</span>, <span class="st">"AUT"</span>, <span class="st">"AZE"</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">"BLR"</span>, <span class="st">"BEL"</span>, <span class="st">"BIH"</span>, <span class="st">"BGR"</span>, <span class="st">"HRV"</span>, <span class="st">"CYP"</span>, <span class="st">"CZE"</span>,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">"DNK"</span>, <span class="st">"EST"</span>, <span class="st">"FIN"</span>, <span class="st">"FRA"</span>, <span class="st">"GEO"</span>, <span class="st">"USA"</span>, <span class="st">"GRC"</span>,</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">"HUN"</span>, <span class="st">"ISL"</span>, <span class="st">"IRL"</span>, <span class="st">"ITA"</span>, <span class="st">"KAZ"</span>, <span class="st">"LVA"</span>, <span class="st">"LIE"</span>,</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"LTU"</span>, <span class="st">"LUX"</span>, <span class="st">"MLT"</span>, <span class="st">"MDA"</span>, <span class="st">"MCO"</span>, <span class="st">"MNE"</span>, <span class="st">"NLD"</span>,</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="st">"MKD"</span>, <span class="st">"NOR"</span>, <span class="st">"POL"</span>, <span class="st">"PRT"</span>, <span class="st">"ROU"</span>, <span class="st">"RUS"</span>, <span class="st">"SMR"</span>,</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="st">"SRB"</span>, <span class="st">"SVK"</span>, <span class="st">"SVN"</span>, <span class="st">"ESP"</span>, <span class="st">"SWE"</span>, <span class="st">"CHE"</span>, <span class="st">"UKR"</span>,</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="st">"GBR"</span>, <span class="st">"VAT"</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>electricity_generation <span class="ot">&lt;-</span> owid_energy <span class="sc">%&gt;%</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(country, iso_code, year, electricity_generation) <span class="sc">%&gt;%</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">&gt;</span> <span class="dv">2000</span> <span class="sc">&amp;</span> iso_code <span class="sc">%in%</span> countries)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>target_country <span class="ot">&lt;-</span> <span class="st">"DEU"</span> <span class="co"># Germany's 3 letter ISO country code</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>target_country_generation <span class="ot">&lt;-</span> owid_energy <span class="sc">%&gt;%</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">&gt;</span> <span class="dv">2000</span> <span class="sc">&amp;</span> iso_code <span class="sc">==</span> target_country) <span class="sc">%&gt;%</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(year, electricity_generation) <span class="sc">%&gt;%</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">target_generation =</span> electricity_generation)</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>countries_with_similarity_score <span class="ot">&lt;-</span> electricity_generation <span class="sc">%&gt;%</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(target_country_generation, <span class="at">by =</span> <span class="st">"year"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(country, iso_code) <span class="sc">%&gt;%</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">similarity_score =</span> <span class="fu">sqrt</span>(<span class="fu">sum</span>((electricity_generation <span class="sc">-</span> target_generation)<span class="sc">^</span><span class="dv">2</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(similarity_score)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 
