@@ -162,7 +162,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="column-page binom">
+<p>In <a href="https://github.com/rfordatascience/tidytuesday/tree/master/data/2023/2023-06-06">TidyTuesday’s</a> 06/06/2023 dataset, which featured various energy metrics by country and year, we can use Euclidean distance to find the countries most similar (or different) to a target country for a given metric, such as electricity generation.</p>
+<p>This method allows us to compare a target country’s electricity generation to others and compute a similarity score that quantifies how closely each country aligns with the target.</p>
+<section id="why-might-you-want-to-know-which-countries-are-similar" class="level3">
+<h3 data-anchor-id="why-might-you-want-to-know-which-countries-are-similar">Why might you want to know which countries are similar?</h3>
+<p>This type of analysis serves as a baseline to identify the impact of changes over time. For example, in a business context, this could involve comparing KPIs across market subsets to assess the effectiveness of a targeted marketing campaign. If one subset shows a significant change, we can check if others experienced a similar trend.</p>
+<p>For this example, I’m interested in Germany’s electricity generation. Using Euclidean distance, I’ll compare electricity generation across all countries and find the five most similar and five most different from Germany. A lower Euclidean distance means a country is more similar to Germany, while a higher score indicates greater dissimilarity.</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-overflow-wrap code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>owid_energy <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-06-06/owid-energy.csv'</span>)</span>
@@ -187,15 +195,120 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>target_country <span class="ot">&lt;-</span> <span class="st">"DEU"</span> <span class="co"># Germany's 3 letter ISO country code</span></span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>target_country_generation <span class="ot">&lt;-</span> owid_energy <span class="sc">%&gt;%</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">&gt;</span> <span class="dv">2000</span> <span class="sc">&amp;</span> iso_code <span class="sc">==</span> target_country) <span class="sc">%&gt;%</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">&gt;</span> <span class="dv">2000</span> <span class="sc">&amp;</span> year <span class="sc">&lt;</span> <span class="dv">2021</span> <span class="sc">&amp;</span> iso_code <span class="sc">==</span> target_country) <span class="sc">%&gt;%</span></span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(year, electricity_generation) <span class="sc">%&gt;%</span></span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">target_generation =</span> electricity_generation)</span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>countries_with_similarity_score <span class="ot">&lt;-</span> electricity_generation <span class="sc">%&gt;%</span></span>
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(target_country_generation, <span class="at">by =</span> <span class="st">"year"</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(country, iso_code) <span class="sc">%&gt;%</span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">similarity_score =</span> <span class="fu">sqrt</span>(<span class="fu">sum</span>((electricity_generation <span class="sc">-</span> target_generation)<span class="sc">^</span><span class="dv">2</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))) <span class="sc">%&gt;%</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(similarity_score)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">euclidean_distance =</span> <span class="fu">sqrt</span>(<span class="fu">sum</span>((electricity_generation <span class="sc">-</span> target_generation)<span class="sc">^</span><span class="dv">2</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(euclidean_distance)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 3
+# Groups:   country [6]
+  country        iso_code euclidean_distance
+  &lt;chr&gt;          &lt;chr&gt;                 &lt;dbl&gt;
+1 Canada         CAN                    101.
+2 France         FRA                    253.
+3 United Kingdom GBR                   1141.
+4 Italy          ITA                   1454.
+5 Spain          ESP                   1513.
+6 Mexico         MEX                   1571.</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 3
+# Groups:   country [6]
+  country       iso_code euclidean_distance
+  &lt;chr&gt;         &lt;chr&gt;                 &lt;dbl&gt;
+1 Malta         MLT                   2744.
+2 Bahamas       BHS                   2745.
+3 Barbados      BRB                   2749.
+4 Haiti         HTI                   2750.
+5 Belize        BLZ                   2751.
+6 United States USA                  15297.</code></pre>
+</div>
+</div>
+<div class="column-page binom">
+<p>The tables above show the countries most and least similar to Germany in terms of electricity generation trends. The most similar countries include Canada, France, and the United Kingdom, while the least similar countries range from Malta and the Bahamas to the United States.</p>
+<p>In a business context, this type of analysis can help establish a baseline for performance across similar markets. For instance, if you introduce a new policy or product in Germany, you could track Germany’s performance over time and compare it to the performance of these similar countries, both before and after the change. This would allow you to assess the effectiveness of the change and identify whether it led to any measurable impact that’s unique to Germany, or if similar trends occurred in comparable markets.</p>
+<p>Now, let’s look at the visuals. The first chart compares Germany’s electricity generation trends with its most similar countries, and the second chart contrasts these trends with countries that are less similar. This setup could be applied similarly in a business setting, helping to monitor the effect of any strategic changes.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-overflow-wrap code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>similar_plot <span class="ot">&lt;-</span> owid_energy <span class="sc">%&gt;%</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">&gt;</span> <span class="dv">2000</span> <span class="sc">&amp;</span> year <span class="sc">&lt;</span> <span class="dv">2021</span> <span class="sc">&amp;</span> iso_code <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"DEU"</span>, <span class="st">"FRA"</span>, <span class="st">"CAN"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">is_color =</span> <span class="fu">case_when</span>(</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>      iso_code <span class="sc">==</span> <span class="st">'DEU'</span> <span class="sc">~</span> <span class="cn">TRUE</span>,</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>      iso_code <span class="sc">==</span> <span class="st">'FRA'</span> <span class="sc">~</span> <span class="cn">TRUE</span>,</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>      iso_code <span class="sc">==</span> <span class="st">'CAN'</span> <span class="sc">~</span> <span class="cn">TRUE</span>,</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">FALSE</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="fu">case_when</span>(</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>      iso_code <span class="sc">==</span> <span class="st">'DEU'</span> <span class="sc">~</span> <span class="st">'#5e81ac'</span>,</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>      iso_code <span class="sc">==</span> <span class="st">'FRA'</span> <span class="sc">~</span> <span class="st">'#d08770'</span>,</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>      iso_code <span class="sc">==</span> <span class="st">'CAN'</span> <span class="sc">~</span> <span class="st">'#b48ead'</span>,</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">'#e5e9f0'</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    )) <span class="sc">%&gt;%</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> electricity_generation, <span class="at">group =</span> country, <span class="at">color =</span> color)) <span class="sc">+</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_identity</span>(<span class="at">guide =</span> <span class="st">"legend"</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Germany"</span>, <span class="st">"France"</span>, <span class="st">"Canada"</span>)) <span class="sc">+</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</div>
+<div class="cell page-columns page-full">
+<div class="cell-output-display page-columns page-full">
+<div class="page-columns page-full">
+<figure class="figure page-columns page-full">
+<p class="page-columns page-full"><img src="index_files/figure-html/similiar-countries-plot-2-1.png" class="img-fluid figure-img column-page" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="column-page binom">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-overflow-wrap code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>similar_higlighted_plot <span class="ot">&lt;-</span> owid_energy <span class="sc">%&gt;%</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(iso_code <span class="sc">%in%</span> countries <span class="sc">|</span> iso_code <span class="sc">==</span> <span class="st">'DEU'</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">&gt;</span> <span class="dv">2000</span> <span class="sc">&amp;</span> year <span class="sc">&lt;</span> <span class="dv">2021</span> <span class="sc">&amp;</span> iso_code <span class="sc">!=</span> <span class="st">'USA'</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">is_color =</span> <span class="fu">case_when</span>(</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>      iso_code <span class="sc">==</span> <span class="st">'DEU'</span> <span class="sc">~</span> <span class="cn">TRUE</span>,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>      iso_code <span class="sc">==</span> <span class="st">'FRA'</span> <span class="sc">~</span> <span class="cn">TRUE</span>,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>      iso_code <span class="sc">==</span> <span class="st">'CAN'</span> <span class="sc">~</span> <span class="cn">TRUE</span>,</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">FALSE</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="fu">case_when</span>(</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>      iso_code <span class="sc">==</span> <span class="st">'DEU'</span> <span class="sc">~</span> <span class="st">'#5e81ac'</span>,</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>      iso_code <span class="sc">==</span> <span class="st">'FRA'</span> <span class="sc">~</span> <span class="st">'#d08770'</span>,</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>      iso_code <span class="sc">==</span> <span class="st">'CAN'</span> <span class="sc">~</span> <span class="st">'#b48ead'</span>,</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">'#e5e9f0'</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(country, year, electricity_generation, color) <span class="sc">%&gt;%</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> electricity_generation, <span class="at">group =</span> country, <span class="at">color =</span> color)) <span class="sc">+</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_identity</span>(<span class="at">guide =</span> <span class="st">"legend"</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Germany"</span>, <span class="st">"France"</span>, <span class="st">"Canada"</span>, <span class="st">"Other"</span>)) <span class="sc">+</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="cell page-columns page-full">
+<div class="cell-output-display page-columns page-full">
+<div class="page-columns page-full">
+<figure class="figure page-columns page-full">
+<p class="page-columns page-full"><img src="index_files/figure-html/similar-higlighted-plot-2-1.png" class="img-fluid figure-img column-page" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 

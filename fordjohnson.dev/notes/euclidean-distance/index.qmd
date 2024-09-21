@@ -20,9 +20,20 @@ Measuring similarity and difference between data points is essential for analysi
 
 ::: {.column-page .binom}
 
+In [TidyTuesday's](https://github.com/rfordatascience/tidytuesday/tree/master/data/2023/2023-06-06) 06/06/2023 dataset, which featured various energy metrics by country and year, we can use Euclidean distance to find the countries most similar (or different) to a target country for a given metric, such as electricity generation.
+
+This method allows us to compare a target country’s electricity generation to others and compute a similarity score that quantifies how closely each country aligns with the target.
+
+### Why might you want to know which countries are similar?
+
+This type of analysis serves as a baseline to identify the impact of changes over time. For example, in a business context, this could involve comparing KPIs across market subsets to assess the effectiveness of a targeted marketing campaign. If one subset shows a significant change, we can check if others experienced a similar trend.
+
+For this example, I’m interested in Germany’s electricity generation. Using Euclidean distance, I'll compare electricity generation across all countries and find the five most similar and five most different from Germany. A lower Euclidean distance means a country is more similar to Germany, while a higher score indicates greater dissimilarity.
+
 ```{r, sum-squared-differences-across-all-years}
-#| eval: false
 #| code-overflow: wrap
+#| warning: false
+#| code-fold: true
 
 library(tidyverse)
 
@@ -48,21 +59,110 @@ electricity_generation <- owid_energy %>%
 target_country <- "DEU" # Germany's 3 letter ISO country code
 
 target_country_generation <- owid_energy %>%
-  filter(year > 2000 & iso_code == target_country) %>%
+  filter(year > 2000 & year < 2021 & iso_code == target_country) %>%
   select(year, electricity_generation) %>%
   rename(target_generation = electricity_generation)
 
 countries_with_similarity_score <- electricity_generation %>%
   left_join(target_country_generation, by = "year") %>%
   group_by(country, iso_code) %>%
-  summarize(similarity_score = sqrt(sum((electricity_generation - target_generation)^2, na.rm = TRUE))) %>%
-  arrange(similarity_score)
+  summarize(euclidean_distance = sqrt(sum((electricity_generation - target_generation)^2, na.rm = TRUE))) %>%
+  arrange(euclidean_distance)
 ```
 
-```{r}
-#| eval: false
-#| code-overflow: wrap
 
+:::
+
+```{r, euclidean-distance-head}
+#| code-overflow: wrap
+#| warning: false
+#| echo: false
+head(countries_with_similarity_score)
+```
+
+```{r, euclidean-distance-tail}
+#| code-overflow: wrap
+#| warning: false
+#| echo: false
+tail(countries_with_similarity_score)
+```
+
+::: {.column-page .binom}
+
+The tables above show the countries most and least similar to Germany in terms of electricity generation trends. The most similar countries include Canada, France, and the United Kingdom, while the least similar countries range from Malta and the Bahamas to the United States.
+
+In a business context, this type of analysis can help establish a baseline for performance across similar markets. For instance, if you introduce a new policy or product in Germany, you could track Germany’s performance over time and compare it to the performance of these similar countries, both before and after the change. This would allow you to assess the effectiveness of the change and identify whether it led to any measurable impact that’s unique to Germany, or if similar trends occurred in comparable markets.
+
+Now, let’s look at the visuals. The first chart compares Germany's electricity generation trends with its most similar countries, and the second chart contrasts these trends with countries that are less similar. This setup could be applied similarly in a business setting, helping to monitor the effect of any strategic changes.
+
+
+
+```{r, similiar-countries-plot}
+#| code-overflow: wrap
+#| warning: false
+#| code-fold: true
+similar_plot <- owid_energy %>%
+  filter(year > 2000 & year < 2021 & iso_code %in% c("DEU", "FRA", "CAN")) %>%
+  mutate(
+    is_color = case_when(
+      iso_code == 'DEU' ~ TRUE,
+      iso_code == 'FRA' ~ TRUE,
+      iso_code == 'CAN' ~ TRUE,
+      TRUE ~ FALSE
+    ),
+    color = case_when(
+      iso_code == 'DEU' ~ '#5e81ac',
+      iso_code == 'FRA' ~ '#d08770',
+      iso_code == 'CAN' ~ '#b48ead',
+      TRUE ~ '#e5e9f0'
+    )) %>%
+  ggplot(aes(x = year, y = electricity_generation, group = country, color = color)) +
+  geom_line() +
+  ylim(0, NA) +
+  scale_color_identity(guide = "legend", labels = c("Germany", "France", "Canada")) +
+  theme_minimal()
 ```
 
 :::
+
+```{r, similiar-countries-plot-2}
+#| echo: false
+#| fig-column: page
+similar_plot
+```
+
+::: {.column-page .binom}
+```{r, similar-higlighted-plot}
+#| code-overflow: wrap
+similar_higlighted_plot <- owid_energy %>%
+  filter(iso_code %in% countries | iso_code == 'DEU') %>%
+  filter(year > 2000 & year < 2021 & iso_code != 'USA') %>%
+  mutate(
+    is_color = case_when(
+      iso_code == 'DEU' ~ TRUE,
+      iso_code == 'FRA' ~ TRUE,
+      iso_code == 'CAN' ~ TRUE,
+      TRUE ~ FALSE
+    ),
+    color = case_when(
+      iso_code == 'DEU' ~ '#5e81ac',
+      iso_code == 'FRA' ~ '#d08770',
+      iso_code == 'CAN' ~ '#b48ead',
+      TRUE ~ '#e5e9f0'
+    )
+  ) %>%
+  select(country, year, electricity_generation, color) %>%
+  ggplot(aes(x = year, y = electricity_generation, group = country, color = color)) +
+  geom_line() +
+  scale_color_identity(guide = "legend", labels = c("Germany", "France", "Canada", "Other")) +
+  ylim(0, NA) +
+  theme_minimal()
+```
+
+:::
+
+```{r, similar-higlighted-plot-2}
+#| echo: false
+#| fig-column: page
+similar_higlighted_plot
+```
