@@ -115,6 +115,7 @@ window.Quarto = {
 <meta property="og:title" content="Notes">
 <meta property="og:description" content="Explore my notes on various data concepts and practical applications, offering insights and tips to enhance your understanding and execution of data-driven solutions.">
 <meta property="og:site_name" content="Ford Johnson">
+<link rel="canonical" href="https://fordjohnson.dev/notes/">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -224,7 +225,7 @@ Notes
       </small>
     </div>
     <a href="binomial-trend-detection/index.html">
-      <img src="binomial-trend-detection/index_files/figure-html/binom-visual-1.png" alt="" class="card-img-top">
+      <img src="binomial-trend-detection/index_files/figure-html/binom-visual-2-1.png" alt="" class="card-img-top">
     </a>
     
     
@@ -234,13 +235,13 @@ Notes
   <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="2">
     <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
       <small class="card-text inline-block">
-        <a href="https://github.com/bradfordjohnson/ggraincloud/blob/master/README.md" class="listing-title">Matchmaking in Rocket League</a>
+        <a href="rocket-league-mmr/index.html" class="listing-title">Matchmaking in Rocket League</a>
         
         <span class="text-muted listing-subtitle">Diving into how MMR and matchmaking work.</span>
       </small>
     </div>
-    <a href="https://github.com/bradfordjohnson/ggraincloud/blob/master/README.md">
-      <img src="https://placehold.co/994x557" alt="" class="card-img-top">
+    <a href="rocket-league-mmr/index.html">
+      <img src="rocket-league-mmr/mmr-notes.png" alt="" class="card-img-top">
     </a>
     
     
@@ -344,7 +345,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/fordjohnson\.dev");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

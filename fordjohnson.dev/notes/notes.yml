@@ -10,13 +10,13 @@
     - title: Binomial trend detection
       subtitle: Finding statistical signifigance and identifying WoW trends.
       href: binomial-trend-detection/index.html
-      thumbnail: binomial-trend-detection/index_files/figure-html/binom-visual-1.png
+      thumbnail: binomial-trend-detection/index_files/figure-html/binom-visual-2-1.png
 
     - title: Matchmaking in Rocket League
       subtitle: Diving into how MMR and matchmaking work.
-      href: https://github.com/bradfordjohnson/ggraincloud/blob/master/README.md
+      href: rocket-league-mmr/index.html
       # code: bi-stars
-      thumbnail: https://placehold.co/994x557
+      thumbnail: rocket-league-mmr/mmr-notes.png
 
 # - category: Code
 #   description: |

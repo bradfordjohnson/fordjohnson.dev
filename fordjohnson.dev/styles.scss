@@ -71,6 +71,18 @@ p {
     padding-bottom: 10px;
 }
 
+dt {
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    padding-bottom: 0px;
+}
+
+dd {
+    font-family: "Hind Madurai", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
 
 // divs
 .hero-heading {
@@ -141,6 +153,34 @@ p {
     color: $header-color;
     padding-bottom: 10px;
     padding-top: 10px;
+}
+
+.ol {
+    font-family: "Hind Madurai", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: $p-color;
+}
+
+.callout-header {
+    font-family: "Rubik", sans-serif;
+}
+
+.callout-body {
+    font-family: "Hind Madurai", sans-serif;
+}
+
+#footnotes p, li {
+    padding-bottom: 0;
+}
+
+#quarto-appendix {
+    grid-column-start: page-start;
+    grid-column-end: page-end;
+}
+
+.math-display{
+    text-align: left;
 }
 
 .card-img-top {
