@@ -109,7 +109,7 @@ binom_visual <- ggplot(data, aes(x = x, y = probability, fill = color)) +
 
 :::
 
-```{r}
+```{r, binom-visual-2}
 #| echo: false
 #| fig-column: page
 #| lightbox:
