@@ -3,9 +3,9 @@
     Just a placeholder category to build out my notes.
   tiles:
     - title: Euclidean distance
-      subtitle: Identifying similarity between a fixed reference and list of vectors.
+      subtitle: Identifying countries similar to Germany using Euclidean distance in electricity generation trends.
       href: euclidean-distance/index.html
-      thumbnail: https://placehold.co/994x557
+      thumbnail: euclidean-distance/index_files/figure-html/similiar-countries-plot-2-1.png
 
     - title: Binomial trend detection
       subtitle: Finding statistical signifigance and identifying WoW trends.

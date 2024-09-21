@@ -2,8 +2,8 @@
 pagetitle: Euclidean Distance Between Vectors
 description: |
   Discover the concept of Euclidean distance, a fundamental metric used in various fields to measure the straight-line distance between points in space. This page covers its mathematical formulation, applications in data analysis, and examples to illustrate its use in clustering and dimensionality reduction.
-# execute: 
-#   freeze: auto
+execute: 
+  freeze: auto
 ---
 
 ::: column-page
@@ -19,7 +19,6 @@ Measuring similarity and difference between data points is essential for analysi
 :::::
 
 ::: {.column-page .binom}
-
 In [TidyTuesday's](https://github.com/rfordatascience/tidytuesday/tree/master/data/2023/2023-06-06) 06/06/2023 dataset, which featured various energy metrics by country and year, we can use Euclidean distance to find the countries most similar (or different) to a target country for a given metric, such as electricity generation.
 
 This method allows us to compare a target country’s electricity generation to others and compute a similarity score that quantifies how closely each country aligns with the target.
@@ -69,8 +68,6 @@ countries_with_similarity_score <- electricity_generation %>%
   summarize(euclidean_distance = sqrt(sum((electricity_generation - target_generation)^2, na.rm = TRUE))) %>%
   arrange(euclidean_distance)
 ```
-
-
 :::
 
 ```{r, euclidean-distance-head}
@@ -88,81 +85,95 @@ tail(countries_with_similarity_score)
 ```
 
 ::: {.column-page .binom}
-
 The tables above show the countries most and least similar to Germany in terms of electricity generation trends. The most similar countries include Canada, France, and the United Kingdom, while the least similar countries range from Malta and the Bahamas to the United States.
 
 In a business context, this type of analysis can help establish a baseline for performance across similar markets. For instance, if you introduce a new policy or product in Germany, you could track Germany’s performance over time and compare it to the performance of these similar countries, both before and after the change. This would allow you to assess the effectiveness of the change and identify whether it led to any measurable impact that’s unique to Germany, or if similar trends occurred in comparable markets.
 
 Now, let’s look at the visuals. The first chart compares Germany's electricity generation trends with its most similar countries, and the second chart contrasts these trends with countries that are less similar. This setup could be applied similarly in a business setting, helping to monitor the effect of any strategic changes.
 
-
-
 ```{r, similiar-countries-plot}
 #| code-overflow: wrap
 #| warning: false
 #| code-fold: true
-similar_plot <- owid_energy %>%
-  filter(year > 2000 & year < 2021 & iso_code %in% c("DEU", "FRA", "CAN")) %>%
-  mutate(
-    is_color = case_when(
-      iso_code == 'DEU' ~ TRUE,
-      iso_code == 'FRA' ~ TRUE,
-      iso_code == 'CAN' ~ TRUE,
-      TRUE ~ FALSE
-    ),
-    color = case_when(
-      iso_code == 'DEU' ~ '#5e81ac',
-      iso_code == 'FRA' ~ '#d08770',
-      iso_code == 'CAN' ~ '#b48ead',
-      TRUE ~ '#e5e9f0'
-    )) %>%
-  ggplot(aes(x = year, y = electricity_generation, group = country, color = color)) +
-  geom_line() +
-  ylim(0, NA) +
-  scale_color_identity(guide = "legend", labels = c("Germany", "France", "Canada")) +
-  theme_minimal()
-```
+library(tidyverse)
+library(showtext)
+library(htmltools)
+library(gghighlight)
 
+showtext_auto()
+showtext_opts(dpi = 300)
+
+font_add_google(name = "Roboto", family = "Roboto")
+font <- "Roboto"
+
+title <- paste0(
+  "<span>Highlighting Countries Similar to<span style='color:#6929c4;'> Germany</span></span>"
+)
+
+subtitle <- paste0(
+  "<span>Electric Generation - Terawatt hours (2000-2020)</span>"
+)
+
+similar_highlighted_plot <- owid_energy %>%
+  filter(iso_code %in% countries | iso_code == 'DEU') %>%
+  filter(year > 2000 & year < 2021 & iso_code != 'USA') %>%
+  ggplot(aes(x = year, y = electricity_generation, group = iso_code, color = iso_code)) +
+  geom_line() +
+  gghighlight(iso_code %in% c('DEU', 'FRA', 'CAN'), 
+              use_direct_label = FALSE) +
+  labs(
+    title = title,
+    subtitle = subtitle,
+    y = "Terawatt hours (TWh)",
+    x = "Year"
+  ) +
+    scale_color_manual(
+    values = c('DEU' = '#6929c4', 'FRA' = '#1192e8', 'CAN' = '#198038', 'Other' = '#D3D3D3'),
+    labels = c('DEU' = 'Germany', 'FRA' = 'France', 'CAN' = 'Canada')
+  ) +
+  scale_y_continuous(breaks = seq(0, 1100, by = 250)) +
+  theme_void() +
+  theme(
+    legend.position = "right",
+    legend.title = element_blank(),
+    axis.text = element_text(
+      family = font,
+      size = 5
+    ),
+    axis.title = element_text(
+      family = font,
+      size = 6
+    ),
+    axis.title.x = element_text(
+      margin = margin(7,0,0,0,"mm")
+    ),
+    axis.title.y = element_text(
+      angle = 90,
+      margin = margin(0,7,0,0,"mm")
+    ),
+    panel.grid.major = element_line(colour = "#e0e0e0", linewidth = 0.1),
+    legend.text = element_text(
+      family = font,
+      size = 5
+    ),
+    plot.title = ggtext::element_textbox_simple(
+      family = font,
+      size = 9,
+      margin = margin(10,0,0,0)
+    ),
+    plot.subtitle = ggtext::element_textbox_simple(
+      family = font,
+      size = 7,
+      margin = margin(10,0,0,0)
+    ),
+    plot.margin = margin(5,5,5,5, "mm")
+  )
+```
 :::
 
 ```{r, similiar-countries-plot-2}
 #| echo: false
 #| fig-column: page
-similar_plot
-```
 
-::: {.column-page .binom}
-```{r, similar-higlighted-plot}
-#| code-overflow: wrap
-similar_higlighted_plot <- owid_energy %>%
-  filter(iso_code %in% countries | iso_code == 'DEU') %>%
-  filter(year > 2000 & year < 2021 & iso_code != 'USA') %>%
-  mutate(
-    is_color = case_when(
-      iso_code == 'DEU' ~ TRUE,
-      iso_code == 'FRA' ~ TRUE,
-      iso_code == 'CAN' ~ TRUE,
-      TRUE ~ FALSE
-    ),
-    color = case_when(
-      iso_code == 'DEU' ~ '#5e81ac',
-      iso_code == 'FRA' ~ '#d08770',
-      iso_code == 'CAN' ~ '#b48ead',
-      TRUE ~ '#e5e9f0'
-    )
-  ) %>%
-  select(country, year, electricity_generation, color) %>%
-  ggplot(aes(x = year, y = electricity_generation, group = country, color = color)) +
-  geom_line() +
-  scale_color_identity(guide = "legend", labels = c("Germany", "France", "Canada", "Other")) +
-  ylim(0, NA) +
-  theme_minimal()
-```
-
-:::
-
-```{r, similar-higlighted-plot-2}
-#| echo: false
-#| fig-column: page
-similar_higlighted_plot
+similar_highlighted_plot
 ```
