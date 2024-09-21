@@ -2,6 +2,7 @@
 pagetitle: Binomial Trend Detection
 description: |
   Explore a robust method for trend detection using binomial analysis, focusing on week-over-week comparisons to identify significant patterns in data.
+lightbox: true
 execute: 
   freeze: auto
 ---
@@ -32,24 +33,19 @@ An alternative method to detect trends more robustly is a **binomial trend detec
 | **Counting Positive and Negative Days** | Within the 14-day window, count the number of days where the WoW delta is positive and the number of days where it is negative. This provides insight into the recent performance pattern. |
 | **Binomial Distribution** | Assume that each day has an equal 50% chance of having either a positive or negative WoW delta. Under this assumption, the 14-day window is treated as 14 independent trials, each with a 50% probability of being positive or negative. |
 | **Trend Threshold** | Set a threshold to identify significant trends: for example, if 12 or more out of the 14 days show a consistent direction (either positive or negative), it is deemed statistically significant according to the binomial distribution. |
-:::
+
 
 ```{r, binom-test}
-#| code-fold: show
-#| column: page
 binom.test(12, 14, 1/2, alternative = "greater")
 ```
 
-::: {.column-page .binom}
 This threshold helps ensure that the observed trend is not due to random fluctuations, but rather indicates a consistent pattern.
-:::
+
 
 
 ```{r, binom-visual}
-#| column: page
-#| echo: false
 #| warning: false
-
+#| code-fold: true
 library(ggplot2)
 library(showtext)
 library(ggtext)
@@ -77,25 +73,27 @@ data <- data.frame(
   color = ifelse(0:n >= x_obs, "#C0392B", "#30394F")  
 )
 
-ggplot(data, aes(x = x, y = probability, fill = color)) +
-  geom_bar(stat = "identity", alpha = 0.7) +
+binom_visual <- ggplot(data, aes(x = x, y = probability, fill = color)) +
+  geom_bar(stat = "identity") +
   scale_fill_identity() +  
   scale_x_continuous(breaks = 0:n) +  
   labs(
     title = "Binomial Distribution (n = 14, p = 0.5)",
+    subtitle = "Success threshold ≥ 12 trials (days)",
     x = "Number of Successes",
     y = "Probability"
   ) +
   theme_minimal() +
   theme(
     panel.grid.major.x = element_blank(),
-    panel.grid.minor.x = element_blank(),
-    plot.margin = margin(10, 10, 10, 10),
+    panel.grid.minor = element_blank(),
+    plot.margin = margin(10, 10, 10, 10, "mm"),
     axis.text = element_text(family = font_1, size = 7),
     axis.title = element_text(family = font_1, size = 7),
     axis.title.x = element_text(margin = margin(5, 0, 0, 0, 'mm')),
     axis.title.y = element_text(margin = margin(0, 5, 0, 0, 'mm')),
     plot.title = element_text(family = font_1, size = 10),
+    plot.subtitle = element_text(family = font_1, size = 8)
   ) +
   annotate(
     geom = 'richtext',
@@ -103,11 +101,20 @@ ggplot(data, aes(x = x, y = probability, fill = color)) +
     y = max(data$probability) * 0.9,
     label = paste0(
       "<span style='color:#C0392B; font-size:8pt;font-family:Roboto;'>",
-      "Successes = ", x_obs, "<br>",
       "P(X ≥ ", x_obs, ") = ", round(p_ge_x_obs, 4), "<br>",
       "95% CI = [", round(conf_int[1], 4), ", ", round(conf_int[2], 4), "]</span>"),
     hjust = 1, fill = NA, label.color = NA
   )
+```
+
+:::
+
+```{r}
+#| echo: false
+#| fig-column: page
+#| lightbox:
+#|   group: plot
+binom_visual
 ```
 
 ::: {.column-page .binom}
