@@ -5,6 +5,7 @@ project:
 website:
   title: "Ford Johnson"
   favicon: images/favicon.png
+  open-graph: true
   search: false
   bread-crumbs: true
   navbar:
@@ -32,7 +33,7 @@ website:
 format:
   html:
     anchor-sections: false
-    theme: new-styles.scss
+    theme: styles.scss
     toc: false
 
 

@@ -1,5 +1,8 @@
 ---
 pagetitle: Gallery
+description: |
+    Browse my gallery of data visuals to explore a curated collection of charts, graphs, and dashboards that bring data to life.
+hide-description: true
 ---
 
 <!-- ::: {.gallery-title}
@@ -17,8 +20,8 @@ pagetitle: Gallery
 <img src="visuals/ufo.png" alt="Network visual showing the most common bigrams used in witness accounts for UFO sightings">
 </div>
 <div class="gallery-column">
-<img src="visuals/topgolf.png" alt="Density plot of 200 random balls hit at TopGolf">
 <img src="visuals/owid-energy.png" alt="Faceted line charts showing Demand vs Generation for electricity in Europe">
+<img src="visuals/topgolf.png" alt="Density plot of 200 random balls hit at TopGolf">
 <img src="visuals/fair-use.png" alt="Fair Use analysis, showing court findings in cases across different case categories">
 <img src="visuals/african-languages.png" alt="Sankey chart showing sentiment of different African languages">
 </div>

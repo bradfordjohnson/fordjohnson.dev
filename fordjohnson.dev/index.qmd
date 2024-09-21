@@ -1,5 +1,8 @@
 ---
 pagetitle: Ford Johnson
+description: |
+    Discover how Ford Johnson transforms complex data into actionable insights through cutting-edge visualization, strategic business intelligence, and robust engineering solutions.
+hide-description: true
 ---
 
 ::: {.column-page}
