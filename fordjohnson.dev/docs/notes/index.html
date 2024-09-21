@@ -115,6 +115,7 @@ window.Quarto = {
 <meta property="og:title" content="Notes">
 <meta property="og:description" content="Explore my notes on various data concepts and practical applications, offering insights and tips to enhance your understanding and execution of data-driven solutions.">
 <meta property="og:site_name" content="Ford Johnson">
+<link rel="canonical" href="https://fordjohnson.dev/notes/">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -344,7 +345,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/fordjohnson\.dev");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

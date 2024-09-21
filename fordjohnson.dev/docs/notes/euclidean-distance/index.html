@@ -92,6 +92,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta property="og:title" content="Euclidean Distance Between Vectors">
 <meta property="og:description" content="Discover the concept of Euclidean distance, a fundamental metric used in various fields to measure the straight-line distance between points in space. This page covers its mathematical formulation, applications in data analysis, and examples to illustrate its use in clustering and dimensionality reduction.">
 <meta property="og:site_name" content="Ford Johnson">
+<link rel="canonical" href="https://fordjohnson.dev/notes/euclidean-distance/">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -420,7 +421,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/fordjohnson\.dev");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -775,7 +776,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

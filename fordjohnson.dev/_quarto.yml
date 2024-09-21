@@ -5,6 +5,7 @@ project:
 website:
   title: "Ford Johnson"
   favicon: images/favicon.png
+  site-url: https://fordjohnson.dev
   open-graph: true
   search: false
   bread-crumbs: true
@@ -35,6 +36,4 @@ format:
     anchor-sections: false
     theme: styles.scss
     toc: false
-
-
-
+    canonical-url: true

@@ -132,6 +132,7 @@ window.Quarto = {
 <meta property="og:title" content="Matchmaking in Rocket League">
 <meta property="og:description" content="Uncover the data behind Rocket League’s MMR and matchmaking system, explaining how player ratings are calculated and how the system pairs competitors in ranked play.">
 <meta property="og:site_name" content="Ford Johnson">
+<link rel="canonical" href="https://fordjohnson.dev/notes/rocket-league-mmr/">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -553,7 +554,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/fordjohnson\.dev");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
