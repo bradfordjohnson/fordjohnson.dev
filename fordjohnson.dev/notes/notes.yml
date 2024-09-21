@@ -1,9 +1,9 @@
 - category: Analytical insights & techniques
   description: |
-    Just a placeholder category to build out my notes.
+    Interesting methods and problem solving
   tiles:
     - title: Euclidean distance
-      subtitle: Identifying countries similar to Germany using Euclidean distance in electricity generation trends.
+      subtitle: 'Identifying countries similar to Germany: electricity generation trends.'
       href: euclidean-distance/index.html
       thumbnail: euclidean-distance/index_files/figure-html/similiar-countries-plot-2-1.png
 
@@ -15,14 +15,14 @@
     - title: Matchmaking in Rocket League
       subtitle: Diving into how MMR and matchmaking work.
       href: https://github.com/bradfordjohnson/ggraincloud/blob/master/README.md
-      code: bi-stars
+      # code: bi-stars
       thumbnail: https://placehold.co/994x557
 
-- category: Code
-  description: |
-    A collection of neat and useful code snippets and use cases.
-  tiles:
-    - title: SQL QUALIFY
-      subtitle: Using the QUALIFY statement in your queries.
-      href: /about/index.qmd
-      thumbnail: https://placehold.co/994x557
+# - category: Code
+#   description: |
+#     A collection of neat and useful code snippets and use cases.
+#   tiles:
+#     - title: SQL QUALIFY
+#       subtitle: Using the QUALIFY statement in your queries.
+#       href: /about/index.qmd
+#       thumbnail: https://placehold.co/994x557

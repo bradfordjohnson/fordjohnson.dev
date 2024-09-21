@@ -143,6 +143,10 @@ p {
     padding-top: 10px;
 }
 
+.card-img-top {
+    border-bottom-left-radius: var(--bs-border-radius-lg);
+    border-bottom-right-radius: var(--bs-border-radius-lg);
+}
 // .gallery-title {
 //     text-align: center;
 // }
