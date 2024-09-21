@@ -35,6 +35,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -125,10 +128,16 @@ ul.task-list li input[type="checkbox"] {
 <div class="column-screen-inset">
 <div class="gallery-row">
 <div class="gallery-column">
-<p><img src="visuals/seinfeld-sentiment.png" alt="Raincloud plots showing the sentiment of Seinfeld episodes across different lexicons"> <img src="visuals/goals-foot.png" alt="Density heatmap showing where goals were scored in the EPL from 2014-2020"> <img src="visuals/soccer.png" alt="Lollipop plot showing the average number of yellow cards given to the home and away teams by EPL soccer referees"> <img src="visuals/ufo.png" alt="Network visual showing the most common bigrams used in witness accounts for UFO sightings"></p>
+<p><a href="visuals/seinfeld-sentiment.png" class="lightbox" data-gallery="lightbox-gallery"><img src="visuals/seinfeld-sentiment.png" class="img-fluid" alt="Raincloud plots showing the sentiment of Seinfeld episodes across different lexicons"></a></p>
+<p><a href="visuals/goals-foot.png" class="lightbox" data-gallery="lightbox-gallery"><img src="visuals/goals-foot.png" class="img-fluid" alt="Density heatmap showing where goals were scored in the EPL from 2014-2020"></a></p>
+<p><a href="visuals/soccer.png" class="lightbox" data-gallery="lightbox-gallery"><img src="visuals/soccer.png" class="img-fluid" alt="Lollipop plot showing the average number of yellow cards given to the home and away teams by EPL soccer referees"></a></p>
+<p><a href="visuals/ufo.png" class="lightbox" data-gallery="lightbox-gallery"><img src="visuals/ufo.png" class="img-fluid" alt="Network visual showing the most common bigrams used in witness accounts for UFO sightings"></a></p>
 </div>
 <div class="gallery-column">
-<p><img src="visuals/owid-energy.png" alt="Faceted line charts showing Demand vs Generation for electricity in Europe"> <img src="visuals/topgolf.png" alt="Density plot of 200 random balls hit at TopGolf"> <img src="visuals/fair-use.png" alt="Fair Use analysis, showing court findings in cases across different case categories"> <img src="visuals/african-languages.png" alt="Sankey chart showing sentiment of different African languages"></p>
+<p><a href="visuals/owid-energy.png" class="lightbox" data-gallery="lightbox-gallery"><img src="visuals/owid-energy.png" class="img-fluid" alt="Faceted line charts showing Demand vs Generation for electricity in Europe"></a></p>
+<p><a href="visuals/topgolf.png" class="lightbox" data-gallery="lightbox-gallery"><img src="visuals/topgolf.png" class="img-fluid" alt="Density plot of 200 random balls hit at TopGolf"></a></p>
+<p><a href="visuals/fair-use.png" class="lightbox" data-gallery="lightbox-gallery"><img src="visuals/fair-use.png" class="img-fluid" alt="Fair Use analysis, showing court findings in cases across different case categories"></a></p>
+<p><a href="visuals/african-languages.png" class="lightbox" data-gallery="lightbox-gallery"><img src="visuals/african-languages.png" class="img-fluid" alt="Sankey chart showing sentiment of different African languages"></a></p>
 </div>
 </div>
 </div>
@@ -576,6 +585,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","loop":false,"descPosition":"bottom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
