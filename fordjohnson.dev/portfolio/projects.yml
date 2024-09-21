@@ -1,12 +1,18 @@
-# - category: Captivating visuals
-#   description: |
-#     Engaging graphics with compelling narratives, crafted directly from the data.
-#   tiles:
-#     - title: ggraincloud
-#       subtitle: Raincloud plot templates for ggplot2.
-#       href: https://github.com/bradfordjohnson/ggraincloud/blob/master/README.md
-#       code: https://github.com/bradfordjohnson/ggraincloud
-#       thumbnail: https://placehold.co/994x557
+- category: Captivating visuals
+  description: |
+    Engaging graphics with compelling data-driven narratives.
+  tiles:
+    - title: TidyTuesday
+      subtitle: Weekly visuals created using R and the Tidyverse.
+      href: https://github.com/bradfordjohnson/tidytuesday/blob/main/README.md
+      code: https://github.com/bradfordjohnson/tidytuesday
+      thumbnail: ../gallery/visuals/owid-energy.png
+
+    - title: ggraincloud
+      subtitle: Raincloud plot template package for ggplot2.
+      href: https://github.com/bradfordjohnson/ggraincloud/blob/master/README.md
+      code: https://github.com/bradfordjohnson/ggraincloud
+      thumbnail: projects/ggraincloud.png
 
 # - category: Custom visual & reporting templates
 #   description: |
@@ -18,12 +24,8 @@
 #       code: https://github.com/bradfordjohnson/ggraincloud
 #       thumbnail: https://placehold.co/994x557
 
-- category: Data-driven solutions
-  description: |
-    Front-end solutions such as dashboards, visuals, and web apps, along with back-end solutions including packages, APIs, and pipelines. All tailored to meet your data needs and fit your project requirements.
-  tiles:
-    - title: ggraincloud
-      subtitle: Raincloud plot templates for ggplot2.
-      href: https://github.com/bradfordjohnson/ggraincloud/blob/master/README.md
-      code: https://github.com/bradfordjohnson/ggraincloud
-      thumbnail: projects/ggraincloud.png
+# - category: Data-driven solutions
+#   description: |
+#     Front-end solutions such as dashboards, visuals, and web apps, along with back-end solutions including packages, APIs, and pipelines. All tailored to meet your data needs and fit your project requirements.
+#   tiles:
+
