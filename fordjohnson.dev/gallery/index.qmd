@@ -6,11 +6,12 @@ hide-description: true
 lightbox: true
 ---
 
-<!-- ::: {.gallery-title}
-
+::: {.column-page}
+::: {.gallery-title}
 <h1 class="title">Gallery</h1>
 
-::: -->
+:::
+:::
 
 :::::: column-screen-inset
 ::::: gallery-row

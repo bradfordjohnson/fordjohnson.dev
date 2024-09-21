@@ -275,7 +275,7 @@ The “uncertainty” value that decreases with each match, indicating the syste
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(R6)</span>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-overflow-wrap code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(R6)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>Rating <span class="ot">&lt;-</span> <span class="fu">R6Class</span>(<span class="st">"Rating"</span>,</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">public =</span> <span class="fu">list</span>(</span>
@@ -438,20 +438,20 @@ The “uncertainty” value that decreases with each match, indicating the syste
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>
-1v1 game 1: Player 2 vs Player 1 -&gt; Win
+1v1 game 1: Player 1 vs Player 2 -&gt; Loss
 Results:
-Player 2: skill_mu = 27.08 (Δ=2.08), skill_sigma = 8.20 (Δ=-0.13)
 Player 1: skill_mu = 22.92 (Δ=-2.08), skill_sigma = 8.20 (Δ=-0.13)
-
-1v1 game 2: Player 2 vs Player 1 -&gt; Win
-Results:
 Player 2: skill_mu = 27.08 (Δ=2.08), skill_sigma = 8.20 (Δ=-0.13)
+
+1v1 game 2: Player 1 vs Player 2 -&gt; Win
+Results:
+Player 1: skill_mu = 27.08 (Δ=2.08), skill_sigma = 8.20 (Δ=-0.13)
+Player 2: skill_mu = 22.92 (Δ=-2.08), skill_sigma = 8.20 (Δ=-0.13)
+
+1v1 game 3: Player 1 vs Player 2 -&gt; Loss
+Results:
 Player 1: skill_mu = 22.92 (Δ=-2.08), skill_sigma = 8.20 (Δ=-0.13)
-
-1v1 game 3: Player 2 vs Player 1 -&gt; Win
-Results:
-Player 2: skill_mu = 27.08 (Δ=2.08), skill_sigma = 8.20 (Δ=-0.13)
-Player 1: skill_mu = 22.92 (Δ=-2.08), skill_sigma = 8.20 (Δ=-0.13)</code></pre>
+Player 2: skill_mu = 27.08 (Δ=2.08), skill_sigma = 8.20 (Δ=-0.13)</code></pre>
 </div>
 </div>
 </section>

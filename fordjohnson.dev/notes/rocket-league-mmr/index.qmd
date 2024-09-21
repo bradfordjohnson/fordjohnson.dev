@@ -91,6 +91,7 @@ When a player's skill reaches a certain threshold, the matchmaking system adjust
 
 ```{r}
 #| code-fold: true
+#| code-overflow: wrap
 #| warning: false
 
 library(R6)

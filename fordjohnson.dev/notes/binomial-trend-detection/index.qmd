@@ -36,6 +36,7 @@ An alternative method to detect trends more robustly is a **binomial trend detec
 
 
 ```{r, binom-test}
+#| code-overflow: wrap
 binom.test(12, 14, 1/2, alternative = "greater")
 ```
 
@@ -45,6 +46,7 @@ This threshold helps ensure that the observed trend is not due to random fluctua
 
 ```{r, binom-visual}
 #| warning: false
+#| code-overflow: wrap
 #| code-fold: true
 library(ggplot2)
 library(showtext)
