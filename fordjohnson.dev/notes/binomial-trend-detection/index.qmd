@@ -5,6 +5,24 @@ description: |
 lightbox: true
 execute: 
   freeze: auto
+
+format:
+  html:
+    include-in-header:
+      text: |
+        <script type="application/ld+json">
+          {
+          "@context": "https://schema.org/",
+          "@type": "ImageObject",
+          "contentUrl": "https://fordjohnson.dev/notes/binomial-trend-detection/index_files/figure-html/binom-visual-2-1.png",
+          "creditText": "Bar Plot Showing a Binomial Distribution",
+          "creator": {
+            "@type": "Person",
+            "name": "Ford Johnson"
+          },
+          "copyrightNotice": "Ford Johnson"
+          }
+        </script>
 ---
 
 ::: column-page

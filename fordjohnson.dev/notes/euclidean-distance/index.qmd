@@ -5,6 +5,24 @@ description: |
 lightbox: true
 execute: 
   freeze: auto
+
+format:
+  html:
+    include-in-header:
+      text: |
+        <script type="application/ld+json">
+          {
+          "@context": "https://schema.org/",
+          "@type": "ImageObject",
+          "contentUrl": "https://fordjohnson.dev/notes/euclidean-distance/index_files/figure-html/similiar-countries-plot-2-1.png",
+          "creditText": "Line Chart of Electricity Generation by Country",
+          "creator": {
+            "@type": "Person",
+            "name": "Ford Johnson"
+          },
+          "copyrightNotice": "Ford Johnson"
+          }
+        </script>
 ---
 
 ::: column-page

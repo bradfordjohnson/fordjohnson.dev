@@ -4,6 +4,102 @@ description: |
     Browse my gallery of data visuals to explore a curated collection of charts, graphs, and dashboards that bring data to life.
 hide-description: true
 lightbox: true
+
+format:
+  html:
+    include-in-header:
+      text: |
+        <script type="application/ld+json">
+          [{
+          "@context": "https://schema.org/",
+          "@type": "ImageObject",
+          "contentUrl": "https://fordjohnson.dev/gallery/visuals/seinfeld-sentiment.png",
+          "creditText": "Raincloud Plot Showing Seinfeld Sentiment",
+          "creator": {
+            "@type": "Person",
+            "name": "Ford Johnson"
+          },
+          "copyrightNotice": "Ford Johnson"
+          },
+          {
+          "@context": "https://schema.org/",
+          "@type": "ImageObject",
+          "contentUrl": "https://fordjohnson.dev/gallery/visuals/goals-foot.png",
+          "creditText": "Heatmap of Premier League Goals",
+          "creator": {
+            "@type": "Person",
+            "name": "Ford Johnson"
+          },
+          "copyrightNotice": "Ford Johnson"
+          },
+          {
+          "@context": "https://schema.org/",
+          "@type": "ImageObject",
+          "contentUrl": "https://fordjohnson.dev/gallery/visuals/soccer.png",
+          "creditText": "Dumbbell Visual",
+          "creator": {
+            "@type": "Person",
+            "name": "Ford Johnson"
+          },
+          "copyrightNotice": "Ford Johnson"
+          },
+          {
+          "@context": "https://schema.org/",
+          "@type": "ImageObject",
+          "contentUrl": "https://fordjohnson.dev/gallery/visuals/ufo.png",
+          "creditText": "Bigrams Network Visual",
+          "creator": {
+            "@type": "Person",
+            "name": "Ford Johnson"
+          },
+          "copyrightNotice": "Ford Johnson"
+          },
+          {
+          "@context": "https://schema.org/",
+          "@type": "ImageObject",
+          "contentUrl": "https://fordjohnson.dev/gallery/visuals/owid-energy.png",
+          "creditText": "European Electricity Trend Facet",
+          "creator": {
+            "@type": "Person",
+            "name": "Ford Johnson"
+          },
+          "copyrightNotice": "Ford Johnson"
+          },
+          {
+          "@context": "https://schema.org/",
+          "@type": "ImageObject",
+          "contentUrl": "https://fordjohnson.dev/gallery/visuals/topgolf.png",
+          "creditText": "TopGolf Ball Heatmap",
+          "creator": {
+            "@type": "Person",
+            "name": "Ford Johnson"
+          },
+          "copyrightNotice": "Ford Johnson"
+          },
+          {
+          "@context": "https://schema.org/",
+          "@type": "ImageObject",
+          "contentUrl": "https://fordjohnson.dev/gallery/visuals/fair-use.png",
+          "creditText": "Fair Use Case Analysis",
+          "creator": {
+            "@type": "Person",
+            "name": "Ford Johnson"
+          },
+          "copyrightNotice": "Ford Johnson"
+          },
+          {
+          "@context": "https://schema.org/",
+          "@type": "ImageObject",
+          "contentUrl": "https://fordjohnson.dev/gallery/visuals/african-languages.png",
+          "creditText": "African Languages Sankey Visual",
+          "creator": {
+            "@type": "Person",
+            "name": "Ford Johnson"
+          },
+          "copyrightNotice": "Ford Johnson"
+          }
+          ]
+        </script>
 ---
 
 ::: {.column-page}
