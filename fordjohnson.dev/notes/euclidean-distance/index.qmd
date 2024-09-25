@@ -5,6 +5,24 @@ description: |
 lightbox: true
 execute: 
   freeze: auto
+
+format:
+  html:
+    include-in-header:
+      text: |
+        <script type="application/ld+json">
+          {
+          "@context": "https://schema.org/",
+          "@type": "ImageObject",
+          "contentUrl": "https://fordjohnson.dev/notes/euclidean-distance/index_files/figure-html/similiar-countries-plot-2-1.png",
+          "creditText": "Line Chart of Electricity Generation by Country",
+          "creator": {
+            "@type": "Person",
+            "name": "Ford Johnson"
+          },
+          "copyrightNotice": "Ford Johnson"
+          }
+        </script>
 ---
 
 ::: column-page
@@ -90,7 +108,7 @@ The tables above show the countries most and least similar to Germany in terms o
 
 In a business context, this type of analysis can help establish a baseline for performance across similar markets. For instance, if you introduce a new policy or product in Germany, you could track Germany’s performance over time and compare it to the performance of these similar countries, both before and after the change. This would allow you to assess the effectiveness of the change and identify whether it led to any measurable impact that’s unique to Germany, or if similar trends occurred in comparable markets.
 
-Now, let’s look at the visuals. The first chart compares Germany's electricity generation trends with its most similar countries, and the second chart contrasts these trends with countries that are less similar. This setup could be applied similarly in a business setting, helping to monitor the effect of any strategic changes.
+Now, let’s look at the visual. The chart highlights electricity generation trends for Germany, Canada, and France in color, showing how closely their trends align, while other countries are represented with gray lines. This setup can be applied in a business context to monitor the impact of strategic changes.
 
 ```{r, similiar-countries-plot}
 #| code-overflow: wrap
