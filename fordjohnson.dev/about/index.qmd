@@ -14,6 +14,31 @@ about:
     - icon: linkedin
       href: https://linkedin.com/in/bradford-ford-johnson
       text: LinkedIn
+format:
+  html:
+    include-in-header:
+      text: |
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "ProfilePage",
+          "dateCreated": "2024-09-25T03:55:57-05:00",
+          "dateModified": "2024-09-25T03:55:57-05:00",
+          "mainEntity": {
+            "@type": "Person",
+            "name": "Ford Johnson",
+            "alternateName": "Bradford Johnson",
+            "identifier": "1",
+            "description": "Data Analyst, Visualization Designer, Problem Solver",
+            "image": "https://fordjohnson.dev/images/profile.jpg",
+            "sameAs": [
+              "https://linkedin.com/in/bradford-ford-johnson",
+              "https://github.com/bradfordjohnson"
+            ],
+            "url":"https://fordjohnson.dev/about/"
+          }
+        }
+        </script>
 ---
 
 ::: {.column-page}
