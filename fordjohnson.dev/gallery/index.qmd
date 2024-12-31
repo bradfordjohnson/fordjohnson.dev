@@ -97,6 +97,83 @@ format:
             "name": "Ford Johnson"
           },
           "copyrightNotice": "Ford Johnson"
+          },
+          {
+          "@context": "https://schema.org/",
+          "@type": "ImageObject",
+          "contentUrl": "https://fordjohnson.dev/gallery/visuals/nhl-births.png",
+          "creditText": "NHL Player Birth Quarter by Season Visual",
+          "creator": {
+            "@type": "Person",
+            "name": "Ford Johnson"
+          },
+          "copyrightNotice": "Ford Johnson"
+          },
+          {
+          "@context": "https://schema.org/",
+          "@type": "ImageObject",
+          "contentUrl": "https://fordjohnson.dev/gallery/visuals/egg-production.png",
+          "creditText": "Growth Rates for the Production of Cage-Free Table Eggs",
+          "creator": {
+            "@type": "Person",
+            "name": "Ford Johnson"
+          },
+          "copyrightNotice": "Ford Johnson"
+          },
+          {
+          "@context": "https://schema.org/",
+          "@type": "ImageObject",
+          "contentUrl": "https://fordjohnson.dev/gallery/visuals/scurvy.png",
+          "creditText": "Sailor Scurvy Treatment Results",
+          "creator": {
+            "@type": "Person",
+            "name": "Ford Johnson"
+          },
+          "copyrightNotice": "Ford Johnson"
+          },
+          {
+          "@context": "https://schema.org/",
+          "@type": "ImageObject",
+          "contentUrl": "https://fordjohnson.dev/gallery/visuals/egg-production.png",
+          "creditText": "Growth Rates for the Production of Cage-Free Table Eggs",
+          "creator": {
+            "@type": "Person",
+            "name": "Ford Johnson"
+          },
+          "copyrightNotice": "Ford Johnson"
+          },
+          {
+          "@context": "https://schema.org/",
+          "@type": "ImageObject",
+          "contentUrl": "https://fordjohnson.dev/gallery/visuals/simplex-lava.png",
+          "creditText": "Art Made with R",
+          "creator": {
+            "@type": "Person",
+            "name": "Ford Johnson"
+          },
+          "copyrightNotice": "Ford Johnson"
+          },
+          {
+          "@context": "https://schema.org/",
+          "@type": "ImageObject",
+          "contentUrl": "https://fordjohnson.dev/gallery/visuals/egg-production.png",
+          "creditText": "Growth Rates for the Production of Cage-Free Table Eggs",
+          "creator": {
+            "@type": "Person",
+            "name": "Ford Johnson"
+          },
+          "copyrightNotice": "Ford Johnson"
+          },
+          {
+          "@context": "https://schema.org/",
+          "@type": "ImageObject",
+          "contentUrl": "https://fordjohnson.dev/gallery/visuals/rfid-analysis.png",
+          "creditText": "Density curves showing pre-update vs post-update error % for RFID tags",
+          "creator": {
+            "@type": "Person",
+            "name": "Ford Johnson"
+          },
+          "copyrightNotice": "Ford Johnson"
           }
           ]
         </script>
@@ -113,11 +190,17 @@ format:
 ::::: gallery-row
 ::: gallery-column
 
+![](visuals/nhl-births.png){alt="Line chart showing birth quarter trends of NHL players by Season" group="lightbox-gallery"}
+
 ![](visuals/seinfeld-sentiment.png){alt="Raincloud plots showing the sentiment of Seinfeld episodes across different lexicons" group="lightbox-gallery"}
+
+![](visuals/rfid-analysis.png){alt="Density curves showing pre-update vs post-update error % for RFID tags" group="lightbox-gallery"}
 
 ![](visuals/goals-foot.png){alt="Density heatmap showing where goals were scored in the EPL from 2014-2020" group="lightbox-gallery"}
 
 ![](visuals/soccer.png){alt="Lollipop plot showing the average number of yellow cards given to the home and away teams by EPL soccer referees" group="lightbox-gallery"}
+
+![](visuals/simplex-lava.png){alt="Art made using data and R code" group="lightbox-gallery"}
 
 ![](visuals/ufo.png){alt="Network visual showing the most common bigrams used in witness accounts for UFO sightings" group="lightbox-gallery"}
 
@@ -125,9 +208,13 @@ format:
 
 ::: gallery-column
 
+![](visuals/scurvy.png){alt="Visual showing the recovery impact on sailors undergoing scurvy treatment" group="lightbox-gallery"}
+
 ![](visuals/owid-energy.png){alt="Faceted line charts showing Demand vs Generation for electricity in Europe" group="lightbox-gallery"}
 
 ![](visuals/topgolf.png){alt="Density plot of 200 random balls hit at TopGolf" group="lightbox-gallery"}
+
+![](visuals/egg-production.png){alt="Trend and scorecards showing Growth Rates for the Production of Cage-Free Table Eggs" group="lightbox-gallery"}
 
 ![](visuals/fair-use.png){alt="Fair Use analysis, showing court findings in cases across different case categories" group="lightbox-gallery"}
 

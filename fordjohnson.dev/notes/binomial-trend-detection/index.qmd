@@ -2,6 +2,7 @@
 pagetitle: Binomial Trend Detection
 description: |
   Explore a robust method for trend detection using binomial analysis, focusing on week-over-week comparisons to identify significant patterns in data.
+draft: true
 lightbox: true
 execute: 
   freeze: auto

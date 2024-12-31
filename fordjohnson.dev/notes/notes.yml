@@ -2,15 +2,15 @@
   description: |
     Interesting methods and problem solving
   tiles:
-    - title: Euclidean distance
-      subtitle: 'Identifying countries similar to Germany: electricity generation trends.'
-      href: euclidean-distance/index.html
-      thumbnail: euclidean-distance/index_files/figure-html/similiar-countries-plot-2-1.png
+    # - title: Euclidean distance
+    #   subtitle: 'Identifying countries similar to Germany: electricity generation trends.'
+    #   href: euclidean-distance/index.html
+    #   thumbnail: euclidean-distance/index_files/figure-html/similiar-countries-plot-2-1.png
 
-    - title: Binomial trend detection
-      subtitle: Finding statistical signifigance and identifying WoW trends.
-      href: binomial-trend-detection/index.html
-      thumbnail: binomial-trend-detection/index_files/figure-html/binom-visual-2-1.png
+    # - title: Binomial trend detection
+    #   subtitle: Finding statistical signifigance and identifying WoW trends.
+    #   href: binomial-trend-detection/index.html
+    #   thumbnail: binomial-trend-detection/index_files/figure-html/binom-visual-2-1.png
 
     - title: Matchmaking in Rocket League
       subtitle: Diving into how MMR and matchmaking work.
