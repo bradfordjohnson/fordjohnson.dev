@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'portfolio/**'     
+      - 'fordjohnson.dev/docs/**'     
   workflow_dispatch:
 
 permissions:
