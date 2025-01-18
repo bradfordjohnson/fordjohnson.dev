@@ -35,6 +35,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -106,27 +109,23 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Photography</h1>
+
+
+
+<section id="photography" class="level1 column-page">
+<h1>Photography</h1>
+<div class="photo-grid">
+<p><a href="images/20240325-171135.jpg" class="lightbox" data-gallery="photo-gallery"><img src="images/20240325-171135.jpg" class="img-fluid"></a></p>
+<p><a href="images/20240327-131558.jpg" class="lightbox" data-gallery="photo-gallery"><img src="images/20240327-131558.jpg" class="img-fluid"></a></p>
+<p><a href="images/20170123-121522.jpg" class="lightbox" data-gallery="photo-gallery"><img src="images/20170123-121522.jpg" class="img-fluid"></a></p>
+<p><a href="images/20240325-120953.jpg" class="lightbox" data-gallery="photo-gallery"><img src="images/20240325-120953.jpg" class="img-fluid"></a></p>
+<p><a href="images/20161231-204059.jpg" class="lightbox" data-gallery="photo-gallery"><img src="images/20161231-204059.jpg" class="img-fluid"></a></p>
+<p><a href="images/20170315-082444.jpg" class="lightbox" data-gallery="photo-gallery"><img src="images/20170315-082444.jpg" class="img-fluid"></a></p>
+<p><a href="images/20170630-202020.jpg" class="lightbox" data-gallery="photo-gallery"><img src="images/20170630-202020.jpg" class="img-fluid"></a></p>
 </div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
+</section>
 
 
 
@@ -571,6 +570,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","loop":false});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
