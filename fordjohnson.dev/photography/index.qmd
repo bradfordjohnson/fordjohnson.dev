@@ -1,3 +1,22 @@
 ---
 title: Photography
 ---
+
+
+## Photos 1
+
+::: {.photo-grid}
+
+{{< placeholder 8490 3902 >}}
+
+{{< placeholder 400 200 format=png >}}
+
+{{< placeholder 700 400 format=png >}}
+
+{{< placeholder 400 200 format=png >}}
+
+{{< placeholder 400 200 format=png >}}
+
+{{< placeholder 400 200 format=png >}}
+
+:::

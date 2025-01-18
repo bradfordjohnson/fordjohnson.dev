@@ -68,6 +68,22 @@ $alert-border-width:            0 !default;
 
 $progress-height:               .5rem !default;
 
+// Photos
+
+.photo-grid {
+  column-count: 3;
+  // column-gap: 10px;
+}
+
+.photo-grid img {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  aspect-ratio: auto;
+  // margin-bottom: 10px;
+  vertical-align: bottom;
+}
+
 /*-- scss:rules --*/
 
 

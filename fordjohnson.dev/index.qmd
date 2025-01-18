@@ -5,6 +5,7 @@ about:
   id: hero-heading
   template: trestles
   image: images/profile.jpg
+  image-width: 15em
 ---
 
 ::: {.column-page}
@@ -13,7 +14,7 @@ about:
 
 ::: {.g-col-12 .g-col-md-8 .hero-heading}
 
-# <span class="hero-highlight">Hey there, I’m Ford!</span>
+# <span class="hero-highlight">Ford Johnson</span>
 
 :::
 
