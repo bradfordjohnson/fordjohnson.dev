@@ -1,0 +1,36 @@
+```{=html}
+<% for (const item of items) { %>
+
+    <h2><%- item.category %></h2>
+    
+    <!-- <p><%- item.description %></p> -->
+    
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Subtitle</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (const tile of item.tiles) { %>
+          <tr>
+            <td>
+              <a href="<%- tile.href %>" class="listing-title"><%= tile.title %></a>
+              <% if (tile.code) { %> 
+                <a href="<%- tile.code %>" title="View source code" 
+                  class="source-code card-text float-end inline-block">
+                  <i class="bi-code-slash"></i>
+                </a>
+              <% } %>
+            </td>
+            <td><span class="text-muted listing-subtitle"><%= tile.subtitle %></span></td>
+            <td><a href="<%- tile.href %>">View</a></td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+    
+    <% } %>
+```

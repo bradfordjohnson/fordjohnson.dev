@@ -32,7 +32,6 @@ website:
 format:
   html:
     anchor-sections: false
-    image-lazy-loading: true
     theme: styles.scss
     toc: false
     canonical-url: true
