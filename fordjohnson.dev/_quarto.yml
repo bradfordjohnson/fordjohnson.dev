@@ -1,0 +1,42 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: Ford Johnson
+  site-url: https://fordjohnson.dev
+  open-graph: true
+  search: false
+  favicon: images/favicon.png
+
+  navbar:
+    right:
+      - href: index.qmd
+        text: Home
+      - href: data/index.qmd
+        text: Data
+      - href: photography/index.qmd
+        text: Photography
+
+      - icon: github
+        href: https://github.com/bradfordjohnson
+      - icon: linkedin
+        href: https://linkedin.com/in/bradford-ford-johnson
+
+  page-footer:
+    center:
+      - icon: github
+        href: https://github.com/bradfordjohnson
+      - icon: linkedin
+        href: https://linkedin.com/in/bradford-ford-johnson
+
+format:
+  html:
+    include-in-header:
+      - text: <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KG7K89VV');</script>
+    include-before-body:
+      - text: <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KG7K89VV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    anchor-sections: false
+    theme: styles.scss
+    toc: false
+    canonical-url: true
