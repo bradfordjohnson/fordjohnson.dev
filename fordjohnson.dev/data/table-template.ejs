@@ -1,7 +1,7 @@
 ```{=html}
 <% for (const item of items) { %>
 
-    <h2><%- item.category %></h2>
+  <h2><%- item.category %></h2>
     
     <!-- <p><%- item.description %></p> -->
     
@@ -10,7 +10,6 @@
         <tr>
           <th>Title</th>
           <th>Subtitle</th>
-          <th>Link</th>
         </tr>
       </thead>
       <tbody>
@@ -26,7 +25,6 @@
               <% } %>
             </td>
             <td><span class="text-muted listing-subtitle"><%= tile.subtitle %></span></td>
-            <td><a href="<%- tile.href %>">View</a></td>
           </tr>
         <% } %>
       </tbody>
