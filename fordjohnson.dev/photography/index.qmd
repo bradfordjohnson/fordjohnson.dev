@@ -1,0 +1,30 @@
+---
+pagetitle: Photography
+hide-title: true
+lightbox: true
+---
+
+::: {.column-page}
+
+# Photography
+
+::: {.photo-grid}
+![](images/20240325-171135.jpg){group="photo-gallery"}
+
+![](images/20240327-131558.jpg){group="photo-gallery"}
+
+![](images/20170123-121522.jpg){group="photo-gallery"}
+
+![](images/20240325-120953.jpg){group="photo-gallery"}
+
+![](images/20161231-204059.jpg){group="photo-gallery"}
+
+![](images/20170315-082444.jpg){group="photo-gallery"}
+
+![](images/20170630-202020.jpg){group="photo-gallery"}
+
+
+
+:::
+
+:::

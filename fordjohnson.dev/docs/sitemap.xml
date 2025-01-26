@@ -1,27 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://fordjohnson.dev/portfolio/index.html</loc>
-    <lastmod>2024-09-25T04:53:06.362Z</lastmod>
+    <loc>https://fordjohnson.dev/photography/index.html</loc>
+    <lastmod>2025-01-18T20:28:00.304Z</lastmod>
   </url>
   <url>
-    <loc>https://fordjohnson.dev/notes/index.html</loc>
-    <lastmod>2024-12-31T19:53:22.068Z</lastmod>
+    <loc>https://fordjohnson.dev/data/notes/rocket-league-mmr/index.html</loc>
+    <lastmod>2025-01-20T22:03:19.232Z</lastmod>
   </url>
   <url>
-    <loc>https://fordjohnson.dev/gallery/index.html</loc>
-    <lastmod>2024-12-31T19:22:18.042Z</lastmod>
-  </url>
-  <url>
-    <loc>https://fordjohnson.dev/about/index.html</loc>
-    <lastmod>2024-12-31T19:50:17.839Z</lastmod>
+    <loc>https://fordjohnson.dev/data/index.html</loc>
+    <lastmod>2025-01-20T22:25:57.610Z</lastmod>
   </url>
   <url>
     <loc>https://fordjohnson.dev/index.html</loc>
-    <lastmod>2024-09-21T05:16:04.200Z</lastmod>
-  </url>
-  <url>
-    <loc>https://fordjohnson.dev/notes/rocket-league-mmr/index.html</loc>
-    <lastmod>2024-09-21T22:41:38.958Z</lastmod>
+    <lastmod>2025-01-18T20:28:46.020Z</lastmod>
   </url>
 </urlset>

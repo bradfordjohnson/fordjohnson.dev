@@ -1,304 +1,123 @@
 /*-- scss:defaults --*/
-$white: #fff !default;
+// quarto-scss-analysis-annotation { "origin": "cosmo (builtin theme)" }
 
-$blue: #027af2 !default;
-$hero-blue: #027af2;
-$header-color: #0b0e14 !default;
-$p-color: #4c566a !default;
-$banner-color: #eceff4 !default;
-$banner-text-color: #3b4252 !default;
-$navbar-bg: #0b0e14;
-// $bs-navbar-color: #0b0e14;
-$nav-footer-color: #eceff4 !default;
-$nav-footer-text-color: #2e3440 !default;
-$primary:  $blue;
-$bg-light: #eceff4 !default;
+$theme: "cosmo" !default;
+
+//
+// Color system
+//
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #373a3c !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$blue:    #2780e3 !default;
+$indigo:  #6610f2 !default;
+$purple:  #613d7c !default;
+$pink:    #e83e8c !default;
+$red:     #ff0039 !default;
+$orange:  #f0ad4e !default;
+$yellow:  #ff7518 !default;
+$green:   #3fb618 !default;
+$teal:    #20c997 !default;
+$cyan:    #9954bb !default;
+
+$primary:       $blue !default;
+$secondary:     $gray-800 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+
+$min-contrast-ratio:   2.6 !default;
+
+// Options
+
+$enable-rounded: false !default;
+
+// Body
+
+$body-color:    $gray-800 !default;
+
+// Fonts
+
+// stylelint-disable-next-line value-keyword-case
+$font-family-sans-serif:    "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$headings-font-weight:      400 !default;
+
+// Navbar
+
+$navbar-dark-hover-color:       rgba($white, 1) !default;
+$navbar-light-hover-color:      rgba($black, .9) !default;
+
+// Alerts
+
+$alert-border-width:            0 !default;
+
+// Progress bars
+
+$progress-height:               .5rem !default;
+
+// Photos
+
+.photo-grid {
+  column-count: 3;
+  // column-gap: 10px;
+}
+
+.photo-grid img {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  aspect-ratio: auto;
+  // margin-bottom: 10px;
+  vertical-align: top;
+}
+
 /*-- scss:rules --*/
 
-// fonts
-$header-font: "https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap";
-$body-font: "https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap'";
 
-@if $header-font {
-    @import url($header-font);
+// Variables
+
+$web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" !default;
+@if $web-font-path {
+  @import url($web-font-path);
 }
 
-@if $body-font {
-    @import url($body-font);
+// Typography
+
+body {
+  -webkit-font-smoothing: antialiased;
 }
 
-// elements
-* {
-    font-weight: 300;
-    letter-spacing: 0.01071em;
-}
+// Indicators
 
-h1 {
-    color: $header-color;
-    font-size: 2.5rem;
-    font-weight: 300;
-    font-family: "Rubik", sans-serif;
-}
-
-h2 {
-    border-bottom: none;
-    padding-bottom: 0;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: $header-color;
-    font-size: 1.5rem;
-    font-weight: 300;
-    font-family: "Rubik", sans-serif;
-}
-
-h3 {
-    border-bottom: none;
-    padding-bottom: 0;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: $header-color;
-    font-size: 1.25rem;
-    font-weight: 400;
-    font-family: "Rubik", sans-serif;
-}
-
-p {
-    font-family: "Hind Madurai", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    margin-bottom: 0;
-    color: $p-color;
-    padding-bottom: 10px;
-}
-
-dt {
-    font-family: "Rubik", sans-serif;
-    font-weight: 400;
-    padding-bottom: 0px;
-}
-
-dd {
-    font-family: "Hind Madurai", sans-serif;
-    font-weight: 300;
-    font-style: italic;
-}
-
-
-// divs
-.hero-heading {
-    font-size: 2.5rem;
-    color: #0b0e14;
-}
-
-.hero-highlight {
-    color: $hero-blue;
-}
-
-.highlight-banner {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    background-color: $banner-color;
-    color: $banner-text-color;
-    text-align: left;
-}
-
-.highlight-banner p {
-    padding-bottom: 0px;
-}
-
-.highlight-banner h5 {
-    color: $header-color;
-    font-size: 1.25rem;
-    font-weight: 300;
-    font-family: "Rubik", sans-serif;
-}
-
-.portfolio-banner {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    background-color: $banner-color;
-}
-
-.portfolio-banner p {
-    color: $banner-text-color;
-    padding-bottom: 0px;
-}
-
-.card {
-    font-family: "Hind Madurai", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    margin-bottom: 0;
-    color: $p-color;
-}
-
-.binom p,li,td,th {
-    font-family: "Hind Madurai", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    margin-bottom: 0;
-    color: $header-color;
-    padding-bottom: 10px;
-}
-.binom th {
-    font-family: "Rubik", sans-serif;
-    font-weight: 300;
-    font-size: 1.2rem;
-    font-style: normal;
-    margin-bottom: 0;
-    color: $header-color;
-    padding-bottom: 10px;
-    padding-top: 10px;
-}
-
-.ol {
-    font-family: "Hind Madurai", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    color: $p-color;
-}
-
-.callout-header {
-    font-family: "Rubik", sans-serif;
-}
-
-.callout-body {
-    font-family: "Hind Madurai", sans-serif;
-}
-
-#footnotes p, li {
-    padding-bottom: 0;
-}
-
-#quarto-appendix {
-    grid-column-start: page-start;
-    grid-column-end: page-end;
-}
-
-.math-display{
-    text-align: left;
-}
-
-.card-img-top {
-    border-bottom-left-radius: var(--bs-border-radius-lg);
-    border-bottom-right-radius: var(--bs-border-radius-lg);
-}
-// .gallery-title {
-//     text-align: center;
-// }
-
-.gallery-row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
-}
-
-.gallery-row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
-}
-
-.gallery-column {
-    flex: 50%;
-    max-width: 50%;
-    padding: 16px;
-}
-
-.gallery-column img {
-    margin-bottom: 32px;
-    vertical-align: middle;
-    width: auto;
-    max-width: 80%;
-    height: auto;
-}
-
-@media screen and (max-width: 800px) {
-    .gallery-column {
-        flex: 100%;
-        max-width: 100%;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .gallery-column {
-        flex: 100%;
-        max-width: 100%;
-    }
-}
-
-// images
-#profile-image {
-    max-width: 95%;
-    height: auto;
-    border-radius: 4.25px;
-}
-
-// buttons
-
-// .cta-button {
-//     float: right;
-// }
-
-.about-link-text {
-    font-family: "Rubik", sans-serif;
-    text-decoration: none;
-}
-
-.btn {
-    margin-top: 16px;
-    margin-bottom: 16px;
-    margin-right: 16px;
-    color: $white;
-    background-color: $hero-blue;
-}
-.btn:hover {
-    color: $white;
-}
-
-// nav
-.navbar {
-    background-color: $white;
-    // stroke:#027af2;
-}
-
-.navbar-toggler {
-    color: $hero-blue;
-}
-
-.nav-link, .navbar-title {
-    font-weight: 400;
-    font-family: "Rubik", sans-serif;
-    color: $header-color;
-    text-decoration: none;
-    display: inline-block;
-    padding: 10px 15px;
-    border-radius: 5px;
-  
-    &:hover {
-      color: $blue;
-    }
-  
-    &.active {
-      color: $blue;
-  
-      .menu-text {
-        color: $blue;
-      }
-    }
+.badge {
+  &.bg-light {
+    color: $dark;
   }
-
-// nav-footer
-.nav-footer {
-    background-color: $nav-footer-color;
-    color: $nav-footer-text-color;
 }
 
-.nav-footer p {
-    background-color: $nav-footer-color;
-    color: $nav-footer-text-color;
+// Progress bars
+
+.progress {
+  @include box-shadow(none);
+
+  .progress-bar {
+    font-size: 8px;
+    line-height: 8px;
+  }
 }
+
+
+// quarto-scss-analysis-annotation { "origin": null }
