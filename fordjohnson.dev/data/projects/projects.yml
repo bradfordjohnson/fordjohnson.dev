@@ -2,6 +2,6 @@
   tiles:
     - title: TidyTuesday
       subtitle: Weekly visuals created using R and the Tidyverse.
-      href: https://github.com/bradfordjohnson/tidytuesday/blob/main/README.md
-      code: https://github.com/bradfordjohnson/tidytuesday
+      href: https://tidytuesday.fordjohnson.dev/
+      code: https://github.com/bradfordjohnson/tidytuesday/tree/main/tidytuesday
       thumbnail: projects/owid-energy.png
