@@ -5,4 +5,4 @@
   tiles:
     - title: Matchmaking in Rocket League
       subtitle: Diving into how MMR and matchmaking work.
-      href: data/notes/rocket-league-mmr/index.html
+      href: notes/rocket-league-mmr/index.html
