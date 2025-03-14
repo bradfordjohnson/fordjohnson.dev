@@ -1,13 +1,26 @@
 - category: Projects
   tiles:
     - title: TidyTuesday
-      subtitle: Visuals created weekly using R and the Tidyverse.
-      href: https://tidytuesday.fordjohnson.dev/
-      code: https://github.com/bradfordjohnson/tidytuesday/tree/main/tidytuesday
-      thumbnail: projects/owid-energy.png
+      subtitle: Visuals created weekly using R and the Tidyverse
+      href: projects/tidytuesday/index.html
+      # code: https://github.com/bradfordjohnson/tidytuesday/tree/main/tidytuesday
+      thumbnail: projects/tidytuesday/image.png
 
     - title: Charleston Flight Dashboard
-      subtitle: Dashboard using Observable Framework (WIP) Using JavaScript and Python
-      href: https://kchs.fordjohnson.dev/
-      code: https://github.com/bradfordjohnson/kchs
-      thumbnail: projects/kchs-dashboard.png
+      subtitle: Dashboard powered by JavaScript and Python
+      href: projects/charleston-flights-dashboard/index.html
+      # code: https://github.com/bradfordjohnson/kchs
+      thumbnail: projects/charleston-flights-dashboard/image.png
+
+    - title: Placeholder
+      subtitle: ...
+      href: projects/charleston-flights-dashboard/index.html
+      # code: https://github.com/bradfordjohnson/kchs
+      thumbnail: https://placehold.co/600x400/png
+
+    - title: Placeholder
+      subtitle: ...
+      href: projects/charleston-flights-dashboard/index.html
+      # code: https://github.com/bradfordjohnson/kchs
+      thumbnail: https://placehold.co/600x400/png
+

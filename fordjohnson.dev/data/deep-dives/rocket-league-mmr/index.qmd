@@ -10,7 +10,6 @@ execute:
   freeze: auto
 ---
 
-::: column-page
 # Matchmaking in Rocket League
 
 ::: {.callout-note}
@@ -19,17 +18,16 @@ execute:
 This note is still in progress as I gather data and insights from other Rocket League players. Feel free to check out what I’ve compiled so far!
 :::
 
-:::
 
 ::::: column-screen
 :::: portfolio-banner
-::: column-page
+::: column-body
 As a longtime Rocket League player, I’ve always been fascinated by the ranking system behind the game. Using tools like BakkesMod and tracking websites, I’ve been able to monitor my MMR in real time, sparking my interest in how the system works. Rocket League, like many games, uses skill-based matchmaking to create balanced matches, driven by calculations that determine player ratings and matchups. My goal is to explore the data behind this system and understand how it shapes the competitive experience.
 :::
 ::::
 :::::
 
-::: {.column-page .binom}
+::: {.binom}
 
 ## Matchmaking Rating (MMR) and Skill Rating
 

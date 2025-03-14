@@ -84,6 +84,53 @@ $progress-height:               .5rem !default;
   vertical-align: top;
 }
 
+// Card Images
+.card-img-top {
+  max-height: 12rem;
+}
+
+// Chip
+.chip-description {
+  display: flex;
+  border-radius: 5px;
+  margin: 10px 0px;
+  padding: 5px 0px;
+}
+
+.chip-caption {
+  flex: 0;
+  white-space: nowrap;
+  color: #777;
+  font-family: Arial;
+  /* max-width: 100px; */
+  line-height: 30px;
+  padding: 0;
+  margin-right: 15px;
+  
+}
+
+.chip {
+  background-color: whitesmoke;
+  color: #3871E0;
+  padding: 6px 8px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-right: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  // font-family: Arial;
+}
+
+.chip:hover, .chip:focus, .chip:active {
+  text-decoration: underline;
+  // background-color: #eee;
+  // text-decoration: none;
+}
+
+.chip a {
+  text-decoration: none;
+}
+
 /*-- scss:rules --*/
 
 

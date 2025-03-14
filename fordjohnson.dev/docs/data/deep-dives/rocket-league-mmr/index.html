@@ -67,6 +67,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
@@ -154,7 +155,7 @@ window.Quarto = {
 <meta property="og:title" content="Matchmaking in Rocket League">
 <meta property="og:description" content="Uncover the data behind Rocket League’s MMR and matchmaking system, explaining how player ratings are calculated and how the system pairs competitors in ranked play.">
 <meta property="og:site_name" content="Ford Johnson">
-<link rel="canonical" href="https://fordjohnson.dev/data/notes/rocket-league-mmr/">
+<link rel="canonical" href="https://fordjohnson.dev/data/deep-dives/rocket-league-mmr/">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -214,7 +215,7 @@ window.Quarto = {
 
 
 
-<section id="matchmaking-in-rocket-league" class="level1 column-page">
+<section id="matchmaking-in-rocket-league" class="level1 page-columns page-full">
 <h1>Matchmaking in Rocket League</h1>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -229,17 +230,16 @@ Ongoing Analysis
 <p>This note is still in progress as I gather data and insights from other Rocket League players. Feel free to check out what I’ve compiled so far!</p>
 </div>
 </div>
-</section>
 <div class="column-screen page-columns page-full">
 <div class="portfolio-banner page-columns page-full">
-<div class="column-page">
+<div class="column-body">
 <p>As a longtime Rocket League player, I’ve always been fascinated by the ranking system behind the game. Using tools like BakkesMod and tracking websites, I’ve been able to monitor my MMR in real time, sparking my interest in how the system works. Rocket League, like many games, uses skill-based matchmaking to create balanced matches, driven by calculations that determine player ratings and matchups. My goal is to explore the data behind this system and understand how it shapes the competitive experience.</p>
 </div>
 </div>
 </div>
-<div class="column-page binom">
+<div class="binom">
 <section id="matchmaking-rating-mmr-and-skill-rating" class="level2">
-<h2 data-anchor-id="matchmaking-rating-mmr-and-skill-rating">Matchmaking Rating (MMR) and Skill Rating</h2>
+<h2 class="anchored" data-anchor-id="matchmaking-rating-mmr-and-skill-rating">Matchmaking Rating (MMR) and Skill Rating</h2>
 <p>Most Rocket League players interested in their <a href="https://www.epicgames.com/help/en-US/c-Category_RocketLeague/c-RocketLeague_Gameplay/what-are-rocket-league-competitive-ranks-a000084481">competitive ranking</a> are familiar with the skill rating displayed on third-party websites or in BakkesMod. This <strong>skill rating</strong> is derived from the matchmaking rank (MMR), which remains hidden and is not easily visible to players.</p>
 <p><span class="math display">
 \text{mmr} \approx \frac{\left(\text{skill rating} - 100\right)}{20}
@@ -249,7 +249,7 @@ Ongoing Analysis
 </span></p>
 <p>The MMR is the underlying numerical value that determines a player’s true skill level, influencing matchmaking and overall competitive performance in Rocket League. Both casual and competitive matchmaking in Rocket League utilize skill-based matchmaking, meaning that wins and losses directly affect your skill value, leading to increases or decreases in your ranking. To balance the time spent finding eligible opponents within selected regions and prevent long wait times, the game expands the allowable skill range when necessary. Different playlists and gamemodes will have their own MMR value.</p>
 <section id="determining-a-players-skill" class="level3">
-<h3 data-anchor-id="determining-a-players-skill">Determining a Player’s Skill</h3>
+<h3 class="anchored" data-anchor-id="determining-a-players-skill">Determining a Player’s Skill</h3>
 <p>Rocket League uses the <code>SkillMu</code> and <code>SkillSigma</code> to calculate a player’s MMR. This is similar to other Bayesian approaches but not the same.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <dl>
 <dt>SkillMu (Mu)</dt>
@@ -264,7 +264,7 @@ The “uncertainty” value that decreases with each match, indicating the syste
 <p>New players start with a SkillMu = 25, skill rating = 600 and SkillSigma = 8.333.</p>
 </section>
 <section id="matchmaking-and-teams" class="level3">
-<h3 data-anchor-id="matchmaking-and-teams">Matchmaking and Teams</h3>
+<h3 class="anchored" data-anchor-id="matchmaking-and-teams">Matchmaking and Teams</h3>
 <p>In competitive Rocket League, players can choose between the following gamemodes:<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> 1v1, 2v2, 3v3.</p>
 <p>The matchmaking system employs a weighted average approach, using methods like the root mean square (RMS), to assess each team’s skill and ensure fair matchups against opponents.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
 <p><span class="math display">
@@ -291,7 +291,7 @@ The “uncertainty” value that decreases with each match, indicating the syste
 </section>
 </section>
 <section id="simulating-matches" class="level2">
-<h2 data-anchor-id="simulating-matches">Simulating Matches</h2>
+<h2 class="anchored" data-anchor-id="simulating-matches">Simulating Matches</h2>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -458,26 +458,27 @@ The “uncertainty” value that decreases with each match, indicating the syste
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>
-1v1 game 1: Player 2 vs Player 1 -&gt; Win
+1v1 game 1: Player 1 vs Player 2 -&gt; Loss
 Results:
-Player 2: skill_mu = 27.08 (Δ=2.08), skill_sigma = 8.20 (Δ=-0.13)
 Player 1: skill_mu = 22.92 (Δ=-2.08), skill_sigma = 8.20 (Δ=-0.13)
+Player 2: skill_mu = 27.08 (Δ=2.08), skill_sigma = 8.20 (Δ=-0.13)
 
 1v1 game 2: Player 2 vs Player 1 -&gt; Loss
 Results:
 Player 2: skill_mu = 22.92 (Δ=-2.08), skill_sigma = 8.20 (Δ=-0.13)
 Player 1: skill_mu = 27.08 (Δ=2.08), skill_sigma = 8.20 (Δ=-0.13)
 
-1v1 game 3: Player 2 vs Player 1 -&gt; Win
+1v1 game 3: Player 1 vs Player 2 -&gt; Win
 Results:
-Player 2: skill_mu = 27.08 (Δ=2.08), skill_sigma = 8.20 (Δ=-0.13)
-Player 1: skill_mu = 22.92 (Δ=-2.08), skill_sigma = 8.20 (Δ=-0.13)</code></pre>
+Player 1: skill_mu = 27.08 (Δ=2.08), skill_sigma = 8.20 (Δ=-0.13)
+Player 2: skill_mu = 22.92 (Δ=-2.08), skill_sigma = 8.20 (Δ=-0.13)</code></pre>
 </div>
 </div>
 </section>
 </div>
 
 
+</section>
 
 
 <div id="quarto-appendix"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
@@ -508,6 +509,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     

@@ -34,6 +34,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
@@ -57,7 +58,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-data-projects .list');
+    const listingTargetEl = window.document.querySelector('#listing-projects .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -70,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-data-projects'] = new List('listing-data-projects', options);
+    window['quarto-listings']['listing-projects'] = new List('listing-projects', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -85,20 +86,20 @@ ul.task-list li input[type="checkbox"] {
   
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-data-notes .list');
+    const listingTargetEl = window.document.querySelector('#listing-deep-dives .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-category','listing-description','listing-tiles',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-category','listing-tiles',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-category","listing-description","listing-tiles"],
+      searchColumns: ["listing-category","listing-tiles"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-data-notes'] = new List('listing-data-notes', options);
+    window['quarto-listings']['listing-deep-dives'] = new List('listing-deep-dives', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -224,28 +225,35 @@ window.Quarto = {
 
 
 <div class="column-page">
-<div id="listing-data-projects" class="quarto-listing quarto-listing-container-custom">
+<!-- <div class="chip-description">
+  <div class="chip-caption">
+  See section:
+  </div>
+  <a href="#projects" class="chip">
+  Projects
+  </a>
+  <a href="#deep-dives" class="chip">
+  Deep Dives
+  </a>
+</div> -->
+<div id="listing-projects" class="quarto-listing quarto-listing-container-custom">
 
-<h2>Projects</h2>
+<h2 class="anchored">Projects</h2>
 
 <div class="list grid" style="column-gap: 10px;">
 
   <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="0">
     <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
       <small class="card-text inline-block">
-        <a href="https://tidytuesday.fordjohnson.dev/" class="listing-title">TidyTuesday</a>
-         
-        <a href="https://github.com/bradfordjohnson/tidytuesday/tree/main/tidytuesday" title="View source code" class="source-code card-text float-end inline-block">
-          <i class="bi-code-slash"></i>
-        </a>
+        <a href="projects/tidytuesday/index.html" class="listing-title">TidyTuesday</a>
         
         <br>
-        <span class="text-muted listing-subtitle">Visuals created weekly using R and the Tidyverse.</span>
+        <span class="text-muted listing-subtitle">Visuals created weekly using R and the Tidyverse</span>
       </small>
     </div>
     
-    <a href="https://tidytuesday.fordjohnson.dev/">
-      <img src="projects/owid-energy.png" alt="" class="card-img-top">
+    <a href="projects/tidytuesday/index.html">
+      <img src="projects/tidytuesday/image.png" alt="" class="card-img-top">
     </a>
     
     
@@ -255,19 +263,51 @@ window.Quarto = {
   <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="1">
     <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
       <small class="card-text inline-block">
-        <a href="https://kchs.fordjohnson.dev/" class="listing-title">Charleston Flight Dashboard</a>
-         
-        <a href="https://github.com/bradfordjohnson/kchs" title="View source code" class="source-code card-text float-end inline-block">
-          <i class="bi-code-slash"></i>
-        </a>
+        <a href="projects/charleston-flights-dashboard/index.html" class="listing-title">Charleston Flight Dashboard</a>
         
         <br>
-        <span class="text-muted listing-subtitle">Dashboard using Observable Framework (WIP) Using JavaScript and Python</span>
+        <span class="text-muted listing-subtitle">Dashboard powered by JavaScript and Python</span>
       </small>
     </div>
     
-    <a href="https://kchs.fordjohnson.dev/">
-      <img src="projects/kchs-dashboard.png" alt="" class="card-img-top">
+    <a href="projects/charleston-flights-dashboard/index.html">
+      <img src="projects/charleston-flights-dashboard/image.png" alt="" class="card-img-top">
+    </a>
+    
+    
+    
+  </div>
+
+  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="2">
+    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
+      <small class="card-text inline-block">
+        <a href="projects/charleston-flights-dashboard/index.html" class="listing-title">Placeholder</a>
+        
+        <br>
+        <span class="text-muted listing-subtitle">...</span>
+      </small>
+    </div>
+    
+    <a href="projects/charleston-flights-dashboard/index.html">
+      <img src="https://placehold.co/600x400/png" alt="" class="card-img-top">
+    </a>
+    
+    
+    
+  </div>
+
+  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="3">
+    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
+      <small class="card-text inline-block">
+        <a href="projects/charleston-flights-dashboard/index.html" class="listing-title">Placeholder</a>
+        
+        <br>
+        <span class="text-muted listing-subtitle">...</span>
+      </small>
+    </div>
+    
+    <a href="projects/charleston-flights-dashboard/index.html">
+      <img src="https://placehold.co/600x400/png" alt="" class="card-img-top">
     </a>
     
     
@@ -280,31 +320,32 @@ window.Quarto = {
 No matching items
 </div>
 </div>
-<div id="listing-data-notes" class="quarto-listing quarto-listing-container-custom">
+<div id="listing-deep-dives" class="quarto-listing quarto-listing-container-custom">
 
-  <h2>Deep Dives</h2>
-    
-    <!-- <p>Exploring the &quot;How?&quot; and &quot;Why?&quot;
-</p> -->
-    
-    
-<table class="table caption-top" data-quarto-postprocess="true">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th">Title</th>
-<th data-quarto-table-cell-role="th">Subtitle</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="notes/rocket-league-mmr/index.html" class="listing-title">Matchmaking in Rocket League</a></td>
-<td><span class="text-muted listing-subtitle">Diving into how MMR and matchmaking work.</span></td>
-</tr>
-</tbody>
-</table>
+<h2 class="anchored">Deep Dives</h2>
 
+<div class="list grid" style="column-gap: 10px;">
+
+  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="0">
+    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
+      <small class="card-text inline-block">
+        <a href="deep-dives/rocket-league-mmr/index.html" class="listing-title">Matchmaking in Rocket League</a>
+        
+        <br>
+        <span class="text-muted listing-subtitle">Diving into how MMR and matchmaking work</span>
+      </small>
+    </div>
+    
+    <a href="deep-dives/rocket-league-mmr/index.html">
+      <img src="https://placehold.co/600x400/png" alt="" class="card-img-top">
+    </a>
     
     
+    
+  </div>
+
+</div>
+
 <div class="listing-no-matching d-none">
 No matching items
 </div>
@@ -335,6 +376,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
