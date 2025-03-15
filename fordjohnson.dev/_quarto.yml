@@ -6,7 +6,7 @@ website:
   title: Ford Johnson
   site-url: https://fordjohnson.dev
   open-graph:
-    image: images/logo.png
+    image: images/logo-2.png
   search: false
   cookie-consent: true
   favicon: images/favicon.png
