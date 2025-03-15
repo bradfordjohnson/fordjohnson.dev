@@ -68,6 +68,17 @@ $alert-border-width:            0 !default;
 
 $progress-height:               .5rem !default;
 
+// About
+.about-entity{
+  padding-left: 1rem;
+}
+
+.about-image {
+  max-width: 20em;
+  aspect-ratio: auto;
+  padding: 16px;
+}
+
 // Photos
 
 .photo-grid {
@@ -160,6 +171,7 @@ $progress-height:               .5rem !default;
   min-width: auto;
   padding: 13px 24px 12px;
   margin-right: 10px;
+  margin-bottom: 10px;
   position: relative;
   text-align: center;
   text-decoration: none;

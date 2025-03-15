@@ -17,7 +17,7 @@ lightbox: true
 
 </div>
 
-![](image.png)
+![](image.png){width=auto}
 
 :::
 
