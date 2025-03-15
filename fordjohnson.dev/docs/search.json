@@ -4,14 +4,14 @@
     "href": "photography/index.html",
     "title": "Photography",
     "section": "",
-    "text": "Photography"
+    "text": "Photography\nExplore photos from my travels, including trips to Mexico and hiking, alongside creative shots where I experiment with different techniques."
   },
   {
     "objectID": "data/projects/tidytuesday/index.html#about",
     "href": "data/projects/tidytuesday/index.html#about",
     "title": "TidyTuesday",
     "section": "About",
-    "text": "About\nI started participating in 2023, drawn to the open-ended nature of the challenge and the opportunity to learn from others. Over time, TidyTuesday has become a space for me to experiment with new visualization techniques, improve my data wrangling workflow, and engage with the broader R and data visualization community.\nBeyond creating visuals, I’ve also submitted datasets and connected with other data professionals—gaining inspiration from their approaches, sharing insights, and refining my own style along the way. While I aim to participate regularly, I prioritize quality over quantity, choosing weeks that challenge me and help me grow when time allows."
+    "text": "About\nI started participating in 2023, drawn to the open-ended nature of the challenge and the opportunity to learn from others. Over time, TidyTuesday has become a space for me to experiment with new visualization techniques, improve my data wrangling workflow, and engage with the broader R and data visualization community.\nBeyond creating visuals, I’ve also submitted datasets and connected with other data professionals. This lets praticipants gain inspiration from eachother, share insights; allowing myself to refine my own style each week. While I aim to participate regularly, I prioritize quality over quantity, choosing weeks that challenge me and help me grow when time allows."
   },
   {
     "objectID": "data/projects/tidytuesday/index.html#approach",
