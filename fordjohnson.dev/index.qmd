@@ -5,7 +5,6 @@ about:
   id: hero-heading
   template: trestles
   image: images/profile.jpg
-  image-width: 20em
 ---
 
 ::: {.column-page}

@@ -1,0 +1,6 @@
+- category: Deep Dives
+  tiles:
+    - title: Matchmaking in Rocket League
+      subtitle: Diving into how MMR and matchmaking work
+      href: deep-dives/rocket-league-mmr/index.html
+      thumbnail: deep-dives/rocket-league-mmr/image.jpg

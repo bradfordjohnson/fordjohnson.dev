@@ -1,19 +1,32 @@
 ---
 pagetitle: Data
 listing:
-  - id: data-projects
+  - id: projects
     template: card-template.ejs
     contents: projects/projects.yml
-  - id: data-notes
-    template: table-template.ejs
-    contents: notes/notes.yml
+  - id: deep-dives
+    template: card-template.ejs
+    contents: deep-dives/deep-dives.yml
 ---
 
 ::: {.column-page}
-:::{#data-projects}
+
+<!-- <div class="chip-description">
+  <div class="chip-caption">
+  See section:
+  </div>
+  <a href="#projects" class="chip">
+  Projects
+  </a>
+  <a href="#deep-dives" class="chip">
+  Deep Dives
+  </a>
+</div> -->
+
+:::{#projects}
 
 :::
-:::{#data-notes}
+:::{#deep-dives}
 
 :::
 
