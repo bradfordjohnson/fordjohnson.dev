@@ -5,7 +5,8 @@ project:
 website:
   title: Ford Johnson
   site-url: https://fordjohnson.dev
-  open-graph: true
+  open-graph:
+    image: images/logo.png
   search: false
   cookie-consent: true
   favicon: images/favicon.png
@@ -41,3 +42,4 @@ format:
     theme: styles.scss
     toc: false
     canonical-url: true
+    link-external-newwindow: true

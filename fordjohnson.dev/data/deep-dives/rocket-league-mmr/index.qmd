@@ -2,6 +2,7 @@
 pagetitle: Matchmaking in Rocket League
 description: |
   Uncover the data behind Rocket League's MMR and matchmaking system, explaining how player ratings are calculated and how the system pairs competitors in ranked play.
+toc: true
 lightbox: true
 appendix-style: plain
 html-math-method:
@@ -18,16 +19,8 @@ execute:
 This note is still in progress as I gather data and insights from other Rocket League players. Feel free to check out what I’ve compiled so far!
 :::
 
-
-::::: column-screen
-:::: portfolio-banner
-::: column-body
 As a longtime Rocket League player, I’ve always been fascinated by the ranking system behind the game. Using tools like BakkesMod and tracking websites, I’ve been able to monitor my MMR in real time, sparking my interest in how the system works. Rocket League, like many games, uses skill-based matchmaking to create balanced matches, driven by calculations that determine player ratings and matchups. My goal is to explore the data behind this system and understand how it shapes the competitive experience.
-:::
-::::
-:::::
 
-::: {.binom}
 
 ## Matchmaking Rating (MMR) and Skill Rating
 
@@ -254,5 +247,3 @@ players <- lapply(1:2, function(i) Player$new(name = paste("Player", i)))
 simulate_duels(rater, players, 3)
 
 ```
-
-:::

@@ -131,6 +131,68 @@ $progress-height:               .5rem !default;
   text-decoration: none;
 }
 
+// CTA Buttons
+
+// this will helpalign with bottom of image
+.g-col-6 { 
+  display: flex;
+  flex-direction: column;
+}
+
+.button-div {
+  margin-top: auto;
+  padding-bottom: 12px;
+}
+
+.brand-button-primary, .brand-button-secondary {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 20px;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  min-height: 48px;
+  min-width: auto;
+  padding: 13px 24px 12px;
+  margin-right: 10px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: background-color 0.2s, box-shadow 0.2s, color 0.2s;
+  align-items: center;
+}
+.brand-button-primary {
+  background-color: #2780e3;
+  color: white;
+  border-color: #2780e3;
+}
+
+.brand-button-primary:hover {
+  background-color: #1961b3;
+  border-color: #1961b3;
+}
+
+.brand-button-secondary {
+  background-color: white;
+  color: #2780e3;
+  border-color: #ddd;
+}
+
+.brand-button-secondary:hover {
+  background-color: #f0f0f0;
+  border-color: #1961b3;
+  color: #1961b3;
+}
+
+
+
+
 /*-- scss:rules --*/
 
 

@@ -74,7 +74,10 @@ cookieconsent.run({
 
 
 <meta property="og:title" content="Ford Johnson">
+<meta property="og:image" content="https://fordjohnson.dev/images/logo.png">
 <meta property="og:site_name" content="Ford Johnson">
+<meta property="og:image:height" content="500">
+<meta property="og:image:width" content="500">
 <link rel="canonical" href="https://fordjohnson.dev/">
 </head>
 
@@ -257,6 +260,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         if (link.dataset.originalHref !== undefined) {
           link.href = link.dataset.originalHref;
         }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

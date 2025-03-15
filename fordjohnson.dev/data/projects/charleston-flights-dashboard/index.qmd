@@ -1,5 +1,24 @@
 ---
 pagetitle: Charleston Flights Dashboard
+toc: true
 ---
 
-https://kchs.fordjohnson.dev/
+# Project Title
+
+## Summary
+- Brief 1-2 sentence description of the project.  
+- Key image or visual.
+
+## Context & Purpose
+- What is the project about?  
+- Why does it matter?
+
+## Approach
+- Briefly describe how it was built (tools, methods, key steps).
+
+## Key Insights
+- Main takeaways or results.
+
+## Links & Next Steps
+- [View Full Project](https://kchs.fordjohnson.dev/)
+- Additional resources (code, data, related work)
