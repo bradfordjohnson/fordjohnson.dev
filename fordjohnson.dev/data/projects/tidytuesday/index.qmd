@@ -27,7 +27,7 @@ lightbox: true
 
 I started participating in **2023**, drawn to the open-ended nature of the challenge and the opportunity to learn from others. Over time, TidyTuesday has become a space for me to experiment with new visualization techniques, improve my data wrangling workflow, and engage with the broader R and data visualization community.
 
-Beyond creating visuals, I’ve also submitted datasets and connected with other data professionals—gaining inspiration from their approaches, sharing insights, and refining my own style along the way. While I aim to participate regularly, I prioritize quality over quantity, choosing weeks that challenge me and help me grow when time allows.
+Beyond creating visuals, I’ve also submitted datasets and connected with other data professionals. This lets praticipants gain inspiration from eachother, share insights; allowing myself to refine my own style each week. While I aim to participate regularly, I prioritize quality over quantity, choosing weeks that challenge me and help me grow when time allows.
 
 ## Approach
 - **Data:** Weekly datasets from the TidyTuesday GitHub repository, covering diverse topics. Each project starts with exploratory analysis and data cleaning.

@@ -8,6 +8,8 @@ lightbox: true
 
 # Photography
 
+Explore photos from my travels, including trips to Mexico and hiking, alongside creative shots where I experiment with different techniques.
+
 ::: {.photo-grid}
 ![](images/20240325-171135.jpg){group="photo-gallery"}
 
