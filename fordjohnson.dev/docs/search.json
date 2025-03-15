@@ -7,11 +7,25 @@
     "text": "Photography"
   },
   {
-    "objectID": "data/projects/tidytuesday/index.html",
-    "href": "data/projects/tidytuesday/index.html",
+    "objectID": "data/projects/tidytuesday/index.html#about",
+    "href": "data/projects/tidytuesday/index.html#about",
     "title": "TidyTuesday",
-    "section": "",
-    "text": "TidyTuesday\n\nAbout\nTidyTuesday is a weekly social data project in the R community, where participants explore real-world datasets, create compelling visualizations, and refine their data storytelling skills.\n\nI started participating in 2023, drawn to the open-ended nature of the challenge and the opportunity to learn from others. Over time, TidyTuesday has become a space for me to experiment with new visualization techniques, improve my data wrangling workflow, and engage with the broader R and data visualization community.\nBeyond creating visuals, I’ve also submitted datasets and connected with other data professionals—gaining inspiration from their approaches, sharing insights, and refining my own style along the way. While I aim to participate regularly, I prioritize quality over quantity, choosing weeks that challenge me and help me grow when time allows.\n\n\nApproach\n\nData: Weekly datasets from the TidyTuesday GitHub repository, covering diverse topics. Each project starts with exploratory analysis and data cleaning.\nTools: Built primarily with R, Quarto, and the Tidyverse. I also leverage additional R packages and techniques depending on the dataset and visualization goals.\nProcess: Each dataset is an opportunity to test new techniques, work with different data structures, and develop engaging visuals. My workflow includes data wrangling, exploratory analysis, and storytelling through visualization.\n\nCheck out the code Check out the code"
+    "section": "About",
+    "text": "About\nI started participating in 2023, drawn to the open-ended nature of the challenge and the opportunity to learn from others. Over time, TidyTuesday has become a space for me to experiment with new visualization techniques, improve my data wrangling workflow, and engage with the broader R and data visualization community.\nBeyond creating visuals, I’ve also submitted datasets and connected with other data professionals—gaining inspiration from their approaches, sharing insights, and refining my own style along the way. While I aim to participate regularly, I prioritize quality over quantity, choosing weeks that challenge me and help me grow when time allows."
+  },
+  {
+    "objectID": "data/projects/tidytuesday/index.html#approach",
+    "href": "data/projects/tidytuesday/index.html#approach",
+    "title": "TidyTuesday",
+    "section": "Approach",
+    "text": "Approach\n\nData: Weekly datasets from the TidyTuesday GitHub repository, covering diverse topics. Each project starts with exploratory analysis and data cleaning.\nTools: Built primarily with R, Quarto, and the Tidyverse. I also leverage additional R packages and techniques depending on the dataset and visualization goals.\nProcess: Each dataset is an opportunity to test new techniques, work with different data structures, and develop engaging visuals. My workflow includes data wrangling, exploratory analysis, and storytelling through visualization."
+  },
+  {
+    "objectID": "data/projects/tidytuesday/index.html#see-more",
+    "href": "data/projects/tidytuesday/index.html#see-more",
+    "title": "TidyTuesday",
+    "section": "See More",
+    "text": "See More\nYou can explore my TidyTuesday gallery here and watch the R visual creation process here through a series of animated GIFs showcasing the step-by-step development of my ggplots."
   },
   {
     "objectID": "data/index.html",
@@ -42,118 +56,6 @@
     "text": "Footnotes\n\n\nReddit - How the Ranking System and Matchmaking works…↩︎\nCompetitive and casual matchmaking use different weighting systems; this discussion will focus on competitive modes.↩︎\nReddit - Parties: How they affect matchmaking MMR↩︎"
   },
   {
-    "objectID": "data/projects/charleston-flights-dashboard/index.html",
-    "href": "data/projects/charleston-flights-dashboard/index.html",
-    "title": "Ford Johnson",
-    "section": "",
-    "text": "https://kchs.fordjohnson.dev/"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Ford Johnson",
-    "section": "",
-    "text": "Ford Johnson\n\nI’m a data analyst and storyteller who specializes in uncovering insights from web analytics and big data. With a background in sociology and criminology, I’ve always been drawn to understanding patterns and turning them into meaningful, engaging narratives.\nLearning R sparked my love for transforming raw data into relatable stories and creating custom visuals that make complex information accessible. Whether it’s diving into web metrics or building visuals, I thrive on blending creativity with analysis.\nOutside the world of data, you’ll usually find me exploring hiking trails, capturing moments through my camera, or perfecting my golf swing.\nTake a look around my site to see my projects and how I bring data to life!"
-  },
-  {
-    "objectID": "data/projects/tidytuesday/index.html#summary",
-    "href": "data/projects/tidytuesday/index.html#summary",
-    "title": "TidyTuesday",
-    "section": "Summary",
-    "text": "Summary\nTidyTuesday is a weekly data visualization and analysis challenge that encourages the use of R and the tidyverse. Each week, participants explore publicly available datasets to create compelling visuals, uncover insights, and refine their data storytelling skills.\n\nI use TidyTuesday as a space to experiment with new visualization techniques, improve my data wrangling workflow, and learn from the broader data community. While I aim to contribute regularly, I may not participate every week."
-  },
-  {
-    "objectID": "data/projects/tidytuesday/index.html#context-purpose",
-    "href": "data/projects/tidytuesday/index.html#context-purpose",
-    "title": "Project Title",
-    "section": "Context & Purpose",
-    "text": "Context & Purpose\n\nWhat is the project about?\n\nWhy does it matter?"
-  },
-  {
-    "objectID": "data/projects/tidytuesday/index.html#approach",
-    "href": "data/projects/tidytuesday/index.html#approach",
-    "title": "TidyTuesday",
-    "section": "Approach",
-    "text": "Approach\n\nData: Weekly datasets from the TidyTuesday GitHub repository, covering diverse topics. Each project starts with exploratory analysis and data cleaning.\nTools: Built primarily with R, Quarto, and the Tidyverse. I also leverage additional R packages and techniques depending on the dataset and visualization goals.\nProcess: Each dataset is an opportunity to test new techniques, work with different data structures, and develop engaging visuals. My workflow includes data wrangling, exploratory analysis, and storytelling through visualization."
-  },
-  {
-    "objectID": "data/projects/tidytuesday/index.html#key-insights",
-    "href": "data/projects/tidytuesday/index.html#key-insights",
-    "title": "Project Title",
-    "section": "Key Insights",
-    "text": "Key Insights\n\nMain takeaways or results."
-  },
-  {
-    "objectID": "data/projects/tidytuesday/index.html#links-next-steps",
-    "href": "data/projects/tidytuesday/index.html#links-next-steps",
-    "title": "TidyTuesday",
-    "section": "Links & Next Steps",
-    "text": "Links & Next Steps\n\nView Full Project\n\nTidyTuesday GitHub Repository\n\nExperimenting with more interactive visualizations using Observable and Shiny."
-  },
-  {
-    "objectID": "data/projects/charleston-flights-dashboard/index.html#summary",
-    "href": "data/projects/charleston-flights-dashboard/index.html#summary",
-    "title": "Project Title",
-    "section": "Summary",
-    "text": "Summary\n\nBrief 1-2 sentence description of the project.\n\nKey image or visual."
-  },
-  {
-    "objectID": "data/projects/charleston-flights-dashboard/index.html#context-purpose",
-    "href": "data/projects/charleston-flights-dashboard/index.html#context-purpose",
-    "title": "Project Title",
-    "section": "Context & Purpose",
-    "text": "Context & Purpose\n\nWhat is the project about?\n\nWhy does it matter?"
-  },
-  {
-    "objectID": "data/projects/charleston-flights-dashboard/index.html#approach",
-    "href": "data/projects/charleston-flights-dashboard/index.html#approach",
-    "title": "Charleston Flights Dashboard",
-    "section": "Approach",
-    "text": "Approach\n\nData: The dashboard ingests daily CHS flight data through a Python-based ETL pipeline, storing structured snapshots for historical trend analysis.\nTools: Built with Observable Framework, leveraging Observable Plot, D3, and Leaflet for interactive visualizations and Python for ETL.\nProcess: Live data is pulled directly from an API powering the official CHS website, while historical trend snapshots help identify operational patterns."
-  },
-  {
-    "objectID": "data/projects/charleston-flights-dashboard/index.html#key-insights",
-    "href": "data/projects/charleston-flights-dashboard/index.html#key-insights",
-    "title": "Project Title",
-    "section": "Key Insights",
-    "text": "Key Insights\n\nMain takeaways or results."
-  },
-  {
-    "objectID": "data/projects/charleston-flights-dashboard/index.html#links-next-steps",
-    "href": "data/projects/charleston-flights-dashboard/index.html#links-next-steps",
-    "title": "Project Title",
-    "section": "Links & Next Steps",
-    "text": "Links & Next Steps\n\nView Full Project\nAdditional resources (code, data, related work)"
-  },
-  {
-    "objectID": "data/projects/tidytuesday/index.html#visuals",
-    "href": "data/projects/tidytuesday/index.html#visuals",
-    "title": "TidyTuesday",
-    "section": "Visuals",
-    "text": "Visuals\nExplore my TidyTuesday gallery to see how data transforms into stories through creative visualizations!"
-  },
-  {
-    "objectID": "data/projects/tidytuesday/index.html#links",
-    "href": "data/projects/tidytuesday/index.html#links",
-    "title": "TidyTuesday",
-    "section": "Links",
-    "text": "Links\n\nView Full Project\n\nTidyTuesday GitHub Repository"
-  },
-  {
-    "objectID": "data/projects/tidytuesday/index.html#about",
-    "href": "data/projects/tidytuesday/index.html#about",
-    "title": "TidyTuesday",
-    "section": "About",
-    "text": "About\nI started participating in 2023, drawn to the open-ended nature of the challenge and the opportunity to learn from others. Over time, TidyTuesday has become a space for me to experiment with new visualization techniques, improve my data wrangling workflow, and engage with the broader R and data visualization community.\nBeyond creating visuals, I’ve also submitted datasets and connected with other data professionals—gaining inspiration from their approaches, sharing insights, and refining my own style along the way. While I aim to participate regularly, I prioritize quality over quantity, choosing weeks that challenge me and help me grow when time allows."
-  },
-  {
-    "objectID": "data/projects/tidytuesday/index.html#see-more",
-    "href": "data/projects/tidytuesday/index.html#see-more",
-    "title": "TidyTuesday",
-    "section": "See More",
-    "text": "See More\nYou can explore my TidyTuesday gallery here and watch the R visual creation process here through a series of animated GIFs showcasing the step-by-step development of my ggplots."
-  },
-  {
     "objectID": "data/projects/charleston-flights-dashboard/index.html#about",
     "href": "data/projects/charleston-flights-dashboard/index.html#about",
     "title": "Charleston Flights Dashboard",
@@ -161,11 +63,11 @@
     "text": "About\nI’m passionate about aviation and data, and this project represents my effort to bring greater clarity to CHS flight operations through data-driven insights. In January 2025, a snowstorm temporarily shut down the airfield1, and the official CHS website’s updates on airport operations highlighted an opportunity for additional clarity2. This dashboard is designed to offer a transparent, data-focused view of CHS flights, enabling users to explore operational trends and stay informed."
   },
   {
-    "objectID": "data/projects/charleston-flights-dashboard/index.html#see-more",
-    "href": "data/projects/charleston-flights-dashboard/index.html#see-more",
+    "objectID": "data/projects/charleston-flights-dashboard/index.html#approach",
+    "href": "data/projects/charleston-flights-dashboard/index.html#approach",
     "title": "Charleston Flights Dashboard",
-    "section": "See More",
-    "text": "See More\nCheck out the live dashboard and explore the data pipeline + dashboard code."
+    "section": "Approach",
+    "text": "Approach\n\nData: The dashboard ingests daily CHS flight data through a Python-based ETL pipeline, storing structured snapshots for historical trend analysis.\nTools: Built with Observable Framework, leveraging Observable Plot, D3, and Leaflet for interactive visualizations and Python for ETL.\nProcess: Live data is pulled directly from an API powering the official CHS website, while historical trend snapshots help identify operational patterns."
   },
   {
     "objectID": "data/projects/charleston-flights-dashboard/index.html#challenges",
@@ -182,6 +84,13 @@
     "text": "Learning & Future Development\nThis project is expanding my JavaScript skills, particularly in building data-driven applications. I’m focusing on:\n\nObservable Framework for developing interactive, data-powered static sites.\nD3 and Observable Plot for creating dynamic, custom visualizations.\nLeaflet for mapping and visualizing airport gate activity.\nOptimizing data workflows in JavaScript and Python to efficiently handle both real-time and historical data."
   },
   {
+    "objectID": "data/projects/charleston-flights-dashboard/index.html#links",
+    "href": "data/projects/charleston-flights-dashboard/index.html#links",
+    "title": "Charleston Flights Dashboard",
+    "section": "Links",
+    "text": "Links\nCheck out the live dashboard and explore the data pipeline + dashboard code."
+  },
+  {
     "objectID": "data/projects/charleston-flights-dashboard/index.html#footnotes",
     "href": "data/projects/charleston-flights-dashboard/index.html#footnotes",
     "title": "Charleston Flights Dashboard",
@@ -189,10 +98,10 @@
     "text": "Footnotes\n\n\nRead CHS’s official updates on the snowstorm.↩︎\nSee CHS’s Facebook Post and reactions from individuals during the snowstorm event.↩︎"
   },
   {
-    "objectID": "data/projects/charleston-flights-dashboard/index.html#links",
-    "href": "data/projects/charleston-flights-dashboard/index.html#links",
-    "title": "Charleston Flights Dashboard",
-    "section": "Links",
-    "text": "Links\nCheck out the live dashboard and explore the data pipeline + dashboard code."
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ford Johnson",
+    "section": "",
+    "text": "Ford Johnson\n\nI’m a data analyst and storyteller who specializes in uncovering insights from web analytics and big data. With a background in sociology and criminology, I’ve always been drawn to understanding patterns and turning them into meaningful, engaging narratives.\nLearning R sparked my love for transforming raw data into relatable stories and creating custom visuals that make complex information accessible. Whether it’s diving into web metrics or building visuals, I thrive on blending creativity with analysis.\nOutside the world of data, you’ll usually find me exploring hiking trails, capturing moments through my camera, or perfecting my golf swing.\nTake a look around my site to see my projects and how I bring data to life!"
   }
 ]
