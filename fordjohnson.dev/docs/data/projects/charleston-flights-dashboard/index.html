@@ -75,6 +75,8 @@ cookieconsent.run({
 
 
 <meta property="og:title" content="Charleston Flights Dashboard">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://fordjohnson.dev/data/projects/charleston-flights-dashboard/images/logo.png">
 <meta property="og:site_name" content="Ford Johnson">
 <link rel="canonical" href="https://fordjohnson.dev/data/projects/charleston-flights-dashboard/">
 </head>
@@ -133,13 +135,13 @@ cookieconsent.run({
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#project-title" id="toc-project-title" class="nav-link active" data-scroll-target="#project-title">Project Title</a>
+  <li><a href="#charleston-flights-dashboard" id="toc-charleston-flights-dashboard" class="nav-link active" data-scroll-target="#charleston-flights-dashboard">Charleston Flights Dashboard</a>
   <ul class="collapse">
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
-  <li><a href="#context-purpose" id="toc-context-purpose" class="nav-link" data-scroll-target="#context-purpose">Context &amp; Purpose</a></li>
+  <li><a href="#about" id="toc-about" class="nav-link" data-scroll-target="#about">About</a></li>
   <li><a href="#approach" id="toc-approach" class="nav-link" data-scroll-target="#approach">Approach</a></li>
-  <li><a href="#key-insights" id="toc-key-insights" class="nav-link" data-scroll-target="#key-insights">Key Insights</a></li>
-  <li><a href="#links-next-steps" id="toc-links-next-steps" class="nav-link" data-scroll-target="#links-next-steps">Links &amp; Next Steps</a></li>
+  <li><a href="#challenges" id="toc-challenges" class="nav-link" data-scroll-target="#challenges">Challenges</a></li>
+  <li><a href="#learning-future-development" id="toc-learning-future-development" class="nav-link" data-scroll-target="#learning-future-development">Learning &amp; Future Development</a></li>
+  <li><a href="#links" id="toc-links" class="nav-link" data-scroll-target="#links">Links</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -151,48 +153,61 @@ cookieconsent.run({
 
 
 
-<section id="project-title" class="level1">
-<h1>Project Title</h1>
-<section id="summary" class="level2">
-<h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<ul>
-<li>Brief 1-2 sentence description of the project.<br>
-</li>
-<li>Key image or visual.</li>
-</ul>
-</section>
-<section id="context-purpose" class="level2">
-<h2 class="anchored" data-anchor-id="context-purpose">Context &amp; Purpose</h2>
-<ul>
-<li>What is the project about?<br>
-</li>
-<li>Why does it matter?</li>
-</ul>
+<section id="charleston-flights-dashboard" class="level1">
+<h1>Charleston Flights Dashboard</h1>
+<p>Charleston Flights Dashboard is a work-in-progress project built with Observable Framework, combining JavaScript visuals, data mapping, and a Python ETL pipeline to provide a dynamic view of Charleston International Airport (CHS) flights. This dashboard delivers historical trends, live flight data, and interactive visualizations to help track airport operations more clearly.</p>
+<div class="button-div">
+<p><a href="https://kchs.fordjohnson.dev/" class="brand-button-primary" role="button">View the dashboard</a> <a href="https://github.com/bradfordjohnson/kchs" class="brand-button-secondary" role="button">Check out the code</a></p>
+</div>
+<p><img src="image.png" height="400"></p>
+<section id="about" class="level2">
+<h2 class="anchored" data-anchor-id="about">About</h2>
+<p>I’m passionate about aviation and data, and this project represents my effort to bring greater clarity to CHS flight operations through data-driven insights. In January 2025, a snowstorm temporarily shut down the airfield<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, and the official CHS website’s updates on airport operations highlighted an opportunity for additional clarity<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. This dashboard is designed to offer a transparent, data-focused view of CHS flights, enabling users to explore operational trends and stay informed.</p>
 </section>
 <section id="approach" class="level2">
 <h2 class="anchored" data-anchor-id="approach">Approach</h2>
 <ul>
-<li>Briefly describe how it was built (tools, methods, key steps).</li>
+<li><strong>Data:</strong> The dashboard ingests daily CHS flight data through a Python-based ETL pipeline, storing structured snapshots for historical trend analysis.</li>
+<li><strong>Tools:</strong> Built with Observable Framework, leveraging Observable Plot, D3, and Leaflet for interactive visualizations and Python for ETL.</li>
+<li><strong>Process:</strong> Live data is pulled directly from an API powering the official CHS website, while historical trend snapshots help identify operational patterns.</li>
 </ul>
 </section>
-<section id="key-insights" class="level2">
-<h2 class="anchored" data-anchor-id="key-insights">Key Insights</h2>
+<section id="challenges" class="level2">
+<h2 class="anchored" data-anchor-id="challenges">Challenges</h2>
+<p>Working with flight data comes with its own complexities, real-world data can be messy, and structuring it for an interactive dashboard requires careful planning. I had a solid understanding of how to transform the data using SQL or Python, but implementing those transformations in JavaScript in a way that remains flexible and scalable was a new challenge. Through multiple iterations, I refined the data model to better capture flight status, delays, and trends.</p>
+<p>Some key challenges included:</p>
 <ul>
-<li>Main takeaways or results.</li>
+<li>Adapting my familiar data transformation techniques to JavaScript’s unique paradigms for handling interactive, event-driven data.</li>
+<li>Defining and categorizing cancellations, diversions, and delays in a way that accurately represents real-world operations.</li>
+<li>The tedious and manual process of mapping SVG coordinates to make it appear as though planes are actually parked at the gates, this was a surprisingly time-consuming but rewarding task!</li>
 </ul>
 </section>
-<section id="links-next-steps" class="level2">
-<h2 class="anchored" data-anchor-id="links-next-steps">Links &amp; Next Steps</h2>
+<section id="learning-future-development" class="level2">
+<h2 class="anchored" data-anchor-id="learning-future-development">Learning &amp; Future Development</h2>
+<p>This project is expanding my JavaScript skills, particularly in building data-driven applications. I’m focusing on:</p>
 <ul>
-<li><a href="https://kchs.fordjohnson.dev/">View Full Project</a></li>
-<li>Additional resources (code, data, related work)</li>
+<li><a href="https://observablehq.com/framework/"><strong>Observable Framework</strong></a> for developing interactive, data-powered static sites.</li>
+<li>D3 and Observable Plot for creating dynamic, custom visualizations.</li>
+<li>Leaflet for mapping and visualizing airport gate activity.</li>
+<li>Optimizing data workflows in JavaScript and Python to efficiently handle both real-time and historical data.</li>
 </ul>
+</section>
+<section id="links" class="level2">
+<h2 class="anchored" data-anchor-id="links">Links</h2>
+<p>Check out the <a href="https://kchs.fordjohnson.dev/">live dashboard</a> and explore the <a href="https://github.com/bradfordjohnson/kchs">data pipeline + dashboard code</a>.</p>
 
 
 </section>
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Read <a href="https://www.iflychs.com/airport-operations-update-winter-weather-98adda437da02bbf">CHS’s official updates</a> on the snowstorm.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>See <a href="https://www.facebook.com/iflyCHS/posts/update-4-snow-doubt-about-itour-chs-team-is-hard-at-work-clearing-the-runways-to/1022883993204310/">CHS’s Facebook Post</a> and reactions from individuals during the snowstorm event.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -299,6 +314,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         if (link.dataset.originalHref !== undefined) {
           link.href = link.dataset.originalHref;
         }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

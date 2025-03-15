@@ -18,7 +18,7 @@
     "href": "data/index.html",
     "title": "Ford Johnson",
     "section": "",
-    "text": "Projects\n\n\n\n  \n    \n      \n        TidyTuesday\n        \n        \n        Visuals created weekly using R and the Tidyverse\n      \n    \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        Charleston Flight Dashboard\n        \n        \n        Dashboard powered by JavaScript and Python\n      \n    \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        Placeholder\n        \n        \n        ...\n      \n    \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        Placeholder\n        \n        \n        ...\n      \n    \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\n\nNo matching items\n\n\n\n\nDeep Dives\n\n\n\n  \n    \n      \n        Matchmaking in Rocket League\n        \n        \n        Diving into how MMR and matchmaking work\n      \n    \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\n\nNo matching items"
+    "text": "Projects\n\n\n\n  \n    \n      \n        TidyTuesday\n        \n        \n        Visuals created weekly using R and the Tidyverse\n      \n    \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        Charleston Flight Dashboard\n        \n        \n        Dashboard powered by JavaScript and Python\n      \n    \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\n\nNo matching items\n\n\n\n\nDeep Dives\n\n\n\n  \n    \n      \n        Matchmaking in Rocket League\n        \n        \n        Diving into how MMR and matchmaking work\n      \n    \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\n\nNo matching items"
   },
   {
     "objectID": "data/deep-dives/rocket-league-mmr/index.html#matchmaking-rating-mmr-and-skill-rating",
@@ -107,9 +107,9 @@
   {
     "objectID": "data/projects/charleston-flights-dashboard/index.html#approach",
     "href": "data/projects/charleston-flights-dashboard/index.html#approach",
-    "title": "Project Title",
+    "title": "Charleston Flights Dashboard",
     "section": "Approach",
-    "text": "Approach\n\nBriefly describe how it was built (tools, methods, key steps)."
+    "text": "Approach\n\nData: The dashboard ingests daily CHS flight data through a Python-based ETL pipeline, storing structured snapshots for historical trend analysis.\nTools: Built with Observable Framework, leveraging Observable Plot, D3, and Leaflet for interactive visualizations and Python for ETL.\nProcess: Live data is pulled directly from an API powering the official CHS website, while historical trend snapshots help identify operational patterns."
   },
   {
     "objectID": "data/projects/charleston-flights-dashboard/index.html#key-insights",
@@ -152,5 +152,47 @@
     "title": "TidyTuesday",
     "section": "See More",
     "text": "See More\nYou can explore my TidyTuesday gallery here and watch the R visual creation process here through a series of animated GIFs showcasing the step-by-step development of my ggplots."
+  },
+  {
+    "objectID": "data/projects/charleston-flights-dashboard/index.html#about",
+    "href": "data/projects/charleston-flights-dashboard/index.html#about",
+    "title": "Charleston Flights Dashboard",
+    "section": "About",
+    "text": "About\nI’m passionate about aviation and data, and this project represents my effort to bring greater clarity to CHS flight operations through data-driven insights. In January 2025, a snowstorm temporarily shut down the airfield1, and the official CHS website’s updates on airport operations highlighted an opportunity for additional clarity2. This dashboard is designed to offer a transparent, data-focused view of CHS flights, enabling users to explore operational trends and stay informed."
+  },
+  {
+    "objectID": "data/projects/charleston-flights-dashboard/index.html#see-more",
+    "href": "data/projects/charleston-flights-dashboard/index.html#see-more",
+    "title": "Charleston Flights Dashboard",
+    "section": "See More",
+    "text": "See More\nCheck out the live dashboard and explore the data pipeline + dashboard code."
+  },
+  {
+    "objectID": "data/projects/charleston-flights-dashboard/index.html#challenges",
+    "href": "data/projects/charleston-flights-dashboard/index.html#challenges",
+    "title": "Charleston Flights Dashboard",
+    "section": "Challenges",
+    "text": "Challenges\nWorking with flight data comes with its own complexities, real-world data can be messy, and structuring it for an interactive dashboard requires careful planning. I had a solid understanding of how to transform the data using SQL or Python, but implementing those transformations in JavaScript in a way that remains flexible and scalable was a new challenge. Through multiple iterations, I refined the data model to better capture flight status, delays, and trends.\nSome key challenges included:\n\nAdapting my familiar data transformation techniques to JavaScript’s unique paradigms for handling interactive, event-driven data.\nDefining and categorizing cancellations, diversions, and delays in a way that accurately represents real-world operations.\nThe tedious and manual process of mapping SVG coordinates to make it appear as though planes are actually parked at the gates, this was a surprisingly time-consuming but rewarding task!"
+  },
+  {
+    "objectID": "data/projects/charleston-flights-dashboard/index.html#learning-future-development",
+    "href": "data/projects/charleston-flights-dashboard/index.html#learning-future-development",
+    "title": "Charleston Flights Dashboard",
+    "section": "Learning & Future Development",
+    "text": "Learning & Future Development\nThis project is expanding my JavaScript skills, particularly in building data-driven applications. I’m focusing on:\n\nObservable Framework for developing interactive, data-powered static sites.\nD3 and Observable Plot for creating dynamic, custom visualizations.\nLeaflet for mapping and visualizing airport gate activity.\nOptimizing data workflows in JavaScript and Python to efficiently handle both real-time and historical data."
+  },
+  {
+    "objectID": "data/projects/charleston-flights-dashboard/index.html#footnotes",
+    "href": "data/projects/charleston-flights-dashboard/index.html#footnotes",
+    "title": "Charleston Flights Dashboard",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nRead CHS’s official updates on the snowstorm.↩︎\nSee CHS’s Facebook Post and reactions from individuals during the snowstorm event.↩︎"
+  },
+  {
+    "objectID": "data/projects/charleston-flights-dashboard/index.html#links",
+    "href": "data/projects/charleston-flights-dashboard/index.html#links",
+    "title": "Charleston Flights Dashboard",
+    "section": "Links",
+    "text": "Links\nCheck out the live dashboard and explore the data pipeline + dashboard code."
   }
 ]
