@@ -1,9 +1,9 @@
 [
   {
-    "objectID": "photography/index.html",
-    "href": "photography/index.html",
-    "title": "Photography",
-    "section": "",
+    "objectID": "photography/index.html#photography",
+    "href": "photography/index.html#photography",
+    "title": "Ford Johnson",
+    "section": "Photography",
     "text": "Photography\nExplore photos from my travels, including trips to Mexico and hiking, alongside creative shots where I experiment with different techniques."
   },
   {
@@ -32,7 +32,14 @@
     "href": "data/index.html",
     "title": "Ford Johnson",
     "section": "",
-    "text": "Projects\n\n\n\n  \n    \n      \n        TidyTuesday\n        \n        \n        Visuals created weekly using R and the Tidyverse\n      \n    \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        Charleston Flight Dashboard\n        \n        \n        Dashboard powered by JavaScript and Python\n      \n    \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\n\nNo matching items\n\n\n\n\nDeep Dives\n\n\n\n  \n    \n      \n        Matchmaking in Rocket League\n        \n        \n        Diving into how MMR and matchmaking work\n      \n    \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\n\nNo matching items"
+    "text": "Projects & Featured Work\n\n\n\n  \n    \n      \n        TidyTuesday\n        \n        \n        Visuals created weekly using R and the Tidyverse\n      \n    \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        Charleston Flight Dashboard\n        \n        \n        Dashboard powered by JavaScript and Python\n      \n    \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\n\nNo matching items\n\n\n\n\nDeep Dives\n\n\n\n  \n    \n      \n        Matchmaking in Rocket League\n        \n        \n        Diving into how MMR and matchmaking work\n      \n    \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about/index.html#about-me",
+    "href": "about/index.html#about-me",
+    "title": "Ford Johnson",
+    "section": "About Me",
+    "text": "About Me\nHi, I’m Ford! I’m a data analyst and storyteller with a knack for uncovering insights from web analytics and big data. With a background in sociology and criminology, I’ve always been fascinated by patterns—whether it’s human behavior, digital interactions, or complex datasets.\nMy journey into data storytelling started when I taught myself R, which opened up a whole new way to turn raw data into meaningful visuals. Since then, I’ve specialized in creating custom data visuals, diving into web analytics, and crafting narratives that make complex information more accessible.\n\nWhat I Do\n\n\n\nData Storytelling & Visualization\nWeb & Marketing Analytics\nBig Data & Custom Solutions\nSQL & Database Management\n\n\n\n\nData Cleaning & Transformation\nPredictive Analytics\nAutomation & ETL\n\n\n\n\n\nBeyond Data\nWhen I’m not working with data, I’m probably out hiking, trying to capture the perfect shot with my camera, or learning to golf. I love exploring the world and finding new perspectives, whether it’s through travel, photography, or just enjoying the great outdoors.\n\n\nContact Me\nThe best way to reach me is via LinkedIn. Whether you’re looking to collaborate, have a question, or just want to connect, I’m always open to meeting new people!"
   },
   {
     "objectID": "data/deep-dives/rocket-league-mmr/index.html#matchmaking-rating-mmr-and-skill-rating",
@@ -103,19 +110,5 @@
     "title": "Ford Johnson",
     "section": "",
     "text": "Ford Johnson\n\nI’m a data analyst and storyteller specializing in web analytics and big data. With a background in sociology and criminology, I uncover patterns and turn them into engaging narratives.\nLearning R sparked my passion for transforming raw data into compelling visuals. Whether analyzing web metrics or crafting custom visuals, I thrive at blending creativity with analysis.\nBeyond data, I’m into hiking, photography, and currently learning to golf.\n\nExplore my work Get to know me"
-  },
-  {
-    "objectID": "about/index.html",
-    "href": "about/index.html",
-    "title": "About Me",
-    "section": "",
-    "text": "About Me\nHi, I’m Ford! I’m a data analyst and storyteller with a knack for uncovering insights from web analytics and big data. With a background in sociology and criminology, I’ve always been fascinated by patterns—whether it’s human behavior, digital interactions, or complex datasets.\nMy journey into data storytelling started when I taught myself R, which opened up a whole new way to turn raw data into meaningful visuals. Since then, I’ve specialized in creating custom data visuals, diving into web analytics, and crafting narratives that make complex information more accessible. Whether it’s analyzing funnels, building interactive dashboards, or working with big data, I love blending creativity with analysis to tell a compelling story.\n\nWhat I Do\n\n\n\n\nData Storytelling & Visualization\nWeb & Marketing Analytics\nBig Data & Custom Solutions\nSQL & Database Management\n\n\n\n\nData Cleaning & Transformation\nPredictive Analytics\nAutomation & ETL\n\n\n\n\nBeyond Data\n\nWhen I’m not working with data, I’m probably out hiking, trying to capture the perfect shot with my camera, or learning to golf. I love exploring the world and finding new perspectives, whether it’s through travel, photography, or just enjoying the great outdoors.\n\nContact Me\n\nThe best way to reach me is via LinkedIn. Whether you’re looking to collaborate, have a question, or just want to connect, I’m always open to a conversation!"
-  },
-  {
-    "objectID": "about/index.html#about-me",
-    "href": "about/index.html#about-me",
-    "title": "Ford Johnson",
-    "section": "About Me",
-    "text": "About Me\nHi, I’m Ford! I’m a data analyst and storyteller with a knack for uncovering insights from web analytics and big data. With a background in sociology and criminology, I’ve always been fascinated by patterns—whether it’s human behavior, digital interactions, or complex datasets.\nMy journey into data storytelling started when I taught myself R, which opened up a whole new way to turn raw data into meaningful visuals. Since then, I’ve specialized in creating custom data visuals, diving into web analytics, and crafting narratives that make complex information more accessible.\n\nWhat I Do\n\n\n\nData Storytelling & Visualization\nWeb & Marketing Analytics\nBig Data & Custom Solutions\nSQL & Database Management\n\n\n\n\nData Cleaning & Transformation\nPredictive Analytics\nAutomation & ETL\n\n\n\n\n\nBeyond Data\nWhen I’m not working with data, I’m probably out hiking, trying to capture the perfect shot with my camera, or learning to golf. I love exploring the world and finding new perspectives, whether it’s through travel, photography, or just enjoying the great outdoors.\n\n\nContact Me\nThe best way to reach me is via LinkedIn. Whether you’re looking to collaborate, have a question, or just want to connect, I’m always open to meeting new people!"
   }
 ]

@@ -18,6 +18,8 @@ website:
         text: Data
       - href: photography/index.qmd
         text: Photography
+      - href: about/index.qmd
+        text: About
 
   page-footer:
     center:
