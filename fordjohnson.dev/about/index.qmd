@@ -1,0 +1,37 @@
+---
+pagetitle: About Me
+hide-title: true
+anchor-sections: false
+---
+
+## About Me
+
+Hi, I'm Ford! I'm a data analyst and storyteller with a knack for uncovering insights from web analytics and big data. With a background in sociology and criminology, I've always been fascinated by patterns—whether it's human behavior, digital interactions, or complex datasets.
+
+My journey into data storytelling started when I taught myself R, which opened up a whole new way to turn raw data into meaningful visuals. Since then, I’ve specialized in creating custom data visuals, diving into web analytics, and crafting narratives that make complex information more accessible.
+
+### What I Do
+
+::: {.grid}
+
+::: {.g-col-6}
+- Data Storytelling & Visualization
+- Web & Marketing Analytics
+- Big Data & Custom Solutions
+- SQL & Database Management
+
+:::
+::: {.g-col-6}
+- Data Cleaning & Transformation
+- Predictive Analytics
+- Automation & ETL
+:::
+:::
+
+### Beyond Data
+
+When I’m not working with data, I’m probably out hiking, trying to capture the perfect shot with my camera, or learning to golf. I love exploring the world and finding new perspectives, whether it’s through travel, photography, or just enjoying the great outdoors.
+
+### Contact Me
+
+The best way to reach me is via [LinkedIn](www.linkedin.com/in/bradford-ford-johnson). Whether you're looking to collaborate, have a question, or just want to connect, I'm always open to meeting new people!

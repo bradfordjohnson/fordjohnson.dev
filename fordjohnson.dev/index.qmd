@@ -17,13 +17,17 @@ about:
 
 :::
 
-I’m a data analyst and storyteller who specializes in uncovering insights from web analytics and big data. With a background in sociology and criminology, I’ve always been drawn to understanding patterns and turning them into meaningful, engaging narratives.
+I’m a data analyst and storyteller specializing in web analytics and big data. With a background in sociology and criminology, I uncover patterns and turn them into engaging narratives.
 
-Learning R sparked my love for transforming raw data into relatable stories and creating custom visuals that make complex information accessible. Whether it's diving into web metrics or building visuals, I thrive on blending creativity with analysis.
+Learning R sparked my passion for transforming raw data into compelling visuals. Whether analyzing web metrics or crafting custom visuals, I thrive at blending creativity with analysis.
 
-Outside the world of data, you’ll usually find me exploring hiking trails, capturing moments through my camera, or perfecting my golf swing.
+Beyond data, I'm into hiking, photography, and currently learning to golf.
 
-Take a look around my site to see my projects and how I bring data to life!
+<div class="button-div">
+
+<a href="/data" class="brand-button-primary" role="button">Explore my work</a> <a href="/about" class="brand-button-secondary" role="button">Get to know me</a>
+
+</div>
 
 :::
 

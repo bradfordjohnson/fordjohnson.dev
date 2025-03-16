@@ -19,11 +19,6 @@ website:
       - href: photography/index.qmd
         text: Photography
 
-      - icon: github
-        href: https://github.com/bradfordjohnson
-      - icon: linkedin
-        href: https://linkedin.com/in/bradford-ford-johnson
-
   page-footer:
     center:
       - icon: github
