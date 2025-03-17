@@ -32,7 +32,7 @@
     "href": "data/index.html",
     "title": "Ford Johnson",
     "section": "",
-    "text": "Projects\n\n\n\n  \n    \n      \n        TidyTuesday\n        \n        \n        Visuals created weekly using R and the Tidyverse\n      \n    \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        Charleston Flight Dashboard\n        \n        \n        Dashboard powered by JavaScript and Python\n      \n    \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\n\nNo matching items\n\n\n\n\nDeep Dives\n\n\n\n  \n    \n      \n        Matchmaking in Rocket League\n        \n        \n        Diving into how MMR and matchmaking work\n      \n    \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\n\nNo matching items"
+    "text": "Projects\n\n\n\n  \n    \n      \n        🥨 Core Pretzel Index (CPI)\n        \n        \n        A custom comparison and ranking framework\n      \n    \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        TidyTuesday\n        \n        \n        Visuals created weekly using R and the Tidyverse\n      \n    \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        Charleston Flight Dashboard\n        \n        \n        Dashboard powered by JavaScript and Python\n      \n    \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\n\nNo matching items\n\n\n\n\nDeep Dives\n\n\n\n  \n    \n      \n        Matchmaking in Rocket League\n        \n        \n        Diving into how MMR and matchmaking work\n      \n    \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\n\nNo matching items"
   },
   {
     "objectID": "data/deep-dives/rocket-league-mmr/index.html#matchmaking-rating-mmr-and-skill-rating",
@@ -103,5 +103,54 @@
     "title": "Ford Johnson",
     "section": "",
     "text": "Ford Johnson\n\nI’m a data analyst and storyteller who specializes in uncovering insights from web analytics and big data. With a background in sociology and criminology, I’ve always been drawn to understanding patterns and turning them into meaningful, engaging narratives.\nLearning R sparked my love for transforming raw data into relatable stories and creating custom visuals that make complex information accessible. Whether it’s diving into web metrics or building visuals, I thrive on blending creativity with analysis.\nOutside the world of data, you’ll usually find me exploring hiking trails, capturing moments through my camera, or perfecting my golf swing.\nTake a look around my site to see my projects and how I bring data to life!"
+  },
+  {
+    "objectID": "data/projects/core-pretzel-index/index.html",
+    "href": "data/projects/core-pretzel-index/index.html",
+    "title": "The Core Pretzel Index (CPI)",
+    "section": "",
+    "text": "The Core Pretzel Index (CPI)\n\n\nTidyTuesday is a weekly social data project in the R community, where participants explore real-world datasets, create compelling visualizations, and refine their data storytelling skills.\n\nView my gallery Check out the code"
+  },
+  {
+    "objectID": "data/projects/core-pretzel-index/index.html#about",
+    "href": "data/projects/core-pretzel-index/index.html#about",
+    "title": "The Core Pretzel Index (CPI)",
+    "section": "About",
+    "text": "About"
+  },
+  {
+    "objectID": "data/projects/core-pretzel-index/index.html#approach",
+    "href": "data/projects/core-pretzel-index/index.html#approach",
+    "title": "🥨 The Core Pretzel Index (CPI)",
+    "section": "Approach",
+    "text": "Approach\n\nMetrics\n\nComposite Scoring\nTo rank pretzels in a way that captures all the important qualities, I developed a composite score that combines multiple factors influencing pretzel quality. The score is made up of several key metrics grouped into categories, and we rate each metric on a scale of 1-10 based on how well the pretzel performs in each area. These ratings are then weighted according to their importance, providing a comprehensive evaluation of the overall pretzel experience.\n\nMetric Group WeightsIndividual Metric Weights\n\n\n\nCPI Composite Score Weights by Metric Group\n\n\n\n\n\n\n\nMetric Group\nDescription\nCPI Weight (%)\n\n\n\n\nTexture & Structure\nHow well the pretzel holds up in texture—crunch, chewiness, and structural integrity.\n25%\n\n\nFlavor & Seasoning\nFlavor balance, seasoning quality, and overall dough flavor complexity.\n20%\n\n\nFreshness & Temperature\nWarmth, freshness, and the overall experience of the pretzel being freshly baked.\n15%\n\n\nDipping Sauce Factor\nHow well the pretzel pairs with the dipping sauces available (e.g., flavor match, variety).\n10%\n\n\nOverall Enjoyment & Presentation\nOverall visual appeal, how well it could be shared, and how satisfying the pretzel is as a total experience.\n30%\n\n\n\n\n\n\nCPI Composite Score Weights by Metric\n\n\n\n\n\n\n\nMetric\nMetric Group\nCPI Weight (%)\n\n\n\n\nCrunch-to-Chew Ratio (CCR)\nTexture & Structure\n10%\n\n\nKnot Integrity\nTexture & Structure\n10%\n\n\nDensity & Airiness\nTexture & Structure\n5%\n\n\nSalt / Sugar + Cinnamon Distribution & Quality (SDQ)\nFlavor & Seasoning\n10%\n\n\nDough Flavor & Complexity (DFC)\nFlavor & Seasoning\n5%\n\n\nButtery Goodness\nFlavor & Seasoning\n5%\n\n\nFresh-Baked Factor (FBF)\nFreshness & Temperature\n15%\n\n\nDip Compatibility Score\nDipping Sauce Factor\n10%\n\n\nShareability\nOverall Enjoyment & Presentation\n15%\n\n\nSatisfaction Score (SS)\nOverall Enjoyment & Presentation\n10%\n\n\nPresentation & Aesthetics (PA)\nOverall Enjoyment & Presentation\n5%\n\n\n\n\n\n\nThis composite score ensures a balanced assessment of each pretzel experience, enabling comparisons, trends, and insights across pretzels and restaurants.\nWhile some of this may be subject to the occasional personal preference (though we consider ourselves authorities on the matter), this methodology can certainly be applied to other data analysis scenarios as well.\n\n\nDecay-Adjusted Score\nThe decay-adjusted score prioritizes recent visits by reducing the weight of past visits using an exponential decay function. This ensures current pretzel quality is reflected while minimizing the impact of outdated data. It helps track trends and fluctuations in pretzel quality, offering a comprehensive view of each restaurant’s performance. This score would be the overall score used to determine rankings at a given moment.\nThe table below illustrates how the decay weight is applied to each visit’s base CPI score to calculate the weighted score and the final decay-adjusted score.\nDecay Adjusted Score: 93.75%\n\nDecay Table Example\n\n\n\n\n\n\n\n\n\nRestaurant\nVisit Number\nBase CPI Score\nDecay Weight\nWeighted Score\n\n\n\n\nX\n1\n80%\n0.05\n3.98%\n\n\nX\n2\n90%\n0.14\n12.18%\n\n\nX\n3\n80%\n0.37\n29.43%\n\n\nX\n4\n100%\n1.00\n100%\n\n\n\n\n\n\\text{Decay Adjusted Score} = \\frac{\\sum_{i=1}^{n} (\\text{Base CPI Score}_i \\times \\text{Decay Weight}_i)}{\\sum_{i=1}^{n} \\text{Decay Weight}_i}\n\n\n\nPrice-to-Value (P2V) Score\n\n\n\n\n\n\nNote\n\n\n\nAs we collect data, this score may be refined to prevent expensive pretzels from being unfairly penalized while still emphasizing value.\n\n\nThe Price-to-Value (P2V) Score helps assess whether a pretzel is worth its cost by comparing its quality to its price. A high P2V score indicates a pretzel that delivers great taste, texture, and experience for the money, while a low score suggests it’s overpriced for what you get.\n\n\n\nData Collection\nData is currently logged manually in spreadsheets, but the ultimate goal is to develop a personal web app and dashboard."
+  },
+  {
+    "objectID": "data/projects/core-pretzel-index/index.html#challenges",
+    "href": "data/projects/core-pretzel-index/index.html#challenges",
+    "title": "🥨 The Core Pretzel Index (CPI)",
+    "section": "Challenges",
+    "text": "Challenges"
+  },
+  {
+    "objectID": "data/projects/core-pretzel-index/index.html#links",
+    "href": "data/projects/core-pretzel-index/index.html#links",
+    "title": "🥨 The Core Pretzel Index (CPI)",
+    "section": "Links",
+    "text": "Links"
+  },
+  {
+    "objectID": "data/projects/core-pretzel-index/index.html#motivation",
+    "href": "data/projects/core-pretzel-index/index.html#motivation",
+    "title": "🥨 The Core Pretzel Index (CPI)",
+    "section": "Motivation",
+    "text": "Motivation\nMy wife and I have a passion for trying new restaurants, and we always make it a point to order a hot pretzel to compare with the ones we’ve had before. In fact, we even had pretzels and cheese as a late-night snack at our wedding. This love for pretzels sparked the idea of properly ranking them, and my wife eagerly agreed to join me in collecting data to create a comprehensive scoring system."
+  },
+  {
+    "objectID": "data/projects/core-pretzel-index/index.html#individual-metric-weights",
+    "href": "data/projects/core-pretzel-index/index.html#individual-metric-weights",
+    "title": "The Core Pretzel Index (CPI)",
+    "section": "Individual Metric Weights",
+    "text": "Individual Metric Weights\n\nCPI Composite Score Weights by Metric\n\n\n\n\n\n\n\nMetric\nMetric Group\nCPI Weight (%)\n\n\n\n\nCrunch-to-Chew Ratio (CCR)\nTexture & Structure\n10%\n\n\nKnot Integrity\nTexture & Structure\n10%\n\n\nDensity & Airiness\nTexture & Structure\n5%\n\n\nSalt / Sugar + Cinnamon Distribution & Quality (SDQ)\nFlavor & Seasoning\n10%\n\n\nDough Flavor & Complexity (DFC)\nFlavor & Seasoning\n5%\n\n\nButtery Goodness\nFlavor & Seasoning\n5%\n\n\nFresh-Baked Factor (FBF)\nFreshness & Temperature\n15%\n\n\nDip Compatibility Score\nDipping Sauce Factor\n10%\n\n\nShareability\nOverall Enjoyment & Presentation\n15%\n\n\nSatisfaction Score (SS)\nOverall Enjoyment & Presentation\n10%\n\n\nPresentation & Aesthetics (PA)\nOverall Enjoyment & Presentation\n5%"
   }
 ]
