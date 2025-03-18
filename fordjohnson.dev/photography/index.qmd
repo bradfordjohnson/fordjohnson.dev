@@ -2,11 +2,12 @@
 pagetitle: Photography
 hide-title: true
 lightbox: true
+anchor-sections: false
 ---
 
 ::: {.column-page}
 
-# Photography
+## Photography
 
 Explore photos from my travels, including trips to Mexico and hiking, alongside creative shots where I experiment with different techniques.
 

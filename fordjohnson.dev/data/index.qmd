@@ -7,9 +7,9 @@ listing:
   - id: deep-dives
     template: card-template.ejs
     contents: deep-dives/deep-dives.yml
+page-layout: full
 ---
 
-::: {.column-page}
 
 <!-- <div class="chip-description">
   <div class="chip-caption">
@@ -27,7 +27,5 @@ listing:
 
 :::
 :::{#deep-dives}
-
-:::
 
 :::
