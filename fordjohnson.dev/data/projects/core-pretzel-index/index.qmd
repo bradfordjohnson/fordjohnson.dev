@@ -8,18 +8,30 @@ html-math-method:
 
 # 🥨 The Core Pretzel Index (CPI)
 
+::: {.callout-note}
+Scoring pretzels, one bite at a time! Data collection is in progress; stay tuned for the ultimate pretzel rankings.
+:::
+
 ::: {.grid}
 
+
 ::: {.g-col-12}
-A personal methodology for ranking and comparing pretzels based on key factors like texture, flavor, and freshness, using a weighted scoring system with exponential decay for multiple visits.
 
-<!-- <div class="button-div">
 
-<a href="https://tidytuesday.fordjohnson.dev" class="brand-button-primary" role="button">View my gallery</a> <a href="https://github.com/bradfordjohnson/tidytuesday" class="brand-button-secondary" role="button">Check out the code</a>
+<div class="pretzel">
+
+![](image.jpg){width=auto}
 
 </div>
 
-![](image.png){width=auto} -->
+A personally developed methodology for ranking and comparing pretzels based on key factors like texture, flavor, and freshness, using a weighted scoring system with exponential decay for multiple visits.
+
+<!-- <div class="button-div"> -->
+
+<!-- <a href="https://docs.google.com/spreadsheets/d/1-2UwNqKx6l1G1cjM6bkR2t7aOHrwzA4QHYaCI1QYH-E/" class="brand-button-primary" role="button">View the live CPI</a> -->
+<!-- <a href="https://github.com/bradfordjohnson/tidytuesday" class="brand-button-secondary" role="button">Check out the code</a> -->
+
+<!-- </div> -->
 
 :::
 
@@ -44,7 +56,7 @@ To rank pretzels in a way that captures all the important qualities, I developed
 
 | Metric Group                   | Description                                                                 | CPI Weight (%) |
 |--------------------------------|-----------------------------------------------------------------------------|--------|
-| Texture & Structure        | How well the pretzel holds up in texture—crunch, chewiness, and structural integrity. | 25%    |
+| Texture & Structure        | How well the pretzel holds up in texture, crunch, chewiness, and structural integrity. | 25%    |
 | Flavor & Seasoning         | Flavor balance, seasoning quality, and overall dough flavor complexity.     | 20%    |
 | Freshness & Temperature    | Warmth, freshness, and the overall experience of the pretzel being freshly baked. | 15%    |
 | Dipping Sauce Factor       | How well the pretzel pairs with the dipping sauces available (e.g., flavor match, variety). | 10%    |
@@ -99,6 +111,7 @@ The table below illustrates how the decay weight is applied to each visit’s ba
 
 </br>
 
+
 $$
 \text{Decay Adjusted Score} = \frac{\sum_{i=1}^{n} (\text{Base CPI Score}_i \times \text{Decay Weight}_i)}{\sum_{i=1}^{n} \text{Decay Weight}_i}
 $$
@@ -115,6 +128,6 @@ The Price-to-Value (P2V) Score helps assess whether a pretzel is worth its cost 
 
 Data is currently logged manually in spreadsheets, but the ultimate goal is to develop a personal web app and dashboard.
 
-## Challenges
-
 ## Links
+
+Coming soon :)

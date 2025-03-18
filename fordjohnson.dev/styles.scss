@@ -98,6 +98,7 @@ $progress-height:               .5rem !default;
 // Card Images
 .card-img-top {
   max-height: 12rem;
+  border-radius: 4px;
 }
 
 // Chip
@@ -238,6 +239,10 @@ body {
     font-size: 8px;
     line-height: 8px;
   }
+}
+
+.pretzel {
+  max-width: 65%;
 }
 
 
