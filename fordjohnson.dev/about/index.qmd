@@ -2,6 +2,7 @@
 pagetitle: About Me
 hide-title: true
 anchor-sections: false
+include-in-header: profile-page.txt
 ---
 
 ## About Me

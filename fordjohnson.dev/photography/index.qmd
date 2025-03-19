@@ -3,6 +3,8 @@ pagetitle: Photography
 hide-title: true
 lightbox: true
 anchor-sections: false
+include-in-header: image-data.txt
+
 ---
 
 ::: {.column-page}
@@ -12,7 +14,7 @@ anchor-sections: false
 Explore photos from my travels, including trips to Mexico and hiking, alongside creative shots where I experiment with different techniques.
 
 ::: {.photo-grid}
-![](images/20240325-171135.jpg){group="photo-gallery"}
+![](images/20240325-171135.jpg){group="photo-gallery" alt="Historic aqueduct in Querétaro, Mexico, stretching alongside a busy road under a clear blue sky."}
 
 ![](images/20240327-131558.jpg){group="photo-gallery"}
 

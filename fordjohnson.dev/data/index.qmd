@@ -1,5 +1,5 @@
 ---
-pagetitle: Data
+pagetitle: Explore My Projects & Deep Dives
 listing:
   - id: projects
     template: card-template.ejs
@@ -9,7 +9,6 @@ listing:
     contents: deep-dives/deep-dives.yml
 page-layout: full
 ---
-
 
 <!-- <div class="chip-description">
   <div class="chip-caption">

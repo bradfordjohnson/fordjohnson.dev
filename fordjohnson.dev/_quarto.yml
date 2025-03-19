@@ -1,3 +1,6 @@
+# build via:
+# quarto preview --render all --no-watch-inputs
+
 project:
   type: website
   output-dir: docs

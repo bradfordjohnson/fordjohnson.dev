@@ -1,5 +1,5 @@
 ---
-pagetitle: Ford Johnson
+pagetitle: Home
 page-layout: article
 about:
   id: hero-heading
