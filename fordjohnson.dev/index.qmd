@@ -1,10 +1,12 @@
 ---
 pagetitle: Home
 page-layout: article
+description-meta: Ford Johnson – Data analyst and storyteller specializing in custom data visuals, web analytics, and big data solutions. Explore projects on data-driven storytelling, visualization, and marketing insights at fordjohnson.dev.
 about:
   id: hero-heading
   template: trestles
   image: images/profile.jpg
+include-in-header: site.txt
 ---
 
 ::: {.column-page}

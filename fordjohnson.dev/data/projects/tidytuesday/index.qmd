@@ -1,5 +1,6 @@
 ---
 pagetitle: TidyTuesday
+description-meta: Explore Ford Johnson’s TidyTuesday projects—data-driven visualizations and analyses showcasing unique insights from diverse datasets. See interactive charts, storytelling, and R-based explorations.
 toc: true
 lightbox: true
 ---
