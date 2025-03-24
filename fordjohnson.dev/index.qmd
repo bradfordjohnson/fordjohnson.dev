@@ -6,7 +6,15 @@ about:
   id: hero-heading
   template: trestles
   image: images/profile.jpg
-include-in-header: site.txt
+include-in-header: |
+  <script type="application/ld+json">
+    {
+      "@context" : "https://schema.org",
+      "@type" : "WebSite",
+      "name" : "Ford Johnson",
+      "url" : "https://fordjohnson.dev"
+    }
+  </script>
 ---
 
 ::: {.column-page}
