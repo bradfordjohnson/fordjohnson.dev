@@ -129,6 +129,12 @@ The Price-to-Value (P2V) Score helps assess whether a pretzel is worth its cost 
 
 Data is currently logged manually in spreadsheets, but the ultimate goal is to develop a personal web app and dashboard.
 
+| Date       | Restaurant | Pretzel Type | Visit Number | Menu Price | Base CPI Score |
+|------------|------------|--------------|--------------|------------|----------------|
+| 2025-03-22 | Holy City  | Salt         | 1            | $6.50      | 79.00%         |
+
+: Current Observations {.striped}
+
 ## Links
 
 Coming soon :)
