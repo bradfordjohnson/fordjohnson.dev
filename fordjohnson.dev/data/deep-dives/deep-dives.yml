@@ -1,16 +1,11 @@
 - category: Deep Dives
   tiles:
+    - title: Analysis Methods
+      subtitle:  A collection of notes
+      href: deep-dives/analysis-methods/index.html
+      thumbnail: deep-dives/analysis-methods/binomial-trend-detection.png
+
     - title: Matchmaking in Rocket League
       subtitle: Diving into how MMR and matchmaking work
       href: deep-dives/rocket-league-mmr/index.html
       thumbnail: deep-dives/rocket-league-mmr/image.jpg
-
-    - title: Measuring similarity with Euclidean Distance
-      subtitle: Comparing electricity generation trends across countries
-      href: deep-dives/euclidean-distance/index.html
-      thumbnail: deep-dives/euclidean-distance/image.png
-
-    - title: Establishing Significance using Binomials
-      subtitle: Identify trends using binomial distributions
-      href: deep-dives/binomial-trend-detection/index.html
-      thumbnail: deep-dives/binomial-trend-detection/image.png

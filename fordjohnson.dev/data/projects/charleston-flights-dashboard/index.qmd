@@ -2,6 +2,7 @@
 pagetitle: Charleston Flights Dashboard
 description-meta: Explore real-time and historical Charleston flight data with interactive visuals. Track daily CHS airport trends, airline performance, and on-time metrics.
 toc: true
+toc-expand: true
 ---
 
 # Charleston Flights Dashboard

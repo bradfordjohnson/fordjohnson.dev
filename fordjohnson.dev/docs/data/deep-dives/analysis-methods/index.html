@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="This analysis applies Euclidean distance to compare electricity generation across countries using the TidyTuesday 06/06/2023 dataset, demonstrating how closely nations align with Germany and revealing key market insights.">
+<meta name="description" content="A collection of useful analysis methods.">
 
-<title>Applying Euclidean Distance in an Electricity Generation Analysis – Ford Johnson</title>
+<title>Useful Data Analysis Methods – Ford Johnson</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -92,11 +92,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-W39B6FZ6');</script>
 
 
-<meta property="og:title" content="Applying Euclidean Distance in an Electricity Generation Analysis">
-<meta property="og:description" content="">
-<meta property="og:image" content="https://fordjohnson.dev/data/deep-dives/euclidean-distance/images/logo-2.png">
+<meta property="og:title" content="Useful Data Analysis Methods">
+<meta property="og:description" content="A collection of notes">
+<meta property="og:image" content="https://fordjohnson.dev/data/deep-dives/analysis-methods/images/logo-2.png">
 <meta property="og:site_name" content="Ford Johnson">
-<link rel="canonical" href="https://fordjohnson.dev/data/deep-dives/euclidean-distance/">
+<link rel="canonical" href="https://fordjohnson.dev/data/deep-dives/analysis-methods/">
 </head>
 
 <body class="nav-fixed">
@@ -143,34 +143,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#measuring-similarity-euclidean-distance-between-vectors" id="toc-measuring-similarity-euclidean-distance-between-vectors" class="nav-link active" data-scroll-target="#measuring-similarity-euclidean-distance-between-vectors">Measuring Similarity: Euclidean Distance Between Vectors</a>
+  <li><a href="#euclidean-distance" id="toc-euclidean-distance" class="nav-link active" data-scroll-target="#euclidean-distance">Euclidean Distance</a>
   <ul class="collapse">
-  <li><a href="#example-comparing-electricity-generation-by-country" id="toc-example-comparing-electricity-generation-by-country" class="nav-link" data-scroll-target="#example-comparing-electricity-generation-by-country">Example: Comparing Electricity Generation by Country</a>
-  <ul class="collapse">
-  <li><a href="#why-compare-similar-entities" id="toc-why-compare-similar-entities" class="nav-link" data-scroll-target="#why-compare-similar-entities">Why Compare Similar Entities?</a></li>
-  <li><a href="#germanys-most-and-least-similar-countries" id="toc-germanys-most-and-least-similar-countries" class="nav-link" data-scroll-target="#germanys-most-and-least-similar-countries">Germany’s Most and Least Similar Countries</a></li>
-  </ul></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
   <li><a href="#visualizing-the-data" id="toc-visualizing-the-data" class="nav-link" data-scroll-target="#visualizing-the-data">Visualizing the Data</a></li>
+  </ul></li>
+  <li><a href="#binomial-trend-detection" id="toc-binomial-trend-detection" class="nav-link" data-scroll-target="#binomial-trend-detection">Binomial Trend Detection</a>
+  <ul class="collapse">
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content page-columns page-full" id="quarto-document-content">
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W39B6FZ6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Analysis Methods</h1>
+<p class="subtitle lead">A collection of notes</p>
+</div>
 
 
 
-<section id="measuring-similarity-euclidean-distance-between-vectors" class="level1 page-columns page-full">
-<h1>Measuring Similarity: Euclidean Distance Between Vectors</h1>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="euclidean-distance" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="euclidean-distance">Euclidean Distance</h2>
 <p>Understanding the similarity between data points is crucial for effective analysis. <strong>Euclidean distance</strong> measures the separation between two sets of values by summing the squares of the differences between corresponding elements. This straightforward method helps reveal patterns and supports informed decision-making.</p>
-<section id="example-comparing-electricity-generation-by-country" class="level2">
-<h2 class="anchored" data-anchor-id="example-comparing-electricity-generation-by-country">Example: Comparing Electricity Generation by Country</h2>
+<section id="example" class="level3">
+<h3 class="anchored" data-anchor-id="example">Example</h3>
 <p>In this demo, I applied Euclidean distance to compare electricity generation across countries using the <a href="https://github.com/rfordatascience/tidytuesday/tree/master/data/2023/2023-06-06">TidyTuesday 06/06/2023 dataset</a>. By selecting Germany as the target country, I identified which countries exhibit the most similar and most different trends.</p>
 <div class="cell">
 <details class="code-fold">
@@ -210,8 +228,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(euclidean_distance)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<section id="why-compare-similar-entities" class="level3">
-<h3 class="anchored" data-anchor-id="why-compare-similar-entities">Why Compare Similar Entities?</h3>
+<section id="why-compare-similar-entities" class="level4">
+<h4 class="anchored" data-anchor-id="why-compare-similar-entities">Why Compare Similar Entities?</h4>
 <p>Comparing similar entities by analyzing a metric across a dimension is a versatile technique with broad real-world applications. It’s a useful way to establish a baseline and explore the impact of changes. Here’s why this method is valuable:</p>
 <ul>
 <li><strong>Establishing Baselines for Experimental Testing:</strong> Comparing similar entities helps set a clear baseline of normal or expected performance. This baseline is essential when testing new interventions or experimental changes, as it allows for a precise measurement of their impact.</li>
@@ -220,8 +238,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Broad Applicability:</strong> Although this demo focuses on comparing countries, the methodology can be applied across various domains, such as benchmarking, evaluating customer segments, or comparing environmental indicators to identify similarities and differences.</li>
 </ul>
 </section>
-<section id="germanys-most-and-least-similar-countries" class="level3">
-<h3 class="anchored" data-anchor-id="germanys-most-and-least-similar-countries">Germany’s Most and Least Similar Countries</h3>
+<section id="germanys-most-and-least-similar-countries" class="level4">
+<h4 class="anchored" data-anchor-id="germanys-most-and-least-similar-countries">Germany’s Most and Least Similar Countries</h4>
 <p>The analysis shows that the five countries most similar to Germany in terms of electricity generation trends include Canada, France, and the UK. On the other hand, the countries that differ the most include Malta, the Bahamas, and the U.S.</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -253,8 +271,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 </section>
-<section id="visualizing-the-data" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="visualizing-the-data">Visualizing the Data</h2>
+<section id="visualizing-the-data" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="visualizing-the-data">Visualizing the Data</h3>
 <p>The accompanying chart highlights the electricity generation trends of Germany, Canada, and France using distinct colors, while other countries are represented in gray. This visual representation makes it easier to grasp how closely the trends align, and it serves as a practical tool for monitoring strategic changes.</p>
 <div class="cell">
 <details class="code-fold">
@@ -343,8 +361,145 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+</section>
+</section>
+<section id="binomial-trend-detection" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="binomial-trend-detection">Binomial Trend Detection</h2>
+<section id="overview" class="level3">
+<h3 class="anchored" data-anchor-id="overview">Overview</h3>
+<p>The <strong>binomial trend detection</strong> method offers an alternative to traditional rolling averages by using week-over-week (WoW) comparisons to detect significant changes quickly.</p>
+</section>
+<section id="methodology" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="methodology">Methodology</h3>
+<p>This approach involves: - <strong>Calculating Week-over-Week Deltas</strong>: Measuring daily changes. - <strong>Using a 14-Day Rolling Window</strong>: Smoothing out short-term fluctuations. - <strong>Counting Positive and Negative Changes</strong>: Tallying the days with consistent directional shifts. - <strong>Applying Statistical Analysis</strong>: Using the binomial distribution (for example, requiring 12 out of 14 days to exhibit the same trend) to confirm significant changes.</p>
+<section id="process-details" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="process-details">Process Details</h4>
+<table class="table-striped caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Calculate WoW Deltas</td>
+<td>Determine the day-to-day changes in the metric.</td>
+</tr>
+<tr class="even">
+<td>Rolling 14-Day Window</td>
+<td>Apply a two-week window to balance sensitivity and stability.</td>
+</tr>
+<tr class="odd">
+<td>Count Positive/Negative Days</td>
+<td>Tally days with consistent positive or negative changes.</td>
+</tr>
+<tr class="even">
+<td>Binomial Distribution</td>
+<td>Model the data with an assumption of a 50% chance for each day’s outcome.</td>
+</tr>
+<tr class="odd">
+<td>Trend Threshold</td>
+<td>Flag a trend if the count meets a predefined threshold (e.g., 12 out of 14 days).</td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-overflow-wrap code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">binom.test</span>(<span class="dv">12</span>, <span class="dv">14</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">2</span>, <span class="at">alternative =</span> <span class="st">"greater"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Exact binomial test
+
+data:  12 and 14
+number of successes = 12, number of trials = 14, p-value = 0.00647
+alternative hypothesis: true probability of success is greater than 0.5
+95 percent confidence interval:
+ 0.6146103 1.0000000
+sample estimates:
+probability of success 
+             0.8571429 </code></pre>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-overflow-wrap code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(showtext)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggtext)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">showtext_auto</span>()</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">showtext_opts</span>(<span class="at">dpi =</span> <span class="dv">300</span>)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="fu">font_add_google</span>(<span class="at">name =</span> <span class="st">"Roboto"</span>, <span class="at">family =</span> <span class="st">"Roboto"</span>)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>font_1 <span class="ot">&lt;-</span> <span class="st">"Roboto"</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">14</span> </span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">2</span>  </span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>x_obs <span class="ot">&lt;-</span> <span class="dv">12</span>  </span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>binom_test <span class="ot">&lt;-</span> <span class="fu">binom.test</span>(x_obs, n, p, <span class="at">alternative =</span> <span class="st">"greater"</span>)</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>p_value <span class="ot">&lt;-</span> binom_test<span class="sc">$</span>p.value</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>conf_int <span class="ot">&lt;-</span> binom_test<span class="sc">$</span>conf.int</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>p_ge_x_obs <span class="ot">&lt;-</span> <span class="fu">sum</span>(<span class="fu">dbinom</span>(x_obs<span class="sc">:</span>n, <span class="at">size =</span> n, <span class="at">prob =</span> p))</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> <span class="dv">0</span><span class="sc">:</span>n,</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>  <span class="at">probability =</span> <span class="fu">dbinom</span>(<span class="dv">0</span><span class="sc">:</span>n, <span class="at">size =</span> n, <span class="at">prob =</span> p),</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>  <span class="at">color =</span> <span class="fu">ifelse</span>(<span class="dv">0</span><span class="sc">:</span>n <span class="sc">&gt;=</span> x_obs, <span class="st">"#C0392B"</span>, <span class="st">"#30394F"</span>)  </span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>binom_visual <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> probability, <span class="at">fill =</span> color)) <span class="sc">+</span></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_identity</span>() <span class="sc">+</span>  </span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="dv">0</span><span class="sc">:</span>n) <span class="sc">+</span>  </span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Binomial Distribution (n = 14, p = 0.5)"</span>,</span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Number of Successes"</span>,</span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Probability"</span></span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.major.x =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.margin =</span> <span class="fu">margin</span>(<span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">10</span>, <span class="st">"mm"</span>),</span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">family =</span> font_1, <span class="at">size =</span> <span class="dv">7</span>),</span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">family =</span> font_1, <span class="at">size =</span> <span class="dv">7</span>),</span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">margin =</span> <span class="fu">margin</span>(<span class="dv">5</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="st">'mm'</span>)),</span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">margin =</span> <span class="fu">margin</span>(<span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="st">'mm'</span>)),</span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">family =</span> font_1, <span class="at">size =</span> <span class="dv">10</span>)</span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(</span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a>    <span class="at">geom =</span> <span class="st">'richtext'</span>,</span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> n<span class="sc">+</span><span class="dv">1</span>,</span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="fu">max</span>(data<span class="sc">$</span>probability) <span class="sc">*</span> <span class="fl">0.9</span>,</span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>    <span class="at">label =</span> <span class="fu">paste0</span>(</span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a>      <span class="st">"&lt;span style='color:#C0392B; font-size:8pt;font-family:Roboto;'&gt;"</span>,</span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Threshold ≥ 12 trials (days)"</span>, <span class="st">"&lt;br&gt;"</span>,</span>
+<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a>      <span class="st">"P(X ≥ "</span>, x_obs, <span class="st">") = "</span>, <span class="fu">round</span>(p_ge_x_obs, <span class="dv">4</span>), <span class="st">"&lt;br&gt;"</span>,</span>
+<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a>      <span class="st">"95% CI = ["</span>, <span class="fu">round</span>(conf_int[<span class="dv">1</span>], <span class="dv">4</span>), <span class="st">", "</span>, <span class="fu">round</span>(conf_int[<span class="dv">2</span>], <span class="dv">4</span>), <span class="st">"]&lt;/span&gt;"</span>),</span>
+<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a>    <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">fill =</span> <span class="cn">NA</span>, <span class="at">label.color =</span> <span class="cn">NA</span></span>
+<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell page-columns page-full">
+<div class="cell-output-display page-columns page-full">
+<div class="page-columns page-full">
+<figure class="figure page-columns page-full">
+<p class="page-columns page-full"><a href="index_files/figure-html/binom-visual-1.png" class="lightbox page-columns page-full" data-gallery="plot"><img src="index_files/figure-html/binom-visual-1.png" class="img-fluid figure-img column-page" width="672"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This binomial approach improves upon rolling averages by offering better responsiveness to recent trends and reducing sensitivity to day-of-week variations, leading to more reliable trend detection.</p>
 
 
+</section>
 </section>
 </section>
 

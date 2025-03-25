@@ -1,17 +1,20 @@
 ---
-pagetitle: Applying Euclidean Distance in an Electricity Generation Analysis
-description-meta: This analysis applies Euclidean distance to compare electricity generation across countries using the TidyTuesday 06/06/2023 dataset, demonstrating how closely nations align with Germany and revealing key market insights.
+title: Analysis Methods
+subtitle: A collection of notes
+pagetitle: Useful Data Analysis Methods
+description-meta: A collection of useful analysis methods.
 toc: true
+toc-expand: true
 lightbox: true
 execute: 
-  freeze: auto
+  freeze: true
 ---
 
-# Measuring Similarity: Euclidean Distance Between Vectors
+## Euclidean Distance
 
 Understanding the similarity between data points is crucial for effective analysis. **Euclidean distance** measures the separation between two sets of values by summing the squares of the differences between corresponding elements. This straightforward method helps reveal patterns and supports informed decision-making.
 
-## Example: Comparing Electricity Generation by Country
+### Example
 
 In this demo, I applied Euclidean distance to compare electricity generation across countries using the [TidyTuesday 06/06/2023 dataset](https://github.com/rfordatascience/tidytuesday/tree/master/data/2023/2023-06-06). By selecting Germany as the target country, I identified which countries exhibit the most similar and most different trends.
 
@@ -55,7 +58,7 @@ countries_with_similarity_score <- electricity_generation %>%
   arrange(euclidean_distance)
 ```
 
-### Why Compare Similar Entities?
+#### Why Compare Similar Entities?
 
 Comparing similar entities by analyzing a metric across a dimension is a versatile technique with broad real-world applications. It’s a useful way to establish a baseline and explore the impact of changes. Here’s why this method is valuable:
 
@@ -64,7 +67,7 @@ Comparing similar entities by analyzing a metric across a dimension is a versati
 - **Tracking Trends:** By analyzing whether variations in a metric are isolated or part of a broader pattern, this approach distinguishes between widespread trends and localized anomalies, supporting more accurate forecasting and planning.
 - **Broad Applicability:** Although this demo focuses on comparing countries, the methodology can be applied across various domains, such as benchmarking, evaluating customer segments, or comparing environmental indicators to identify similarities and differences.
 
-### Germany’s Most and Least Similar Countries
+#### Germany’s Most and Least Similar Countries
 
 The analysis shows that the five countries most similar to Germany in terms of electricity generation trends include Canada, France, and the UK. On the other hand, the countries that differ the most include Malta, the Bahamas, and the U.S.
 
@@ -82,7 +85,7 @@ head(countries_with_similarity_score)
 tail(countries_with_similarity_score)
 ```
 
-## Visualizing the Data
+### Visualizing the Data
 
 The accompanying chart highlights the electricity generation trends of Germany, Canada, and France using distinct colors, while other countries are represented in gray. This visual representation makes it easier to grasp how closely the trends align, and it serves as a practical tool for monitoring strategic changes.
 
@@ -174,3 +177,111 @@ similar_countries_highlighted_plot <- owid_energy %>%
 
 similar_countries_highlighted_plot
 ```
+
+
+
+## Binomial Trend Detection
+
+### Overview
+
+The **binomial trend detection** method offers an alternative to traditional rolling averages by using week-over-week (WoW) comparisons to detect significant changes quickly.
+
+### Methodology
+
+This approach involves:
+- **Calculating Week-over-Week Deltas**: Measuring daily changes.
+- **Using a 14-Day Rolling Window**: Smoothing out short-term fluctuations.
+- **Counting Positive and Negative Changes**: Tallying the days with consistent directional shifts.
+- **Applying Statistical Analysis**: Using the binomial distribution (for example, requiring 12 out of 14 days to exhibit the same trend) to confirm significant changes.
+
+#### Process Details
+
+|Step|Details|
+|----|----|
+|Calculate WoW Deltas|Determine the day-to-day changes in the metric.|
+|Rolling 14-Day Window|Apply a two-week window to balance sensitivity and stability.|
+|Count Positive/Negative Days|Tally days with consistent positive or negative changes.|
+|Binomial Distribution|Model the data with an assumption of a 50% chance for each day's outcome.|
+|Trend Threshold|Flag a trend if the count meets a predefined threshold (e.g., 12 out of 14 days).|
+
+: {.striped}
+
+```{r, binom-test}
+#| code-overflow: wrap
+binom.test(12, 14, 1/2, alternative = "greater")
+```
+
+
+```{r, binom-code}
+#| warning: false
+#| code-overflow: wrap
+#| code-fold: true
+library(ggplot2)
+library(showtext)
+library(ggtext)
+
+showtext_auto()
+showtext_opts(dpi = 300)
+
+font_add_google(name = "Roboto", family = "Roboto")
+font_1 <- "Roboto"
+
+n <- 14 
+p <- 1/2  
+x_obs <- 12  
+
+binom_test <- binom.test(x_obs, n, p, alternative = "greater")
+
+p_value <- binom_test$p.value
+conf_int <- binom_test$conf.int
+
+p_ge_x_obs <- sum(dbinom(x_obs:n, size = n, prob = p))
+
+data <- data.frame(
+  x = 0:n,
+  probability = dbinom(0:n, size = n, prob = p),
+  color = ifelse(0:n >= x_obs, "#C0392B", "#30394F")  
+)
+
+binom_visual <- ggplot(data, aes(x = x, y = probability, fill = color)) +
+  geom_bar(stat = "identity") +
+  scale_fill_identity() +  
+  scale_x_continuous(breaks = 0:n) +  
+  labs(
+    title = "Binomial Distribution (n = 14, p = 0.5)",
+    x = "Number of Successes",
+    y = "Probability"
+  ) +
+  theme_minimal() +
+  theme(
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor = element_blank(),
+    plot.margin = margin(10, 10, 10, 10, "mm"),
+    axis.text = element_text(family = font_1, size = 7),
+    axis.title = element_text(family = font_1, size = 7),
+    axis.title.x = element_text(margin = margin(5, 0, 0, 0, 'mm')),
+    axis.title.y = element_text(margin = margin(0, 5, 0, 0, 'mm')),
+    plot.title = element_text(family = font_1, size = 10)
+  ) +
+  annotate(
+    geom = 'richtext',
+    x = n+1,
+    y = max(data$probability) * 0.9,
+    label = paste0(
+      "<span style='color:#C0392B; font-size:8pt;font-family:Roboto;'>",
+      "Threshold ≥ 12 trials (days)", "<br>",
+      "P(X ≥ ", x_obs, ") = ", round(p_ge_x_obs, 4), "<br>",
+      "95% CI = [", round(conf_int[1], 4), ", ", round(conf_int[2], 4), "]</span>"),
+    hjust = 1, fill = NA, label.color = NA
+  )
+```
+
+```{r, binom-visual}
+#| echo: false
+#| fig-column: page
+#| lightbox:
+#|   group: plot
+binom_visual
+```
+
+This binomial approach improves upon rolling averages by offering better responsiveness to recent trends and reducing sensitivity to day-of-week variations, leading to more reliable trend detection.
