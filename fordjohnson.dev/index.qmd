@@ -6,7 +6,7 @@ about:
   id: hero-heading
   template: trestles
   image: images/profile.jpg
-include-in-header: profile-meta.txt
+include-in-header: site-meta.txt
 ---
 
 ::: {.column-page}
