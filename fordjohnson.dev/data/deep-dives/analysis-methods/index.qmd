@@ -189,6 +189,7 @@ The **binomial trend detection** method offers an alternative to traditional rol
 ### Methodology
 
 This approach involves:
+
 - **Calculating Week-over-Week Deltas**: Measuring daily changes.
 - **Using a 14-Day Rolling Window**: Smoothing out short-term fluctuations.
 - **Counting Positive and Negative Changes**: Tallying the days with consistent directional shifts.
