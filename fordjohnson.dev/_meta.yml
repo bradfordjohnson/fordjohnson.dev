@@ -1,0 +1,22 @@
+hero:
+  headline: Turning Data into Insights, One Story at a Time
+  subtitle: I transform raw data into compelling visuals and meaningful narratives, helping businesses make smarter decisions.
+
+cta:
+  text: check it out
+  url: /
+
+anchor-sections: false
+
+listing:
+  - id: projects-featured
+    template: _components/card-grid.ejs
+    contents: projects/listing.yml
+    template-params:
+      showFeaturedOnly: true
+
+  - id: projects-all
+    template: _components/card-grid.ejs
+    contents: projects/listing.yml
+    template-params:
+      showFeaturedOnly: false

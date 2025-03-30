@@ -1,36 +1,8 @@
 ---
-pagetitle: Home
-page-layout: article
-description-meta: Ford Johnson – Data analyst and storyteller specializing in custom data visuals, web analytics, and big data solutions. Explore projects on data-driven storytelling, visualization, and marketing insights at fordjohnson.dev.
-about:
-  id: hero-heading
-  template: trestles
-  image: images/profile.jpg
-include-in-header: site-meta.txt
+metadata-files: 
+  - _meta.yml
 ---
 
-::: {.column-page}
+{{< include _components/hero.qmd >}}
 
-::: {#hero-heading}
-
-::: {.g-col-12 .g-col-md-8 .hero-heading}
-
-# <span class="hero-highlight">Ford Johnson</span>
-
-:::
-
-I’m a data analyst and storyteller specializing in web analytics and big data. With a background in sociology and criminology, I uncover patterns and turn them into engaging narratives.
-
-Learning R sparked my passion for transforming raw data into compelling visuals. Whether analyzing web metrics or crafting custom visuals, I thrive at blending creativity with analysis.
-
-Beyond data, I'm into hiking, photography, and currently learning to golf.
-
-<div class="button-div">
-
-<a href="/data" class="brand-button-primary" role="button">Explore my work</a> <a href="/about" class="brand-button-secondary" role="button">Get to know me</a>
-
-</div>
-
-:::
-
-:::
+{{< include _components/cta.qmd >}}

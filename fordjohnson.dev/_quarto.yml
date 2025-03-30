@@ -5,24 +5,28 @@ project:
   type: website
   output-dir: docs
 
+# temp testing
+  render: 
+    - index.qmd
+
 website:
   title: Ford Johnson
   site-url: https://fordjohnson.dev
-  open-graph:
-    image: images/logo-2.png
   search: false
-  favicon: images/favicon.png
+  favicon: _assets/images/favicon.png
+  open-graph:
+    image: _assets/images/logo-2.png
 
   navbar:
-    right:
+    left:
       - href: index.qmd
         text: Home
-      - href: data/index.qmd
-        text: Data
-      - href: photography/index.qmd
-        text: Photography
-      - href: about/index.qmd
-        text: About
+      - href: projects/index.qmd
+      #   text: Projects
+      # - href: notes/index.qmd
+      #   text: Notes
+      # - href: about/index.qmd
+      #   text: About
 
   page-footer:
     center:
@@ -33,11 +37,12 @@ website:
 
 format:
   html:
-    include-in-header:
-      - text: <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-W39B6FZ6');</script>
-    include-before-body:
-      - text: <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W39B6FZ6"height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    anchor-sections: true
+    # include-in-header:
+      # - text: <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-W39B6FZ6');</script>
+    # include-before-body:
+      # - text: <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W39B6FZ6"height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    page-layout: full
+    # anchor-sections: true
     theme: styles.scss
     toc: false
     canonical-url: true
