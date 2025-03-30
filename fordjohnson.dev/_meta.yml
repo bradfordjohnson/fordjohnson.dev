@@ -15,6 +15,7 @@ listing:
     template-params:
       showFeaturedOnly: true
       basePath: "projects/"
+      showCategory: true
 
   - id: split-section
     template: _components/split-section.ejs

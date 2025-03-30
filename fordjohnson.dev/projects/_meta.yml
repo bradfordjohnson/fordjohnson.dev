@@ -1,3 +1,6 @@
+title: Projects
+description: about my projects!
+
 listing:
   - id: projects-all
     template: ../_components/card-grid.ejs
@@ -5,3 +8,4 @@ listing:
     template-params:
       showFeaturedOnly: false
       basePath: ""
+      showCategory: false
