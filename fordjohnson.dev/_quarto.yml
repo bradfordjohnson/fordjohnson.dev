@@ -8,6 +8,7 @@ project:
 # temp testing
   render: 
     - index.qmd
+    - projects/index.qmd
 
 website:
   title: Ford Johnson

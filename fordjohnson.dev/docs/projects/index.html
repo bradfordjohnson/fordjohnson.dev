@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Ford Johnson</title>
+<title>index – Ford Johnson</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,20 +23,21 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<link href="./_assets/images/favicon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d9e09300a50f43c0b0f5f39e025bc523.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../_assets/images/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-d9e09300a50f43c0b0f5f39e025bc523.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -55,7 +56,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-projects-featured .list');
+    const listingTargetEl = window.document.querySelector('#listing-projects-all .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -68,35 +69,7 @@ ul.task-list li input[type="checkbox"] {
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-projects-featured'] = new List('listing-projects-featured', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-split-section .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-splitSections',{ data: ['index'] },{ data: ['categories'] }],
-      
-      searchColumns: ["listing-splitSections"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-split-section'] = new List('listing-split-section', options);
+    window['quarto-listings']['listing-projects-all'] = new List('listing-projects-all', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -141,11 +114,9 @@ window.Quarto = {
 </script>
 
 <meta property="og:title" content="Ford Johnson">
-<meta property="og:image" content="https://fordjohnson.dev/_assets/images/logo-2.png">
+<meta property="og:image" content="https://fordjohnson.dev/projects/_assets/images/logo-2.png">
 <meta property="og:site_name" content="Ford Johnson">
-<meta property="og:image:height" content="200">
-<meta property="og:image:width" content="600">
-<link rel="canonical" href="https://fordjohnson.dev/">
+<link rel="canonical" href="https://fordjohnson.dev/projects/">
 </head>
 
 <body class="nav-fixed">
@@ -155,7 +126,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Ford Johnson</span>
     </a>
   </div>
@@ -165,11 +136,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects/index.html"> 
+    <a class="nav-link active" href="../projects/index.html" aria-current="page"> 
 <span class="menu-text">index.html</span></a>
   </li>  
 </ul>
@@ -185,25 +156,18 @@ window.Quarto = {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="hero-headline title display-7">Turning Data into Insights, One Story at a Time</h1></header>
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
-<section class="hero">
-  <div class="hero-content">
-    
-    <p class="hero-subtitle">I transform raw data into compelling visuals and meaningful narratives, helping businesses make smarter decisions.</p>
-  </div>
-</section>
-<a href="./" class="cta-button-primary">check it out</a>
 
 
 
 
-<div class="quarto-listing quarto-listing-container-custom" id="listing-projects-featured">
+<div class="quarto-listing quarto-listing-container-custom" id="listing-projects-all">
 
-  <h2>Projects &amp; Featured Work</h2>
+  <h2 class="anchored">Projects &amp; Featured Work</h2>
   
   <div class="list grid" style="column-gap: 10px;">
   
@@ -212,15 +176,15 @@ window.Quarto = {
       <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="0" data-featured="true">
         <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
           <small class="card-text inline-block">
-            <a href="projects/core-pretzel-index/index.html" class="listing-title">🥨 Core Pretzel Index (CPI)</a>
+            <a href="core-pretzel-index/index.html" class="listing-title">🥨 Core Pretzel Index (CPI)</a>
             
             <br>
             <span class="text-muted listing-subtitle">A custom comparison and ranking framework</span>
           </small>
         </div>
         
-        <a href="projects/core-pretzel-index/index.html">
-          <img src="projects/core-pretzel-index/image.jpg" alt="" class="card-img-top">
+        <a href="core-pretzel-index/index.html">
+          <img src="core-pretzel-index/image.jpg" alt="" class="card-img-top">
         </a>
         
         
@@ -231,15 +195,15 @@ window.Quarto = {
       <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="1" data-featured="true">
         <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
           <small class="card-text inline-block">
-            <a href="projects/tidytuesday/index.html" class="listing-title">TidyTuesday</a>
+            <a href="tidytuesday/index.html" class="listing-title">TidyTuesday</a>
             
             <br>
             <span class="text-muted listing-subtitle">Visuals created weekly using R and the Tidyverse</span>
           </small>
         </div>
         
-        <a href="projects/tidytuesday/index.html">
-          <img src="projects/tidytuesday/image.png" alt="" class="card-img-top">
+        <a href="tidytuesday/index.html">
+          <img src="tidytuesday/image.png" alt="" class="card-img-top">
         </a>
         
         
@@ -247,38 +211,26 @@ window.Quarto = {
     
   
     
+      <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="2" data-featured="false">
+        <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
+          <small class="card-text inline-block">
+            <a href="charleston-flights-dashboard/index.html" class="listing-title">Charleston Flight Dashboard</a>
+            
+            <br>
+            <span class="text-muted listing-subtitle">Dashboard powered by JavaScript and Python</span>
+          </small>
+        </div>
+        
+        <a href="charleston-flights-dashboard/index.html">
+          <img src="charleston-flights-dashboard/image.png" alt="" class="card-img-top">
+        </a>
+        
+        
+      </div>
+    
   
   
   </div>
-  
-
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div><div class="quarto-listing quarto-listing-container-custom" id="listing-split-section">
-
-  
-    
-      <section class="split-section ">
-        <div class="split-content">
-          <h3 class="split-title">Data Storytelling &amp; Visualization</h3>
-          <p class="split-text">I craft compelling data stories using interactive and engaging visualizations.</p>
-        </div>
-        <div class="split-image">
-          <img src="projects/core-pretzel-index/image.jpg" alt="Example of Data Visualization" data-index="0">
-        </div>
-      </section>
-    
-      <section class="split-section flip">
-        <div class="split-content">
-          <h3 class="split-title">Web &amp; Marketing Analytics</h3>
-          <p class="split-text">Leveraging data to optimize web performance, funnels, and customer journeys.</p>
-        </div>
-        <div class="split-image">
-          <img src="projects/core-pretzel-index/image.jpg" alt="Example of Analytics Dashboard" data-index="1">
-        </div>
-      </section>
-    
   
 
 <div class="listing-no-matching d-none">
@@ -305,6 +257,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     

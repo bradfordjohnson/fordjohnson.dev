@@ -14,12 +14,7 @@ listing:
     contents: projects/listing.yml
     template-params:
       showFeaturedOnly: true
-
-  - id: projects-all
-    template: _components/card-grid.ejs
-    contents: projects/listing.yml
-    template-params:
-      showFeaturedOnly: false
+      basePath: "projects/"
 
   - id: split-section
     template: _components/split-section.ejs

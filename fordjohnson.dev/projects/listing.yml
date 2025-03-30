@@ -2,20 +2,20 @@
   tiles:
     - title: 🥨 Core Pretzel Index (CPI)
       subtitle: A custom comparison and ranking framework
-      href: projects/core-pretzel-index/index.html
-      thumbnail: projects/core-pretzel-index/image.jpg
+      href: core-pretzel-index/index.html
+      thumbnail: core-pretzel-index/image.jpg
       featured: true
 
     - title: TidyTuesday
       subtitle: Visuals created weekly using R and the Tidyverse
-      href: projects/tidytuesday/index.html
+      href: tidytuesday/index.html
       # code: https://github.com/bradfordjohnson/tidytuesday/tree/main/tidytuesday
-      thumbnail: projects/tidytuesday/image.png
+      thumbnail: tidytuesday/image.png
       featured: true
 
     - title: Charleston Flight Dashboard
       subtitle: Dashboard powered by JavaScript and Python
-      href: projects/charleston-flights-dashboard/index.html
+      href: charleston-flights-dashboard/index.html
       # code: https://github.com/bradfordjohnson/kchs
-      thumbnail: projects/charleston-flights-dashboard/image.png
+      thumbnail: charleston-flights-dashboard/image.png
       featured: false
