@@ -1,0 +1,11 @@
+title: Notes
+description: Notes about my data!
+
+listing:
+  - id: notes-all
+    template: ../_components/card-grid.ejs
+    contents: listing.yml
+    template-params:
+      showFeaturedOnly: false
+      basePath: ""
+      showCategory: false

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://fordjohnson.dev/notes/index.html</loc>
+    <lastmod>2025-03-30T22:10:11.394Z</lastmod>
+  </url>
+  <url>
     <loc>https://fordjohnson.dev/index.html</loc>
     <lastmod>2025-03-30T20:18:20.068Z</lastmod>
   </url>

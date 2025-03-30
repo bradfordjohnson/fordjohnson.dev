@@ -9,6 +9,7 @@ project:
   render: 
     - index.qmd
     - projects/index.qmd
+    - notes/index.qmd
 
 website:
   title: Ford Johnson
@@ -23,9 +24,9 @@ website:
       - href: index.qmd
         text: Home
       - href: projects/index.qmd
-      #   text: Projects
-      # - href: notes/index.qmd
-      #   text: Notes
+        text: Projects
+      - href: notes/index.qmd
+        text: Notes
       # - href: about/index.qmd
       #   text: About
 

@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="about my projects!">
+<meta name="description" content="Notes about my data!">
 
-<title>Projects – Ford Johnson</title>
+<title>Notes – Ford Johnson</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,7 +57,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-projects-all .list');
+    const listingTargetEl = window.document.querySelector('#listing-notes-all .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -70,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-projects-all'] = new List('listing-projects-all', options);
+    window['quarto-listings']['listing-notes-all'] = new List('listing-notes-all', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -114,11 +114,11 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Projects – Ford Johnson">
-<meta property="og:description" content="about my projects!">
-<meta property="og:image" content="https://fordjohnson.dev/projects/_assets/images/logo-2.png">
+<meta property="og:title" content="Notes – Ford Johnson">
+<meta property="og:description" content="Notes about my data!">
+<meta property="og:image" content="https://fordjohnson.dev/notes/_assets/images/logo-2.png">
 <meta property="og:site_name" content="Ford Johnson">
-<link rel="canonical" href="https://fordjohnson.dev/projects/">
+<link rel="canonical" href="https://fordjohnson.dev/notes/">
 </head>
 
 <body class="nav-fixed">
@@ -142,11 +142,11 @@ window.Quarto = {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../projects/index.html" aria-current="page"> 
+    <a class="nav-link" href="../projects/index.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../notes/index.html"> 
+    <a class="nav-link active" href="../notes/index.html" aria-current="page"> 
 <span class="menu-text">Notes</span></a>
   </li>  
 </ul>
@@ -166,12 +166,12 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Projects</h1>
+<h1 class="title">Notes</h1>
 </div>
 
 <div>
   <div class="description">
-    about my projects!
+    Notes about my data!
   </div>
 </div>
 
@@ -192,7 +192,7 @@ window.Quarto = {
 
 
 
-<div class="quarto-listing quarto-listing-container-custom" id="listing-projects-all">
+<div class="quarto-listing quarto-listing-container-custom" id="listing-notes-all">
 
   
 
@@ -205,15 +205,15 @@ window.Quarto = {
       <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="0" data-featured="true">
         <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
           <small class="card-text inline-block">
-            <a href="core-pretzel-index/index.html" class="listing-title">🥨 Core Pretzel Index (CPI)</a>
+            <a href="analysis-methods/index.html" class="listing-title">Analysis Methods</a>
             
             <br>
-            <span class="text-muted listing-subtitle">A custom comparison and ranking framework</span>
+            <span class="text-muted listing-subtitle">A collection of notes</span>
           </small>
         </div>
         
-        <a href="core-pretzel-index/index.html">
-          <img src="core-pretzel-index/image.jpg" alt="" class="card-img-top">
+        <a href="analysis-methods/index.html">
+          <img src="analysis-methods/binomial-trend-detection.png" alt="" class="card-img-top">
         </a>
         
         
@@ -224,34 +224,15 @@ window.Quarto = {
       <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="1" data-featured="true">
         <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
           <small class="card-text inline-block">
-            <a href="tidytuesday/index.html" class="listing-title">TidyTuesday</a>
+            <a href="rocket-league-mmr/index.html" class="listing-title">Matchmaking in Rocket League</a>
             
             <br>
-            <span class="text-muted listing-subtitle">Visuals created weekly using R and the Tidyverse</span>
+            <span class="text-muted listing-subtitle">Diving into how MMR and matchmaking work</span>
           </small>
         </div>
         
-        <a href="tidytuesday/index.html">
-          <img src="tidytuesday/image.png" alt="" class="card-img-top">
-        </a>
-        
-        
-      </div>
-    
-  
-    
-      <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="2" data-featured="false">
-        <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
-          <small class="card-text inline-block">
-            <a href="charleston-flights-dashboard/index.html" class="listing-title">Charleston Flight Dashboard</a>
-            
-            <br>
-            <span class="text-muted listing-subtitle">Dashboard powered by JavaScript and Python</span>
-          </small>
-        </div>
-        
-        <a href="charleston-flights-dashboard/index.html">
-          <img src="charleston-flights-dashboard/image.png" alt="" class="card-img-top">
+        <a href="rocket-league-mmr/index.html">
+          <img src="rocket-league-mmr/image.jpg" alt="" class="card-img-top">
         </a>
         
         
