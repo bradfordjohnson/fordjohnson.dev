@@ -4,3 +4,12 @@ metadata-files:
 ---
 
 {{< include ../_components/hero-split.qmd >}}
+
+:::{.content-block}
+- what i do section
+- about me
+- skills / tools
+- experience timeline?
+- contact / cta?
+
+:::

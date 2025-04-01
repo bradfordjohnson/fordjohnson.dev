@@ -35,3 +35,9 @@ listing:
           img-url: projects/core-pretzel-index/image.jpg
           img-alt: Example of Analytics Dashboard
           flip: false
+
+        - header: Data Storytelling & Visualization
+          text: I craft compelling data stories using interactive and engaging visualizations.
+          img-url: projects/core-pretzel-index/image.jpg
+          img-alt: Example of Data Visualization
+          flip: true
