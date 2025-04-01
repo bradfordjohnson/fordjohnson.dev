@@ -36,7 +36,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d9e09300a50f43c0b0f5f39e025bc523.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-6bacb180fceb418d3daf347ae40fa413.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -148,7 +148,7 @@ window.Quarto = {
 <link rel="canonical" href="https://fordjohnson.dev/">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -176,6 +176,10 @@ window.Quarto = {
     <a class="nav-link" href="./notes/index.html"> 
 <span class="menu-text">Notes</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about/index.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -184,29 +188,31 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
 <!-- main -->
-<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="hero-headline title display-7">Turning Data into Insights, One Story at a Time</h1></header>
 
 
 
 
-<section class="hero">
-  <div class="hero-content">
+<div class="hero-banner">
+  <div class="content-block">
+    <div class="hero-text">
+      <h1 class="hero-headline">Turning Data into Insights, One Story at a Time</h1>
+      <p class="hero-subtitle">I transform raw data into compelling visuals and meaningful narratives, helping businesses make smarter decisions.</p>
     
-    <p class="hero-subtitle">I transform raw data into compelling visuals and meaningful narratives, helping businesses make smarter decisions.</p>
+    <div class="hero-button">
+      <a href="./" class="cta-button-primary">check it out</a>
+      </div>
+    </div>
   </div>
-</section>
-<!-- make a hero cta component and a regular cta component and implement -->
-<a href="./" class="cta-button-primary">check it out</a>
+</div>
 <div id="listing-split-section" class="quarto-listing quarto-listing-container-custom">
 
   
     
-      <section class="split-section ">
+      <div class="split-section flip">
         <div class="split-content">
           <h3 class="split-title">Data Storytelling &amp; Visualization</h3>
           <p class="split-text">I craft compelling data stories using interactive and engaging visualizations.</p>
@@ -214,9 +220,9 @@ window.Quarto = {
         <div class="split-image">
           <img src="projects/core-pretzel-index/image.jpg" alt="Example of Data Visualization" data-index="0">
         </div>
-      </section>
+      </div>
     
-      <section class="split-section flip">
+      <div class="split-section ">
         <div class="split-content">
           <h3 class="split-title">Web &amp; Marketing Analytics</h3>
           <p class="split-text">Leveraging data to optimize web performance, funnels, and customer journeys.</p>
@@ -224,7 +230,7 @@ window.Quarto = {
         <div class="split-image">
           <img src="projects/core-pretzel-index/image.jpg" alt="Example of Analytics Dashboard" data-index="1">
         </div>
-      </section>
+      </div>
     
   
 
@@ -240,7 +246,7 @@ No matching items
 
   
   
-  <div class="list grid" style="column-gap: 10px;">
+  <div class="list grid card-grid">
   
   
     
@@ -295,7 +301,7 @@ No matching items
 
 
 
-</main> <!-- /main -->
+
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

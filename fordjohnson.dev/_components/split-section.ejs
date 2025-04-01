@@ -2,7 +2,7 @@
 <% for (const item of items) { %>
   <% if (item.splitSections) { %>
     <% for (const section of item.splitSections) { %>
-      <section class="split-section <%= section.flip ? 'flip' : '' %>">
+      <div class="split-section <%= section.flip ? 'flip' : '' %>">
         <div class="split-content">
           <h3 class="split-title"><%- section.header %></h3>
           <p class="split-text"><%- section.text %></p>
@@ -10,7 +10,7 @@
         <div class="split-image">
           <img src="<%- section['img-url'] %>" alt="<%- section['img-alt'] %>" <%= metadataAttrs(section) %> >
         </div>
-      </section>
+      </div>
     <% } %>
   <% } %>
 <% } %>

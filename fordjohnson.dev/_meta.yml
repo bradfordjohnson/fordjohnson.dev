@@ -1,12 +1,15 @@
 hero:
   headline: Turning Data into Insights, One Story at a Time
   subtitle: I transform raw data into compelling visuals and meaningful narratives, helping businesses make smarter decisions.
-
-cta:
-  text: check it out
-  url: /
+  cta:
+    text: check it out
+    url: /
+  img-url: _assets/images/profile.jpg
+  img-alt: alt text
 
 anchor-sections: false
+section-divs: false
+page-layout: custom
 
 listing:
   - id: projects-featured
@@ -25,10 +28,10 @@ listing:
           text: I craft compelling data stories using interactive and engaging visualizations.
           img-url: projects/core-pretzel-index/image.jpg
           img-alt: Example of Data Visualization
-          flip: false
+          flip: true
 
         - header: Web & Marketing Analytics
           text: Leveraging data to optimize web performance, funnels, and customer journeys.
           img-url: projects/core-pretzel-index/image.jpg
           img-alt: Example of Analytics Dashboard
-          flip: true
+          flip: false

@@ -9,7 +9,7 @@
   <p><%- item.description %></p>
   <% } %>
   
-  <div class="list grid" style="column-gap: 10px;">
+  <div class="list grid card-grid">
   
   <% for (const tile of item.tiles) { %>
     <% if (!(templateParams.showFeaturedOnly === true && tile.featured === false)) { %>

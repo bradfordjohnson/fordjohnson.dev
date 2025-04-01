@@ -1,0 +1,8 @@
+pageTitle: about
+page-layout: custom
+section-divs: false
+hero:
+  headline: One Story at a Time
+  subtitle: I transform raw data into compelling visuals and meaningful narratives, helping businesses make smarter decisions.
+  img-url: ../_assets/images/profile.jpg
+  img-alt: alt text

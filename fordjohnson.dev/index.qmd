@@ -5,9 +5,6 @@ metadata-files:
 
 {{< include _components/hero.qmd >}}
 
-<!-- make a hero cta component and a regular cta component and implement -->
-{{< include _components/cta.qmd >}}
-
 :::{#split-section}
 
 :::

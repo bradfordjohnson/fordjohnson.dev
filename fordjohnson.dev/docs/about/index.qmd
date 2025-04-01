@@ -1,0 +1,4 @@
+---
+metadata-files: 
+  - _meta.yml
+---
