@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://fordjohnson.dev/notes/index.html</loc>
-    <lastmod>2025-03-30T22:10:11.394Z</lastmod>
-  </url>
-  <url>
-    <loc>https://fordjohnson.dev/index.html</loc>
-    <lastmod>2025-04-01T14:14:46.612Z</lastmod>
+    <loc>https://fordjohnson.dev/about/index.html</loc>
+    <lastmod>2025-04-05T03:04:21.359Z</lastmod>
   </url>
   <url>
     <loc>https://fordjohnson.dev/projects/index.html</loc>
     <lastmod>2025-04-01T14:18:28.627Z</lastmod>
   </url>
   <url>
-    <loc>https://fordjohnson.dev/about/index.html</loc>
-    <lastmod>2025-04-01T14:30:55.362Z</lastmod>
+    <loc>https://fordjohnson.dev/index.html</loc>
+    <lastmod>2025-04-01T14:14:46.612Z</lastmod>
+  </url>
+  <url>
+    <loc>https://fordjohnson.dev/notes/index.html</loc>
+    <lastmod>2025-03-30T22:10:11.394Z</lastmod>
   </url>
 </urlset>

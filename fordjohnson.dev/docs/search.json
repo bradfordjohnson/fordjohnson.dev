@@ -1,19 +1,5 @@
 [
   {
-    "objectID": "notes/index.html",
-    "href": "notes/index.html",
-    "title": "Notes",
-    "section": "",
-    "text": "Analysis Methods\n            \n            \n            A collection of notes\n          \n        \n        \n        \n          \n        \n        \n        \n      \n    \n  \n    \n      \n        \n          \n            Matchmaking in Rocket League\n            \n            \n            Diving into how MMR and matchmaking work\n          \n        \n        \n        \n          \n        \n        \n        \n      \n    \n  \n  \n  \n  \n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Turning Data into Insights, One Story at a Time",
-    "section": "",
-    "text": "I transform raw data into compelling visuals and meaningful narratives, helping businesses make smarter decisions.\n        \n            check it out\n        \n        \n        \n            \n        \n  \n\n\n\n  \n    \n      \n        \n          Data Storytelling & Visualization\n          I craft compelling data stories using interactive and engaging visualizations.\n        \n        \n          \n        \n      \n    \n      \n        \n          Web & Marketing Analytics\n          Leveraging data to optimize web performance, funnels, and customer journeys.\n        \n        \n          \n        \n      \n    \n  \n\n\nNo matching items\n\n\n\n\n  \n    Projects & Featured Work\n  \n\n  \n  \n  \n  \n  \n    \n      \n        \n          \n            🥨 Core Pretzel Index (CPI)\n            \n            \n            A custom comparison and ranking framework\n          \n        \n        \n        \n          \n        \n        \n        \n      \n    \n  \n    \n      \n        \n          \n            TidyTuesday\n            \n            \n            Visuals created weekly using R and the Tidyverse\n          \n        \n        \n        \n          \n        \n        \n        \n      \n    \n  \n    \n  \n  \n  \n  \n\n\nNo matching items"
-  },
-  {
     "objectID": "projects/index.html",
     "href": "projects/index.html",
     "title": "Projects",
@@ -21,10 +7,10 @@
     "text": "todo: create listing template for title parameter in _meta.yml, hide pagetitle / desc from listing pages\n\n\n\n\n\n\n\n\n  \n\n  \n  \n  \n  \n  \n    \n      \n        \n          \n            🥨 Core Pretzel Index (CPI)\n            \n            \n            A custom comparison and ranking framework\n          \n        \n        \n        \n          \n        \n        \n        \n      \n    \n  \n    \n      \n        \n          \n            TidyTuesday\n            \n            \n            Visuals created weekly using R and the Tidyverse\n          \n        \n        \n        \n          \n        \n        \n        \n      \n    \n  \n    \n      \n        \n          \n            Charleston Flight Dashboard\n            \n            \n            Dashboard powered by JavaScript and Python\n          \n        \n        \n        \n          \n        \n        \n        \n      \n    \n  \n  \n  \n  \n\n\n\nNo matching items"
   },
   {
-    "objectID": "about/index.html",
-    "href": "about/index.html",
-    "title": "One Story at a Time",
+    "objectID": "notes/index.html",
+    "href": "notes/index.html",
+    "title": "Notes",
     "section": "",
-    "text": "I transform raw data into compelling visuals and meaningful narratives, helping businesses make smarter decisions."
+    "text": "Analysis Methods\n            \n            \n            A collection of notes\n          \n        \n        \n        \n          \n        \n        \n        \n      \n    \n  \n    \n      \n        \n          \n            Matchmaking in Rocket League\n            \n            \n            Diving into how MMR and matchmaking work\n          \n        \n        \n        \n          \n        \n        \n        \n      \n    \n  \n  \n  \n  \n\n\n\nNo matching items"
   }
 ]

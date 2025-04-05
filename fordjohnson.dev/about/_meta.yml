@@ -2,7 +2,9 @@ pagetitle: about
 page-layout: custom
 section-divs: false
 hero:
-  headline: One Story at a Time
-  subtitle: I transform raw data into compelling visuals and meaningful narratives, helping businesses make smarter decisions.
+  headline: Simplifying data, driving impact.
+  subtitle: |
+    I’m a data analyst skilled in uncovering insights from complex datasets. I use analytical tools and storytelling to transform data into actionable insights that drive decisions.
+    With a background in sociology and criminology, I bring a unique perspective to understanding patterns and behaviors. Whether optimizing business performance or visualizing data for impact, I focus on making data accessible and valuable.
   img-url: ../_assets/images/profile.jpg
   img-alt: alt text
