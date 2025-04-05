@@ -7,7 +7,7 @@ $theme: "cosmo" !default;
 // Color system
 //
 
-$white:    #fff !default;
+$white: #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
@@ -17,29 +17,85 @@ $gray-600: #868e96 !default;
 $gray-700: #495057 !default;
 $gray-800: #373a3c !default;
 $gray-900: #212529 !default;
-$black:    #000 !default;
+$black: #000 !default;
 
-$blue:    #2780e3 !default;
-$indigo:  #6610f2 !default;
-$purple:  #613d7c !default;
-$pink:    #e83e8c !default;
-$red:     #ff0039 !default;
-$orange:  #f0ad4e !default;
-$yellow:  #ff7518 !default;
-$green:   #3fb618 !default;
-$teal:    #20c997 !default;
-$cyan:    #9954bb !default;
+$blue: #2780e3 !default;
+$alt-blue: #1961b3 !default;
+$light-blue: #f6f9ff !default;
+$indigo: #6610f2 !default;
+$purple: #613d7c !default;
+$pink: #e83e8c !default;
+$red: #ff0039 !default;
+$orange: #f0ad4e !default;
+$yellow: #ff7518 !default;
+$green: #3fb618 !default;
+$teal: #20c997 !default;
+$cyan: #9954bb !default;
 
-$primary:       $blue !default;
-$secondary:     $gray-800 !default;
-$success:       $green !default;
-$info:          $cyan !default;
-$warning:       $yellow !default;
-$danger:        $red !default;
-$light:         $gray-100 !default;
-$dark:          $gray-800 !default;
+$primary: $blue !default;
+$secondary: $white !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-800 !default;
 
-$min-contrast-ratio:   2.6 !default;
+$blue-hover: $alt-blue !default;
+$hero-bg: $light-blue !default;
+$heading-color: $blue !default;
+$hero-heading: $blue !default;
+
+$navbar-bg: $white !default;
+$navbar-fg: $dark !default;
+$navbar-hl: $blue !default;
+
+$footer-bg: $white !default;
+$footer-fg: $dark !default;
+
+$callout-border-width: 5px;
+$callout-border-scale: 0%;
+$callout-icon-scale: 10%;
+$callout-margin-top: 1.25rem;
+$callout-margin-bottom: 1.25rem;
+
+$link-color: $alt-blue !default;
+
+$font-size-root: 16px !default;
+$h1-font-size: 2.5rem !default;
+$h2-font-size: 1.75rem !default;
+$h3-font-size: 1.5rem !default;
+$h4-font-size: 1.25rem !default;
+$toc-font-size: 14px !default;
+
+$spacing-xs: 10px !default;
+$spacing-sm: 16px !default;
+$spacing-md: 20px !default;
+$spacing-lg: 30px !default;
+$spacing-xl: 50px !default;
+$section-gap: 2rem !default;
+
+$button-radius: 4px !default;
+$button-padding: 13px 24px 12px !default;
+$button-height: 48px !default;
+
+$max-content-width: 1100px !default;
+$hero-image-max-width: 300px !default;
+
+$content-padding-top: 0px !default;
+
+// $code-block-border-left:
+$code-block-border-left-style: solid !default;
+$code-block-border-left-size: 3px !default;
+$code-block-padding-left: 0.6em !default;
+// $code-block-bg:
+$code-block-bg-padding: 0.4em !default;
+$code-block-bg-alpha: -0.35 !default;
+
+// $btn-code-copy-color: $alt-blue !default;
+$btn-code-copy-color-active: $alt-blue !default;
+
+$min-contrast-ratio: 2.6 !default;
 
 // Options
 
@@ -47,17 +103,29 @@ $enable-rounded: false !default;
 
 // Body
 
-$body-color:    $gray-800 !default;
+$body-color: $gray-800 !default;
 
 // Fonts
 
-$font-family-sans-serif: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-sans-serif:
+  "Source Sans Pro",
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  Roboto,
+  "Helvetica Neue",
+  Arial,
+  sans-serif,
+  "Apple Color Emoji",
+  "Segoe UI Emoji",
+  "Segoe UI Symbol" !default;
 $headings-font-weight: 400 !default;
+// $font-family-monospace:
 
 // Navbar
 
 $navbar-dark-hover-color: rgba($white, 1) !default;
-$navbar-light-hover-color: rgba($black, .9) !default;
+$navbar-light-hover-color: rgba($black, 0.9) !default;
 
 // Alerts
 
@@ -65,8 +133,7 @@ $alert-border-width: 0 !default;
 
 // Progress bars
 
-$progress-height: .5rem !default;
-
+$progress-height: 0.5rem !default;
 
 /*-- scss:rules --*/
 
@@ -102,52 +169,169 @@ body {
   }
 }
 
-:root {
-  --primary-color: #2780e3;
-  --primary-hover: #1961b3;
-  --secondary-color: white;
-  --secondary-hover: #f0f0f0;
-  --gray-light: #ddd;
-  --gray-medium: #555;
-  --gray-dark: rgb(84, 85, 85);
-  --hero-bg: rgb(240, 245, 249);
-  --heading-color: #39729e;
-
-  --font-size-base: 16px;
-  --font-size-lg: 2.5rem;
-  --font-size-title: 1.75rem;
-  --font-size-text: 1rem;
-
-  --spacing-xs: 10px;
-  --spacing-sm: 16px;
-  --spacing-md: 20px;
-  --spacing-lg: 30px;
-  --spacing-xl: 50px;
-  --section-gap: 2rem;
-
-  --button-radius: 4px;
-  --button-padding: 13px 24px 12px;
-  --button-height: 48px;
-
-  --max-content-width: 1100px;
-  --hero-image-max-width: 300px;
-}
-
 /* ==========================
    Layout & Utilities
 ========================== */
 
 .card-grid {
-  column-gap: var(--spacing-xs);
+  column-gap: $spacing-xs;
 }
+
+/* ==========================
+   Typography
+========================== */
+
+p {
+  color: #333333; /* Charcoal color */
+  line-height: 1.6;
+  margin-bottom: $spacing-md;
+}
+
+h1 {
+  font-size: $h1-font-size;
+  font-weight: 600;
+  color: $primary;
+  line-height: 1.3;
+  margin-top: $spacing-lg;
+  margin-bottom: $spacing-md;
+}
+
+h2 {
+  margin-top: $spacing-lg;
+  margin-bottom: $spacing-sm;
+  font-size: $h2-font-size;
+  color: $dark;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+h3 {
+  margin-top: $spacing-md;
+  margin-bottom: $spacing-xs;
+  font-size: $h3-font-size;
+  color: $dark;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+h4 {
+  margin-top: $spacing-md;
+  margin-bottom: $spacing-xs;
+  font-size: $h4-font-size;
+  color: $dark;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* ==========================
+   Content Blocks
+========================== */
+
+.content-block {
+  width: 85%;
+  padding: $spacing-md 0;
+  margin-left: $spacing-lg;
+  margin-right: $spacing-lg;
+}
+
+@media (min-width: 900px) {
+  .content-block {
+    margin-left: $spacing-xl;
+    margin-right: $spacing-xl;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content-block {
+    max-width: $max-content-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-banner .content-block .hero-text {
+    width: 100%;
+  }
+}
+
+/* ==========================
+   Hero Section
+========================== */
+
+.hero-banner h1 {
+  color: $hero-heading;
+  font-size: $h1-font-size;
+}
+
+.hero-subtitle {
+  padding-right: $spacing-sm;
+}
+
+.hero-banner {
+  position: relative;
+  background-color: $hero-bg;
+}
+
+.hero-banner .content-block {
+  display: flex;
+  flex-direction: row;
+  z-index: 2;
+}
+
+.hero-image {
+  max-width: $hero-image-max-width;
+  width: 100%;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .hero-image {
+    display: none;
+  }
+}
+
+/* ==========================
+   Listing Section
+========================== */
+
+.card .listing-title {
+  font-size: 1.125rem; // ~18px
+  font-weight: 600;
+  color: $heading-color;
+  margin-bottom: 0.25rem;
+  line-height: 1.4;
+  word-break: break-word;
+  text-decoration: none;
+}
+
+.card .listing-subtitle,
+.card .text-muted.listing-subtitle {
+  font-size: 0.95rem; // ~15px
+  font-weight: 400;
+  color: $gray-600;
+  line-height: 1.4;
+  margin-bottom: 0;
+  word-break: break-word;
+}
+
+/* ==========================
+   Split Section
+========================== */
 
 .split-section {
   display: flex;
   align-items: flex-start;
-  gap: var(--section-gap);
+  gap: $section-gap;
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: var(--section-gap);
+  padding-top: $section-gap;
 }
 
 .split-section:not(.flip) {
@@ -169,220 +353,15 @@ body {
   border-radius: 8px;
 }
 
-/* ==========================
-   Typography
-========================== */
-
 .split-title {
-  font-size: var(--font-size-title);
+  font-size: $h2-font-size;
   font-weight: bold;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: $spacing-md;
 }
 
 .split-text {
-  font-size: var(--font-size-text);
-  color: var(--gray-medium);
+  color: $dark;
 }
-
-p {
-  font-size: var(--font-size-text);
-  color: #333333; /* Charcoal color */
-  line-height: 1.6;
-  margin-bottom: var(--spacing-md);
-}
-
-h1 {
-  font-size: var(--font-size-lg);
-  font-weight: 600;
-  color: var(--heading-color);
-  line-height: 1.3;
-  margin-top: var(--spacing-lg);
-  margin-bottom: var(--spacing-md);
-}
-
-h2 {
-  margin-top: var(--spacing-lg);
-  margin-bottom: var(--spacing-sm);
-  font-size: var(--font-size-title);
-  color: var(--heading-color);
-  font-weight: 600;
-  line-height: 1.3;
-}
-
-h3 {
-  margin-top: var(--spacing-md);
-  margin-bottom: var(--spacing-xs);
-  font-size: calc(var(--font-size-title) * 0.8);
-  color: var(--heading-color);
-  font-weight: 500;
-  line-height: 1.4;
-}
-
-h4 {
-  margin-top: var(--spacing-md);
-  margin-bottom: var(--spacing-xs);
-  font-size: calc(var(--font-size-title) * 0.65);
-  color: var(--heading-color);
-  font-weight: 500;
-  line-height: 1.4;
-}
-
-.feature h3 {
-  margin-top: 0;
-}
-
-.feature p:first-of-type {
-  margin-bottom: 0.2rem;
-  color: var(--gray-dark);
-}
-
-.hero-banner h1 {
-  color: var(--heading-color);
-  font-size: var(--font-size-lg);
-}
-
-.hero-subtitle {
-  padding-right: var(--spacing-sm);
-}
-
-/* ==========================
-   Button Styles
-========================== */
-
-.cta-button-primary,
-.cta-button-secondary {
-  font-size: var(--font-size-base);
-  font-weight: 500;
-  letter-spacing: normal;
-  line-height: 20px;
-  border-radius: var(--button-radius);
-  border-style: solid;
-  border-width: 1px;
-  box-sizing: border-box;
-  cursor: pointer;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  min-height: var(--button-height);
-  padding: var(--button-padding);
-  margin-right: var(--spacing-xs);
-  margin-bottom: var(--spacing-xs);
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  text-transform: none;
-  transition: background-color 0.2s, box-shadow 0.2s, color 0.2s;
-}
-
-.cta-button-primary {
-  background-color: var(--primary-color);
-  color: white;
-  border-color: var(--primary-color);
-}
-
-.cta-button-primary:hover {
-  background-color: var(--primary-hover);
-  border-color: var(--primary-hover);
-}
-
-.cta-button-secondary {
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-  border-color: var(--gray-light);
-}
-
-.cta-button-secondary:hover {
-  background-color: var(--secondary-hover);
-  border-color: var(--primary-hover);
-  color: var(--primary-hover);
-}
-
-/* ==========================
-   Hero Banner
-========================== */
-
-.hero-banner {
-  position: relative;
-  background-color: var(--hero-bg);
-}
-
-.hero-banner .content-block {
-  display: flex;
-  flex-direction: row;
-  z-index: 2;
-}
-
-.hero-image {
-  max-width: var(--hero-image-max-width);
-  width: 100%;
-  justify-content: center;
-}
-
-.hero-image img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* ==========================
-   Content Blocks
-========================== */
-
-.content-block {
-  width: 85%;
-  padding: var(--spacing-md) 0;
-  margin-left: var(--spacing-lg);
-  margin-right: var(--spacing-lg);
-}
-
-@media (min-width: 900px) {
-  .content-block {
-    margin-left: var(--spacing-xl);
-    margin-right: var(--spacing-xl);
-  }
-}
-
-@media (min-width: 1200px) {
-  .content-block {
-    max-width: var(--max-content-width);
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-banner .content-block .hero-text {
-    width: 100%;
-  }
-}
-
-/* ==========================
-   Features Section
-========================== */
-
-.features {
-  padding-bottom: 2em;
-}
-
-.feature {
-  margin-top: var(--spacing-md);
-}
-
-@media (min-width: 800px) {
-  .features {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: calc(100% + var(--spacing-xs));
-  }
-
-  .feature {
-    width: calc(33% - var(--spacing-xs));
-    margin: var(--spacing-md) 0 0 var(--spacing-xs);
-  }
-}
-
-/* ==========================
-   Responsive Layout
-========================== */
 
 @media (max-width: 900px) {
   .split-section,
@@ -398,24 +377,93 @@ h4 {
 }
 
 /* ==========================
-   Listing Card Text Styles
+   Features Section
 ========================== */
 
-.card .listing-title {
-  font-size: 1.125rem; // ~18px
-  font-weight: 600;
-  color: var(--heading-color);
-  margin-bottom: 0.25rem;
-  line-height: 1.4;
-  word-break: break-word;
+.features {
+  padding-bottom: 2em;
+  padding-top: $spacing-xl;
 }
 
-.card .listing-subtitle,
-.card .text-muted.listing-subtitle {
-  font-size: 0.95rem; // ~15px
-  font-weight: 400;
-  color: $gray-600;
-  line-height: 1.4;
-  margin-bottom: 0;
-  word-break: break-word;
+.feature {
+  margin-top: $spacing-md;
+  padding: 5px;
+}
+
+.feature h3 {
+  margin-top: 0;
+}
+
+.feature p:first-of-type {
+  margin-bottom: 0.2rem;
+  color: $gray-800;
+}
+
+@media (min-width: 800px) {
+  .features {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: calc(100% + $spacing-xs);
+  }
+
+  .feature {
+    width: calc(33% - $spacing-xs);
+    margin: $spacing-md 0 0 $spacing-xs;
+  }
+}
+
+/* ==========================
+   Button Styles
+========================== */
+
+.cta-button-primary,
+.cta-button-secondary {
+  font-size: $font-size-root;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 20px;
+  border-radius: $button-radius;
+  border-style: solid;
+  border-width: 1px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: $button-height;
+  padding: $button-padding;
+  margin-right: $spacing-xs;
+  margin-bottom: $spacing-xs;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition:
+    background-color 0.2s,
+    box-shadow 0.2s,
+    color 0.2s;
+}
+
+.cta-button-primary {
+  background-color: $blue;
+  color: white;
+  border-color: $blue;
+}
+
+.cta-button-primary:hover {
+  background-color: $blue-hover;
+  border-color: $blue-hover;
+}
+
+.cta-button-secondary {
+  background-color: $secondary;
+  color: $blue;
+  border-color: $gray-200;
+}
+
+.cta-button-secondary:hover {
+  background-color: $gray-200;
+  border-color: $gray-100;
+  color: $blue-hover;
 }
