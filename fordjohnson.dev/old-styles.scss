@@ -51,24 +51,26 @@ $body-color:    $gray-800 !default;
 
 // Fonts
 
-$font-family-sans-serif: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$headings-font-weight: 400 !default;
+// stylelint-disable-next-line value-keyword-case
+$font-family-sans-serif:    "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$headings-font-weight:      400 !default;
 
 // Navbar
 
-$navbar-dark-hover-color: rgba($white, 1) !default;
-$navbar-light-hover-color: rgba($black, .9) !default;
+$navbar-dark-hover-color:       rgba($white, 1) !default;
+$navbar-light-hover-color:      rgba($black, .9) !default;
 
 // Alerts
 
-$alert-border-width: 0 !default;
+$alert-border-width:            0 !default;
 
 // Progress bars
 
-$progress-height: .5rem !default;
+$progress-height:               .5rem !default;
 
 
 /*-- scss:rules --*/
+
 
 // Variables
 
@@ -103,6 +105,7 @@ body {
 }
 
 :root {
+  /* Colors */
   --primary-color: #2780e3;
   --primary-hover: #1961b3;
   --secondary-color: white;
@@ -113,11 +116,13 @@ body {
   --hero-bg: rgb(240, 245, 249);
   --heading-color: #39729e;
 
+  /* Typography */
   --font-size-base: 16px;
   --font-size-lg: 2.5rem;
   --font-size-title: 1.75rem;
   --font-size-text: 1rem;
 
+  /* Spacing */
   --spacing-xs: 10px;
   --spacing-sm: 16px;
   --spacing-md: 20px;
@@ -125,13 +130,16 @@ body {
   --spacing-xl: 50px;
   --section-gap: 2rem;
 
+  /* Buttons */
   --button-radius: 4px;
   --button-padding: 13px 24px 12px;
   --button-height: 48px;
 
+  /* Layout */
   --max-content-width: 1100px;
   --hero-image-max-width: 300px;
 }
+
 
 /* ==========================
    Layout & Utilities
@@ -158,8 +166,7 @@ body {
   flex-direction: row-reverse;
 }
 
-.split-content,
-.split-image {
+.split-content, .split-image {
   flex: 1;
 }
 
@@ -168,6 +175,7 @@ body {
   height: auto;
   border-radius: 8px;
 }
+
 
 /* ==========================
    Typography
@@ -184,47 +192,8 @@ body {
   color: var(--gray-medium);
 }
 
-p {
-  font-size: var(--font-size-text);
-  color: #333333; /* Charcoal color */
-  line-height: 1.6;
-  margin-bottom: var(--spacing-md);
-}
-
-h1 {
-  font-size: var(--font-size-lg);
-  font-weight: 600;
-  color: var(--heading-color);
-  line-height: 1.3;
-  margin-top: var(--spacing-lg);
-  margin-bottom: var(--spacing-md);
-}
-
 h2 {
-  margin-top: var(--spacing-lg);
-  margin-bottom: var(--spacing-sm);
-  font-size: var(--font-size-title);
-  color: var(--heading-color);
-  font-weight: 600;
-  line-height: 1.3;
-}
-
-h3 {
-  margin-top: var(--spacing-md);
-  margin-bottom: var(--spacing-xs);
-  font-size: calc(var(--font-size-title) * 0.8);
-  color: var(--heading-color);
-  font-weight: 500;
-  line-height: 1.4;
-}
-
-h4 {
-  margin-top: var(--spacing-md);
-  margin-bottom: var(--spacing-xs);
-  font-size: calc(var(--font-size-title) * 0.65);
-  color: var(--heading-color);
-  font-weight: 500;
-  line-height: 1.4;
+  margin-top: 0;
 }
 
 .feature h3 {
@@ -244,6 +213,7 @@ h4 {
 .hero-subtitle {
   padding-right: var(--spacing-sm);
 }
+
 
 /* ==========================
    Button Styles
@@ -297,6 +267,7 @@ h4 {
   color: var(--primary-hover);
 }
 
+
 /* ==========================
    Hero Banner
 ========================== */
@@ -324,6 +295,7 @@ h4 {
   display: block;
 }
 
+
 /* ==========================
    Content Blocks
 ========================== */
@@ -349,10 +321,15 @@ h4 {
     margin-right: auto;
   }
 
+  // .hero-banner .content-block .hero-image {
+  //   display: none;
+  // }
+
   .hero-banner .content-block .hero-text {
     width: 100%;
   }
 }
+
 
 /* ==========================
    Features Section
@@ -380,6 +357,7 @@ h4 {
   }
 }
 
+
 /* ==========================
    Responsive Layout
 ========================== */
@@ -395,27 +373,4 @@ h4 {
   .split-image {
     width: 100%;
   }
-}
-
-/* ==========================
-   Listing Card Text Styles
-========================== */
-
-.card .listing-title {
-  font-size: 1.125rem; // ~18px
-  font-weight: 600;
-  color: var(--heading-color);
-  margin-bottom: 0.25rem;
-  line-height: 1.4;
-  word-break: break-word;
-}
-
-.card .listing-subtitle,
-.card .text-muted.listing-subtitle {
-  font-size: 0.95rem; // ~15px
-  font-weight: 400;
-  color: $gray-600;
-  line-height: 1.4;
-  margin-bottom: 0;
-  word-break: break-word;
 }

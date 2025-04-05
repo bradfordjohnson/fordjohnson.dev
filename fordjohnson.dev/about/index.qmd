@@ -13,7 +13,7 @@ metadata-files:
 Designing clear, effective visuals to communicate insights.
 
 <!-- ::: {.learn-more}
-[Learn more »](/docs/computations/python.qmd)
+[Learn more »](/../)
 ::: -->
 :::
 
@@ -31,9 +31,8 @@ Cleaning, processing, and analyzing large datasets to find patterns and efficien
 :::
 :::
 
-:::{.content-block}
+::: {.content-block}
 
-- could make this a split block
 
 {{< include ../_components/network-visual.qmd >}}
 

@@ -3,4 +3,8 @@ metadata-files:
   - _meta.yml
 ---
 
-- todo: create listing template for title parameter in _meta.yml, hide pagetitle / desc from listing pages
+{{< include ../_components/listing-hero.qmd >}}
+
+:::{#projects-all}
+
+:::

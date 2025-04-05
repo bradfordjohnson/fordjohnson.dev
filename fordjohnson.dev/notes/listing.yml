@@ -9,6 +9,5 @@
     - title: Matchmaking in Rocket League
       subtitle: Diving into how MMR and matchmaking work
       href: rocket-league-mmr/index.html
-      # code: https://github.com/bradfordjohnson/tidytuesday/tree/main/tidytuesday
       thumbnail: rocket-league-mmr/image.jpg
       featured: true

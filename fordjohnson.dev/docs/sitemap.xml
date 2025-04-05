@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://fordjohnson.dev/about/index.html</loc>
-    <lastmod>2025-04-05T03:04:21.359Z</lastmod>
+    <loc>https://fordjohnson.dev/projects/tidytuesday/index.html</loc>
+    <lastmod>2025-04-05T14:25:32.433Z</lastmod>
   </url>
   <url>
-    <loc>https://fordjohnson.dev/projects/index.html</loc>
-    <lastmod>2025-04-01T14:18:28.627Z</lastmod>
+    <loc>https://fordjohnson.dev/projects/core-pretzel-index/index.html</loc>
+    <lastmod>2025-04-05T14:21:50.170Z</lastmod>
+  </url>
+  <url>
+    <loc>https://fordjohnson.dev/notes/rocket-league-mmr/index.html</loc>
+    <lastmod>2025-04-05T14:19:04.605Z</lastmod>
+  </url>
+  <url>
+    <loc>https://fordjohnson.dev/notes/analysis-methods/index.html</loc>
+    <lastmod>2025-03-29T12:52:15.667Z</lastmod>
+  </url>
+  <url>
+    <loc>https://fordjohnson.dev/about/index.html</loc>
+    <lastmod>2025-04-05T13:21:36.856Z</lastmod>
   </url>
   <url>
     <loc>https://fordjohnson.dev/index.html</loc>
@@ -14,6 +26,14 @@
   </url>
   <url>
     <loc>https://fordjohnson.dev/notes/index.html</loc>
-    <lastmod>2025-03-30T22:10:11.394Z</lastmod>
+    <lastmod>2025-04-05T13:07:21.033Z</lastmod>
+  </url>
+  <url>
+    <loc>https://fordjohnson.dev/projects/charleston-flights-dashboard/index.html</loc>
+    <lastmod>2025-04-05T14:23:40.683Z</lastmod>
+  </url>
+  <url>
+    <loc>https://fordjohnson.dev/projects/index.html</loc>
+    <lastmod>2025-04-05T12:39:32.333Z</lastmod>
   </url>
 </urlset>

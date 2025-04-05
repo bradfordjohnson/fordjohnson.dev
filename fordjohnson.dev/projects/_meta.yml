@@ -1,5 +1,9 @@
-title: Projects
-description: about my projects!
+page-layout: custom
+pagetitle: Projects
+
+hero:
+  headline: Turning Data into Insights, One Story at a Time
+  subtitle: I transform raw data into compelling visuals and meaningful narratives, helping businesses make smarter decisions.
 
 listing:
   - id: projects-all

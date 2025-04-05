@@ -5,13 +5,6 @@ project:
   type: website
   output-dir: docs
 
-# temp testing
-  render: 
-    - index.qmd
-    - projects/index.qmd
-    - notes/index.qmd
-    - about/index.qmd
-
 website:
   title: Ford Johnson
   site-url: https://fordjohnson.dev

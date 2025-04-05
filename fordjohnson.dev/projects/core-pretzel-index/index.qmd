@@ -6,6 +6,7 @@ toc-depth: 4
 toc-expand: true
 html-math-method:
   method: katex
+# page-layout: custom
 ---
 
 # 🥨 The Core Pretzel Index (CPI)
@@ -101,12 +102,12 @@ The table below illustrates how the decay weight is applied to each visit’s ba
 
 **Decay Adjusted Score:** 93.75%
 
-| Restaurant | Visit Number | Base CPI Score | Decay Weight | Weighted Score |
-|------------|--------------|----------------|--------------|----------------|
-| X          | 1            | 80%          | 0.05         | 3.98%          |
-| X          | 2            | 90%          | 0.14         | 12.18%         |
-| X          | 3            | 80%          | 0.37         | 29.43%         |
-| X          | 4            | 100%         | 1.00         | 100%        |
+| Restaurant | Visit | Base CPI Score | Decay Weight | Weighted Score |
+|------------|-------|----------------|--------------|----------------|
+| X          | 1     | 80%          | 0.05         | 3.98%          |
+| X          | 2     | 90%          | 0.14         | 12.18%         |
+| X          | 3     | 80%          | 0.37         | 29.43%         |
+| X          | 4     | 100%         | 1.00         | 100%        |
 
 : Decay Table Example {.striped}
 
@@ -115,7 +116,7 @@ The table below illustrates how the decay weight is applied to each visit’s ba
 
 
 $$
-\text{Decay Adjusted Score} = \frac{\sum_{i=1}^{n} (\text{Base CPI Score}_i \times \text{Decay Weight}_i)}{\sum_{i=1}^{n} \text{Decay Weight}_i}
+\text{DAS} = \frac{\sum_{i=1}^{n} (\text{CPI}_i \times \text{Decay Weight}_i)}{\sum_{i=1}^{n} \text{Decay Weight}_i}
 $$
 
 #### Price-to-Value (P2V) Score
@@ -130,9 +131,9 @@ The Price-to-Value (P2V) Score helps assess whether a pretzel is worth its cost 
 
 Data is currently logged manually in spreadsheets, but the ultimate goal is to develop a personal web app and dashboard.
 
-| Date       | Restaurant | Pretzel Type | Visit Number | Menu Price | Base CPI Score |
-|------------|------------|--------------|--------------|------------|----------------|
-| 2025-03-22 | Holy City  | Salt         | 1            | $6.50      | 79.00%         |
+| Restaurant | Pretzel Type | Visit Number | Menu Price | Base CPI Score |
+|------------|--------------|--------------|------------|----------------|
+| Holy City  | Salt         | 1            | $6.50      | 79.00%         |
 
 : Current Observations {.striped}
 

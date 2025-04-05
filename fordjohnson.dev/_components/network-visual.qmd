@@ -60,6 +60,8 @@ data = {
     {"id": "matplotlib", "group": 1 },
     {"id": "sqlite3", "group": 1 },
     {"id": "psycopg2", "group": 1 },
+    {"id": "Google Analytics", "group": 2 },
+    {"id": "Search Console", "group": 2 },
   ],
   "links": [
     {"source": "R", "target": "tidyverse", "value": 1},
@@ -123,7 +125,9 @@ data = {
     {"source": "BigQuery", "target": "DataForm", "value": 1},
     {"source": "BigQuery", "target": "JavaScript", "value": 1},
     {"source": "DataForm", "target": "JavaScript", "value": 1},
-    {"source": "SQL", "target": "SQLite", "value": 1}
+    {"source": "SQL", "target": "SQLite", "value": 1},
+    {"source": "BigQuery", "target": "Google Analytics", "value": 1},
+    {"source": "BigQuery", "target": "Search Console", "value": 1}
   ]
 }
 return data

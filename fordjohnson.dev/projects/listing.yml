@@ -9,13 +9,11 @@
     - title: TidyTuesday
       subtitle: Visuals created weekly using R and the Tidyverse
       href: tidytuesday/index.html
-      # code: https://github.com/bradfordjohnson/tidytuesday/tree/main/tidytuesday
       thumbnail: tidytuesday/image.png
       featured: true
 
     - title: Charleston Flight Dashboard
       subtitle: Dashboard powered by JavaScript and Python
       href: charleston-flights-dashboard/index.html
-      # code: https://github.com/bradfordjohnson/kchs
       thumbnail: charleston-flights-dashboard/image.png
       featured: false

@@ -15,7 +15,7 @@ lightbox: true
 
 <div class="button-div">
 
-<a href="https://tidytuesday.fordjohnson.dev" class="brand-button-primary" role="button">View my gallery</a> <a href="https://github.com/bradfordjohnson/tidytuesday" class="brand-button-secondary" role="button">Check out the code</a>
+<a href="https://tidytuesday.fordjohnson.dev" class="cta-button-primary" role="button">View my gallery</a> <a href="https://github.com/bradfordjohnson/tidytuesday" class="cta-button-secondary" role="button">Check out the code</a>
 
 </div>
 

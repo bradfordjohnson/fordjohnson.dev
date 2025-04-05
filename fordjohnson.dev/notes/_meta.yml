@@ -1,5 +1,9 @@
-title: Notes
-description: Notes about my data!
+page-layout: custom
+pagetitle: Notes
+
+hero:
+  headline: Turning Data into Insights, One Story at a Time
+  subtitle: I transform raw data into compelling visuals and meaningful narratives, helping businesses make smarter decisions.
 
 listing:
   - id: notes-all

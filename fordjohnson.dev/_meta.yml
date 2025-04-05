@@ -25,19 +25,19 @@ listing:
     contents:
       splitSections:
         - header: Data Storytelling & Visualization
-          text: I craft compelling data stories using interactive and engaging visualizations.
+          text: "{{< lipsum >}}"
           img-url: projects/core-pretzel-index/image.jpg
           img-alt: Example of Data Visualization
           flip: true
 
         - header: Web & Marketing Analytics
-          text: Leveraging data to optimize web performance, funnels, and customer journeys.
+          text: "{{< lipsum >}}"
           img-url: projects/core-pretzel-index/image.jpg
           img-alt: Example of Analytics Dashboard
           flip: false
 
         - header: Data Storytelling & Visualization
-          text: I craft compelling data stories using interactive and engaging visualizations.
+          text: "{{< lipsum >}}"
           img-url: projects/core-pretzel-index/image.jpg
           img-alt: Example of Data Visualization
           flip: true

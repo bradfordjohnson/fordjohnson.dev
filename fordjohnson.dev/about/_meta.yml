@@ -4,7 +4,7 @@ section-divs: false
 hero:
   headline: Simplifying data, driving impact.
   subtitle: |
-    I’m a data analyst skilled in uncovering insights from complex datasets. I use analytical tools and storytelling to transform data into actionable insights that drive decisions.
+    I use analytical tools and storytelling to transform data into actionable insights that drive decisions.
     With a background in sociology and criminology, I bring a unique perspective to understanding patterns and behaviors. Whether optimizing business performance or visualizing data for impact, I focus on making data accessible and valuable.
   img-url: ../_assets/images/profile.jpg
   img-alt: alt text

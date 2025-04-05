@@ -57,8 +57,9 @@ In competitive Rocket League, players can choose between the following gamemodes
 The matchmaking system employs a weighted average approach, using methods like the root mean square (RMS), to assess each team's skill and ensure fair matchups against opponents.^[[Reddit](https://www.reddit.com/r/RocketLeague/comments/ljyzcy/parties_how_they_affect_matchmaking_mmr/) - *Parties: How they affect matchmaking MMR*]
 
 $$
-\text{Team Skill}=\sqrt[n]{\frac{\mathrm{\text{mmr}}_{1}^{n}+\mathrm{\text{mmr}}_{2}^{n}+\text{...}+\mathrm{\text{mmr}}_{x}^{n} }{x}}
+\text{TeamSkill}=\sqrt[n]{\frac{\mathrm{\text{mmr}}_{1}^{n}+\text{...}+\mathrm{\text{mmr}}_{x}^{n} }{x}}
 $$
+
 
 ```{r}
 party_matchmaking <- function(mmr_arr, n) {
