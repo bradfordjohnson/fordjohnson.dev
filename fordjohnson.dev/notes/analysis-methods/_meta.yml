@@ -1,0 +1,9 @@
+title: Analysis Methods
+subtitle: A collection of notes
+pagetitle: Useful Data Analysis Methods
+description-meta: A collection of useful analysis methods.
+toc: true
+toc-expand: true
+lightbox: true
+execute: 
+  freeze: true

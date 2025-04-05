@@ -1,29 +1,13 @@
 ---
-pagetitle: TidyTuesday
-description-meta: Explore Ford Johnson’s TidyTuesday projects—data-driven visualizations and analyses showcasing unique insights from diverse datasets. See interactive charts, storytelling, and R-based explorations.
-toc: true
-toc-expand: true
-lightbox: true
+metadata-files: 
+  - _meta.yml
 ---
 
-# TidyTuesday
+:::{.content-block}
 
-::: {.grid}
+{{< include ../../_components/listing-slug.qmd >}}
 
-::: {.g-col-12}
-[TidyTuesday](https://tidytues.day/) is a weekly social data project in the R community, where participants explore real-world datasets, create compelling visualizations, and refine their data storytelling skills.
 
-<div class="button-div">
-
-<a href="https://tidytuesday.fordjohnson.dev" class="cta-button-primary" role="button">View my gallery</a> <a href="https://github.com/bradfordjohnson/tidytuesday" class="cta-button-secondary" role="button">Check out the code</a>
-
-</div>
-
-![](image.png){width=auto}
-
-:::
-
-:::
 
 ## About
 
@@ -38,4 +22,6 @@ Beyond creating visuals, I’ve also submitted datasets and connected with other
 
 ## See More
 
-You can explore my TidyTuesday gallery [here](https://tidytuesday.fordjohnson.dev) and watch the R visual creation process [here](https://tidytuesday.fordjohnson.dev/about/) through a series of animated GIFs showcasing the step-by-step development of my ggplots.
+You can explore my TidyTuesday gallery [here]({{< meta listing-slug.primary-cta-url >}}) and watch the R visual creation process [here]({{< meta listing-slug.secondary-cta-url >}}) through a series of animated GIFs showcasing the step-by-step development of my ggplots.
+
+:::

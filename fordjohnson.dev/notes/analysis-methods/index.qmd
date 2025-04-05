@@ -1,14 +1,9 @@
 ---
-title: Analysis Methods
-subtitle: A collection of notes
-pagetitle: Useful Data Analysis Methods
-description-meta: A collection of useful analysis methods.
-toc: true
-toc-expand: true
-lightbox: true
-execute: 
-  freeze: true
+metadata-files: 
+  - _meta.yml
 ---
+
+:::{.content-block}
 
 ## Euclidean Distance
 
@@ -286,3 +281,5 @@ binom_visual
 ```
 
 This binomial approach improves upon rolling averages by offering better responsiveness to recent trends and reducing sensitivity to day-of-week variations, leading to more reliable trend detection.
+
+:::

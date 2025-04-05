@@ -1,12 +1,11 @@
 /*-- scss:defaults --*/
-// quarto-scss-analysis-annotation { "origin": "cosmo (builtin theme)" }
+// ==========================================================================
+// Defaults & Variables
+// ==========================================================================
 
 $theme: "cosmo" !default;
 
-//
-// Color system
-//
-
+// Color System
 $white: #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
@@ -32,6 +31,7 @@ $green: #3fb618 !default;
 $teal: #20c997 !default;
 $cyan: #9954bb !default;
 
+// Semantic Colors
 $primary: $blue !default;
 $secondary: $white !default;
 $success: $green !default;
@@ -39,12 +39,13 @@ $info: $cyan !default;
 $warning: $yellow !default;
 $danger: $red !default;
 $light: $gray-100 !default;
-$dark: $gray-800 !default;
+$dark: $black !default;
 
+// Theme Specific Variables
 $blue-hover: $alt-blue !default;
 $hero-bg: $light-blue !default;
 $heading-color: $blue !default;
-$hero-heading: $blue !default;
+$hero-heading-color: $blue !default;
 
 $navbar-bg: $white !default;
 $navbar-fg: $dark !default;
@@ -61,13 +62,21 @@ $callout-margin-bottom: 1.25rem;
 
 $link-color: $alt-blue !default;
 
+// Typography Variables
 $font-size-root: 16px !default;
+$hero-heading-size: 3rem !default;
+$hero-heading-weight: bolder !default;
+$hero-heading-line-height: 1.2em;
+$hero-subtitle-size: 16px !default;
+$hero-subtitle-weight: 400 !default;
+$hero-subtitle-line-height: 24px !default;
 $h1-font-size: 2.5rem !default;
 $h2-font-size: 1.75rem !default;
 $h3-font-size: 1.5rem !default;
 $h4-font-size: 1.25rem !default;
 $toc-font-size: 14px !default;
 
+// Spacing Variables
 $spacing-xs: 10px !default;
 $spacing-sm: 16px !default;
 $spacing-md: 20px !default;
@@ -75,116 +84,78 @@ $spacing-lg: 30px !default;
 $spacing-xl: 50px !default;
 $section-gap: 2rem !default;
 
+// Button Variables
 $button-radius: 4px !default;
 $button-padding: 13px 24px 12px !default;
 $button-height: 48px !default;
 
+// Layout Variables
 $max-content-width: 1100px !default;
 $hero-image-max-width: 300px !default;
-
 $content-padding-top: 0px !default;
 
-// $code-block-border-left:
+// Code Block Variables
 $code-block-border-left-style: solid !default;
 $code-block-border-left-size: 3px !default;
 $code-block-padding-left: 0.6em !default;
-// $code-block-bg:
 $code-block-bg-padding: 0.4em !default;
 $code-block-bg-alpha: -0.35 !default;
 
-// $btn-code-copy-color: $alt-blue !default;
+// Code Copy Button Variable
 $btn-code-copy-color-active: $alt-blue !default;
 
+// Accessibility Variable
 $min-contrast-ratio: 2.6 !default;
 
-// Options
-
+// Options Variable
 $enable-rounded: false !default;
 
-// Body
-
+// Body Variable
 $body-color: $gray-800 !default;
 
-// Fonts
+// Font Family Variable
+$font-family-sans-serif: "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol" !default;
 
-$font-family-sans-serif:
-  "Source Sans Pro",
-  -apple-system,
-  BlinkMacSystemFont,
-  "Segoe UI",
-  Roboto,
-  "Helvetica Neue",
-  Arial,
-  sans-serif,
-  "Apple Color Emoji",
-  "Segoe UI Emoji",
-  "Segoe UI Symbol" !default;
+// Headings Font Weight Variable
 $headings-font-weight: 400 !default;
-// $font-family-monospace:
 
-// Navbar
-
+// Navbar Variables
 $navbar-dark-hover-color: rgba($white, 1) !default;
 $navbar-light-hover-color: rgba($black, 0.9) !default;
 
-// Alerts
-
+// Alerts Variable
 $alert-border-width: 0 !default;
 
-// Progress bars
-
+// Progress Bars Variable
 $progress-height: 0.5rem !default;
 
 /*-- scss:rules --*/
+// ==========================================================================
+// Global Styles
+// ==========================================================================
 
-// Variables
-
+// Web Fonts
 $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" !default;
 @if $web-font-path {
   @import url($web-font-path);
 }
 
-// Typography
-
+// Base Typography
 body {
   -webkit-font-smoothing: antialiased;
 }
 
-// Indicators
-
-.badge {
-  &.bg-light {
-    color: $dark;
-  }
-}
-
-// Progress bars
-
-.progress {
-  @include box-shadow(none);
-
-  .progress-bar {
-    font-size: 8px;
-    line-height: 8px;
-  }
-}
-
-/* ==========================
-   Layout & Utilities
-========================== */
-
-.card-grid {
-  column-gap: $spacing-xs;
-}
-
-/* ==========================
-   Typography
-========================== */
+// ==========================================================================
+// Elements: Typography
+// ==========================================================================
 
 p {
-  color: #333333; /* Charcoal color */
   line-height: 1.6;
   margin-bottom: $spacing-md;
+  letter-spacing: normal;
+  font-weight: 400;
 }
 
 h1 {
@@ -210,7 +181,7 @@ h3 {
   margin-bottom: $spacing-xs;
   font-size: $h3-font-size;
   color: $dark;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.4;
 }
 
@@ -223,47 +194,76 @@ h4 {
   line-height: 1.4;
 }
 
-/* ==========================
-   Content Blocks
-========================== */
+.nav-item{
+  padding-right: 6px;
+}
+
+// ==========================================================================
+// Layout & Utilities
+// ==========================================================================
+
+.card-grid {
+  column-gap: $spacing-xs;
+}
 
 .content-block {
   width: 85%;
   padding: $spacing-md 0;
   margin-left: $spacing-lg;
   margin-right: $spacing-lg;
-}
 
-@media (min-width: 900px) {
-  .content-block {
+  @media (min-width: 900px) {
     margin-left: $spacing-xl;
     margin-right: $spacing-xl;
   }
-}
 
-@media (min-width: 1200px) {
-  .content-block {
+  @media (min-width: 1200px) {
     max-width: $max-content-width;
     margin-left: auto;
     margin-right: auto;
   }
+}
 
-  .hero-banner .content-block .hero-text {
-    width: 100%;
+.hero-banner .content-block .hero-text {
+  width: 100%;
+}
+
+// ==========================================================================
+// Components
+// ==========================================================================
+
+// Indicators
+.badge {
+  &.bg-light {
+    color: $dark;
   }
 }
 
-/* ==========================
-   Hero Section
-========================== */
+// Progress bars
+.progress {
+  @include box-shadow(none);
 
+  .progress-bar {
+    font-size: 8px;
+    line-height: 8px;
+  }
+}
+
+// Hero Section
 .hero-banner h1 {
-  color: $hero-heading;
-  font-size: $h1-font-size;
+  color: $hero-heading-color;
+  font-size: $hero-heading-size;
+  font-weight: $hero-heading-weight;
+  line-height: $hero-heading-line-height;
+  letter-spacing: -0.5px;
 }
 
 .hero-subtitle {
   padding-right: $spacing-sm;
+  font-size: $hero-subtitle-size;
+  font-weight: $hero-subtitle-weight;
+  line-height: $hero-subtitle-line-height;
+  letter-spacing: .1px;
 }
 
 .hero-banner {
@@ -297,13 +297,10 @@ h4 {
   }
 }
 
-/* ==========================
-   Listing Section
-========================== */
-
+// Listing Section
 .card .listing-title {
-  font-size: 1.125rem; // ~18px
-  font-weight: 600;
+  font-size: $h4-font-size; // ~18px
+  font-weight: 400;
   color: $heading-color;
   margin-bottom: 0.25rem;
   line-height: 1.4;
@@ -321,10 +318,11 @@ h4 {
   word-break: break-word;
 }
 
-/* ==========================
-   Split Section
-========================== */
+.listing-slug-image {
+  margin-top: 10px;
+}
 
+// Split Section
 .split-section {
   display: flex;
   align-items: flex-start;
@@ -332,54 +330,51 @@ h4 {
   max-width: 1200px;
   margin: 0 auto;
   padding-top: $section-gap;
-}
 
-.split-section:not(.flip) {
-  flex-direction: row;
-}
+  &:not(.flip) {
+    flex-direction: row;
+  }
 
-.split-section.flip {
-  flex-direction: row-reverse;
-}
-
-.split-content,
-.split-image {
-  flex: 1;
-}
-
-.split-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.split-title {
-  font-size: $h2-font-size;
-  font-weight: bold;
-  margin-bottom: $spacing-md;
-}
-
-.split-text {
-  color: $dark;
-}
-
-@media (max-width: 900px) {
-  .split-section,
-  .split-section.flip,
-  .split-section:not(.flip) {
-    flex-direction: column !important;
+  &.flip {
+    flex-direction: row-reverse;
   }
 
   .split-content,
   .split-image {
+    flex: 1;
+  }
+
+  .split-image img {
     width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .split-title {
+    font-size: $h2-font-size;
+    font-weight: bold;
+    margin-bottom: $spacing-md;
+  }
+
+  .split-text {
+    color: $dark;
+  }
+
+  @media (max-width: 900px) {
+    &,
+    &.flip,
+    &:not(.flip) {
+      flex-direction: column !important;
+    }
+
+    .split-content,
+    .split-image {
+      width: 100%;
+    }
   }
 }
 
-/* ==========================
-   Features Section
-========================== */
-
+// Features Section
 .features {
   padding-bottom: 2em;
   padding-top: $spacing-xl;
@@ -413,10 +408,7 @@ h4 {
   }
 }
 
-/* ==========================
-   Button Styles
-========================== */
-
+// Button Styles
 .cta-button-primary,
 .cta-button-secondary {
   font-size: $font-size-root;
@@ -439,10 +431,7 @@ h4 {
   text-align: center;
   text-decoration: none;
   text-transform: none;
-  transition:
-    background-color 0.2s,
-    box-shadow 0.2s,
-    color 0.2s;
+  transition: background-color 0.2s, box-shadow 0.2s, color 0.2s;
 }
 
 .cta-button-primary {

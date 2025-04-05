@@ -1,13 +1,9 @@
 ---
-pagetitle: "The Core Pretzel Index: A Pretzel Ranking System"
-description-meta: The Core Pretzel Index (CPI) is a data-driven ranking system for restaurant pretzels. Explore ratings based on texture, flavor, freshness, and dipping sauce to find the best pretzels.
-toc: true
-toc-depth: 4
-toc-expand: true
-html-math-method:
-  method: katex
-# page-layout: custom
+metadata-files: 
+  - _meta.yml
 ---
+
+:::{.content-block}
 
 # 🥨 The Core Pretzel Index (CPI)
 
@@ -140,3 +136,5 @@ Data is currently logged manually in spreadsheets, but the ultimate goal is to d
 ## Links
 
 Coming soon :)
+
+:::

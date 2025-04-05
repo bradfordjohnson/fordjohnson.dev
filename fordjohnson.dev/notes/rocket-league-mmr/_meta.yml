@@ -1,0 +1,10 @@
+pagetitle: Matchmaking in Rocket League
+description-meta: Uncover the data behind Rocket League's MMR and matchmaking system.
+toc: true
+lightbox: true
+appendix-style: plain
+html-math-method:
+  method: katex
+execute: 
+  freeze: auto
+reference-location: margin

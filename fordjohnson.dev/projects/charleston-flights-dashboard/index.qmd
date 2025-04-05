@@ -1,27 +1,12 @@
 ---
-pagetitle: Charleston Flights Dashboard
-description-meta: Explore real-time and historical Charleston flight data with interactive visuals. Track daily CHS airport trends, airline performance, and on-time metrics.
-toc: true
-toc-expand: true
+metadata-files: 
+  - _meta.yml
 ---
 
-# Charleston Flights Dashboard
+:::{.content-block}
 
-::: {.grid}
+{{< include ../../_components/listing-slug.qmd >}}
 
-::: {.g-col-12}
-
-Charleston Flights Dashboard is a work-in-progress project built with Observable Framework, combining JavaScript visuals, data mapping, and a Python ETL pipeline to provide a dynamic view of Charleston International Airport (CHS) flights. This dashboard delivers historical trends, live flight data, and interactive visualizations to help track airport operations more clearly.
-
-<div class="button-div">
-<a href="https://kchs.fordjohnson.dev/" class="cta-button-primary" role="button">View the dashboard</a> <a href="https://github.com/bradfordjohnson/kchs" class="cta-button-secondary" role="button">Check out the code</a>
-</div>
-
-![](image.png){width=auto}
-
-:::
-
-:::
 
 ## About
 
@@ -57,4 +42,6 @@ This project is expanding my JavaScript skills, particularly in building data-dr
 
 ## Links
 
-Check out the [live dashboard](https://kchs.fordjohnson.dev/) and explore the [data pipeline + dashboard code](https://github.com/bradfordjohnson/kchs).
+Check out the [live dashboard]({{< meta listing-slug.primary-cta-url >}}) and explore the [data pipeline + dashboard code]({{< meta listing-slug.secondary-cta-url >}}).
+
+:::

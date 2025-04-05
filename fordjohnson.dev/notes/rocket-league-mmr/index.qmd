@@ -1,14 +1,9 @@
 ---
-pagetitle: Matchmaking in Rocket League
-description-meta: Uncover the data behind Rocket League's MMR and matchmaking system.
-toc: true
-lightbox: true
-appendix-style: plain
-html-math-method:
-  method: katex
-execute: 
-  freeze: auto
+metadata-files: 
+  - _meta.yml
 ---
+
+:::{.content-block}
 
 # Matchmaking in Rocket League
 
@@ -247,3 +242,5 @@ players <- lapply(1:2, function(i) Player$new(name = paste("Player", i)))
 simulate_duels(rater, players, 3)
 
 ```
+
+:::
