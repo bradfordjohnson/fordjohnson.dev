@@ -318,8 +318,11 @@ h4 {
   word-break: break-word;
 }
 
-.listing-slug-image {
+.listing-slug-image img {
   margin-top: 10px;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 // Split Section
@@ -455,4 +458,8 @@ h4 {
   background-color: $gray-200;
   border-color: $gray-100;
   color: $blue-hover;
+}
+
+.honeypot {
+  display: none;
 }

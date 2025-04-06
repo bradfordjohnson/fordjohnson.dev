@@ -8,8 +8,13 @@
 <a href="{{< meta listing-slug.primary-cta-url >}}" class="cta-button-primary" role="button">{{< meta listing-slug.primary-cta-text >}}</a> <a href="{{< meta listing-slug.secondary-cta-url >}}" class="cta-button-secondary" role="button">{{< meta listing-slug.secondary-cta-text >}}</a>
 </div>
 
+
+
+<div class="listing-slug-image">
+<img class="lightbox" data-gallery="gallery" src="{{< meta listing-slug.image-url >}}" alt="{{< meta listing-slug.image-alt >}}">
+</div>
 ```
 
-:::{.listing-slug-image}
-![]({{< meta listing-slug.image-url >}}){width=auto}
+:::{.honeypot}
+{{< placeholder >}}
 :::

@@ -1,9 +1,10 @@
-page-layout: custom
 pagetitle: Notes
+description-meta: Discover data insights, quick tips, deep dives, and personal learnings from Data Analyst Ford Johnson. A collection of my ongoing data explorations and findings.
+page-layout: custom
 
 hero:
-  headline: Turning Data into Insights, One Story at a Time
-  subtitle: I transform raw data into compelling visuals and meaningful narratives, helping businesses make smarter decisions.
+  headline: Notes
+  subtitle: This is where I jot down interesting data stuff I've been thinking about, little tips I've picked up, and cool things I've found.
 
 listing:
   - id: notes-all

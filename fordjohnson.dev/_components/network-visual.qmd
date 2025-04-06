@@ -201,7 +201,7 @@ chart = {
 }
 
 
-height = 1200
+height = 1000
 
 color = {
   const scale = d3.scaleOrdinal(d3.schemeCategory10);

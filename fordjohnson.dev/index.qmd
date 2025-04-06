@@ -14,3 +14,6 @@ metadata-files:
 
 :::
 
+:::{.honeypot}
+{{< placeholder >}}
+:::

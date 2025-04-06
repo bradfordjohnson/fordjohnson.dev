@@ -1,10 +1,10 @@
-pagetitle: about
+pagetitle: About
+description-meta: "About Data Analyst Ford Johnson: I simplify complex data by creating clear visuals and compelling stories. My background in sociology and criminology helps me understand the human context behind the numbers, leading to more relevant and actionable insights."
 page-layout: custom
 section-divs: false
 hero:
-  headline: Simplifying data, driving impact.
+  headline: Making data less intimidating, more insightful.
   subtitle: |
-    I use analytical tools and storytelling to transform data into actionable insights that drive decisions.
-    With a background in sociology and criminology, I bring a unique perspective to understanding patterns and behaviors. Whether optimizing business performance or visualizing data for impact, I focus on making data accessible and valuable.
+    That journey from raw data to understanding can feel tough. I simplify it by turning complex datasets into visuals and stories that actually make sense. My background in sociology and criminology helps me see the human side of the numbers, so the insights aren't just data points, they're real takeaways that can help you make better decisions.
   img-url: ../_assets/images/profile.jpg
-  img-alt: alt text
+  img-alt: Ford Johnson, Data Analyst.

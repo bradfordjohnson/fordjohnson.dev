@@ -1,9 +1,10 @@
-page-layout: custom
 pagetitle: Projects
+description-meta: View Ford Johnson's data project portfolio and see how data visualization and analysis can transform raw data into actionable insights for business growth and strategic decision-making.
+page-layout: custom
 
 hero:
-  headline: Turning Data into Insights, One Story at a Time
-  subtitle: I transform raw data into compelling visuals and meaningful narratives, helping businesses make smarter decisions.
+  headline: Projects
+  subtitle: Discover my work in data analysis and visualization. Click on a project to learn more about the process and insights.
 
 listing:
   - id: projects-all

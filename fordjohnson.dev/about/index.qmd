@@ -9,8 +9,8 @@ metadata-files:
 ::: {.features}
 
 ::: {.feature}
-### Data Visualization
-Designing clear, effective visuals to communicate insights.
+### Visualizing data for impact
+Transforming raw data into understandable and actionable visuals. My expertise includes creating interactive dashboards and static graphics using tools such as Tableau, Looker, and R (with ggplot2), ensuring clarity and effective communication of key findings.
 
 <!-- ::: {.learn-more}
 [Learn more »](/../)
@@ -18,13 +18,13 @@ Designing clear, effective visuals to communicate insights.
 :::
 
 ::: {.feature}
-### Web & Marketing Analytics
-Tracking user behavior, measuring performance, and improving funnels.
+### Driving growth with web data
+Utilizing web analytics tools such as Google Analytics to monitor user engagement, analyze traffic sources, and measure the success of marketing initiatives. I focus on providing data-driven recommendations for website optimization and improved marketing ROI.
 :::
 
 ::: {.feature}
-### Big Data & Automation
-Cleaning, processing, and analyzing large datasets to find patterns and efficiencies.
+### Cloud data infrastructure
+Experienced in developing and deploying scalable data pipelines and analytical environments on cloud platforms, particularly Google Cloud Platform (GCP). I leverage services like BigQuery, Cloud Storage, and Dataform for robust data processing and insight generation.
 
 :::
 

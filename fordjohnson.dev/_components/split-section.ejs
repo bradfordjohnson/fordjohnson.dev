@@ -9,7 +9,7 @@
           <p class="split-text"><%- section.text %></p>
         </div>
         <div class="split-image">
-          <img src="<%- section['img-url'] %>" alt="<%- section['img-alt'] %>" <%= metadataAttrs(section) %> >
+          <img class="lightbox" data-gallery="gallery" src="<%- section['img-url'] %>" alt="<%- section['img-alt'] %>" <%= metadataAttrs(section) %> >
         </div>
       </div>
     <% } %>

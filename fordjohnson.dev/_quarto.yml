@@ -14,6 +14,7 @@ website:
     image: _assets/images/logo-2.png
 
   navbar:
+    logo: _assets/images/favicon.png
     left:
       - href: index.qmd
         text: Home
@@ -43,3 +44,6 @@ format:
     toc: false
     canonical-url: true
     link-external-newwindow: true
+    lightbox:
+      match: auto
+      effect: fade
