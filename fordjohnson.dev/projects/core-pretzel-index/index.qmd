@@ -25,13 +25,6 @@ Scoring pretzels, one bite at a time! Data collection is in progress; stay tuned
 
 A personally developed methodology for ranking and comparing pretzels based on key factors like texture, flavor, and freshness, using a weighted scoring system with exponential decay for multiple visits.
 
-<!-- <div class="button-div"> -->
-
-<!-- <a href="https://docs.google.com/spreadsheets/d/1-2UwNqKx6l1G1cjM6bkR2t7aOHrwzA4QHYaCI1QYH-E/" class="brand-button-primary" role="button">View the live CPI</a> -->
-<!-- <a href="https://github.com/bradfordjohnson/tidytuesday" class="brand-button-secondary" role="button">Check out the code</a> -->
-
-<!-- </div> -->
-
 :::
 
 :::

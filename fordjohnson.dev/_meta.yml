@@ -25,19 +25,19 @@ listing:
     contents:
       splitSections:
         - header: Visual sensemaking
-          text: "I specialize in crafting interactive and insightful data visualizations, including custom visuals tailored to specific needs, that empower stakeholders to understand complex information and drive strategic decisions. My approach focuses on clarity, accuracy, and actionable storytelling, ensuring data becomes a powerful tool for business growth."
+          text: "Crafting interactive and insightful data visualizations, including custom visuals tailored to specific needs, is a specialty that empowers stakeholders to understand complex information and drive strategic decisions. This approach focuses on clarity, accuracy, and actionable storytelling, ensuring data becomes a powerful tool for business growth."
           img-url: _assets/images/seinfeld-sentiment.png
           img-alt: An R-generated raincloud plot displays the distribution of sentiment scores for Seinfeld episode scripts. The plot compares the sentiment as analyzed by multiple lexicons, showing how each lexicon interprets the emotional tone of the same text data.
           flip: true
 
-        - header: End-to-end data expertise
-          text: "I manage the full data lifecycle, from initial data acquisition and meticulous preparation to the creation of insightful visualizations and comprehensive reports, sometimes leveraging JavaScript for interactive or bespoke visual solutions. My core analysis toolkit includes SQL, R, and Python, enabling me to extract actionable insights from diverse datasets."
-          img-url: projects/core-pretzel-index/image.jpg
-          img-alt: Example of Analytics Dashboard
-          flip: false
+        # - header: End-to-end management with code
+        #   text: "My expertise covers the entire data lifecycle, driven by a code-centric methodology. I utilize Python and SQL for data acquisition and preparation, R for in-depth analysis and statistical modeling, and JavaScript for custom and interactive visualizations, ensuring precise control and tailored solutions at every stage."
+        #   img-url: projects/core-pretzel-index/image.jpg
+        #   img-alt: Example of Analytics Dashboard
+        #   flip: false
 
-        - header: Ensuring data accuracy and reliability
-          text: "I prioritize data quality through the implementation of thorough validation techniques. My focus is on ensuring data accuracy and reliability, which is fundamental for generating trustworthy insights."
-          img-url: projects/core-pretzel-index/image.jpg
-          img-alt: Example of Data Visualization
-          flip: true
+        # - header: Quality assurance and validation
+        #   text: "Ensuring data integrity and building trust in the data are key priorities. I achieve this through the implementation of comprehensive validation techniques and QA processes, guaranteeing accuracy and reliability for insightful analysis."
+        #   img-url: projects/core-pretzel-index/image.jpg
+        #   img-alt: Example of Data Visualization
+        #   flip: true
