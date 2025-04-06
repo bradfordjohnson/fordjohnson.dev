@@ -1,0 +1,19 @@
+- category: Projects & Featured Work
+  tiles:
+    - title: 🥨 Core Pretzel Index (CPI)
+      subtitle: A custom comparison and ranking framework
+      href: core-pretzel-index/index.html
+      thumbnail: core-pretzel-index/image.jpg
+      featured: true
+
+    - title: TidyTuesday
+      subtitle: Visuals created weekly using R and the Tidyverse
+      href: tidytuesday/index.html
+      thumbnail: tidytuesday/image.png
+      featured: true
+
+    - title: Charleston Flight Dashboard
+      subtitle: Dashboard powered by JavaScript and Python
+      href: charleston-flights-dashboard/index.html
+      thumbnail: charleston-flights-dashboard/image.png
+      featured: false

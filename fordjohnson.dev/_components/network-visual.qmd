@@ -1,0 +1,236 @@
+```{ojs}
+//| echo: false
+d3 = require("d3@6")
+
+
+data = { 
+  const data = {
+  "nodes": [
+    {"id": "R", "group": 3 },
+    {"id": "SQL", "group": 3 },
+    {"id": "Python", "group": 3 },
+    {"id": "JavaScript", "group": 3 },
+    {"id": "HTML", "group": 4 },
+    {"id": "CSS", "group": 4 },
+    {"id": "SCSS", "group": 4 },
+    {"id": "YAML", "group": 4 },
+    {"id": "markdown", "group": 4 },
+    {"id": "GitHub", "group": 2 },
+    {"id": "Git", "group": 2 },
+    {"id": "GitHub Actions", "group": 2 },
+    {"id": "PostgreSQL", "group": 2 },
+    {"id": "BigQuery", "group": 2 },
+    {"id": "DataForm", "group": 2 },
+    {"id": "tidyverse", "group": 1 },
+    {"id": "dplyr", "group": 1 },
+    {"id": "rvest", "group": 1 },
+    {"id": "tidyr", "group": 1 },
+    {"id": "lubridate", "group": 1 },
+    {"id": "ggplot2", "group": 1 },
+    {"id": "patchwork", "group": 1 },
+    {"id": "ggdist", "group": 1 },
+    {"id": "ggtext", "group": 1 },
+    {"id": "ggextra", "group": 1 },
+    {"id": "ggridges", "group": 1 },
+    {"id": "ggmagnify", "group": 1 },
+    {"id": "cowplot", "group": 1 },
+    {"id": "plotly", "group": 1 },
+    {"id": "shiny", "group": 1 },
+    {"id": "caret", "group": 1 },
+    {"id": "htmlwidgets", "group": 1 },
+    {"id": "DT", "group": 1 },
+    {"id": "leaflet", "group": 1 },
+    {"id": "network3D", "group": 1 },
+    {"id": "janitor", "group": 1 },
+    {"id": "dbplyr", "group": 1 },
+    {"id": "RPostgres", "group": 1 },
+    {"id": "Quarto", "group": 4 },
+    {"id": "React", "group": 1 },
+    {"id": "ejs", "group": 4 },
+    {"id": "D3", "group": 1 },
+    {"id": "Observable Framework", "group": 1 },
+    {"id": "SQLite", "group": 1 },
+    {"id": "pandas", "group": 1 },
+    {"id": "numpy", "group": 1 },
+    {"id": "NLTK", "group": 1 },
+    {"id": "seaborn", "group": 1 },
+    {"id": "fastapi", "group": 1 },
+    {"id": "SQLAlchemy", "group": 1 },
+    {"id": "BeautifulSoup", "group": 1 },
+    {"id": "matplotlib", "group": 1 },
+    {"id": "sqlite3", "group": 1 },
+    {"id": "psycopg2", "group": 1 },
+    {"id": "Google Analytics", "group": 2 },
+    {"id": "Search Console", "group": 2 },
+  ],
+  "links": [
+    {"source": "R", "target": "tidyverse", "value": 1},
+    {"source": "tidyverse", "target": "dplyr", "value": 1},
+    {"source": "tidyverse", "target": "tidyr", "value": 1},
+    {"source": "tidyverse", "target": "lubridate", "value": 1},
+    {"source": "tidyverse", "target": "rvest", "value": 1},
+    {"source": "tidyverse", "target": "ggplot2", "value": 1},
+    {"source": "ggplot2", "target": "patchwork", "value": 1},
+    {"source": "ggplot2", "target": "ggdist", "value": 1},
+    {"source": "ggplot2", "target": "ggtext", "value": 1},
+    {"source": "ggplot2", "target": "ggextra", "value": 1},
+    {"source": "ggplot2", "target": "ggridges", "value": 1},
+    {"source": "ggplot2", "target": "ggmagnify", "value": 1},
+    {"source": "ggplot2", "target": "cowplot", "value": 1},
+    {"source": "dplyr", "target": "dbplyr", "value": 1},
+    {"source": "dbplyr", "target": "RPostgres", "value": 1},
+    {"source": "RPostgres", "target": "PostgreSQL", "value": 1},
+    {"source": "PostgreSQL", "target": "SQL", "value": 1},
+    {"source": "R", "target": "plotly", "value": 1},
+    {"source": "R", "target": "shiny", "value": 1},
+    {"source": "R", "target": "caret", "value": 1},
+    {"source": "R", "target": "htmlwidgets", "value": 1},
+    {"source": "htmlwidgets", "target": "DT", "value": 1},
+    {"source": "htmlwidgets", "target": "leaflet", "value": 1},
+    {"source": "htmlwidgets", "target": "network3D", "value": 1},
+    {"source": "R", "target": "janitor", "value": 1},
+    {"source": "R", "target": "Quarto", "value": 1},
+    {"source": "JavaScript", "target": "Quarto", "value": 1},
+    {"source": "JavaScript", "target": "leaflet", "value": 1},
+    {"source": "JavaScript", "target": "React", "value": 1},
+    {"source": "JavaScript", "target": "HTML", "value": 1},
+    {"source": "JavaScript", "target": "ejs", "value": 1},
+    {"source": "JavaScript", "target": "D3", "value": 1},
+    {"source": "JavaScript", "target": "plotly", "value": 1},
+    {"source": "JavaScript", "target": "Observable Framework", "value": 1},
+    {"source": "HTML", "target": "Quarto", "value": 1},
+    {"source": "HTML", "target": "ejs", "value": 1},
+    {"source": "YAML", "target": "Quarto", "value": 1},
+    {"source": "CSS", "target": "Quarto", "value": 1},
+    {"source": "SCSS", "target": "Quarto", "value": 1},
+    {"source": "markdown", "target": "Quarto", "value": 1},
+    {"source": "GitHub", "target": "Git", "value": 1},
+    {"source": "GitHub", "target": "GitHub Actions", "value": 1},
+    {"source": "GitHub Actions", "target": "YAML", "value": 1},
+    {"source": "Python", "target": "plotly", "value": 1},
+    {"source": "Python", "target": "pandas", "value": 1},
+    {"source": "Python", "target": "numpy", "value": 1},
+    {"source": "Python", "target": "Quarto", "value": 1},
+    {"source": "Python", "target": "NLTK", "value": 1},
+    {"source": "Python", "target": "seaborn", "value": 1},
+    {"source": "Python", "target": "fastapi", "value": 1},
+    {"source": "fastapi", "target": "SQLAlchemy", "value": 1},
+    {"source": "Python", "target": "BeautifulSoup", "value": 1},
+    {"source": "Python", "target": "matplotlib", "value": 1},
+    {"source": "SQLAlchemy", "target": "sqlite3", "value": 1},
+    {"source": "sqlite3", "target": "SQLite", "value": 1},
+    {"source": "SQLAlchemy", "target": "psycopg2", "value": 1},
+    {"source": "psycopg2", "target": "PostgreSQL", "value": 1},
+    {"source": "SQL", "target": "BigQuery", "value": 1},
+    {"source": "BigQuery", "target": "DataForm", "value": 1},
+    {"source": "BigQuery", "target": "JavaScript", "value": 1},
+    {"source": "DataForm", "target": "JavaScript", "value": 1},
+    {"source": "SQL", "target": "SQLite", "value": 1},
+    {"source": "BigQuery", "target": "Google Analytics", "value": 1},
+    {"source": "BigQuery", "target": "Search Console", "value": 1}
+  ]
+}
+return data
+};
+
+
+
+chart = {
+  const links = data.links.map(d => Object.create(d));
+  const nodes = data.nodes.map(d => Object.create(d));
+
+  const simulation = d3.forceSimulation(nodes)
+      .force("link", d3.forceLink(links).id(d => d.id).distance(70))
+      .force("charge", d3.forceManyBody().strength(-420))
+      .force("x", d3.forceX())
+      .force("y", d3.forceY())
+      .force("collide", d3.forceCollide(d => {
+        const textLength = d.id.length * 6; // Adjust based on font
+        return Math.max(18, textLength / 2); // Leave space for labels
+      }));
+
+  const svg = d3.create("svg")
+      .attr("viewBox", [-width / 2, -height / 2, width, height])
+      .style("font", "16px sans-serif") // Slightly smaller text
+      .style("overflow", "visible");
+
+  const link = svg.append("g")
+    .selectAll("line")
+    .data(links)
+    .join("line")
+      .attr("stroke", "#999")
+      .attr("stroke-opacity", 0.6)
+      .attr("stroke-width", d => Math.sqrt(d.value));
+
+  const node = svg.append("g")
+      .attr("fill", "currentColor")
+      .attr("stroke-linecap", "round")
+      .attr("stroke-linejoin", "round")
+    .selectAll("g")
+    .data(nodes)
+    .join("g")
+      .call(drag(simulation));
+
+  node.append("circle")
+      .attr("fill", color)
+      .attr("stroke", "black")
+      .attr("stroke-width", 1.5)
+      .attr("r", 8); // slightly larger circle
+
+  node.append("text")
+      .attr("x", 10)
+      .attr("y", "0.31em")
+      .text(d => d.id)
+    .clone(true).lower()
+      .attr("fill", "none")
+      .attr("stroke", "white")
+      .attr("stroke-width", 3);
+
+  simulation.on("tick", () => {
+    node.attr("transform", d => `translate(${d.x},${d.y})`);
+    link
+      .attr("x1", d => d.source.x)
+      .attr("x2", d => d.target.x)
+      .attr("y1", d => d.source.y)
+      .attr("y2", d => d.target.y);
+  });
+
+  invalidation.then(() => simulation.stop());
+
+  return svg.node();
+}
+
+
+height = 1000
+
+color = {
+  const scale = d3.scaleOrdinal(d3.schemeCategory10);
+  return d => scale(d.group);
+}
+
+drag = simulation => {
+  
+  function dragstarted(event) {
+    if (!event.active) simulation.alphaTarget(0.3).restart();
+    event.subject.fx = event.subject.x;
+    event.subject.fy = event.subject.y;
+  }
+  
+  function dragged(event) {
+    event.subject.fx = event.x;
+    event.subject.fy = event.y;
+  }
+  
+  function dragended(event) {
+    if (!event.active) simulation.alphaTarget(0);
+    event.subject.fx = null;
+    event.subject.fy = null;
+  }
+  
+  return d3.drag()
+      .on("start", dragstarted)
+      .on("drag", dragged)
+      .on("end", dragended);
+}
+
+```

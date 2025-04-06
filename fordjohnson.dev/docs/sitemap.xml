@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://fordjohnson.dev/photography/index.html</loc>
-    <lastmod>2025-03-19T02:08:21.211Z</lastmod>
+    <loc>https://fordjohnson.dev/projects/tidytuesday/index.html</loc>
+    <lastmod>2025-04-05T20:53:41.011Z</lastmod>
   </url>
   <url>
-    <loc>https://fordjohnson.dev/data/projects/tidytuesday/index.html</loc>
-    <lastmod>2025-03-25T01:53:11.195Z</lastmod>
+    <loc>https://fordjohnson.dev/projects/core-pretzel-index/index.html</loc>
+    <lastmod>2025-04-06T14:43:30.634Z</lastmod>
   </url>
   <url>
-    <loc>https://fordjohnson.dev/data/projects/charleston-flights-dashboard/index.html</loc>
-    <lastmod>2025-03-25T01:52:43.917Z</lastmod>
+    <loc>https://fordjohnson.dev/notes/rocket-league-mmr/index.html</loc>
+    <lastmod>2025-04-05T21:05:26.975Z</lastmod>
   </url>
   <url>
-    <loc>https://fordjohnson.dev/data/deep-dives/rocket-league-mmr/index.html</loc>
-    <lastmod>2025-03-25T03:27:20.125Z</lastmod>
+    <loc>https://fordjohnson.dev/notes/analysis-methods/index.html</loc>
+    <lastmod>2025-04-05T21:01:24.930Z</lastmod>
   </url>
   <url>
     <loc>https://fordjohnson.dev/about/index.html</loc>
-    <lastmod>2025-03-19T02:14:04.610Z</lastmod>
-  </url>
-  <url>
-    <loc>https://fordjohnson.dev/data/deep-dives/analysis-methods/index.html</loc>
-    <lastmod>2025-03-29T12:44:23.880Z</lastmod>
-  </url>
-  <url>
-    <loc>https://fordjohnson.dev/data/index.html</loc>
-    <lastmod>2025-03-25T03:27:20.126Z</lastmod>
-  </url>
-  <url>
-    <loc>https://fordjohnson.dev/data/projects/core-pretzel-index/index.html</loc>
-    <lastmod>2025-03-25T01:52:15.880Z</lastmod>
+    <lastmod>2025-04-06T14:41:17.832Z</lastmod>
   </url>
   <url>
     <loc>https://fordjohnson.dev/index.html</loc>
-    <lastmod>2025-03-25T02:16:01.165Z</lastmod>
+    <lastmod>2025-04-05T23:30:25.277Z</lastmod>
+  </url>
+  <url>
+    <loc>https://fordjohnson.dev/notes/index.html</loc>
+    <lastmod>2025-04-05T13:07:21.033Z</lastmod>
+  </url>
+  <url>
+    <loc>https://fordjohnson.dev/projects/charleston-flights-dashboard/index.html</loc>
+    <lastmod>2025-04-05T20:54:04.030Z</lastmod>
+  </url>
+  <url>
+    <loc>https://fordjohnson.dev/projects/index.html</loc>
+    <lastmod>2025-04-05T12:39:32.333Z</lastmod>
   </url>
 </urlset>

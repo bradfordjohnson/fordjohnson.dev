@@ -1,6 +1,14 @@
 [
   {
-    "listing": "/data/index.html",
+    "listing": "/index.html",
+    "items": []
+  },
+  {
+    "listing": "/notes/index.html",
+    "items": []
+  },
+  {
+    "listing": "/projects/index.html",
     "items": []
   }
 ]

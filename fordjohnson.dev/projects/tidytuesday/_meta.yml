@@ -1,0 +1,15 @@
+pagetitle: TidyTuesday
+description-meta: Explore Ford Johnson’s TidyTuesday projects—data-driven visualizations and analyses showcasing unique insights from diverse datasets. See interactive charts, storytelling, and R-based explorations.
+toc: true
+toc-expand: true
+lightbox: true
+
+listing-slug:
+  overview: |
+    [TidyTuesday](https://tidytues.day/) is a weekly social data project in the R community, where participants explore real-world datasets, create compelling visualizations, and refine their data storytelling skills.
+  primary-cta-url: https://tidytuesday.fordjohnson.dev
+  primary-cta-text: View my gallery
+  secondary-cta-url: https://github.com/bradfordjohnson/tidytuesday
+  secondary-cta-text: Check out the code
+  image-url: image.png
+  image-alt: ...

@@ -1,38 +1,42 @@
 ---
-pagetitle: About Me
-hide-title: true
-anchor-sections: false
-include-in-header: profile-page.txt
+metadata-files: 
+  - _meta.yml
 ---
 
-## About Me
+{{< include ../_components/hero-split.qmd >}}
 
-Hi, I'm Ford! I'm a data analyst and storyteller with a knack for uncovering insights from web analytics and big data. With a background in sociology and criminology, I've always been fascinated by patterns—whether it's human behavior, digital interactions, or complex datasets.
+::: {.content-block}
+::: {.features}
 
-My journey into data storytelling started when I taught myself R, which opened up a whole new way to turn raw data into meaningful visuals. Since then, I’ve specialized in creating custom data visuals, diving into web analytics, and crafting narratives that make complex information more accessible.
+::: {.feature}
+### Visualizing data for impact
+Transforming raw data into understandable and actionable visuals. My expertise includes creating interactive dashboards and static graphics using tools such as Tableau, Looker, and R (with ggplot2), ensuring clarity and effective communication of key findings.
 
-### What I Do
+<!-- ::: {.learn-more}
+[Learn more »](/../)
+::: -->
+:::
 
-::: {.grid}
+::: {.feature}
+### Driving growth with web data
+Utilizing web analytics tools such as Google Analytics to monitor user engagement, analyze traffic sources, and measure the success of marketing initiatives. I focus on providing data-driven recommendations for website optimization and improved marketing ROI.
+:::
 
-::: {.g-col-6}
-- Data Storytelling & Visualization
-- Web & Marketing Analytics
-- Big Data & Custom Solutions
-- SQL & Database Management
+::: {.feature}
+### Cloud data infrastructure
+Experienced in developing and deploying scalable data pipelines and analytical environments on cloud platforms, particularly Google Cloud Platform (GCP). I leverage services like BigQuery, Cloud Storage, and Dataform for robust data processing and insight generation.
 
 :::
-::: {.g-col-6}
-- Data Cleaning & Transformation
-- Predictive Analytics
-- Automation & ETL
+
 :::
 :::
+
+::: {.content-block}
+
+
+{{< include ../_components/network-visual.qmd >}}
 
 ### Beyond Data
-
 When I’m not working with data, I’m probably out hiking, trying to capture the perfect shot with my camera, or learning to golf. I love exploring the world and finding new perspectives, whether it’s through travel, photography, or just enjoying the great outdoors.
 
-### Contact Me
-
-The best way to reach me is via [LinkedIn](www.linkedin.com/in/bradford-ford-johnson). Whether you're looking to collaborate, have a question, or just want to connect, I'm always open to meeting new people!
+:::

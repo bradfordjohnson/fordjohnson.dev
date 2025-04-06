@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Ford Johnson – Data analyst and storyteller specializing in custom data visuals, web analytics, and big data solutions. Explore projects on data-driven storytelling, visualization, and marketing insights at fordjohnson.dev.">
+<meta name="description" content="Ford Johnson is a Data Analyst specializing in data visualization and analysis. Explore my portfolio showcasing projects in growth marketing, web analytics, and funnel optimization, turning data into actionable insights.">
 
-<title>Home – Ford Johnson</title>
+<title>Ford Johnson</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -26,7 +26,9 @@ ul.task-list li input[type="checkbox"] {
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
-<link href="./images/favicon.png" rel="icon" type="image/png">
+<link href="./_assets/images/favicon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -35,7 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c9a69587e1173cd8815e7ae326764744.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bbfff07e4ae6b115518f3eb77db120f8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -51,26 +56,97 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script type="application/ld+json">
+<script>
 
-    {
-
-      "@context" : "https://schema.org",
-
-      "@type" : "WebSite",
-
-      "name" : "Ford Johnson",
-
-      "url" : "https://fordjohnson.dev"
-
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-projects-featured .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
     }
 
-</script>
+    const options = {
+      valueNames: ['listing-category','listing-tiles',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-category","listing-tiles"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-projects-featured'] = new List('listing-projects-featured', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-split-section .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-splitSections',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-splitSections"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-split-section'] = new List('listing-split-section', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-W39B6FZ6');</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="Home">
-<meta property="og:image" content="https://fordjohnson.dev/images/logo-2.png">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Ford Johnson">
+<meta property="og:image" content="https://fordjohnson.dev/_assets/images/logo-2.png">
 <meta property="og:site_name" content="Ford Johnson">
 <meta property="og:image:height" content="200">
 <meta property="og:image:width" content="600">
@@ -84,6 +160,9 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./_assets/images/favicon.png" alt="" class="navbar-logo">
+    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Ford Johnson</span>
     </a>
@@ -92,18 +171,18 @@ ul.task-list li input[type="checkbox"] {
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link active" href="./index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./data/index.html"> 
-<span class="menu-text">Data</span></a>
+    <a class="nav-link" href="./projects/index.html"> 
+<span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./photography/index.html"> 
-<span class="menu-text">Photography</span></a>
+    <a class="nav-link" href="./notes/index.html"> 
+<span class="menu-text">Notes</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about/index.html"> 
@@ -117,42 +196,118 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W39B6FZ6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
 
-<div class="column-page">
-<div class="quarto-about-trestles">
-  <div class="about-entity">
-    <img src="images/profile.jpg" class="about-image
-  rounded " style="width: 20em;">
-<header id="title-block-header" class="quarto-title-block"><h1 class="title display-7"><span class="hero-highlight">Ford Johnson</span></h1></header>
+<div class="hero-banner">
+  <div class="content-block">
+    <div class="hero-text">
+      <h1 class="hero-headline">Data to insights, visually driven.</h1>
+      <p class="hero-subtitle">I transform raw data into understandable visuals and meaningful stories, enabling businesses to make informed strategic decisions.</p>
+    
+    <div class="hero-button">
+      <a href="./projects/" class="cta-button-primary">Explore my work</a>
+      </div>
+    </div>
   </div>
-  <div class="about-contents"><div id="hero-heading">
-<section id="ford-johnson" class="level1 g-col-12 g-col-md-8 hero-heading">
-</section>
-<p>I’m a data analyst and storyteller specializing in web analytics and big data. With a background in sociology and criminology, I uncover patterns and turn them into engaging narratives.</p>
-<p>Learning R sparked my passion for transforming raw data into compelling visuals. Whether analyzing web metrics or crafting custom visuals, I thrive at blending creativity with analysis.</p>
-<p>Beyond data, I’m into hiking, photography, and currently learning to golf.</p>
-<div class="button-div">
-<p><a href="./data" class="brand-button-primary" role="button">Explore my work</a> <a href="./about" class="brand-button-secondary" role="button">Get to know me</a></p>
 </div>
-</div></div>
-</div>
+<div id="listing-split-section" class="quarto-listing quarto-listing-container-custom">
+<div class="content-block">
+
+  
+    
+      <div class="split-section flip">
+        <div class="split-content">
+          <h3 class="split-title">Visual sensemaking</h3>
+          <p class="split-text">Crafting interactive and insightful data visualizations, including custom visuals tailored to specific needs, is a specialty that empowers stakeholders to understand complex information and drive strategic decisions. This approach focuses on clarity, accuracy, and actionable storytelling, ensuring data becomes a powerful tool for business growth.</p>
+        </div>
+        <div class="split-image">
+          <img class="lightbox" data-gallery="gallery" src="_assets/images/seinfeld-sentiment.png" alt="An R-generated raincloud plot displays the distribution of sentiment scores for Seinfeld episode scripts. The plot compares the sentiment as analyzed by multiple lexicons, showing how each lexicon interprets the emotional tone of the same text data." data-index="0">
+        </div>
+      </div>
+    
+  
 
 </div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+<div id="listing-projects-featured" class="quarto-listing quarto-listing-container-custom">
+<div class="content-block">
+
+  
+    <h2>Projects &amp; Featured Work</h2>
+  
+
+  
+  
+  <div class="list grid card-grid">
+  
+  
+    
+      <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="0" data-featured="true">
+        <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
+          <small class="card-text inline-block">
+            <a href="projects/core-pretzel-index/index.html" class="listing-title">🥨 Core Pretzel Index (CPI)</a>
+            
+            <br>
+            <span class="text-muted listing-subtitle">A custom comparison and ranking framework</span>
+          </small>
+        </div>
+        
+        <a href="projects/core-pretzel-index/index.html">
+          <img src="projects/core-pretzel-index/image.jpg" alt="" class="card-img-top">
+        </a>
+        
+        
+      </div>
+    
+  
+    
+      <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="1" data-featured="true">
+        <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
+          <small class="card-text inline-block">
+            <a href="projects/tidytuesday/index.html" class="listing-title">TidyTuesday</a>
+            
+            <br>
+            <span class="text-muted listing-subtitle">Visuals created weekly using R and the Tidyverse</span>
+          </small>
+        </div>
+        
+        <a href="projects/tidytuesday/index.html">
+          <img src="projects/tidytuesday/image.png" alt="" class="card-img-top">
+        </a>
+        
+        
+      </div>
+    
+  
+    
+  
+  
+  </div>
+  
+
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+<div class="honeypot">
+<p><a href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAADNklEQVR4nO2WLVYrQRBGKwuADcAGYAGAwuFQ4MAEBwYcDgUKBwoHBhwoXFxUsoG4uGQBSRaQ13dyKpDAE5jJJ757zuT09E81p25XD41+vz8NI4OFiGEhYliIGBYihoWIYSFiWIgYFiKGhYhhIWJYiBgWIoaFiGEhYliIGBYihoWIYSFiWIgYFiKGhYhhIWJYiBgWIoaFiGEhYliIGBYihoWIYSFiWIgYFiKGhYhhIWJYiBgWIoaFiGEhYliIGBYihoWIsVIhvV4vtre3S+uLwWBQfiM2NzfL7xfdbjd2d3dL6+8Qc319vXoS+uC3fba2thbm1slKhJCMi4uLSkjZv/TMuL29jeFwWFoRBwcHcXx8XM29vr6uZJCsp6enPyXr9PQ0Op1OvL6+xt7eXumJeH9/j1arVVoRGxsbcXNzE+PxOM7Pz+f73N/f/5BVBysRkpycnMTb21tpRZUQ3j8/P8tbxP7+frTb7Xh4eKgSgxwSybyzs7MyY7bm4+Mjms1mwMvLSxwdHf0QRtzLy8u5kIwNh4eH1d+AIOIRmzYPUupGRginmCRwWoExEkJ1ZDKZ8/j4OF8DVBVja2trlRzWLEOsjEFV3t3dzWMQH4nsTVUyB1iTc+pESghXxdXVVXmbjZFEBOQ1tZxM4FQzl/GctwzjxCLZ7EPMjEEFck3Rl3OAyslqrRMpId9POGO0OcGZKOaQuFyTcPdPJpPqO/EbxMoY+U3KGKxtliuPw4AY5iCZ/pxTJzJCSALvnEranFDu+efn5+qdyuE05/ckyXEeksm1swxxUwgQm32ppmxzZVGBXJm0kU+7blYihI8z1UAC+LeXO5wkZz+nmATSR6I5rY1GI6bT6cK1xBjJ/i6Rdo5nPPZB5M7OTpVk+qk0+nJvoHKotNFotLBPnaxEiPk/FiKGhYhhIWJYiBgWIoaFiGEhYliIGBYihoWIYSFiWIgYFiKGhYhhIWJYiBgWIoaFiGEhYliIGBYihoWIYSFiWIgYFiKGhYhhIWJYiBgWIoaFiGEhYliIGBYihoWIYSFiWIgYFiKGhYhhIWJYiBgWIoaFiGEhYliIGBYihoWIYSFiWIgYFiLGPxfY2Bvll5LhAAAAAElFTkSuQmCC" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAADNklEQVR4nO2WLVYrQRBGKwuADcAGYAGAwuFQ4MAEBwYcDgUKBwoHBhwoXFxUsoG4uGQBSRaQ13dyKpDAE5jJJ757zuT09E81p25XD41+vz8NI4OFiGEhYliIGBYihoWIYSFiWIgYFiKGhYhhIWJYiBgWIoaFiGEhYliIGBYihoWIYSFiWIgYFiKGhYhhIWJYiBgWIoaFiGEhYliIGBYihoWIYSFiWIgYFiKGhYhhIWJYiBgWIoaFiGEhYliIGBYihoWIsVIhvV4vtre3S+uLwWBQfiM2NzfL7xfdbjd2d3dL6+8Qc319vXoS+uC3fba2thbm1slKhJCMi4uLSkjZv/TMuL29jeFwWFoRBwcHcXx8XM29vr6uZJCsp6enPyXr9PQ0Op1OvL6+xt7eXumJeH9/j1arVVoRGxsbcXNzE+PxOM7Pz+f73N/f/5BVBysRkpycnMTb21tpRZUQ3j8/P8tbxP7+frTb7Xh4eKgSgxwSybyzs7MyY7bm4+Mjms1mwMvLSxwdHf0QRtzLy8u5kIwNh4eH1d+AIOIRmzYPUupGRginmCRwWoExEkJ1ZDKZ8/j4OF8DVBVja2trlRzWLEOsjEFV3t3dzWMQH4nsTVUyB1iTc+pESghXxdXVVXmbjZFEBOQ1tZxM4FQzl/GctwzjxCLZ7EPMjEEFck3Rl3OAyslqrRMpId9POGO0OcGZKOaQuFyTcPdPJpPqO/EbxMoY+U3KGKxtliuPw4AY5iCZ/pxTJzJCSALvnEranFDu+efn5+qdyuE05/ckyXEeksm1swxxUwgQm32ppmxzZVGBXJm0kU+7blYihI8z1UAC+LeXO5wkZz+nmATSR6I5rY1GI6bT6cK1xBjJ/i6Rdo5nPPZB5M7OTpVk+qk0+nJvoHKotNFotLBPnaxEiPk/FiKGhYhhIWJYiBgWIoaFiGEhYliIGBYihoWIYSFiWIgYFiKGhYhhIWJYiBgWIoaFiGEhYliIGBYihoWIYSFiWIgYFiKGhYhhIWJYiBgWIoaFiGEhYliIGBYihoWIYSFiWIgYFiKGhYhhIWJYiBgWIoaFiGEhYliIGBYihoWIYSFiWIgYFiLGPxfY2Bvll5LhAAAAAElFTkSuQmCC" class="img-fluid"></a></p>
+</div>
 
 
 
 
-</main> <!-- /main -->
+
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -595,6 +750,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"fade","descPosition":"bottom","loop":false,"openEffect":"fade","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

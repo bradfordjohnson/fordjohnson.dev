@@ -1,0 +1,10 @@
+---
+metadata-files: 
+  - _meta.yml
+---
+
+{{< include ../_components/listing-hero.qmd >}}
+
+:::{#notes-all}
+
+:::
