@@ -1,6 +1,3 @@
-# build via:
-# quarto preview --render all --no-watch-inputs
-
 project:
   type: website
   output-dir: docs
@@ -8,22 +5,28 @@ project:
 website:
   title: Ford Johnson
   site-url: https://fordjohnson.dev
+  favicon: images/favicon.png
+  image: images/logo.png
   search: false
-  favicon: _assets/images/favicon.png
+
   open-graph:
-    image: _assets/images/logo-2.png
+    image: images/logo.png
+
+  announcement:
+    type: warning
+    position: below-navbar 
+    content: "Site updates are in progress :)"
+    icon: wrench
 
   navbar:
-    logo: _assets/images/favicon.png
-    left:
-      - href: index.qmd
-        text: Home
-      - href: projects/index.qmd
-        text: Projects
-      - href: notes/index.qmd
-        text: Notes
-      - href: about/index.qmd
-        text: About
+    pinned: true
+    logo: images/logo.png
+
+    right:
+      - icon: github
+        href: https://github.com/bradfordjohnson
+      - icon: linkedin
+        href: https://linkedin.com/in/bradford-ford-johnson
 
   page-footer:
     center:
@@ -34,16 +37,20 @@ website:
 
 format:
   html:
-    include-in-header:
-      - text: <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-W39B6FZ6');</script>
-    include-before-body:
-      - text: <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W39B6FZ6"height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     page-layout: full
-    # anchor-sections: true
-    theme: styles.scss
+    include-in-header: ga4/gtm_header.html
+    include-before-body: ga4/gtm_body.html
+
+    theme: styles.scss,
+    css: styles.css
     toc: false
+    anchor-sections: true
     canonical-url: true
-    link-external-newwindow: true
+    lang: en
+
     lightbox:
       match: auto
-      effect: fade
+      effect: zoom
+
+# build via:
+# quarto preview --render all --no-watch-inputs

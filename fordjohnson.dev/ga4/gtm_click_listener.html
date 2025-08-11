@@ -1,0 +1,72 @@
+<script>
+  console.log("GA4 Click Listener Initialized (Attribute-based).");
+
+  document.addEventListener("click", function (e) {
+    // 1. Identify the closest relevant element for tracking.
+    // This now looks for:
+    // - An anchor (<a>) tag
+    // - A button (<button>) tag
+    // - Or any element explicitly marked with a 'data-ga4-trackable' attribute
+    //   (Use this if you need to track elements that are neither 'a' nor 'button'
+    //   and don't have other specific data-ga4-* attributes.)
+    const el = e.target.closest('a, button, img, [quarto-announcement], [data-ga4-trackable], [data-ga4-event-name], [data-ga4-component], [data-ga4-text], [data-ga4-position], [data-ga4-destination-url]');
+
+    // for lightroom we should get the aria-label
+
+    // If no relevant element is found, stop processing.
+    if (!el) return;
+
+    const notFound = "(not found)";
+    
+    // 2. Extract GA4 event parameters directly from element attributes or properties.
+
+    // Event Name: Prioritize 'data-ga4-event-name', otherwise default to 'interaction'.
+    const eventName = el.getAttribute("data-ga4-event-name") || "interaction";
+
+    // Component: Prioritize 'data-ga4-component', then infer from tag name.
+    const component = el.getAttribute("data-ga4-component") || el.tagName.toLowerCase();
+
+    // Text: Prioritize 'data-ga4-text', otherwise use innerText of the element.
+    const text = el.getAttribute("data-ga4-text") || el.innerText.trim();
+
+    // Position: Prioritize 'data-ga4-position', otherwise default to 'not found'.
+    const position = el.getAttribute("data-ga4-position");
+
+    // Destination URL:
+    // 1. Prioritize 'data-ga4-destination-url' (if explicitly set for GA4).
+    // 2. Then check for 'data-original-href'.
+    // 3. Then check for 'href' attribute.
+    // 4. Fallback to the 'href' DOM property.
+    const destinationUrl =
+      el.getAttribute("data-ga4-destination-url") ||
+      el.getAttribute("data-original-href") ||
+      el.getAttribute("href") ||
+      el.href; // Note: el.href gets the full, absolute URL, which is often what you want.
+
+
+    // Ensure we have an event name to push
+    if (!eventName) {
+      console.warn("No event name determined for GA4 object. Event not pushed.");
+      return;
+    }
+
+    // 3. Prepare parameters for dataLayer push, applying 'notFound' fallbacks.
+    const params = {
+      component: component || notFound,
+      text: text || notFound,
+      position: position || notFound, // 'position' will be 'null' if not set, then falls to 'notFound'
+      destination_url: destinationUrl || notFound
+    };
+
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+      event: eventName,
+      ...params
+    });
+
+    console.log("GA4 Event Pushed:", {
+      event: eventName,
+      ...params
+    });
+  });
+</script>
