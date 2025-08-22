@@ -1,9 +1,13 @@
 project:
   type: website
   output-dir: docs
+  preview:
+    port: 4000
+    timeout: 1200
 
 website:
   title: Ford Johnson
+  description: Data analyst turning raw data into insights, visualizations, and strategies that drive smarter business decisions.
   site-url: https://fordjohnson.dev
   favicon: images/favicon.png
   image: images/logo.png
@@ -12,15 +16,24 @@ website:
   open-graph:
     image: images/logo.png
 
-  announcement:
-    type: warning
-    position: below-navbar 
-    content: "Site updates are in progress :)"
-    icon: wrench
+  # announcement:
+  #   type: warning
+  #   position: below-navbar 
+  #   content: "Site updates are in progress :)"
+  #   icon: wrench
 
   navbar:
+    background: secondary 
     pinned: true
     logo: images/logo.png
+
+    left:
+      - text: Home
+        href: index.qmd
+      - text: About
+        href: about/index.qmd
+      - text: Data
+        href: data/index.qmd
 
     right:
       - icon: github
@@ -38,15 +51,18 @@ website:
 format:
   html:
     page-layout: full
-    include-in-header: ga4/gtm_header.html
+    include-in-header:
+      - ga4/gtm_header.html
+      - ga4/gtm_click_listener.html
     include-before-body: ga4/gtm_body.html
 
-    theme: styles.scss,
-    css: styles.css
+    theme: styles.scss
+    # css: styles.css
     toc: false
-    anchor-sections: true
+    anchor-sections: false
     canonical-url: true
     lang: en
+    smooth-scroll: true
 
     lightbox:
       match: auto

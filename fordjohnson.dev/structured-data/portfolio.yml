@@ -1,0 +1,19 @@
+- category: Explore my work
+  tiles:
+    - title: TidyTuesday
+      subtitle: Weekly data visualizations
+      href: https://tidytuesday.fordjohnson.dev/
+      code: https://github.com/bradfordjohnson/tidytuesday
+      thumbnail: https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/tidytuesday/2025/2025-01-14/image.png
+
+    - title: golfr
+      subtitle: Simulating Topgolf games each day using R
+      href: https://github.com/bradfordjohnson/golfr
+      code: https://github.com/bradfordjohnson/golfr
+      thumbnail: https://raw.githubusercontent.com/bradfordjohnson/golfr/refs/heads/master/topgolf-sim.png
+
+    - title: ggraincloud
+      subtitle: Easy raincloud plots with R
+      href: https://github.com/bradfordjohnson/ggraincloud
+      code: https://github.com/bradfordjohnson/ggraincloud
+      thumbnail: https://raw.githubusercontent.com/bradfordjohnson/ggraincloud/refs/heads/master/man/figures/README-theme_void-1.png

@@ -1,0 +1,25 @@
+```{=html}
+<% for (const item of items) { %>
+
+<!-- <h2><%- item.category %></h2>
+<p><%- item.description %></p> -->
+
+<div class="features">
+
+  <% for (const tile of item.tiles) { %>
+  <div class="feature">
+    <h4><%= tile.title %></h4>
+    <p><%= tile.subtitle %></p>
+    <% if (tile.href) { %>
+    <div class="learn-more">
+      <a href="<%- tile.href %>">Learn more »</a>
+    </div>
+    <% } %>
+  </div>
+  <% } %>
+
+</div>
+
+<% } %>
+
+```

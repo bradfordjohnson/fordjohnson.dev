@@ -1,0 +1,18 @@
+- category: Features
+  description: placeholder (not seen)
+  tiles:
+    - title: Insightful analytics
+      subtitle: Transform raw data into actionable insights that guide smarter decisions across marketing, product, and business.
+      # href: /docs/computations/python.qmd # optional learn more link
+
+    - title: Funnel optimization
+      subtitle: Spot drop-offs, identify growth levers, and design strategies that improve conversion at every stage of the user journey.
+
+    - title: Attribution & impact
+      subtitle: Understand which touchpoints drive results, measure ROI accurately, and optimize campaigns based on real data.
+
+    - title: Campaign performance
+      subtitle: Track and analyze multi-channel marketing campaigns to turn performance metrics into actionable strategy.
+
+    - title: Visual sensemaking
+      subtitle: Transforming raw data into stories you can see, understand, and act on.
