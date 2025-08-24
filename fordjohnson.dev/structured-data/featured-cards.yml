@@ -1,18 +1,20 @@
-- category: Features
-  description: placeholder (not seen)
+- category: Data Sensemaking
+  description: I combine search, web analytics, product, and CRM data to generate holistic insights, uncover patterns, guide strategy, and support confident decision-making.
   tiles:
-    - title: Insightful analytics
-      subtitle: Transform raw data into actionable insights that guide smarter decisions across marketing, product, and business.
-      # href: /docs/computations/python.qmd # optional learn more link
+    - title: Insightful Analytics
+      subtitle: Extracting actionable insights from complex datasets to guide marketing, product, and business decisions.
 
-    - title: Funnel optimization
-      subtitle: Spot drop-offs, identify growth levers, and design strategies that improve conversion at every stage of the user journey.
+    - title: Funnel Optimization
+      subtitle: Analyzing user journeys to uncover drop-offs, identify growth opportunities, and improve conversion rates.
 
-    - title: Attribution & impact
-      subtitle: Understand which touchpoints drive results, measure ROI accurately, and optimize campaigns based on real data.
+    - title: Attribution & Impact
+      subtitle: Measuring which touchpoints drive results, quantifying ROI, and optimizing campaigns with data-backed insights.
 
-    - title: Campaign performance
-      subtitle: Track and analyze multi-channel marketing campaigns to turn performance metrics into actionable strategy.
+    - title: Visual Narratives
+      subtitle: Crafting visualizations that clarify patterns, highlight opportunities, and make data actionable.
 
-    - title: Visual sensemaking
-      subtitle: Transforming raw data into stories you can see, understand, and act on.
+    - title: Data Pipelines & Cloud Infrastructure
+      subtitle: Building scalable, automated workflows and cloud-based systems to ensure analytics are timely, reliable, and accurate.
+
+    - title: Anomaly Detection & QA
+      subtitle: Detecting anomalies and maintaining high-quality data to support confident decisions.

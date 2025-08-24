@@ -116,12 +116,45 @@ body {
   max-height: 32px;
 }
 
-.hero-emphasis {
+#hero-title {
+  font-size: clamp(48px, 6vw, 56px); /* min 36px, scales with viewport, max 72px */
+  line-height: 1.1;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+#hero-title .hero-emphasis {
   color: $primary;
+  font-weight: 800;
+}
+
+#hero-text {
+  font-size: larger;
 }
 
 .btn {
   border-radius: 0.375rem;
+  font-size:large;
+}
+
+/* Target the image within the desktop-only column */
+.g-col-lg-6.d-none.d-lg-block img {
+
+  max-width: 65%; /* Adjust this percentage as desired (e.g., 60%, 80%) */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Required for auto margins to work */
+  margin-left: auto; /* Center the image within its column */
+  margin-right: auto;
+}
+
+/* Target the image within the mobile-only div */
+.d-block.d-lg-none img {
+  max-width: 65%; /* Adjust this percentage as desired (e.g., 70%, 90%) */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Required for auto margins to work */
+  margin-left: 0; /* Center the image within the mobile view */
+  margin-right: auto;
 }
 
 .content-block {
@@ -130,6 +163,18 @@ body {
   margin-left: auto;
   margin-right: auto;
   max-width: 1200px;
+}
+
+.feature-header h2 {
+  padding-bottom: 0px;
+  border-bottom: none;
+  margin-bottom: 8px;
+  font-size: calc(1.6rem + 0.48vw);
+}
+
+.feature-header p {
+  font-size: large;
+  padding-right: 30%;
 }
 
 .features {
@@ -146,11 +191,11 @@ body {
   flex-direction: column;
 }
 
-.feature h4 {
-  margin-top: 0;
-  color: $gray-900;
-  font-weight: bolder;
-}
+// .feature h4 {
+//   margin-top: 0;
+//   color: $gray-800;
+//   // font-weight: bolder;
+// }
 
 .feature p:first-of-type {
   margin-bottom: 0.2rem;

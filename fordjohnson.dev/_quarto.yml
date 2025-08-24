@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: docs
+  output-dir: _site
   preview:
     port: 4000
     timeout: 1200
@@ -15,12 +15,6 @@ website:
 
   open-graph:
     image: images/logo.png
-
-  # announcement:
-  #   type: warning
-  #   position: below-navbar 
-  #   content: "Site updates are in progress :)"
-  #   icon: wrench
 
   navbar:
     background: secondary 
@@ -67,6 +61,3 @@ format:
     lightbox:
       match: auto
       effect: zoom
-
-# build via:
-# quarto preview --render all --no-watch-inputs

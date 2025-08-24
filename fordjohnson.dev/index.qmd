@@ -4,37 +4,32 @@ listing:
     template: templates/cards.ejs
     contents: structured-data/featured-cards.yml
 
-  - id: featured-content
-    template: templates/gallery.ejs
-    contents: structured-data/portfolio.yml
+hero-image: https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/tidytuesday/2025/2025-01-14/image.png
 ---
 
 <div class="grid align-items-start">
-<div class="g-col-12 g-col-lg-6 me-2 mb-2">
-
-<h1>
+<div class="g-col-12 g-col-lg-7 me-2 mb-2">
+<h1 id="hero-title">
 Data to insights, <span class="hero-emphasis">visually driven.</span>
 </h1>
-
-<div class="d-block d-lg-none mb-3">
-![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/tidytuesday/2023/2023-06-06/image.png)
-</div>
-
-<p>
-I create valuable data products that turn raw data into actionable intelligence and drive meaningful impact.
+<p id="hero-text">
+  I create valuable data products that turn raw data into actionable intelligence and drive meaningful impact.
 </p>
 
-<a href="/data/" class="btn btn-primary me-2 mb-2" role="button">View my work</a>
-<a href="/about/" class="btn btn-secondary me-2 mb-2" role="button">Contact me</a>
+
+<a href="/data" class="btn btn-primary me-2 mb-2" role="button">Explore My Work</a>
+<!-- <a href="/about" class="btn btn-secondary me-2 mb-2" role="button">Learn About Me</a> -->
+
+<!-- Mobile-only image -->
+<!-- <div class="d-block d-lg-none mb-3">
+![]({{< meta hero-image >}})
+</div> -->
 </div>
 
-<div class="g-col-12 g-col-lg-6 mb-2 d-none d-lg-block">
-![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/tidytuesday/2023/2023-06-06/image.png)
+<!-- Desktop-only image -->
+<div class="g-col-12 g-col-lg-5 mb-2 d-none d-lg-block">
+![]({{< meta hero-image >}})
 </div>
 </div>
 
 <div id="featured-cards"></div>
-
-<div id="featured-content"></div>
-
-
