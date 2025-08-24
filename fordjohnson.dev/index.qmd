@@ -9,7 +9,7 @@ hero-image: https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/h
 css: index.css
 ---
 
-<div class="grid align-items-start">
+<div class="grid align-items-start hero">
 <div class="g-col-12 g-col-lg-7 me-2 mb-2">
 <h1 id="hero-title">
 Data to insights, <span class="hero-emphasis">visually driven.</span>
