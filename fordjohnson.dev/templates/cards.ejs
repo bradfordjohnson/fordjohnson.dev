@@ -2,16 +2,27 @@
 <% for (const item of items) { %>
 
 <div class="feature-header">
-<h2><%- item.category %></h2>
-<p><%- item.description %></p>
+  <h2><%- item.category %></h2>
+  <p><%- item.description %></p>
 </div>
 
 <div class="features">
 
   <% for (const tile of item.tiles) { %>
   <div class="feature">
-    <h3><%= tile.title %></h3>
-    <p><%= tile.subtitle %></p>
+    <div class="feature-content-wrapper">
+      <div class="feature-text">
+        <% if (tile.icon) { %>
+          <div class="feature-icon-wrapper">
+            <span class="feature-icon material-symbols-outlined">
+              <%= tile.icon %>
+            </span>
+          </div>
+        <% } %>
+        <h3><%= tile.title %></h3>
+      </div>
+      <p><%= tile.subtitle %></p>
+    </div>
     <% if (tile.href) { %>
     <div class="learn-more">
       <a href="<%- tile.href %>">Learn more »</a>
@@ -23,5 +34,4 @@
 </div>
 
 <% } %>
-
 ```

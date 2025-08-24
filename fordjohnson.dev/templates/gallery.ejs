@@ -2,9 +2,11 @@
 ```{=html}
 
 <% for (const item of items) { %>
+<div class="feature-header">
+<h2><%- item.title %></h2>
 
-<h2><%- item.category %></h2>
-
+<p><%- item.subtitle %></p>
+</div>
 <div class="list grid" style="column-gap: 10px;">
 
 <% for (const tile of item.tiles) { %>

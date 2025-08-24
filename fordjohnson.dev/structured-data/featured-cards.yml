@@ -1,20 +1,27 @@
 - category: Data Sensemaking
-  description: I combine search, web analytics, product, and CRM data to generate holistic insights, uncover patterns, guide strategy, and support confident decision-making.
+  description: I unify search, web, product, and CRM data to deliver actionable insights and drive strategic decision-making.
   tiles:
     - title: Insightful Analytics
-      subtitle: Extracting actionable insights from complex datasets to guide marketing, product, and business decisions.
+      subtitle: Actionable insights for marketing, product, and business decisions.
+      icon: trending_up
+      # href: https://fordjohnson.dev
 
     - title: Funnel Optimization
-      subtitle: Analyzing user journeys to uncover drop-offs, identify growth opportunities, and improve conversion rates.
+      subtitle: Optimizing user journeys for growth and conversion.
+      icon: filter_alt
 
     - title: Attribution & Impact
-      subtitle: Measuring which touchpoints drive results, quantifying ROI, and optimizing campaigns with data-backed insights.
+      subtitle: Quantifying ROI and optimizing campaigns through touchpoint measurement.
+      icon: square_foot
 
     - title: Visual Narratives
-      subtitle: Crafting visualizations that clarify patterns, highlight opportunities, and make data actionable.
+      subtitle: Crafting custom dashboards and visuals to uncover patterns and drive action.
+      icon: analytics
 
-    - title: Data Pipelines & Cloud Infrastructure
-      subtitle: Building scalable, automated workflows and cloud-based systems to ensure analytics are timely, reliable, and accurate.
+    - title: Data Pipelines
+      subtitle: Scalable, automated data pipelines for reliable analytics.
+      icon: cloud
 
     - title: Anomaly Detection & QA
-      subtitle: Detecting anomalies and maintaining high-quality data to support confident decisions.
+      subtitle: Anomaly detection and data quality for confident decisions.
+      icon: vital_signs
