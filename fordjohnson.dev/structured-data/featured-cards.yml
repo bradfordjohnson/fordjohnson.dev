@@ -4,7 +4,7 @@
     - title: Insightful Analytics
       subtitle: Actionable insights for marketing, product, and business decisions.
       icon: trending_up
-      href: https://fordjohnson.dev
+      # href: https://fordjohnson.dev # example learn more link
 
     - title: Funnel Optimization
       subtitle: Optimizing user journeys for growth and conversion.
