@@ -1,3 +1,0 @@
-```{=html}
-<a href="{{< meta cta.url >}}" class="cta-button-primary">{{< meta cta.text >}}</a>
-```

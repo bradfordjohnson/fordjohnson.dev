@@ -1,15 +1,16 @@
 /*-- scss:defaults --*/
-// ==========================================================================
-// Defaults & Variables
-// ==========================================================================
+// quarto-scss-analysis-annotation { "origin": "cosmo (builtin theme)" }
 
 $theme: "cosmo" !default;
 
-// Color System
+//
+// Color system
+//
+
 $white: #fff !default;
-$gray-100: #f8f9fa !default;
+$gray-100: #f2f2f2 !default;
 $gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
+$gray-300: #c7cbcf !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
 $gray-600: #868e96 !default;
@@ -19,8 +20,6 @@ $gray-900: #212529 !default;
 $black: #000 !default;
 
 $blue: #2780e3 !default;
-$alt-blue: #1961b3 !default;
-$light-blue: #f6f9ff !default;
 $indigo: #6610f2 !default;
 $purple: #613d7c !default;
 $pink: #e83e8c !default;
@@ -31,208 +30,72 @@ $green: #3fb618 !default;
 $teal: #20c997 !default;
 $cyan: #9954bb !default;
 
-// Semantic Colors
 $primary: $blue !default;
-$secondary: $white !default;
+$secondary: $gray-100 !default;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
 $danger: $red !default;
 $light: $gray-100 !default;
-$dark: $black !default;
+$dark: $gray-800 !default;
 
-// Theme Specific Variables
-$blue-hover: $alt-blue !default;
-$hero-bg: $light-blue !default;
-$heading-color: $blue !default;
-$hero-heading-color: $blue !default;
-
-$navbar-bg: $white !default;
-$navbar-fg: $dark !default;
-$navbar-hl: $blue !default;
-
-$footer-bg: $white !default;
-$footer-fg: $dark !default;
-
-$callout-border-width: 5px;
-$callout-border-scale: 0%;
-$callout-icon-scale: 10%;
-$callout-margin-top: 1.25rem;
-$callout-margin-bottom: 1.25rem;
-
-$link-color: $alt-blue !default;
-
-// Typography Variables
-$font-size-root: 16px !default;
-$hero-heading-size: 3rem !default;
-$hero-heading-weight: bolder !default;
-$hero-heading-line-height: 1.2em;
-$hero-subtitle-size: 16px !default;
-$hero-subtitle-weight: 400 !default;
-$hero-subtitle-line-height: 24px !default;
-$h1-font-size: 2.5rem !default;
-$h2-font-size: 1.75rem !default;
-$h3-font-size: 1.5rem !default;
-$h4-font-size: 1.25rem !default;
-$toc-font-size: 14px !default;
-
-// Spacing Variables
-$spacing-xs: 10px !default;
-$spacing-sm: 16px !default;
-$spacing-md: 20px !default;
-$spacing-lg: 30px !default;
-$spacing-xl: 50px !default;
-$section-gap: 2rem !default;
-
-// Button Variables
-$button-radius: 4px !default;
-$button-padding: 13px 24px 12px !default;
-$button-height: 48px !default;
-
-// Layout Variables
-$max-content-width: 1100px !default;
-$hero-image-max-width: 300px !default;
-$content-padding-top: 0px !default;
-
-// Code Block Variables
-$code-block-border-left-style: solid !default;
-$code-block-border-left-size: 3px !default;
-$code-block-padding-left: 0.6em !default;
-$code-block-bg-padding: 0.4em !default;
-$code-block-bg-alpha: -0.35 !default;
-
-// Code Copy Button Variable
-$btn-code-copy-color-active: $alt-blue !default;
-
-// Accessibility Variable
 $min-contrast-ratio: 2.6 !default;
 
-// Options Variable
+// Options
+
 $enable-rounded: false !default;
 
-// Body Variable
+// Body
+
 $body-color: $gray-800 !default;
 
-// Font Family Variable
-$font-family-sans-serif: "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-  "Segoe UI Emoji", "Segoe UI Symbol" !default;
+// Fonts
 
-// Headings Font Weight Variable
+// stylelint-disable-next-line value-keyword-case
+$font-family-sans-serif:
+  "Source Sans Pro",
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  Roboto,
+  "Helvetica Neue",
+  Arial,
+  sans-serif,
+  "Apple Color Emoji",
+  "Segoe UI Emoji",
+  "Segoe UI Symbol" !default;
 $headings-font-weight: 400 !default;
 
-// Navbar Variables
+// Navbar
+
 $navbar-dark-hover-color: rgba($white, 1) !default;
 $navbar-light-hover-color: rgba($black, 0.9) !default;
 
-// Alerts Variable
+// Alerts
+
 $alert-border-width: 0 !default;
 
-// Progress Bars Variable
+// Progress bars
+
 $progress-height: 0.5rem !default;
 
 /*-- scss:rules --*/
-// ==========================================================================
-// Global Styles
-// ==========================================================================
 
-// Web Fonts
+// Variables
+
 $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" !default;
 @if $web-font-path {
   @import url($web-font-path);
 }
 
-// Base Typography
+// Typography
+
 body {
   -webkit-font-smoothing: antialiased;
 }
 
-// ==========================================================================
-// Elements: Typography
-// ==========================================================================
-
-p {
-  line-height: 1.6;
-  margin-bottom: $spacing-md;
-  letter-spacing: normal;
-  font-weight: 400;
-}
-
-h1 {
-  font-size: $h1-font-size;
-  font-weight: 600;
-  color: $primary;
-  line-height: 1.3;
-  margin-top: $spacing-lg;
-  margin-bottom: $spacing-md;
-}
-
-h2 {
-  margin-top: $spacing-lg;
-  margin-bottom: $spacing-sm;
-  font-size: $h2-font-size;
-  color: $dark;
-  font-weight: 600;
-  line-height: 1.3;
-}
-
-h3 {
-  margin-top: $spacing-md;
-  margin-bottom: $spacing-xs;
-  font-size: $h3-font-size;
-  color: $dark;
-  font-weight: 400;
-  line-height: 1.4;
-}
-
-h4 {
-  margin-top: $spacing-md;
-  margin-bottom: $spacing-xs;
-  font-size: $h4-font-size;
-  color: $dark;
-  font-weight: 500;
-  line-height: 1.4;
-}
-
-.nav-item{
-  padding-right: 6px;
-}
-
-// ==========================================================================
-// Layout & Utilities
-// ==========================================================================
-
-.card-grid {
-  column-gap: $spacing-xs;
-}
-
-.content-block {
-  width: 85%;
-  padding: $spacing-md 0;
-  margin-left: $spacing-lg;
-  margin-right: $spacing-lg;
-
-  @media (min-width: 900px) {
-    margin-left: $spacing-xl;
-    margin-right: $spacing-xl;
-  }
-
-  @media (min-width: 1200px) {
-    max-width: $max-content-width;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-.hero-banner .content-block .hero-text {
-  width: 100%;
-}
-
-// ==========================================================================
-// Components
-// ==========================================================================
-
 // Indicators
+
 .badge {
   &.bg-light {
     color: $dark;
@@ -240,6 +103,7 @@ h4 {
 }
 
 // Progress bars
+
 .progress {
   @include box-shadow(none);
 
@@ -249,217 +113,144 @@ h4 {
   }
 }
 
-// Hero Section
-.hero-banner h1 {
-  color: $hero-heading-color;
-  font-size: $hero-heading-size;
-  font-weight: $hero-heading-weight;
-  line-height: $hero-heading-line-height;
-  letter-spacing: -0.5px;
+// quarto-scss-analysis-annotation { "origin": null }
+
+.btn-secondary:hover {
+  background-color: $gray-300;
 }
 
-.hero-subtitle {
-  padding-right: $spacing-sm;
-  font-size: $hero-subtitle-size;
-  font-weight: $hero-subtitle-weight;
-  line-height: $hero-subtitle-line-height;
-  letter-spacing: .1px;
+.navbar-logo {
+  max-height: 32px;
 }
 
-.hero-banner {
-  position: relative;
-  background-color: $hero-bg;
+#quarto-header {
+  border-bottom: 1px solid #e0e0e0;
 }
 
-.hero-banner .content-block {
-  display: flex;
-  flex-direction: row;
-  z-index: 2;
-}
-
-.hero-image {
-  max-width: $hero-image-max-width;
-  width: 100%;
-  justify-content: center;
-}
-
-.hero-image img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-@media (max-width: 768px) {
-  .hero-image {
-    display: none;
-  }
-}
-
-// Listing Section
-.card .listing-title {
-  font-size: $h4-font-size; // ~18px
-  font-weight: 400;
-  color: $heading-color;
-  margin-bottom: 0.25rem;
-  line-height: 1.4;
-  word-break: break-word;
-  text-decoration: none;
-}
-
-.card .listing-subtitle,
-.card .text-muted.listing-subtitle {
-  font-size: 0.95rem; // ~15px
-  font-weight: 400;
-  color: $gray-600;
-  line-height: 1.4;
-  margin-bottom: 0;
-  word-break: break-word;
-}
-
-.listing-slug-image img {
-  margin-top: 10px;
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-// Split Section
-.split-section {
-  display: flex;
-  align-items: flex-start;
-  gap: $section-gap;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-top: $section-gap;
-
-  &:not(.flip) {
-    flex-direction: row;
-  }
-
-  &.flip {
-    flex-direction: row-reverse;
-  }
-
-  .split-content,
-  .split-image {
-    flex: 1;
-  }
-
-  .split-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-
-  .split-title {
-    font-size: $h2-font-size;
-    font-weight: bold;
-    margin-bottom: $spacing-md;
-  }
-
-  .split-text {
-    color: $dark;
-  }
-
-  @media (max-width: 900px) {
-    &,
-    &.flip,
-    &:not(.flip) {
-      flex-direction: column !important;
-    }
-
-    .split-content,
-    .split-image {
-      width: 100%;
-    }
-  }
-}
-
-// Features Section
-.features {
-  padding-bottom: 2em;
-  padding-top: $spacing-xl;
-}
-
-.feature {
-  margin-top: $spacing-md;
-  padding: 5px;
-}
-
-.feature h3 {
+#hero-title {
+  font-size: clamp(48px, 6vw, 56px); /* min 36px, scales with viewport, max 72px */
+  line-height: 1.1;
+  font-weight: 700;
   margin-top: 0;
+  margin-bottom: 20px;
 }
 
-.feature p:first-of-type {
-  margin-bottom: 0.2rem;
-  color: $gray-800;
+#hero-title .hero-emphasis {
+  color: $primary;
+  font-weight: 800;
 }
 
-@media (min-width: 800px) {
-  .features {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: calc(100% + $spacing-xs);
-  }
-
-  .feature {
-    width: calc(33% - $spacing-xs);
-    margin: $spacing-md 0 0 $spacing-xs;
-  }
+#hero-text {
+  font-size: larger;
 }
 
-// Button Styles
-.cta-button-primary,
-.cta-button-secondary {
-  font-size: $font-size-root;
-  font-weight: 500;
-  letter-spacing: normal;
-  line-height: 20px;
-  border-radius: $button-radius;
-  border-style: solid;
-  border-width: 1px;
+.btn {
+  border-radius: 0.375rem;
+  font-size: large;
+}
+
+/* Target the image within the desktop-only column */
+.g-col-lg-5.d-none.d-lg-block img {
+  max-width: 75%;
+  height: auto; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content-block {
+  padding-top: 64px;
+  padding-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+.feature-header h2 {
+  padding-bottom: 0px;
+  border-bottom: none;
+  margin-bottom: 8px;
+  font-size: calc(1.6rem + 0.48vw);
+}
+.feature-header p {
+  font-size: large;
+  padding-right: 0%;
+  padding-bottom: 15px;
+}
+.features {
+  // padding-top: 2em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  // padding-bottom: 2em;
+}
+.feature {
   box-sizing: border-box;
-  cursor: pointer;
-  display: inline-flex;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  // padding-bottom: 15px;
+  // border: 1px solid #ddd;
+  border-radius: 5px;
+  justify-content: space-between;
+}
+
+.feature-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  // margin-bottom: 15px;
+}
+
+.feature-text {
+  display: grid;
+  grid-template-columns: auto 1fr; 
+  gap: 0.75rem;
+  align-items: start;
+  margin-bottom: 0; 
+}
+
+.feature-icon-wrapper {
+  display: flex; 
   align-items: center;
-  min-height: $button-height;
-  padding: $button-padding;
-  margin-right: $spacing-xs;
-  margin-bottom: $spacing-xs;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  text-transform: none;
-  transition: background-color 0.2s, box-shadow 0.2s, color 0.2s;
+  justify-content: center;
+  margin: 0; 
+  padding: 0; 
 }
 
-.cta-button-primary {
-  background-color: $blue;
-  color: white;
-  border-color: $blue;
+.feature-icon {
+  font-size: 1.8rem; 
+  line-height: 1; 
+  display: block; 
+  font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 0, 'opsz' 48;
+  color: $primary;
 }
 
-.cta-button-primary:hover {
-  background-color: $blue-hover;
-  border-color: $blue-hover;
+.feature-text h3 {
+  margin: 0; 
+  font-size: 1.4rem;
+  line-height: 1.3;
 }
 
-.cta-button-secondary {
-  background-color: $secondary;
-  color: $blue;
-  border-color: $gray-200;
+.feature-content-wrapper > p { 
+  margin-top: 8px; 
+  margin-bottom: 0.2rem;
+  font-size: medium;
+}
+body.quarto-light .feature-content-wrapper > p { 
+  color: rgb(84, 85, 85);
+}
+body.quarto-dark .feature-content-wrapper > p { 
+  color: rgb(200, 200, 200);
 }
 
-.cta-button-secondary:hover {
-  background-color: $gray-200;
-  border-color: $gray-100;
-  color: $blue-hover;
+.learn-more {
+  margin-top: auto;
+  font-size: medium;
 }
 
-.honeypot {
-  display: none;
+.card-img-top {
+  width: 100%;
+  max-height: 270px;
+  object-fit: contain;
+  object-position: top;
 }

@@ -1,42 +1,17 @@
 ---
-metadata-files: 
-  - _meta.yml
+pagetitle: About Me
+about:
+  template: solana
+  image: ../images/headshot.jpg
+
+css: index.css
 ---
 
-{{< include ../_components/hero-split.qmd >}}
+<div class="feature-header">
+<h2>About Me</h2>
 
-::: {.content-block}
-::: {.features}
+Hi I'm Ford! I’m curious by nature, always asking questions and exploring patterns-whether in the world around me or in the data I work with. With a background in Sociology and a self-taught passion for analytics, I enjoy uncovering insights that tell a story and make complex information feel clear and actionable. Colleagues know me as reliable, detail-oriented, and someone who approaches problems with both curiosity and care.
 
-::: {.feature}
-### Visualizing data for impact
-Transforming raw data into understandable and actionable visuals. My expertise includes creating interactive dashboards and static graphics using tools such as Tableau, Looker, and R (with ggplot2), ensuring clarity and effective communication of key findings.
+Outside of work, you’ll often find me hiking new trails, capturing moments through photography, trying to improve my golf game, or spending time with my family. I like to approach life the same way I approach data: with curiosity, creativity, and a willingness to learn from every experience.
 
-<!-- ::: {.learn-more}
-[Learn more »](/../)
-::: -->
-:::
-
-::: {.feature}
-### Driving growth with web data
-Utilizing web analytics tools such as Google Analytics to monitor user engagement, analyze traffic sources, and measure the success of marketing initiatives. I focus on providing data-driven recommendations for website optimization and improved marketing ROI.
-:::
-
-::: {.feature}
-### Cloud data infrastructure
-Experienced in developing and deploying scalable data pipelines and analytical environments on cloud platforms, particularly Google Cloud Platform (GCP). I leverage services like BigQuery, Cloud Storage, and Dataform for robust data processing and insight generation.
-
-:::
-
-:::
-:::
-
-::: {.content-block}
-
-
-{{< include ../_components/network-visual.qmd >}}
-
-### Beyond Data
-When I’m not working with data, I’m probably out hiking, trying to capture the perfect shot with my camera, or learning to golf. I love exploring the world and finding new perspectives, whether it’s through travel, photography, or just enjoying the great outdoors.
-
-:::
+</div>
