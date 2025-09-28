@@ -1,5 +1,7 @@
 - category: Data Sensemaking
   description: I unify search, web, product, and CRM data to deliver actionable insights and drive strategic decision-making.
+  metadata:
+    module: featured cards
   tiles:
     - title: Insightful Analytics
       subtitle: Actionable insights for marketing, product, and business decisions.

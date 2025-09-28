@@ -10,17 +10,17 @@ website:
   title: Ford Johnson
   description: Data analyst turning raw data into insights, visualizations, and strategies that drive smarter business decisions.
   site-url: https://fordjohnson.dev
-  favicon: images/favicon.png
-  image: images/logo.png
+  favicon: https://cdn.jsdelivr.net/gh/bradfordjohnson/global-assets@master/images/logo/favicon.png
+  image: https://cdn.jsdelivr.net/gh/bradfordjohnson/global-assets@master/images/logo/logo.png
   search: false
 
   open-graph:
-    image: images/logo.png
+    image: https://cdn.jsdelivr.net/gh/bradfordjohnson/global-assets@master/images/logo/logo.png
 
   navbar:
     background: white
     pinned: true
-    logo: images/logo.png
+    logo: https://cdn.jsdelivr.net/gh/bradfordjohnson/global-assets@master/images/logo/logo.png
     left:
       - text: Home
         href: index.qmd
@@ -53,9 +53,7 @@ format:
     lang: en
     smooth-scroll: true
 
-    include-in-header:
-      - ga4/gtm_header.html
-      - ga4/gtm_click_listener.html
+    include-in-header: ga4/gtm_header.html
     include-before-body: ga4/gtm_body.html
 
     lightbox:
