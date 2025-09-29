@@ -1,10 +1,11 @@
-- category: Data Sensemaking
+- module: featured cards
+  module-headline: Data Sensemaking
   description: I unify search, web, product, and CRM data to deliver actionable insights and drive strategic decision-making.
   tiles:
     - title: Insightful Analytics
       subtitle: Actionable insights for marketing, product, and business decisions.
       icon: trending_up
-      # href: https://fordjohnson.dev # example learn more link
+      # href: "#" # example learn more link
 
     - title: Funnel Optimization
       subtitle: Optimizing user journeys for growth and conversion.

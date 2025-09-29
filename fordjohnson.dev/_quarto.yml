@@ -9,18 +9,18 @@ website:
 
   title: Ford Johnson
   description: Data analyst turning raw data into insights, visualizations, and strategies that drive smarter business decisions.
-  site-url: https://fordjohnson.dev
-  favicon: images/favicon.png
-  image: images/logo.png
+  site-url: "https://fordjohnson.dev"
+  favicon: "_components/favicon.png"
+  image: "https://cdn.jsdelivr.net/gh/bradfordjohnson/global-assets@master/images/logo/logo.png"
   search: false
 
   open-graph:
-    image: images/logo.png
+    image: "https://cdn.jsdelivr.net/gh/bradfordjohnson/global-assets@master/images/logo/logo.png"
 
   navbar:
     background: white
     pinned: true
-    logo: images/logo.png
+    logo: "https://cdn.jsdelivr.net/gh/bradfordjohnson/global-assets@master/images/logo/logo.png"
     left:
       - text: Home
         href: index.qmd
@@ -30,20 +30,21 @@ website:
         href: data/index.qmd
     right:
       - icon: github
-        href: https://github.com/bradfordjohnson
+        href: "https://github.com/bradfordjohnson"
       - icon: linkedin
-        href: https://linkedin.com/in/bradford-ford-johnson
+        href: "https://linkedin.com/in/bradford-ford-johnson"
 
   page-footer:
     center:
       - icon: github
-        href: https://github.com/bradfordjohnson
+        href: "https://github.com/bradfordjohnson"
       - icon: linkedin
-        href: https://linkedin.com/in/bradford-ford-johnson
+        href: "https://linkedin.com/in/bradford-ford-johnson"
 
 
 format:
   html:
+    template: templates/template.html
     page-layout: full
     theme: styles.scss
     
@@ -53,9 +54,7 @@ format:
     lang: en
     smooth-scroll: true
 
-    include-in-header:
-      - ga4/gtm_header.html
-      - ga4/gtm_click_listener.html
+    include-in-header: ga4/gtm_header.html
     include-before-body: ga4/gtm_body.html
 
     lightbox:

@@ -1,0 +1,10 @@
+```{=html}
+<a class="{{< meta button-component.class >}}"
+  href="{{< meta button-component.url >}}"
+  role="button"
+  data-component="{{< meta button-component.component >}}"
+  data-modifier="{{< meta button-component.modifier >}}"
+  data-module="{{< meta button-component.module >}}"
+  >{{< meta button-component.text >}}</a
+>
+```

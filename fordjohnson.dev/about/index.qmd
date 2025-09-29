@@ -2,7 +2,7 @@
 pagetitle: About Me
 about:
   template: solana
-  image: ../images/headshot.jpg
+  image: https://cdn.jsdelivr.net/gh/bradfordjohnson/global-assets@master/images/headshot.jpg
 
 css: index.css
 ---
