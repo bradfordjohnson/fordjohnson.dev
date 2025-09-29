@@ -4,12 +4,26 @@ listing:
     template: templates/cards.ejs
     contents: structured-data/featured-cards.yml
 
-hero-image: https://cdn.jsdelivr.net/gh/bradfordjohnson/tidytuesday@main/tidytuesday/2025/2025-01-14/image.png
+image-component:
+  url: https://cdn.jsdelivr.net/gh/bradfordjohnson/tidytuesday@main/tidytuesday/2025/2025-01-14/image.png
+  a-wrapper-class: "lightbox"
+  component: "image"
+  module: "home hero"
+  gallery: "home hero image"
+  alt: "Visual comparing the top posit::conf presentation title words between 2023 and 2024"
+
+button-component:
+  class: "btn btn-primary me-2 mb-2"
+  text: "Explore my work"
+  url: "/data"
+  component: "button"
+  modifier: "primary"
+  module: "home hero"
 
 css: index.css
 ---
 
-<div class="grid align-items-start hero">
+<div class="grid align-items-start hero" data-position="hero">
 <div class="g-col-12 g-col-lg-7 me-2 mb-2">
 <h1 id="hero-title">
 Data to insights, <span class="hero-emphasis">visually driven.</span>
@@ -18,20 +32,15 @@ Data to insights, <span class="hero-emphasis">visually driven.</span>
   I create valuable data products that turn raw data into actionable intelligence and drive meaningful impact.
 </p>
 
+{{< include _components/button.qmd >}}
 
-<a href="/data" class="btn btn-primary me-2 mb-2" role="button">Explore My Work</a>
-<!-- <a href="/about" class="btn btn-secondary me-2 mb-2" role="button">Learn About Me</a> -->
-
-<!-- Mobile-only image -->
-<!-- <div class="d-block d-lg-none mb-3">
-![]({{< meta hero-image >}})
-</div> -->
 </div>
 
-<!-- Desktop-only image -->
 <div class="g-col-12 g-col-lg-5 mb-2 d-none d-lg-block">
-![]({{< meta hero-image >}})
+
+![]({{< meta image-component.url >}})
+
 </div>
 </div>
 
-<div id="featured-cards"></div>
+<div id="featured-cards" data-position="body"></div>

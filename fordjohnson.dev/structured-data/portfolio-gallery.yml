@@ -1,9 +1,10 @@
-- title: Explore My Work
+- module: card gallery
+  module-headline: Explore My Work
   subtitle: A curated selection of my visualizations, projects, and analytical solutions.
   tiles:
     - title: TidyTuesday
       subtitle: Weekly data visualizations
-      href: https://tidytuesday.fordjohnson.dev/
+      href: "#" #https://tidytuesday.fordjohnson.dev/
       code: https://github.com/bradfordjohnson/tidytuesday
       thumbnail: https://cdn.jsdelivr.net/gh/bradfordjohnson/tidytuesday@main/tidytuesday/2025/2025-01-14/image.png
 

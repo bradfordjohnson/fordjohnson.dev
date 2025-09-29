@@ -1,37 +1,40 @@
 ```{=html}
 <% for (const item of items) { %>
 
-<div class="feature-header">
-  <h2><%- item.category %></h2>
-  <p><%- item.description %></p>
-</div>
+  <div class="feature-header">
+    <h2><%= item["module-headline"] %></h2>
+    <p><%= item.description %></p>
+  </div>
 
-<div class="features">
+  <div class="features" data-module="<%= item.module %>">
 
-  <% for (const tile of item.tiles) { %>
-  <div class="feature">
-    <div class="feature-content-wrapper">
-      <div class="feature-text">
-        <% if (tile.icon) { %>
-          <div class="feature-icon-wrapper">
-            <span class="feature-icon material-symbols-outlined">
-              <%= tile.icon %>
-            </span>
+    <% for (const tile of item.tiles) { %>
+      <div class="feature" data-component="<%= tile.title.toLowerCase() %>">
+        <div class="feature-content-wrapper">
+          <div class="feature-text">
+            <% if (tile.icon) { %>
+              <div class="feature-icon-wrapper">
+                <span class="feature-icon material-symbols-outlined">
+                  <%= tile.icon %>
+                </span>
+              </div>
+            <% } %>
+            <h3>
+              <%= tile.title %>
+            </h3>
+          </div>
+          <p><%= tile.subtitle %></p>
+        </div>
+        <% if (tile.href) { %>
+          <div class="learn-more">
+            <a href="<%= tile.href %>">Learn more »</a>
           </div>
         <% } %>
-        <h3><%= tile.title %></h3>
       </div>
-      <p><%= tile.subtitle %></p>
-    </div>
-    <% if (tile.href) { %>
-    <div class="learn-more">
-      <a href="<%- tile.href %>">Learn more »</a>
-    </div>
     <% } %>
-  </div>
-  <% } %>
 
-</div>
+  </div>
 
 <% } %>
+
 ```

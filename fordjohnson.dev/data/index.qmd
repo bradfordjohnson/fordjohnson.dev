@@ -4,7 +4,7 @@ pagetitle: Data
 listing: 
   - id: featured-content
     template: ../templates/gallery.ejs
-    contents: ../structured-data/portfolio.yml
+    contents: ../structured-data/portfolio-gallery.yml
 ---
 
 <div id="featured-content"></div>
