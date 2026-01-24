@@ -1,3 +1,10 @@
 ---
-title: Projects
+pagetitle: Projects
+css: index.css
+listing: 
+  - id: featured-content
+    template: gallery.ejs
+    contents: gallery.yml
 ---
+
+<div id="featured-content"></div>

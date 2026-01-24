@@ -1,3 +1,17 @@
 ---
-title: "about"
+pagetitle: "About Me"
+title: "Ford Johnson"
+about:
+  template: solana
+  image: ../_images/headshot.jpg
 ---
+
+{{< lipsum 1 >}}
+
+## Education
+
+{{< lipsum 1 >}}
+
+## Experience
+
+{{< lipsum 1 >}}
