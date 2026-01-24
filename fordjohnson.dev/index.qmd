@@ -1,46 +1,41 @@
 ---
-listing:
-  - id: featured-cards
-    template: templates/cards.ejs
-    contents: structured-data/featured-cards.yml
-
-image-component:
-  url: https://cdn.jsdelivr.net/gh/bradfordjohnson/tidytuesday@main/tidytuesday/2025/2025-01-14/image.png
-  a-wrapper-class: "lightbox"
-  component: "image"
-  module: "home hero"
-  gallery: "home hero image"
-  alt: "Visual comparing the top posit::conf presentation title words between 2023 and 2024"
-
-button-component:
-  class: "btn btn-primary me-2 mb-2"
-  text: "Explore my work"
-  url: "/data"
-  component: "button"
-  modifier: "primary"
-  module: "home hero"
-
-css: index.css
+title: "My Document"
 ---
 
-<div class="grid align-items-start hero" data-position="hero">
-<div class="g-col-12 g-col-lg-7 me-2 mb-2">
-<h1 id="hero-title">
-Data to insights, <span class="hero-emphasis">visually driven.</span>
-</h1>
-<p id="hero-text">
-  I create valuable data products that turn raw data into actionable intelligence and drive meaningful impact.
-</p>
+https://bootswatch.com/brite/
 
-{{< include _components/button.qmd >}}
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+<button type="button" class="btn btn-link">Link</button>
 
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+<h3>
+  Heading
+  <small class="text-body-secondary">with faded secondary text</small>
+</h3>
+<p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+
+<h2>Example body text</h2>
+<p>Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+<p><small>This line of text is meant to be treated as fine print.</small></p>
+<p>The following is <strong>rendered as bold text</strong>.</p>
+<p>The following is <em>rendered as italicized text</em>.</p>
+<p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
+
+
+<div class="alert alert-dismissible alert-primary">
+  <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+  <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
 </div>
-
-<div class="g-col-12 g-col-lg-5 mb-2 d-none d-lg-block">
-
-![]({{< meta image-component.url >}})
-
-</div>
-</div>
-
-<div id="featured-cards" data-position="body"></div>
