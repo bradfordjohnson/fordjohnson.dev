@@ -7,7 +7,7 @@ project:
 
 website:
   title: Ford Johnson
-  description: Data analyst turning raw data into insights, visualizations, and strategies that drive smarter business decisions.
+  # description: Data analyst turning raw data into insights, visualizations, and strategies that drive smarter business decisions.
   site-url: "https://fordjohnson.dev"
   favicon: "_images/favicon.png"
   image: "_images/logo.png"
@@ -18,10 +18,8 @@ website:
 
   navbar:
     background: dark
-    # pinned: true
+    pinned: true
     left:
-      - text: Home
-        href: index.qmd
       - text: About
         href: about/index.qmd
       - text: Projects
@@ -44,7 +42,9 @@ website:
 format:
   html:
     page-layout: full
-    css: brite.css
+    theme: cosmo
+    fontsize: 1rem
+    # css: brite.css
     toc: false
     anchor-sections: false
     canonical-url: true
