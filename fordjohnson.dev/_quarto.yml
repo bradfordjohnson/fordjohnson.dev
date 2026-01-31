@@ -6,28 +6,34 @@ project:
     timeout: 1200
 
 website:
-
   title: Ford Johnson
-  description: Data analyst turning raw data into insights, visualizations, and strategies that drive smarter business decisions.
+  # description: Data analyst turning raw data into insights, visualizations, and strategies that drive smarter business decisions.
   site-url: "https://fordjohnson.dev"
-  favicon: "_components/favicon.png"
-  image: "https://cdn.jsdelivr.net/gh/bradfordjohnson/global-assets@master/images/logo/logo.png"
+  favicon: "_images/favicon.png"
+  image: "_images/logo.png"
   search: false
 
+  cookie-consent:
+    type: implied
+    style: simple
+
+  google-analytics:
+    tracking-id: "GTM-PF2MWQN4"
+
   open-graph:
-    image: "https://cdn.jsdelivr.net/gh/bradfordjohnson/global-assets@master/images/logo/logo.png"
+    image: "_images/logo.png"
 
   navbar:
-    background: white
+    background: secondary
+    logo: "_images/logo.png"
     pinned: true
-    logo: "https://cdn.jsdelivr.net/gh/bradfordjohnson/global-assets@master/images/logo/logo.png"
     left:
-      - text: Home
-        href: index.qmd
       - text: About
-        href: about/index.qmd
-      - text: Data
-        href: data/index.qmd
+        href: index.qmd
+      - text: Projects
+        href: projects/index.qmd
+      - text: Blog
+        href: blog/index.qmd
     right:
       - icon: github
         href: "https://github.com/bradfordjohnson"
@@ -41,22 +47,12 @@ website:
       - icon: linkedin
         href: "https://linkedin.com/in/bradford-ford-johnson"
 
-
 format:
   html:
-    template: templates/template.html
     page-layout: full
-    theme: styles.scss
-    
+    theme: cosmo.scss
     toc: false
     anchor-sections: false
     canonical-url: true
     lang: en
     smooth-scroll: true
-
-    include-in-header: ga4/gtm_header.html
-    include-before-body: ga4/gtm_body.html
-
-    lightbox:
-      match: auto
-      effect: zoom

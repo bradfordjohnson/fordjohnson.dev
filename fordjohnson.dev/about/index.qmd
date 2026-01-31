@@ -1,17 +1,17 @@
 ---
-pagetitle: About Me
+pagetitle: "About Me"
+title: "Ford Johnson"
 about:
   template: solana
-  image: https://cdn.jsdelivr.net/gh/bradfordjohnson/global-assets@master/images/headshot.jpg
-
-css: index.css
+  image: ../_images/headshot.jpg
 ---
 
-<div class="feature-header">
-<h2>About Me</h2>
+{{< lipsum 1 >}}
 
-Hi I'm Ford! I’m curious by nature, always asking questions and exploring patterns-whether in the world around me or in the data I work with. With a background in Sociology and a self-taught passion for analytics, I enjoy uncovering insights that tell a story and make complex information feel clear and actionable. Colleagues know me as reliable, detail-oriented, and someone who approaches problems with both curiosity and care.
+## Education
 
-Outside of work, you’ll often find me hiking new trails, capturing moments through photography, trying to improve my golf game, or spending time with my family. I like to approach life the same way I approach data: with curiosity, creativity, and a willingness to learn from every experience.
+{{< lipsum 1 >}}
 
-</div>
+## Experience
+
+{{< lipsum 1 >}}

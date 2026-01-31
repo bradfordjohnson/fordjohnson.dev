@@ -1,46 +1,22 @@
 ---
-listing:
-  - id: featured-cards
-    template: templates/cards.ejs
-    contents: structured-data/featured-cards.yml
-
-image-component:
-  url: https://cdn.jsdelivr.net/gh/bradfordjohnson/tidytuesday@main/tidytuesday/2025/2025-01-14/image.png
-  a-wrapper-class: "lightbox"
-  component: "image"
-  module: "home hero"
-  gallery: "home hero image"
-  alt: "Visual comparing the top posit::conf presentation title words between 2023 and 2024"
-
-button-component:
-  class: "btn btn-primary me-2 mb-2"
-  text: "Explore my work"
-  url: "/data"
-  component: "button"
-  modifier: "primary"
-  module: "home hero"
-
-css: index.css
+title: "Ford Johnson"
+about:
+  template: trestles
+  image: _images/mountains.jpeg
+  links:
+    - icon: code-slash
+      text: Projects
+      href: projects/index.qmd
+    - icon: github
+      text: Github
+      href: https://github.com/bradfordjohnson
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/bradford-ford-johnson
 ---
 
-<div class="grid align-items-start hero" data-position="hero">
-<div class="g-col-12 g-col-lg-7 me-2 mb-2">
-<h1 id="hero-title">
-Data to insights, <span class="hero-emphasis">visually driven.</span>
-</h1>
-<p id="hero-text">
-  I create valuable data products that turn raw data into actionable intelligence and drive meaningful impact.
-</p>
+Hi! My name is Ford Johnson. 
 
-{{< include _components/button.qmd >}}
+I build analytics systems that help companies measure, understand, and accelerate growth. I turn messy numbers into stories that make sense (*and hopefully even make it fun*). My background spans web, marketing and product analytics.
 
-</div>
-
-<div class="g-col-12 g-col-lg-5 mb-2 d-none d-lg-block">
-
-![]({{< meta image-component.url >}})
-
-</div>
-</div>
-
-<div id="featured-cards" data-position="body"></div>
+This site is a place to share data projects, deep dives, and notes. I’m always happy to chat about data, projects, or ideas.

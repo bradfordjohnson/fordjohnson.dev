@@ -1,0 +1,197 @@
+---
+title: Matchmaking in Rocket League
+description: Uncover the data behind Rocket League's MMR and matchmaking system.
+title-block-banner: false
+# image:
+date: '2024-09-21'
+categories: [Skill Rankings]
+
+html-math-method:
+  method: katex
+
+reference-location: margin
+
+execute:
+  freeze: true
+---
+
+As a longtime Rocket League player, I’ve always been fascinated by the ranking system behind the game. Using tools like BakkesMod and tracking websites, I’ve been able to monitor my MMR in real time, sparking my interest in how the system works. Rocket League, like many games, uses skill-based matchmaking to create balanced matches, driven by calculations that determine player ratings and matchups. My goal is to explore the data behind this system and understand how it shapes the competitive experience.
+
+
+## Matchmaking Rating (MMR) and Skill Rating
+
+Most Rocket League players interested in their [competitive ranking](https://www.epicgames.com/help/en-US/c-Category_RocketLeague/c-RocketLeague_Gameplay/what-are-rocket-league-competitive-ranks-a000084481) are familiar with the skill rating displayed on third-party websites or in BakkesMod. This **skill rating** is derived from the matchmaking rank (MMR), which remains hidden and is not easily visible to players.
+
+
+$$
+\text{mmr} \approx \frac{\left(\text{skill rating} - 100\right)}{20}
+$$
+
+$$
+\text{skill rating} \approx \left(20\text{mmr}\right) - 100
+$$
+
+The MMR is the underlying numerical value that determines a player's true skill level, influencing matchmaking and overall competitive performance in Rocket League. Both casual and competitive matchmaking in Rocket League utilize skill-based matchmaking, meaning that wins and losses directly affect your skill value, leading to increases or decreases in your ranking. To balance the time spent finding eligible opponents within selected regions and prevent long wait times, the game expands the allowable skill range when necessary. Different playlists and gamemodes will have their own MMR value.
+
+### Determining a Player's Skill
+
+Rocket League uses the `SkillMu` and `SkillSigma` to calculate a player's MMR. This is similar to other Bayesian approaches but not the same.^[[Reddit](https://www.reddit.com/r/RocketLeague/comments/3uv3xu/how_the_ranking_system_and_matchmaking_works_the/) - *How the Ranking System and Matchmaking works...*]
+
+SkillMu (Mu)
+: The perceived skill level of a player, which increases with wins and decreases with losses. It starts at a value of 25 in unplayed playlists.
+
+SkillSigma (Sigma)
+: The "uncertainty" value that decreases with each match, indicating the system's confidence in a player's skill. It starts at 8.333 in unplayed playlists and decreases as matches are played to a minimum of 2.5. A lower Sigma signifies greater certainty a player is at the correct skill level.
+
+New players start with a SkillMu = 25, skill rating = 600 and SkillSigma = 8.333.
+
+### Matchmaking and Teams
+
+
+In competitive Rocket League, players can choose between the following gamemodes:^[*Competitive and casual matchmaking use different weighting systems; this discussion will focus on competitive modes.*] 1v1, 2v2, 3v3.
+
+
+The matchmaking system employs a weighted average approach, using methods like the root mean square (RMS), to assess each team's skill and ensure fair matchups against opponents.^[[Reddit](https://www.reddit.com/r/RocketLeague/comments/ljyzcy/parties_how_they_affect_matchmaking_mmr/) - *Parties: How they affect matchmaking MMR*]
+
+$$
+\text{TeamSkill}=\sqrt[n]{\frac{\mathrm{\text{mmr}}_{1}^{n}+\text{...}+\mathrm{\text{mmr}}_{x}^{n} }{x}}
+$$
+
+
+```{r}
+party_matchmaking <- function(mmr_arr, n) {
+  party_mmr <- round((sum(mmr_arr^n) / length(mmr_arr))^(1/n),0)
+  return(paste0("Team's Skill Rating = ", party_mmr))
+}
+
+player_1_mmr = 600
+player_2_mmr = 700
+n = 15 # this is the value for competitive playlists
+
+team_skill <- party_matchmaking(c(player_1_mmr, player_2_mmr), n)
+
+team_skill
+```
+
+When a player's skill reaches a certain threshold, the matchmaking system adjusts by basing the team's skill level entirely on the high skilled player, even if they are partied with lower-skilled teammates. This ensures that the match remains competitive despite skill imbalances within the team.
+
+## Simulating Matches
+
+```{r}
+#| code-fold: true
+#| code-overflow: wrap
+#| warning: false
+
+library(R6)
+
+Rating <- R6Class("Rating",
+  public = list(
+    skill_mu = 25.0,
+    skill_sigma = 8.333,
+    sigma_sq = NULL,
+    initialize = function(skill_mu = 25.0, skill_sigma = 8.333) {
+      self$skill_mu <- skill_mu
+      self$skill_sigma <- skill_sigma
+      self$sigma_sq <- skill_sigma^2
+    },
+    get_mmr = function() {
+      return(self$skill_mu)
+    },
+    get_skill_rating = function() {
+      return(round((20 * self$skill_mu) + 100, 0))
+    }
+  )
+)
+
+Outcome <- list(WIN = "Win", LOSS = "Loss", DRAW = "Draw")
+
+Rater <- R6Class("Rater",
+  public = list(
+    beta_sq = NULL,
+    initialize = function(beta) {
+      self$beta_sq <- beta^2
+    },
+    update_ratings = function(teams, ranks) {
+      team_mu <- numeric(length(teams))
+      team_sigma_sq <- numeric(length(teams))
+      team_omega <- numeric(length(teams))
+      team_delta <- numeric(length(teams))
+      for (i in seq_along(teams)) {
+        for (player in teams[[i]]) {
+          team_mu[i] <- team_mu[i] + player$skill_mu
+          team_sigma_sq[i] <- team_sigma_sq[i] + player$sigma_sq
+        }
+      }
+      for (i in seq_along(teams)) {
+        for (q in seq_along(teams)) {
+          if (i == q) next
+          c <- sqrt(team_sigma_sq[i] + team_sigma_sq[q] + 2.0 * self$beta_sq)
+          e1 <- exp(team_mu[i] / c)
+          e2 <- exp(team_mu[q] / c)
+          piq <- e1 / (e1 + e2)
+          pqi <- e2 / (e1 + e2)
+          s <- if (ranks[q] > ranks[i]) 1.0 else if (ranks[q] == ranks[i]) 0.5 else 0.0
+          delta <- (team_sigma_sq[i] / c) * (s - piq)
+          gamma <- sqrt(team_sigma_sq[i]) / c
+          eta <- gamma * (team_sigma_sq[i] / (c^2)) * piq * pqi
+          team_omega[i] <- team_omega[i] + delta
+          team_delta[i] <- team_delta[i] + eta
+        }
+      }
+      result <- list()
+      for (i in seq_along(teams)) {
+        team_result <- list()
+        for (player in teams[[i]]) {
+          new_mu <- player$skill_mu + (player$sigma_sq / team_sigma_sq[i]) * team_omega[i]
+          sigma_adj <- 1.0 - (player$sigma_sq / team_sigma_sq[i]) * team_delta[i]
+          new_sigma <- max(sqrt(player$sigma_sq * max(sigma_adj, 0.0001)), 2.5)
+          team_result[[length(team_result) + 1]] <- Rating$new(skill_mu = new_mu, skill_sigma = new_sigma)
+        }
+        result[[length(result) + 1]] <- team_result
+      }
+      return(result)
+    },
+    duel = function(p1, p2, outcome) {
+      teams <- list(list(p1), list(p2))
+      ranks <- if (outcome == Outcome$WIN) c(1, 2) else if (outcome == Outcome$LOSS) c(2, 1) else c(1, 1)
+      res <- self$update_ratings(teams, ranks)
+      return(list(res[[1]][[1]], res[[2]][[1]]))
+    }
+  )
+)
+
+Player <- R6Class("Player",
+  public = list(
+    name = NULL,
+    rating = NULL,
+    initialize = function(name) {
+      self$name <- name
+      self$rating <- Rating$new()
+    }
+  )
+)
+
+simulate_career <- function(rater, player_name, num_matches) {
+  subject <- Player$new(player_name)
+  opponents <- lapply(paste("Opponent", 1:10), function(n) {
+    p <- Player$new(n)
+    p$rating$skill_mu <- 25
+    return(p)
+  })
+  cat(sprintf("Career Simulation: %s\n", player_name))
+  cat(sprintf("Match %2d | Sigma: %5.3f | Skill Rating: %4d | Gain: --\n", 
+              0, subject$rating$skill_sigma, subject$rating$get_skill_rating()))
+  for (i in seq_len(num_matches)) {
+    opp <- opponents[[sample(length(opponents), 1)]]
+    old_sr <- subject$rating$get_skill_rating()
+    result <- rater$duel(subject$rating, opp$rating, Outcome$WIN)
+    subject$rating <- result[[1]]
+    new_sr <- subject$rating$get_skill_rating()
+    cat(sprintf("Match %2d | Sigma: %5.3f | Skill Rating: %4d | Gain: +%-2d\n", 
+                i, subject$rating$skill_sigma, new_sr, new_sr - old_sr))
+  }
+}
+
+rater <- Rater$new(beta = 25.0 / 3.0)
+simulate_career(rater, "NewPlayer", 30)
+```
