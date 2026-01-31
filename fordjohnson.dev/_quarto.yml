@@ -13,22 +13,23 @@ website:
   image: "_images/logo.png"
   search: false
 
-  # cookie-consent:
-  #   type: implied
-  #   style: simple
+  cookie-consent:
+    type: implied
+    style: simple
 
-  # google-analytics:
-  #   tracking-id: "GTM-W39B6FZ6"
+  google-analytics:
+    tracking-id: "GTM-PF2MWQN4"
 
   open-graph:
     image: "_images/logo.png"
 
   navbar:
-    background: dark
+    background: secondary
+    logo: "_images/logo.png"
     pinned: true
     left:
       - text: About
-        href: about/index.qmd
+        href: index.qmd
       - text: Projects
         href: projects/index.qmd
       - text: Blog
@@ -49,8 +50,7 @@ website:
 format:
   html:
     page-layout: full
-    theme: cosmo
-    fontsize: 1rem
+    theme: cosmo.scss
     toc: false
     anchor-sections: false
     canonical-url: true

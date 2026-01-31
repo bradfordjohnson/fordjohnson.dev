@@ -2,9 +2,8 @@
 title: Binomial Trend Detection
 description: The binomial trend detection method offers an alternative to traditional rolling averages by using week-over-week (WoW) comparisons to detect significant changes quickly.
 title-block-banner: false
-# image: index_files/figure-html/binom-visual-1.png
 date: '2024-10-01'
-categories: [Trend, Stats]
+categories: [Trends, Stats]
 execute:
   freeze: auto
 ---

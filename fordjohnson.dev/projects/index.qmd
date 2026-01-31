@@ -1,5 +1,6 @@
 ---
 pagetitle: Projects
+page-layout: full
 css: index.css
 listing: 
   - id: featured-content
