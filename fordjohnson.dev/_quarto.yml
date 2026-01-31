@@ -13,6 +13,13 @@ website:
   image: "_images/logo.png"
   search: false
 
+  # cookie-consent:
+  #   type: implied
+  #   style: simple
+
+  # google-analytics:
+  #   tracking-id: "GTM-W39B6FZ6"
+
   open-graph:
     image: "_images/logo.png"
 
@@ -44,7 +51,6 @@ format:
     page-layout: full
     theme: cosmo
     fontsize: 1rem
-    # css: brite.css
     toc: false
     anchor-sections: false
     canonical-url: true
