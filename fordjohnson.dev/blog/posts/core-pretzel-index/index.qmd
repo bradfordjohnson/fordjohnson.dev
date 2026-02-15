@@ -120,6 +120,6 @@ Data is currently logged manually in spreadsheets, but the ultimate goal is to d
 | Restaurant | Pretzel Type | # of Rankings | Adjusted CPI Score |
 |------------|--------------|---------------|--------------------|
 | Holy City  | Salt         | 3             | 82.35%             |
-| Holy City  | Salt         | 1             | 89.00%             |
+| DIG In The Park  | Salt   | 1             | 89.00%             |
 
 : Adjusted CPI Score {.striped}
