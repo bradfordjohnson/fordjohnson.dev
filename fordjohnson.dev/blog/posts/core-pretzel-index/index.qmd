@@ -113,11 +113,13 @@ Data is currently logged manually in spreadsheets, but the ultimate goal is to d
 | Holy City  | Salt         | 1            | $6.50      | 79.00%         |
 | Holy City  | Salt         | 2            | $6.50      | 81.50%         |
 | Holy City  | Salt         | 3            | $6.50      | 83.50%         |
+| DIG In The Park  | Salt   | 1            | $10.99     | 89.00%         |
 
 : Current Observations {.striped}
 
 | Restaurant | Pretzel Type | # of Rankings | Adjusted CPI Score |
 |------------|--------------|---------------|--------------------|
 | Holy City  | Salt         | 3             | 82.35%             |
+| Holy City  | Salt         | 1             | 89.00%             |
 
 : Adjusted CPI Score {.striped}
