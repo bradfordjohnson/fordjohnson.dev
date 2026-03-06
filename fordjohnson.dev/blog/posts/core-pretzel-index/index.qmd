@@ -81,10 +81,10 @@ The table below illustrates how the decay weight is applied to each visit’s ba
 
 | Restaurant | Visit | Base CPI Score | Decay Weight | Weighted Score |
 |------------|-------|----------------|--------------|----------------|
-| X          | 1     | 80%          | 0.05         | 3.98%          |
-| X          | 2     | 90%          | 0.14         | 12.18%         |
-| X          | 3     | 80%          | 0.37         | 29.43%         |
-| X          | 4     | 100%         | 1.00         | 100%        |
+| X          | 1     | 80%          | 0.05         | 3.98%            |
+| X          | 2     | 90%          | 0.14         | 12.18%           |
+| X          | 3     | 80%          | 0.37         | 29.43%           |
+| X          | 4     | 100%         | 1.00         | 100%             |
 
 : Decay Table Example {.striped}
 
@@ -114,12 +114,14 @@ Data is currently logged manually in spreadsheets, but the ultimate goal is to d
 | Holy City  | Salt         | 2            | $6.50      | 81.50%         |
 | Holy City  | Salt         | 3            | $6.50      | 83.50%         |
 | DIG In The Park  | Salt   | 1            | $10.99     | 89.00%         |
+| The Heidelberg   | Salt   | 1            | $11.95     | 88.50%         |
 
 : Current Observations {.striped}
 
 | Restaurant | Pretzel Type | # of Rankings | Adjusted CPI Score |
 |------------|--------------|---------------|--------------------|
 | Holy City  | Salt         | 3             | 82.35%             |
-| DIG In The Park  | Salt   | 1             | 89.00%             |
+| DIG In The Park | Salt    | 1             | 89.00%             |
+| The Heidelberg  | Salt    | 1             | 88.50%             |
 
 : Adjusted CPI Score {.striped}
